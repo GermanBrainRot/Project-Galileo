@@ -4,26 +4,86 @@
 
 !!! Attention: This work is still in refinement stage until 23rd or September 2025. After this, I hope I can limit myself to minor revisions and pointers to other contributions. Until then, everything you read is provisional !!!
 
-Carlo Rovelli's contribution to Quantum Mechanics was to pose the problem correctly, yet he fell just short of drawing the correct conclusions from it. It is as if he had run a marathon, stopped 5m before the finish line and decided to make a picnic.  
+In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics (RQM) and how it aims at resolving the measurement problem. Once I have explained how I think it works, I will point out an obvious type of criticism and how Rovelli tried to fix the problem. After this, I will show why it does not fix the issues and suggest a *much* better fix.
 
-According to Rovelli, the appropriate quantum description of the World is *relative* to the observer. What is in a superposition for one observer is a fact for another.  
+In [1996/97, Carlo Rovelli](https://arxiv.org/pdf/quant-ph/9609002) introduced the idea that descriptions of quantum systems could be observer-dependent. Here, "observer" does not refer to any "conscious" or "macroscopic" entity, but returns to the more sober and naturalistic meaning the term used to have in physics prior to Quantum Mechanics - and which it still has in Special and General Relativity.
 
-Genius! Except, how can two observers for whom an event is a fact agree on the matter of the fact? In Rovelli's world, the probabilities of the wave function have to conspire in such a way that upon information exchange, consistency is guaranteed. If we were to grant any ontic facticity to an event, it would break relativity of the description, so goes the reasoning.
+To motivate this idea, he proposed a thought experiment which has since been [pointed out](https://arxiv.org/pdf/1710.07556) to be a restatement of the old thought experiment of Wigner's Friend. For the sake of clarity, I will therefore motivate Rovelli's idea starting from Wigner's Friend.
 
-**This is false.**
+#### Wigner's Friend: Thought Experiment
 
-What Rovelli has generalized here is not the Einsteinian picture of relativity, but the Lorentzian picture of reality conspiring against the experiment so we can never pin reality down.
+Eugene Wigner, like many physicists, once wondered what exactly constituted a measurement and what the mysterious "collapse of the wave function" during a measurement might mean.
 
-The first conceptual clue where to find a solution for this is that for any two observers for whom an event is a fact, the fact is safely inscribed into the intersection of their past light cones (which *by Rovelli’s own assumption* is non-empty) where it simply cannot bother anyone else. There are only two other kinds of observers for whom the fact is not in their shared past:
+For him, the collapse had to have something to do with quantum systems interacting with consciousness. Here's how he justified this:
+
+Suppose, instead of Wigner himself conducting a quantum measurement, he would have a friend conduct the measurement. Wigner himself would stand outside of the lab. So far, so good.
+
+Now, after the measurement, Wigner's friend comes out of the lab and is asked by Wigner about the outcome of the experiment. Notice something here: *from Wigner's point of view*, if quantum mechanics is correct, the answer must at this point be described using a superposition between the different possible outcomes. It is only upon hearing (i.e. "measuring") the answer that Wigner's description can collapse to a single state.
+
+So, does this mean that Wigner's friend was in a superposition until that point? Well, let's find out! Wigner asks his friend: "what did it feel like to be in a superposition?" His friend looks confused, then replies: "What do you mean? I was not in a superposition!"
+
+And this leads Wigner to the "only" correct interpretation: consciousness collapses wave functions! -
+
+Yeah, except that this is obvious nonsense and has since been challanged in various ways. Today's consensus seems to be that it's not about consciousness, but about interactions with macroscopic environments which "decohere" into a single classical reality (more on this idea later).
+
+In his key contribution, Rovelli added his own unique take: What if Wigner's friend truly *is* in a superposition - *for* Wigner? Yes, you read this right: Rovelli's solution boils down to stating that superposition for me can be facts for thee and vice versa.
+
+You know what? This is actually a genius idea! I am *not* being sarcastic here. It's the *exact* idea that got us from Newtonian physics plus weird Lorentz transformations to account for the constancy of the speed of light for any observer to Einstein's relativity - and Rovelli is bold enough to draw this comparison himself in his initial paper.
+
+Except, it doesn't quite work. Here's the problem:
+
+If something can be a fact for one party (say, Alice), in limbo for another party (say, Bob) and once again a fact for a third party (say Charlie), who or what guarantees that Alice's and Charlie's facts agree once Bob learns of Alice's and Bob's notes?
+
+Well, an [ad-hoc postulate](https://philsci-archive.pitt.edu/20379/1/RQM%20paper%20copy.pdf) does. After a quarter of a century, this rather obvious weak point had become bothersome enough that Mr Rovelli felt the need to just assert that this should work.
+
+This attempt is not without merits. At least, it hints at an ontology that could be responsible for this to work: each observer just carries the information about their measurement records around on some way, for example in correlations between observables. Nice! We avoid hidden variables simply by using statistical correlations as the locus of physical information. Very elegant move!
+
+But somehow, this is still quite slippery. Rovelli's idea how all this fits together forces him to write something like this:
+
+*This postulate implies that the information stored in Alice’s physical variables about the variable V of the system S is accessible in principle to any observer who measures her in the right basis, so at least at an emergent level this information about V is an observer-independent fact.*
+
+Excuse me? What if I measure her in the wrong basis? What does this even mean?
+
+Honestly, this sounds like Rovelli's interpretation slips right back into Many Worlds lite - a problem that he has been struggling with from the start. And indeed, the "fix" for this is to be found in the exact same place as with Many Worlds, as the "at an emergent level" part of the sentence I quoted gives away:
+
+*It is clear that decoherence should play some role in this story. And in fact, decoherence provides exactly what it needed here: it picks out a basis which is dynamically favoured and then disseminates information stored in that basis through the environment.*
+
+Mr Rovelli, if I understand your interpretation correctly, you want to treat the wave function as a book keeping tool rather than something physical, no? So, what is it that "decoheres" here? Certainly not quantum branches, right?
+
+Alright, so this seems to be the state of the art here! At least as far as I am concerned, the mysteries have not *quite* gone away. If we invoke decoherence to explain the "emergence" of stable facts at the macroscopic level, we would have to say *what* decoheres. So, back to the drawing board!
+
+#### Here's a thought
+
+What if we went a little further than Rovelli and simply treated facts simply as facts? That is: *measurement bases be damned*, once an interaction happened, *it is a fact*.
+
+But hold on! Is this not in a direct contradiction with the idea that facticity or superposition should be *relative* to an observer, that is, *observer-dependent*? How can an interaction that happened *just be a fact* and this somehow *doesn't* contradict the idea that another observer that doesn't know about the interaction record yet could somehow still *validly* describe the situation as a superposition?
+
+The answer is actually somewhat obvious once you hear it. It is *so* obvious that I couldn't *believe* that it hadn't occurred to anyone for a quarter of a century - at least to my knowledge.
+
+Mr Rovelli, was your theory not supposed to make Quantum Mechanics *directly* compatible with Special Relativity? In Special Relativity, whether an event has happened or not is *relative* to the observer! Just because the interaction already resides in the past light cone of Wigner's friend, this does not mean that it is already in Wigner's past light cone!
+
+This leads to a *natural* refinement of RQM. It is *not* an ad-hoc axiom or postulate, it is *well motivated* by known physics:
+
+**Interaction records are factual for any pair of observers such that the interaction resides in the intersection of their causal past.**
+
+If we simply dump everything we consider a definite fact into our shared causal past, these facts can simply not bother any other observer; for there are only two other types of observers:
 
 - Those who can never interact with the fact because, for example, they have fallen into a black hole  
 - Those for whom the fact lives in the future and for whom the wave function is the absolute horizon
 
 Once we make this adjustment - which is *squarely justified* by our current secure knowledge of the universe (but needs to be handled with a little more precision later) - a lot of things suddenly make sense.
 
+Let's take a walk through the freak show of Quantum Mechanics like this guy would because ... we kinda can:
+
+![](Snap.jpg)
+
 **Schrödinger's Cat** - dead and alive, but what the *gentlemen scientists* in the ivory tower forget to mention *even though their own formalism **and** basic common sense screams it in their face* is that learning about the live/dead state of the cat *implies* learning about whether the atom has decayed that would trigger the mechanism that would kill the cat. That is all that entanglement encodes! Information about an interaction entering your causal past means that an *entire consistent causal history* enters your causal past. If we position the experiment in such a way that the trigger is behind the cat from our perspective, the information about the entire sequence of events enters our causal past all at once.
 
-**Counterfactual indefiniteness**: Star Wars already knew the answer:  
+**Retrocausality** - This one doesn't even need any special interpretation to be [thoroughly debunked](https://www.youtube.com/watch?v=RQv5CVELG3U), but I think the ontology we are building towards here suggests that Quantum Mechanics actually yells at us precisely that retrocausality *is not* real.
+
+Think about it: when we see an interference pattern on the screen behind a double slit, isn't this precisely the universe telling us that it *can not* retroactively *create* the information through which slit the particle has gone?? Because, if we were to see two peaks rather than an interference pattern, this *would be* nature coming up with a so far non-existant history on the spot. Once the particle has definitely made it past the double slit without being constrained to go either through the left slit or the right slit, we have condemned the particle's position at this time to be in a superposition for all eternity and that's all there is to it. It can have a position later if we measure it, but whatever we measure must be consistent with the particle *not* having had a definite position when it went through the double slit.
+
+**Counterfactual indefiniteness** - Star Wars already knew the answer:  
 
 ![](Records.jpg)
 If an item does not appear in our records, it does not exist. 
@@ -54,9 +114,11 @@ There are a few more huge mysteries of science that can be readily explained wit
 
 The problem with dumping all the facts into the shared past of two observers is that of course, the facts in our past would have to superluminally signal to us so we have full access to them at any given time. This is *nonsense*. But what we *can* do is to pin down facts as definite values of n-tuples of observables which live in the *infinitesimal* shared past of all interacting observers. That is: different sets of entangled observables coming together to create new facts and evolve in an entangled manner *are* an interaction.
 
-We should take a moment here to be even more careful, because as you may notice, the relativity that Rovelli only talks about (don’t take it personally, man, you were still on the right track imho) does not have *any* representation in our actual formal set of requirements so far (nor in his; Rovelli tried - but was stuck in the autistic habit of academia to somehow transform the observer out of the universe so the world could not hold him accountable for his causal contribution to the development of the world).
+Notice: yes, your causal past *is* factual; but your *access* to the past is mediated through interactions.
 
-Let us pick think this through very carefully.
+We should take a moment here to be even more careful, because as you may notice, the relativity that Rovelli only talks about (don’t take it personally, man, you were still on the right track imho) does not have *any* representation in our actual formal set of requirements so far (nor in his; Rovelli tried - but was stuck in the autistic habit of academia to somehow transform the observer out of the universe [a habit which he had *thought* he had overcome!] so the world could not hold him accountable for his causal contribution to the development of the world).
+
+Let us think this through very carefully.
 
 If I am a measurement aparatus, what is measurement *about* from my perspective? Fundamentally, it is about *other* quantum objects, *not* about me. I can not see myself directly! I *can* see what other objects are doing, but I must infer anything about myself from observations of the rest of the world.
 
@@ -64,7 +126,7 @@ The natural way to express Rovelli’s symmetry is, therefore, to restrict what 
 
 So, let me do this again and summarize the two constraints that we demand:
 
-1. Real facts live in the infinitesimal and shared moment before the wave function returns to unitary evolution. By “shared”, we mean that for wave functions to interact, the tips of their past light cones need to be aligned.  
+1. Real facts live in the causal past that any set of given observers share in common. Access to those facts is granted at the infinitesimal and shared moment before the wave function returns to unitary evolution. By “shared”, we mean that for wave functions to interact, the tips of their past light cones need to be aligned.  
 
 2. The wave function growing out of the facts must be invariant as we leave one set of observables and the Hilbert space components that gave rise to it and that it is giving rise to out of the picture.
 
