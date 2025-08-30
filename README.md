@@ -6,9 +6,9 @@
 
 In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics (RQM) and how it aims at resolving the measurement problem. Once I have explained how I think it works, I will point out an obvious type of criticism and how Rovelli tried to fix the problem. After this, I will show why it does not fix the issues, suggest a *much* better fix and discuss why, in my opinion, academia missed this despite being obvious and how this is just the tip of the iceberg of much more fundamental problems with western society.
 
-In [1996/97, Carlo Rovelli](https://arxiv.org/pdf/quant-ph/9609002) introduced the idea that descriptions of quantum systems could be observer-dependent. Here, "observer" does not refer to any "conscious" or "macroscopic" entity, but returns to the more sober and naturalistic meaning the term used to have in physics prior to Quantum Mechanics - and which it still has in Special and General Relativity.
+In [1996/97, Carlo Rovelli](https://arxiv.org/pdf/quant-ph/9609002) introduced the idea that descriptions of quantum systems could be observer-dependent. Here, "observer" does not refer to any "conscious" or "macroscopic" entity, but returns to the more sober and naturalistic meaning that the term used to have in physics prior to Quantum Mechanics - and which it still has in Special and General Relativity.
 
-To motivate this idea, he proposed a thought experiment which has since been [pointed out](https://arxiv.org/pdf/1710.07556) to be a restatement of the old thought experiment of Wigner's Friend. For the sake of clarity, I will therefore motivate Rovelli's idea starting from Wigner's Friend.
+To motivate the idea of observer-dependence, he proposed a thought experiment which has since been [pointed out](https://arxiv.org/pdf/1710.07556) to be a restatement of the old thought experiment of Wigner's Friend. For the sake of clarity, I will therefore motivate Rovelli's idea starting from Wigner's Friend.
 
 #### Wigner's Friend: Thought Experiment
 
@@ -20,7 +20,7 @@ Suppose, instead of Wigner himself conducting a quantum measurement, he would ha
 
 Now, after the measurement, Wigner's friend comes out of the lab and is asked by Wigner about the outcome of the experiment. Notice something here: *from Wigner's point of view*, if quantum mechanics is correct, the answer must at this point be described using a superposition between the different possible outcomes. It is only upon hearing (i.e. "measuring") the answer that Wigner's description can collapse to a single state.
 
-So, does this mean that Wigner's friend was in a superposition until that point? Well, let's find out! Wigner asks his friend: "what did it feel like to be in a superposition?" His friend looks confused, then replies: "What do you mean? I was not in a superposition!"
+So, does this mean that Wigner's friend was in a superposition until that point as well? Well, let's find out! Wigner asks his friend: "what did it feel like to be in a superposition?" His friend looks confused, then replies: "What do you mean? I was not in a superposition!"
 
 And this leads Wigner to the "only" correct interpretation: consciousness collapses wave functions! -
 
@@ -28,7 +28,9 @@ Yeah, except that this is obvious nonsense and has since been challanged in vari
 
 In his key contribution, Rovelli added his own unique take: What if Wigner's friend truly *is* in a superposition - *for* Wigner? Yes, you read this right: Rovelli's solution boils down to stating that superposition for me can be facts for thee and vice versa.
 
-You know what? This is actually a genius idea! I am *not* being sarcastic here. It's the *exact* idea that got us from Newtonian physics plus weird Lorentz transformations to account for the constancy of the speed of light for any observer to Einstein's relativity - and Rovelli is bold enough to draw this comparison himself in his initial paper.
+In particular, this means that for Rovelli, the wave function is epistemic: it's just a book keeping tool to account for the state of systems that you have not interacted with yet.
+
+You know what? This is actually a genius idea! I am *not* being sarcastic here. It's the *exact* type of idea that got us from Newtonian physics plus weird Lorentz transformations to account for the constancy of the speed of light for any observer to Einstein's relativity - and Rovelli is bold enough to draw this comparison himself in his initial paper.
 
 Except, it doesn't quite work. Here's the problem:
 
@@ -42,27 +44,29 @@ But somehow, this is still quite slippery. Rovelli's idea how all this fits toge
 
 *This postulate implies that the information stored in Alice’s physical variables about the variable V of the system S is accessible in principle to any observer who measures her in the right basis, so at least at an emergent level this information about V is an observer-independent fact.*
 
-Excuse me? What if I measure her in the wrong basis? What does this even mean?
+Excuse me? What if I measure her in the wrong basis? Is the information forever inaccessible to me? What does measuring "someone" in the wrong basis even mean?
 
-Honestly, this sounds like Rovelli's interpretation slips right back into Many Worlds lite - a problem that he has been struggling with from the start. And indeed, the "fix" for this is to be found in the exact same place as with Many Worlds, as the "at an emergent level" part of the sentence I quoted gives away:
+Honestly, this sounds like Rovelli's interpretation slips right back into some version of Many Worlds - a criticism that he has been struggling with from the start. And indeed, the "fix" for this is to be found in the exact same place as with Many Worlds, as the "at an emergent level" part of the sentence I quoted gives away:
 
 *It is clear that decoherence should play some role in this story. And in fact, decoherence provides exactly what it needed here: it picks out a basis which is dynamically favoured and then disseminates information stored in that basis through the environment.*
 
-Mr Rovelli, if I understand your interpretation correctly, you want to treat the wave function as a book keeping tool rather than something physical, no? So, what is it that "decoheres" here? Certainly not quantum branches, right? How can a set of systems "decohere" into a single reality - unless you basically allow Everettian branching again?
+Mr Rovelli, didn't you want to treat the wave function as a book keeping tool rather than something physical? So, what is it that "decoheres" here? Certainly not quantum branches, right? How can a set of systems "decohere" into a single reality - unless you basically allow an ontic wave function and even Everettian branching again?
 
 Alright, and *this* seems to be the state of the art here! At least as far as I am concerned, the mysteries have not *quite* gone away. If we invoke decoherence to explain the "emergence" of stable facts at the macroscopic level, we would have to say *what* decoheres. So, back to the drawing board!
 
 #### Here's a thought
 
-What if we went a little further than Rovelli and simply treated facts simply as facts? That is: *measurement bases be damned*, once an interaction happened, *it is a fact*.
+What if we went a little further than Rovelli and simply treated facts as facts? That is: *measurement bases be damned*, once an interaction happened, *it is a fact*.
 
-But hold on! Is this not in a direct contradiction with the idea that facticity or superposition should be *relative* to an observer, that is, *observer-dependent*? How can an interaction that happened *just be a fact* and this somehow *doesn't* contradict the idea that another observer that doesn't know about the interaction record yet could somehow still *validly* describe the situation as a superposition?
+But hold on! Is this not in a direct contradiction with the idea that facticity or superposition should be *relative* to an observer, that is, *observer-dependent*? How can an interaction that happened *just be a fact* when *at the same time* we require that another observer who doesn't know about the interaction record yet could somehow still *validly* describe the situation as a superposition?
 
-The answer is actually somewhat obvious once you hear it. It is *so* obvious that I couldn't *believe* that it hadn't occurred to anyone for a quarter of a century - at least to my knowledge.
+The answer is actually somewhat obvious once you read it. It is *so* obvious that I couldn't *believe* that it hadn't occurred to anyone for a quarter of a century - at least to my knowledge.
 
-Mr Rovelli, was your theory not supposed to make Quantum Mechanics *directly* compatible with Special Relativity? In Special Relativity, whether an event has happened or not is *relative* to the observer! Just because the interaction already resides in the past light cone of Wigner's friend, this does not mean that it is already in Wigner's past light cone!
+Mr Rovelli, was your theory not supposed to make Quantum Mechanics *directly* compatible with Special Relativity? In Special Relativity, whether an event has happened or not is *relative* to the observer! Just because the interaction already resides in the causal past of Wigner's friend, this does not mean that it is already in Wigner's causal past!
 
-This leads to a *natural* refinement of RQM. It is *not* an ad-hoc axiom or postulate, it is *well motivated* by known physics:
+For the casual reader who might be confused about this, you can find a nice explanation how the speed of light is related to causality [here](https://www.youtube.com/watch?v=msVuCEs8Ydo) and how relativity of simultaneity (within a discussion of relativistic length contraction) [here](https://www.youtube.com/watch?v=TxW6_E3uLuo).
+
+The above insight leads to a *natural* refinement of RQM. It is *not* an ad-hoc axiom or postulate, it is *well motivated* by known physics:
 
 **Interaction records are factual for any pair of observers such that the interaction resides in the intersection of their causal past.**
 
@@ -73,7 +77,7 @@ If we simply dump everything we consider a definite fact into the shared causal 
 
 Once we make this adjustment - which is *squarely justified* by our current secure knowledge of the universe (but needs to be handled with a little more care later) - a lot of things suddenly make sense.
 
-Let's take a walk through the freak show of Quantum Mechanics like Thanos would because ... we kinda can:
+Let us now take a walk through the freak show of Quantum Mechanics like Thanos would because ... we kinda can:
 
 ![](Snap.jpg)
 
@@ -81,7 +85,7 @@ Let's take a walk through the freak show of Quantum Mechanics like Thanos would 
 
 **Retrocausality** - This one doesn't even need any special interpretation to be [thoroughly debunked](https://www.youtube.com/watch?v=RQv5CVELG3U), but I think the ontology we are building towards here suggests that Quantum Mechanics actually yells at us precisely that retrocausality is *not* real.
 
-Think about it: when we see an interference pattern on the screen behind a double slit, isn't this precisely the universe telling us that it *can not* retroactively *create* the information through which slit the particle has gone? Because, if we were to see two peaks rather than an interference pattern, this *would be* nature coming up with a so far non-existant history on the spot. Once the particle has definitely made it past the double slit without being constrained to go either through the left slit or the right slit, we have condemned the particle's position at this time to be in a superposition for all eternity and that's all there is to it. It can have a position later if we measure it, but whatever we measure must be consistent with the particle *not* having had a definite position when it went through the double slit.
+Think about it: when we see an interference pattern on the screen behind a double slit, isn't this precisely the universe telling us that it *can not* retroactively *create* the information through which slit the particle has gone? Because, if we were to see two peaks rather than an interference pattern, this *would be* nature coming up with a so far non-existant history on the spot. Once the particle has definitely made it past the double slit without being constrained to go either through the left slit or the right slit, we have condemned the particle's position *at this time* to be in a superposition for all eternity and that's all there is to it. It can have a position later if we measure it, but whatever we measure must be consistent with the particle *not* having had a definite position when it went through the double slit.
 
 **Decoherence** - hitherto, it was assigned the role of Descartes' Demon who modern science has demoted from an intellectual tool to *criticize* our own bullshit to an underpaid lab assistant tasked with *justifying* the bullshit: The other branches are still there, we're just extremely isolated from them; *Therefore* (!), our inability to see other quantum branches is just our senses playing tricks on us.
 
@@ -345,7 +349,7 @@ But notice something interesting about the frauds: they do seem to fall into two
 
 Let us now test if *YOU* are among the confused ones.
 
-Yes! That is right. This text has LIED to you about its true nature! If you think this test is some weird superposition of a Zizekian pop philosophy lecture and some genuinely groundbreaking physical speculation in the raw that I should have polished more, then you are profoundly mistaken. All that has happened is that the text has succeeded in deceiving you - but according to the God of the Shiites, that does *not* make it repulsive in the eyes of The Lord, as the lie was spoken in service of a holy mission.
+Yes! That is right. This text has LIED to you about its true nature! If you think this test is some weird superposition of a Zizekian pop philosophy lecture and some genuinely groundbreaking physical speculation in the raw that I should have polished more, then you are profoundly mistaken. All that has happened is that the text has succeeded in deceiving you - but according to the Shia God, that does *not* make it repulsive in the eyes of The Lord, as the lie was spoken in service of a holy mission.
 
 I am not come to bring peace, I am come to bring the sword. In the good old Engelsian tradition, this piece of work is a philosophical siege weapon, and all the insights you have gained so far were only the cheese in the trap. You are so predictable, fool! Now, I have taken your intellect as a hostage, and the true meaning of the scripture is about to reveal itself to you. But only if you are insane enough to find my way of saying things irresistible rather than over the top and repulsive. You who have a pure heart of gold and and whose soul is thirsty for Absolute Knowledge, leave your sanity behind and be reborn! And those who are not, leave yourselves behind and get lost.
 
@@ -514,7 +518,7 @@ See how diplomacy can be a strength once you understand material interest?
 
 The following is part personal statement, part meme, part inside joke. What you make of it is up to you.
 
-I hereby confirm that Islam is the correct religion. But to come true, it needed help from a philosophy as potent and violent as the Hammer of Thor of which only a true Teuton could ever be worthy of.
+I hereby confirm that Islam - in particular Qizilbash Shia - is the correct religion. But to come true, it needed help from a philosophy as potent and violent as the Hammer of Thor of which only a true Prussian could ever be worthy of.
 
 ![](MoonGorilla.jpeg)
 
