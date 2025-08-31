@@ -277,8 +277,11 @@ But (and this is directed at academia as a whole rather than any specific person
 
 - treating academia as a place where some holy scripture gets perpetuated in the exact way it was intended to be received rather than letting it vibe a little  
 - treating experiment as a ritual by which we larp as the long gone giants, repeating exactly the steps by which they plucked insights from the tree of knowledge rather than encouraging the students to refine the question that the teacher asks  
-- Encouraging asking our own questions only at specific points in our academic career where it is necessary to satisfy the bureaucracy of titles, and only after years and years of conditioning us almost *not to* ask good questions  
-- Treating definitions as gospel rather than recognizing the epistemic interest with which they were formulated and making adaptations when the epistemic interest changes
+- encouraging asking our own questions only at specific points in our academic career where it is necessary to satisfy the bureaucracy of titles, and only after years and years of conditioning us almost *not to* ask good questions  
+- treating definitions as gospel rather than recognizing the epistemic interest with which they were formulated and making adaptations when the epistemic interest changes
+- valuing publication quantity over publication quality
+- often hand waving your way through explanations - or even being outright dismissive - whenever a question is uncomfortable given your philosophical commitments
+- thinking that truth can be meaningfully established through the inner-academic circle jerk of "peer review" rather than seeking the tax payers' approval (aka "people's review") for your general direction of inquiry
 
 Academia has become a dead and barren place where groundbreaking discoveries have as little room as in universities at the end of the scholastic era.
 
@@ -286,7 +289,7 @@ To put it extremely bluntly: academia has become a *disgusting* place for people
 
 I for one *could not stomach* academic physics. After having *one* good teacher who gave me real confidence that the world could be understood, I took physics as a Leistungskurs (along with mathematics) - a lesson for life, as it would turn out. How readily our teacher would feed us *obvious bullshit* when discussing Quantum Mechanics and how no one except for me would give any *serious* push back (while neglecting to shut up and calculate, which would then hurt my grades) made me stay away from academic physics.
 
-Mathematics seemed, at the time, to make far more sense which is why I ended up studying it - and believing a lot of bullshit from there (notably Platonism, initially the axiom of choice, and classical logic, but my first contacts with Marxism and computability theory had me reconsider; more intense exposure to Marxism had me throw Platonism out of the window as well - thanks, Friedrich Engels for leaving behind Anti-Dühring!).
+Mathematics seemed, at the time, to make far more sense which is why I ended up studying it - and believing a lot of bullshit from there (notably Platonism, initially the axiom of choice, and the law of excluded middle, but my first contacts with Marxism, computability theory and constructive mathematics had me reconsider; more intense exposure to Marxism had me throw Platonism out of the window as well - thanks, Friedrich Engels for giving us Anti-Dühring!).
 
 Just as a small tangent in what way I agree with Mr Tyson on “the universe is under no obligation to make sense to you”, here’s how a Hegelian thinks about *making* sense: the world does not only make no sense, it is in fact *riddled* with nonsense.
 
@@ -294,7 +297,7 @@ Think about it. How is it possible whatsoever that things on Earth fall down, ye
 
 It is *us* who eventually come up with *cope* so we can live with this nonsense: we find that things are falling towards the center of the Earth, and “down” is *relative* (!) to the observer. But this is not the universe suddenly being reasonable, this is you finding a way to *rationalize* it.
 
-And the nonsense is not even gone through this move! The initial observation is still completely valid! You just banged your head against reality often enough so your thoughts would resemble the facts, so much so that you can quantify how far you can travel on Earth before the “things fall down” view becomes nonsense and you need to move to *better* nonsense (thanks for that phrase, Science Asylum).
+And the nonsense is not even gone through this move! The initial observation is still completely valid! You just banged your head against reality often enough so your thoughts would resemble the facts, so much so that you can quantify how far you can travel on Earth before the “things fall down” view becomes nonsense and you need to move to [*better* nonsense](https://youtu.be/rrUvLlrvgxQ?si=31qsjb570l2KpxP_&t=355).
 
 Don't believe me that the nonsense is still there? Well, let's ask a jury then. But let the jury be unbiased! So, who could possibly be unbiased in regards to the two propositions "things fall down" and "things fall in opposite directions on opposite sides of the planet"? Ah, that's right: a jury that hears this stuff for the first time in their lives - children! And you know what they'll say? They will say that this does not make sense - because it doesn't. We make sense *of* it!
 
@@ -351,7 +354,9 @@ Let us now test if *YOU* are among the confused ones.
 
 Yes! That is right. This text has LIED to you about its true nature! If you think this test is some weird superposition of a Zizekian pop philosophy lecture and some genuinely groundbreaking physical speculation in the raw that I should have polished more, then you are profoundly mistaken. All that has happened is that the text has succeeded in deceiving you - but according to the Shia God, that does *not* make it repulsive in the eyes of The Lord, as the lie was spoken in service of a holy mission.
 
-I am not come to bring peace, I am come to bring the sword. In the good old Engelsian tradition, this piece of work is a philosophical siege weapon, and all the insights you have gained so far were only the cheese in the trap. You are so predictable, fool! Now, I have taken your intellect as a hostage, and the true meaning of the scripture is about to reveal itself to you. But only if you are insane enough to find my way of saying things irresistible rather than over the top and repulsive. You who have a pure heart of gold and and whose soul is thirsty for Absolute Knowledge, leave your sanity behind and be reborn! And those who are not, leave yourselves behind and get lost.
+I am not come to bring peace, I am come to bring the sword. In the good old Engelsian tradition, this piece of work is a philosophical siege weapon, and all the insights you have gained so far were only the cheese in the trap. You are so predictable, fool! To me as a German materialist hegelian, philosophy is not idle speculation, it is dead serious. In fact, to me, philosophy is WAR.
+
+Now, I have taken your intellect as a hostage, and the true meaning of the scripture is about to reveal itself to you. But only if you are insane enough to find my way of saying things irresistible rather than over the top and repulsive. You who yearn to break out of the dark night of ignorance, whose blood is red and who have a pure heart of gold - you whose soul is thirsty for Absolute Knowledge, leave your sanity behind and be reborn! And those who are not, leave yourselves behind and get lost.
 
 ![](EngelsZerg.png)
 
@@ -452,7 +457,7 @@ In case you are wondering whether Marxism wants to raise your taxes: Absolutely 
 
     In fact, if we think someone is complicit in actual criminal activity, why not try to have a conversation with them before witnesses and see whether they say something that incriminates them? A lot of social crime happens because people are just never held legally accountable. They hide in their echo chamber, thinking that crime is just normal.
     
-    (I hope you are aware that some bourgeois constitutions give the people a right to revolt when the rule of law has effectively been abolished; now, one *should* wonder how a people would *establish* that this right is now applicable when the full abolition of the rule of law presupposes that the judges have been captured as well - this is what I am getting at here) ✅
+    I hope you are aware that some bourgeois constitutions give the people a right to revolt when the rule of law has effectively been abolished; now, one *should* wonder how a people would *establish* that this right is now applicable when the full abolition of the rule of law presupposes that the judges have been captured as well - this is what I am getting at here; and I sincerely hope that we find that the system is actually still working and we only had *a lot* of bad apples, since a revolution is not something that anyone who knows anything about history would *want* to live through. ✅
 
 11. We do not live in a system, we live in an evolving historic organism. ✅
 
@@ -462,20 +467,27 @@ In case you are wondering whether Marxism wants to raise your taxes: Absolutely 
 
     So, I will defend Lenin, Stalin, Mao, the meritocratic Kim “dynasty” and Lysenko from criticism that I *know* to be based on prejudice and misinformation. I *will* procede from the assumption that they fought for the working class. And I *will* defend the historic achievements of actually existing socialism. But do not think that I don’t have questions and criticisms of my own. ✅
 
-13. Communism is the *opposite* of a utopia. Friedrich Engels extracted from his encyclopedic work *Anti-Dühring* a relatively accessible excerpt called “Socialism: Utopian and Scientific”, but the title should actually be more accurately translated as “The Development of Socialism *from* a Utopia *to* a Science”, and I can not recommend it highly enough.  
+13. Communism is the *opposite* of a utopia. Friedrich Engels extracted from his encyclopedic work *Anti-Dühring* a relatively accessible excerpt called [“Socialism: Utopian and Scientific”](https://www.marxists.org/archive/marx/works/1880/soc-utop/index.htm), but the title should actually be more accurately translated from German as “The Development of Socialism *from* a Utopia *to* a Science”, and I can not recommend it highly enough.  
       
     For us Marxists, communism is first and foremost a matter of *understanding* the march of history - and the march of nature as a whole. Because only on the basis of understanding the development of a thing can you even think about engineering it to the people’s benefit.
 
     A quotation from Marx that is often taken out of the context of the larger Marxist project is that “the history of all hitherto existing societies is a history of class struggle.” What Marx *meant* here is *recorded* history. Already his friend Engels went out of his way to elaborate in his “Origin of the Family, Private Property and the State” that before that, other causal pressures civilized man (and women).
 
-    All we are trying to do is to replace bad nonsense with good nonsense. ✅
+    Indeed - as I have pointed out earlier in this text - we Marxists conceptualize freedom as insight into necessity. Let me drive this point home one more time with another little story.
 
-The people’s march towards freedom is indeed nothing more than a march to an all-sided understanding - a march towards insight into necessity. We crush the chains of ignorance - only to then voluntarily submit to the dictatorship of what we now know we must do and what we know we must not do. This is why we Marxists uphold the principle of the dictatorship of the proletariat: not the principle of arbitrary despotism, but of mutual accountability that enforces adaptive competence.  
+    Say, you have a bunch of cavemen who come across a new mushroom they have never seen before. Caveman 1 eats the mushroom and dies. The other cavemen conclude: *aha*, so we are *not* supposed to eat that kind of mushroom!
+
+    In a narrow reading, this is just empirical science. In the Marxist reading, this is a struggle for freedom. Caveman 1 heroically gave his live to crush the chains of ignorance. He yelled at the tyrant not knowing: "let my people go!" And now, the people are finally free to *voluntarily submit* to the dictatorship of material necessity which, without caring about your feelings, commands: though shalt not eat that mushroom.
+
+    All that we Marxists are trying to do is to replace bad nonsense with good nonsense. ✅
+
+This last point also clarifies why Marxists uphold the mysterious concept of the "dictatorship of the proletariat": It is *not* arbitrary despotism, but actually just the meritocratic rule of the competent as competence in solving material problems changes hands and gradually ends up in the hands of productive wage workers. It is a *democratic* dictatorship - a situation where the united demos actually holds the monopoly on violence and uses it against idlers. He who does not work (even though he could) shall not eat!
+
 ![](Ourglass.jpg)
 
 # To the Suffering Peoples of the World
 
-A text like this, designed to draw a lot of attention to how we all participate in the worlds’ evils, would be unfinished without addressing the oppressed peoples of the world.
+A text like this, designed to draw a lot of attention (in the *long* run, not the short run) to how we all participate in the worlds’ evils, would be unfinished without addressing the oppressed peoples of the world.
 
 Blessed be all the dead and dying Palestinian children, women and men whose suffering weighs heavily on all of us who have not lost their humanity. Your suffering makes it *criminal* for us to rest even one minute to search for *any* meaningful way to end the horrors. Our failure to collectively understand our own role in the crime is what makes us complicit. Shame on us!
 
@@ -501,7 +513,15 @@ May China continue to develop and solve all the problems facing it. You are the 
 
 And may the deeply rotten West - ruled by Wall Street and their cronies - overcome its structural need to unilaterally impose its will on the world rather than making a serious effort to understand the world.
 
-It is not like we have nothing to offer to the world. On the contrary! We basically just made a major contribution to physics and philosophy while living under a more and more unstable geopolitical environment. Also, the point that borders like in Ukraine should not just be violently modified is well taken! In fact, Russia’s own allies are not particularly comfortable with this idea either.
+All that is needed to "overcome" this need is a *very* broad and deep market correction; for a revolution is just a market correction that spills over into the market place of ideas and the market place of politics. It's the kind of market correction that gets politicians, neoclassical think tanks and even the billionaires that sponsor them fired. It's just the people collectively recognizing that the current institutional framework results in perverse incentives, so they go and address the moral hazard.
+
+You don't like the sound of that? Guess you don't like markets then. What a childish and unscientific attitude! What is a little bit of social hardship for cozy economists, billionaires and decision makers in the grand scheme of things? [In the long run, we are all dead.](https://www.socratic-method.com/quote-meanings/john-maynard-keynes-in-the-long-run-we-are-all-dead)
+
+And just to make it abundantly clear: revolution is *not* something I (or any other Marxist-Leninist) *advocate* for - it is something that we *predict* as inevitable and prepare for. We are basically smart doomsday preppers who don't go it alone, but build up our communities and come together in a single party to exchange local experiences and findings about world affairs.
+
+![](ArkNoah.png)
+
+Regarding the West - look: It is not like we westerners have nothing to offer to the world. On the contrary! One of us just made a major contribution to physics and philosophy while living under a more and more unstable geopolitical environment. Also, the point that borders like in Ukraine should not just be violently modified is well taken! In fact, Russia’s own allies are not particularly comfortable with this idea either.
 
 So, here’s a proposal:
 
@@ -544,8 +564,12 @@ I hereby confirm that Islam - in particular Qizilbash Shia - is the correct reli
 
 \- *Matthew 10:34-46*
 
+“My dialectical method is, in its foundations, not only different from the Hegelian, but exactly opposite to it. For Hegel, the process of thinking, which he even transforms into an independent subject, under the name of 'the Idea', is the creator of the real world, and the real world is only the external appearance of the idea. With me the reverse is true: the ideal is nothing but the material world reflected in the mind of man, and translated into forms of thought.
+The mystification which the dialectic suffers in Hegel's hands by no means prevents him from being the first to present its general forms of motion in a comprehensive and conscious manner. With him it is standing on its head. It must be inverted, in order to discover the rational kernel within the mystical shell.“
 
+\- *Karl Marx*
 
+![](GermanBrainRot.png)
 
 On the physics part, I want to express my special gratitude to:
 
@@ -558,7 +582,7 @@ On the physics part, I want to express my special gratitude to:
 
 - PBS Space Time for [coming so close to something real, yet getting it totally wrong](https://www.youtube.com/watch?v=1JCRDaa3ehk). The “present foliation” is not only arbitrary, it is, when taken as ontic, a Newtonian fossil. What must be understood about solutions to PDEs is that they are solutions because they *satisfy* them. That is, whatever shape the solution may take, it can not possibly prove that the differential that gave rise to it isn’t real, but on the contrary: it gives it a home.
 
-- Science Asylum whose [graphical explanations with squirrels](https://www.youtube.com/watch?v=5HKH1ZjGutA) I trust more than the formalistic cope that had him walk back his fresh approach to make General Relativity make *sense*. In the future, please stick to your own lesson that we need *better* nonsense, not worse. Keep at it\! What you have been doing is exactly what the revolutionary proletariat desperately needs.
+- Science Asylum whose [graphical explanations with squirrels](https://www.youtube.com/watch?v=5HKH1ZjGutA) I trust more than the formalistic cope that had him walk back his fresh approach to make General Relativity make *sense*. In the future, please stick to your own lesson that we need *better* nonsense, not worse. Keep at it! What you have been doing is exactly what the revolutionary proletariat desperately needs.
 
 **Dedicated to**
 
@@ -574,4 +598,7 @@ On the physics part, I want to express my special gratitude to:
 
 Markus Kasperczyk  
 14th of August 2025 \- 23rd of September (scheduled release)
-Hesse, Germany![](Me.png)
+Hesse, Germany
+![](Me.png)
+![](visionen.png)
+![](Barbarossa2.jpg)
