@@ -158,17 +158,18 @@ Let's see how this plays out!
 
 ---
 
-If you saw a snapshot of a[ tea pot in space](https://en.wikipedia.org/wiki/Russell's_teapot), what would you think where it should go? I don’t know about you, but I would not have any expectation whatsoever, meaning I would have to begin with a totally unconstrained prior on its momentum which is at the moment *nowhere to be found* in nature. Only when information about the position of the tea pot becomes causally available to me would it and I simultaneously *wake up* to each other’s position, while also giving us a hint at who we are, how we got here and where we’re going.
-
-Just look at what my idea does for the Schrödinger’s cat thought experiment. **Caution**: given how sound and yet *novel* my idea appears to be, I *do* take the liberty here to make some philosophical jokes.
+Let us have a look at what my second postulate does for the Schrödinger’s cat thought experiment.
 
 ![](SchrödingerRiddle.jpg) 
-How do we have to complete this causal picture so it makes sense?
+It is *here* that we see most clearly (without formalizing it yet) what my second postulate *means*. Herr Schrödinger keeps checking in on the cat, say, every 30 minutes to see if the cat is still alive or not - until it is dead. But Herr Schrödinger can *only* observe the cat and the quantum contraption that will eventually kill the cat. He can *not* directly observe himself - yet he knows that he is somehow part of the story.
+It is a *riddle*: Herr Schrödinger's task is not only to find out whether the cat is dead and alive; in order to understand the experiment *in its entirety*, he has to come to an understanding *about his own role* in the experiment. And since he can not see himself, he has to infer his own causal impact on the situation *by observing how the situation unfolds*. The situation becomes a *mirror* for him.
+So, how do we have to complete this causal picture so it makes sense?
 
-It’s *YOU*, Schrödinger\! Yes, you.
-
-YOU killed the cat. Just because you put the knife into the hands of the Brutus that is the Cesium atom, this does not absolve you from your causal contribution. Saying “the Cesium atom’s decay caused the cat’s death, I didn’t make it decay\!” is a CHEAP way out of your responsibility. YOU sick sadistic freak set the thought experiment up in such a way that the cat would *have to* die - the only thing you gave out of your hand was the information about when it would happen.  
 ![](SchrödingerSolution.jpg)
+
+It’s *YOU*, Schrödinger! Yes, you.
+
+YOU killed the cat. Just because you put the knife into the hands of the Brutus that is the Cesium atom, this does not absolve you from your causal contribution. Saying “the Cesium atom’s decay caused the cat’s death, I didn’t make it decay!” is a CHEAP way out of your responsibility. YOU sick sadistic freak set the thought experiment up in such a way that the cat would *have to* die - the only thing you gave out of your hand was the information about when it would happen.  
 
 With this, the following mystery also suddenly makes sense:
 
@@ -178,13 +179,9 @@ This last part about the possibility of information being *destroyed* is somethi
 
 ---
 
-Notice how this also gives us a new approach to optics: rather than creating a quantitative representation of the universe, then picking a coordinate system and impose some further math onto the universe, this new approach is rooted in the spirit of phenomenology. And this [*Phenomenology of Spirit*](https://files.libcom.org/files/Georg%20Wilhelm%20Friedrich%20Hegel%20-%20The%20Phenomenology%20of%20Spirit%20(Michael%20Inwood%20Translation).pdf) makes our point of view a more natural inhabitant of the universe that does not need to be told how to engage with it.
-
-Yes: you *will* still need models like, for example, a pinhole camera. But at least, this is now a physical object in the universe like any other.
-
 Just to give some further hints on how to make this more formal for technically more trained folks: This looks very much like some kind of “Quantum Bayesian” apparatus, except that the knowledge of the past we can encode in the wave function is naturally limited by its degrees of freedom, making each entangled set of becomables into the long hypothesized Quantum Cellular Automaton. The formalists who proposed this idea were, however, committed to superdeterminism - and that's not how my picture (which I believe to be more correct) works.
 
-Here's the thing: I don't think the math to make this *fully* formal even exists yet. This is why I refer to my whole idea as a "Galilean" moment (named after Galilean relativity) of Quantum Mechanics rather than a "Newtonian" moment.
+Here's the thing: I don't think the math to make this *fully* formal even exists yet. This is why I refer to my whole idea as a "Galilean" moment (named after Galilean relativity) of Quantum Mechanics rather than a "Newtonian" moment. We basically have to build a new mathematical discipline here, and that is out of scope for this contribution.
 
 But to give some more details on how I *think* it might work is that we can pick an "observer" (=stable set of becomables evolving together) and just keep conditioning our subjective wave function of everything else on interaction records as we encounter them, *while* accounting for our own causal impact by another wave function and set of observables about which we can only "speculate" via (Quantum) Bayesian conditioning.
 
@@ -221,6 +218,8 @@ As Hegelians knew for ages: [he who studies the past is studied by it](https://w
 By the way: I mean this quite literally. We are teasing out an important distinction here: *information* versus *knowledge*. If we follow Rovelli's reasoning, this physical instance of the text that you are reading - no matter if it's represented with ink or bits and pixels - *contains* information about some causally potent principle, the "abstract" text. *Your* engagement with the text reproduces and produces *living* knowledge.
 
 And yes: If we take "causal information = correlation" to its logical conclusion, this means that the evolving *meaning* of the text for different readers is as physical as the momentum of an asteroid floating through space (which, by the way, is also observer-dependent as an observer in the same rest frame would describe the asteroid as stationary). And if you can still take me seriously here, I would hope that this gives you pause when scientists in other disciplines try to explain things in mechanistic terms while ignoring more complex channels of causality.
+
+If you saw a snapshot of a[ tea pot in space](https://en.wikipedia.org/wiki/Russell's_teapot), what would you think where it should go? I don’t know about you, but I would not have any expectation whatsoever, meaning I would have to begin with a totally unconstrained prior on its momentum which is at the moment *nowhere to be found* in nature. Only when information about the position of the tea pot becomes causally available to me would it and I simultaneously *wake up* to each other’s position, while also giving us a hint at who we are, how we got here and where we’re going. It would appear that macroscopic "momentum" of relatively simple objects is just an encoding of the effectively very low dimensional causes driving the motion of the system, and that talk of "momentum" of quantum objects is actually misleading. It's pure causality!
 
 Let me leave the stuff that can be said about this new *real* equivalence principle that already solves a ton of problems and is 90% of the way to something formal with two more *speculations* (and yes, these are now indeed completely wild and free speculations) where else we could take this idea:
 
