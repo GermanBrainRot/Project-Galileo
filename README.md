@@ -224,7 +224,8 @@ If you saw a snapshot of a[ tea pot in space](https://en.wikipedia.org/wiki/Russ
 Let me leave the stuff that can be said about this new *real* equivalence principle that already solves a ton of problems and is 90% of the way to something formal with two more *speculations* (and yes, these are now indeed completely wild and free speculations) where else we could take this idea:
 
 1. In order to “see” the facts, the observer should naturally somehow face towards the past, marching *backwards* into the future, just like the Babylonians correctly thought…  
-2. Notice how in GR, your geodesic future \- if it has anything to do with a center of mass \- would then only betray its existence by the strange motion of objects that you can’t account for by other known physics…
+2. Notice how in GR, your geodesic future - if it has anything to do with a center of mass - would then only betray its existence by the strange motion of objects that you can’t account for by other known physics…
+3. Apropros gravity: GR suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. And with my picture of QM, *this makes sense now* at the quantum level. No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are *real* at interactions and this reality leaves a trace, and outside of interactions, you can not say anything.
 
 A last few things to mention on the conceptual roadblocks in academia that I just bulldozed over.
 
