@@ -97,16 +97,9 @@ All that decoherence does is to quantify to what degree small things enter into 
 
 More philosophically: decoherence is “Hegel's Law” (“quantitative change [here: system size] leads to qualitative change [here: weird absence of facts vs classical facticity]”) of quantum mechanics.
 
-**Counterfactual indefiniteness** - Star Wars already knew the answer:  
+**The Block Universe** - This one also doesn't really need a new interpretation of QM to be debunked, as it arises more out of General Relativity than Quantum Mechanics; the simplest criticism is that solutions to Einstein's field equations are solutions because they *satisfy* the field equations, thereby giving all observers (i.e. infinitesimal regions that experience a flow of time) a way to coexist even though that appears contradictory from a Euclidean/Newtonian point of view.
 
-![](Records.jpg)
-If an item does not appear in our records, it does not exist. 
-
-Or to be more precise: What is *real* is the record of the interaction, that is, the concrete values that observables took when interacting with each other (=measurement). The wave function is needed as an epistemic excess over the facts to explain their further development, making it at the same time ontic. Now, you will say that this is contradictory bullshit, but compared to everything else, it is *good* contradictory bullshit, and I will make it precise and justify it later in this text.
-
-**The Block Universe** - A fairy tale told to intellectual children who mistake the comfort of finding a closed form solution here and there in extremely simple space-times which you can probe forward and backward in whatever way you like for a proof of the actual existence of the past and the future in some eternalist way.
-
-Proponents worship a platonic ideal to which they *know* they usually don't have access anyway, as their formalism gives, for all practical intents and purposes, already only approximate answers in scenarios as trivial as the general Newtonian three body problem.
+Still: if - as my observation suggests - the past is full of facts and the future *actually has not happened yet* for us, that makes the whole notion of the block universe even more sus. Also, just because you have a closed form solution that you can traverse forward and backward in whatever way you like doesn't mean that this is physical. Moreover, closed form solutions fail to exist even in simple cases as the Newtonian (!) general three body problem, so you're taking comfort in the false promise of knowledge when *you know* you don't have access to that nebulous Platonic ideal.
 
 **Superdeterminism** - It depends on what you *mean* by it.
 
@@ -114,45 +107,60 @@ If you take it to mean that there are any laws that allow you to *predict* futur
 
 If you take it to mean that you can, in thought, place yourself at the heavens of the "end of all world lines", I will admit that this works, but *you just made that position up*, and the minute you forget that, you condemn your future self to wrestle with the same kind of nonsense that we are wrestling with in the present.
 
+**Counterfactual indefiniteness** - Star Wars already knew the answer:  
+
+![](Records.jpg)
+If an item does not appear in our records, it does not exist. 
+
+Or to be more precise: What is *factual* is the record of the interaction, that is, the concrete values that observables took when interacting with each other (=measurement). The wave function is needed as an epistemic excess over the facts to explain their further development, making it at the same time ontic.
+
+Now, you will say that this is contradictory bullshit, but if you do say that, I'm about to make you eat your words because there's *another* refinement we need to make to Rovelli's interpretation.
+
 ---
 
-There are a few more huge mysteries of science that can be readily explained with this new framework - but this is where I need to highlight where the simplistic notion I introduced above breaks and how we can refine it to make it *really* bite.
+Rovelli's main point is that world descriptions should be *relative* to the observer. Rovelli himself then correctly concludes from this that the observer is *part* of the universe and we can not describe the universe "from nowhere in particular".
 
-The problem with dumping all the facts into the shared past of two observers is of course that just because they happened, this doesn't mean that we have physical access to this information. To have actual access to them just because they happened would require that the facts in our past could superluminally signal to us.
+Very good, Mr Rovelli! (Again, if this sounds ironic or sarcastic, I apologize - I think this is genuinely good). But how to operationalize this? Alas, Rovelli is a little shy here. He assumes that Quantum Mechanics is basically complete, so we can just use its formal apparatus and maybe derive it from an axiomatic basis that makes sense. The best we get is some notation indicating that we are looking at a world description from a given perspective. That is a little disappointing.
 
-This is *nonsense*.
+**Alright, let's give it a shot then!**
 
-But what we *can* do is to pin down facts as definite values of n-tuples of observables which live in the *infinitesimal* shared past of all interacting observers. That is: different sets of entangled observables coming together to create new facts and evolve in an entangled manner *are* an interaction.
+Let us start with a simple observation: in everyday language, relativity "removes" facts. This is, I think, the trap that Rovelli has fallen into. What relativity *actually* does is that it *refines* our notion of what counts as a fact.
 
-**Notice**: yes, your causal past *is* factual; but your *access* to the past is mediated through interactions.
+In mathematics, this is well known. It is the reason why we pin objects down "up to isomorphism" and work out properties that are invariant under these isomorphisms. In category theory, this concept is known as "universal properties". And in theoretical physics, there is a notion of "gauge invariance" that is related to this.
 
-We should take a moment here to be even more careful. Have we at *any* point given any indication how Rovelli's relativity of description may work from a formal point of view? Well, no. *Neither has Rovelli*. In fact, Rovelli insists that Quantum Mechanics is complete - despite the fact that no one *really* knows how to reconcile it with General Realitivity.
+In the narrow sense, a gauge (here: Yang-Mills gauge) can be thought of as a set of symmetries so that contributions to interactions are redundant and naively summing them all up would over-count. It's basically a very fancy dx in an integral.
 
-Alright, let's give this a shot too then! Let us think this through very carefully.
+In a broader sense though, we come right back to the familiar notion from pure mathematics: if we know how spacetime works, we can change our coordinates - and whatever changes we observe through such a move, we would not interpret them as a change of the physical *facts*. That is: what is a fact is that which is left invariant under all admissible perspective changes.
 
-**Caution**: this is where this publication becomes *considerably* more speculative. I think the motivation is still sound and I *am* aiming at something that *future work* can formalize so we *may* predict something new. But right now, I am trying to give us a better intuition and philosophy.
+Alright, let's do this for Quantum Mechanics then!
 
-Let's continue.
-
-If I am a measurement aparatus, what is measurement *about* from my perspective? Fundamentally, it is about *other* quantum objects, *not* about me. I can not see myself directly! I *can* see what other objects are doing, but I must infer anything about myself from observations of the rest of the world.
+If I am a measurement aparatus, what is measurement *about* from my perspective? Fundamentally, it is about *other* quantum objects, *not* about me. I can not see myself directly! I *can* see what *other* objects are doing, but I must infer anything about myself from observations of the rest of the world. Whatever we do: to get a *complete* picture of reality, we must try to learn not only about the outside world, but also about ourselves and our causal impact *by using the universe as a mirror*.
 
 This suggests that we have to restrict what we mean by "fact" to anything that is true from the point of view of any observer *as we leave this observer out of the picture*.
 
 Here, it also becomes a bit clearer what an "observer" could even be. In essence, it's a set of correlated observables moving from one interaction to the next one. In general, such a "causal principle" can branch apart: just because the N observables all participated in one interaction, this doesn't mean that all N of them will participate in the next interaction - this should actually be more of an exception in general. But under certain circumstances, we end up with self-reinforcing interactions so we can treat all the involved observables as one very complex "macroscopic" observable.
 
-It is *here* that I also need to explain more clearly how I see the wave function. Yes: from the point of view of any given observer, *it is epistemic* and encodes simply what can be known about other observables. *But since our observer is an inhabitant of the universe*, the wave function encodes his "memory" of the past and his potential causal impact on the future.
+Oh, and by the way: in case you didn't notice it, I have answered in what way the wave function is *both* epistemic *and* ontic at the same time now. Which by the way also answers why it seems to difficult to commit to either stance.
 
-So, let me do all this again and summarize the two constraints that we demand:
+Pause here if you need another minute.
 
-1. Real facts live in the causal past that any set of given observers share in common. Access to those facts is granted at the infinitesimal and shared moment before the onto-epistemic (!) wave function returns to unitary evolution. By “shared”, we mean that for observers to interact, the tips of their past light cones need to be aligned.  
+Ready?
 
-2. The wave function growing out of the facts must be invariant as we leave one set of observables and the Hilbert space components that gave rise to it and that it is giving rise to out of the picture.
+Well, if the observer lives *inside* the universe, then *his* epistemic wave function through which he understands the past and predicts the future *must be physical*.
 
-**Notice**: To get back to Rovelli's original proposed symmetry, we have to take *both* constraints together. The literal "facts for me, superposition for thee" symmetry lives mostly in the first observation I made, as I permit this symmetry only when it makes sense in terms of Einstein's Special Relativity. However, the more we think about where the world description of an observer actually lives, the more we are forced to allow an ontic wave function back into the picture - yet in a *totally* different form than ever before.
+![](Facepalm.jpg)
 
-With all of this, Bell’s beables become *becomables* which live in the infinitesimally near past of the moment before "now" *and at the same time* in the "now". The degrees of freedom of the wave function, on the other hand, are where the fact that past interactions have indeed happened gain explanatory power in future interactions. 
+#### Summary So Far
 
-In other words: The wave function is the substrate of *cause and effect* which in different setups constrains things in different ways.
+Let me repeat my two postulates again for clarity.
+
+1. Real facts live in the causal past that any set of given observers share in common. Access to those facts is granted through interactions, and consistency becomes possible because facts are just facts.
+
+2. Whatever counts as physically real must be invariant under perspective changes between different quantum observers which I take to mean any maximal set of correlated observables that participate in two successive interactions.
+
+**Notice**: 
+
+With all of this, Bell’s beables become *becomables* which live at the same time at the point of an interaction and in the onto-epistemic (!) wave functions growing out of interactions.
 
 Let's see how this plays out!
 
@@ -167,9 +175,21 @@ So, how do we have to complete this causal picture so it makes sense?
 
 ![](SchrödingerSolution.jpg)
 
-It’s *YOU*, Schrödinger! Yes, you.
+It’s *YOU*, Herr Schrödinger! Yes, you.
 
-YOU killed the cat. Just because you put the knife into the hands of the Brutus that is the Cesium atom, this does not absolve you from your causal contribution. Saying “the Cesium atom’s decay caused the cat’s death, I didn’t make it decay!” is a CHEAP way out of your responsibility. YOU sick sadistic freak set the thought experiment up in such a way that the cat would *have to* die - the only thing you gave out of your hand was the information about when it would happen.  
+YOU killed the cat. Just because you put the knife into the hands of the Brutus that is the Cesium atom, this does not absolve you from your causal contribution. Saying “the Cesium atom’s decay caused the cat’s death, I didn’t make it decay!” is a CHEAP way out of your responsibility. YOU sick sadistic freak set the thought experiment up in such a way that the cat would *have to* die - the only thing you gave out of your hand was the information about when it would happen.
+
+---
+
+It would appear that we can now make sense of the wave function even at the macroscopic scale. The difference between quantum and macroscopic scales is indeed the extent to which facts are established through a gigantic web of interactions.
+
+Let me point this out with another example.
+
+If you saw a snapshot of a[ tea pot in space](https://en.wikipedia.org/wiki/Russell's_teapot), what would you think where it should go? I don’t know about you, but I would not have any expectation whatsoever, meaning I would have to begin with a totally unconstrained prior on its momentum which is at the moment *nowhere to be found* in nature.
+
+Only when information about the position of the tea pot becomes causally available to me would it and I simultaneously *wake up* to each other’s position, while also giving us a hint at who we are, how we got here and where we’re going. It would appear that macroscopic "momentum" of relatively simple objects is just an encoding of the effectively very low dimensional causes driving the motion of the very dull system, and that talk of "momentum" of quantum objects is actually misleading. At the quantum level, it's pure causality!
+
+In other words: The wave function is the substrate of *cause and effect* which in different setups constrains things in different ways.
 
 With this, the following mystery also suddenly makes sense:
 
@@ -177,25 +197,38 @@ With this, the following mystery also suddenly makes sense:
 
 This last part about the possibility of information being *destroyed* is something that Rovelli toys with as well in his more recent work, but he does not commit to the claim that this necessarily implies time-asymmetry. My causal-past refinement *does* strongly suggest such an asymmetry.
 
----
+## Road To Formalization?
 
-Just to give some further hints on how to make this more formal for technically more trained folks: This looks very much like some kind of “Quantum Bayesian” apparatus, except that the knowledge of the past we can encode in the wave function is naturally limited by its degrees of freedom, making each entangled set of becomables into the long hypothesized Quantum Cellular Automaton. The formalists who proposed this idea were, however, committed to superdeterminism - and that's not how my picture (which I believe to be more correct) works.
+Here's the thing: I don't think the math to make this *fully* formal even exists yet. This is why I refer to my whole contribution as a "Galilean" moment (named after Galilean relativity) of Quantum Mechanics rather than a "Newtonian" moment. We basically have to build a new mathematical discipline here, and that is out of scope for this contribution.
 
-Here's the thing: I don't think the math to make this *fully* formal even exists yet. This is why I refer to my whole idea as a "Galilean" moment (named after Galilean relativity) of Quantum Mechanics rather than a "Newtonian" moment. We basically have to build a new mathematical discipline here, and that is out of scope for this contribution.
+*However*, for any reader who has some respect for my intuitions by now, I'll leave you with some pointers.
 
-But to give some more details on how I *think* it might work is that we can pick an "observer" (=stable set of becomables evolving together) and just keep conditioning our subjective wave function of everything else on interaction records as we encounter them, *while* accounting for our own causal impact by another wave function and set of observables about which we can only "speculate" via (Quantum) Bayesian conditioning.
+1. The first thing I would do to formalize this is to study QBism. This "Quantum Bayesian" school has taken the epistemic interpretation of the wave function to a radical extreme, but in the process, they have done something useful: they gave us a formalism to treat measurement as statistical conditioning.
 
-Notice how in a system where we keep track of *all* becomables, this conditioning on new facts should *not* change the parametric form of the wave function. If we model the entire universe as one big wave function of appropriate dimensionality, just with very little initial correlation (do not try this at home, that becomes computationally untractable *very* quickly), all we ever change through (Quantum) Bayesian conditioning is parameters, not the parametric form of the function.
+2. It would seem to be a little dissatisfying that we now have a working ontology that treats superposition and measurement as equal to some extent *and then* end up with a formalism that treats measurement as a strange extra operation again.
+Here's the good news: in classical probability theory, we already know how to describe statistical processes in such a way that evolution of probabilities can be thought of as an aggregate of probabilistic evolution of each realized outcome. For sophisticated folks, this is the Giry monad (if you don't know what a monad is: don't worry, it's just a monoid in the category of endomorphisms - nothing intimidating). For more hands-on folks, it's for example Markov processes.
+Here's even more good news: It [appears](https://www.youtube.com/watch?v=gEK4-XtMwro) that Jacob Barandes has made some significant progress in bridging the gap between classical statistical processes and quantum processes from a formal angle. I have not yet studies his work in any depth, but this is promising.
+Where it gets tricky: I think if we really want a Giry-style picture, we *will* have to think really hard how to use my second postulate to modify the involved subjective Bayesian conditioning.
 
-Just to remind everyone about the meaning of relativity: the fact that we just "pick" an observer does *not* mean that things are not happening objectively. But from the point of view of each causal principle, it looks like all they do is just refining their mutual knowledge of the past by asking the present world about it, thereby at the same time changing the future - a very Hegelian thought by the way.
+3. Once this extremely challenging second step has been made, baking Special Relativity into the equations should be relatively straightforward given my first postulate.
 
-Let me do this again to make it click on a more philosophical level: We make arbitrary "choices" as long as we are ignorant the consequences of our actions. As we become aware of the consequences through experience, we can not help but make more predictable choices. This is the old Hegelian paradox of [freedom as insight into necessity](https://www.marxists.org/archive/marx/works/1877/anti-duhring/ch09.htm): our freedom of choice *diminishes* as our freedom from ignorance grows. And in the Quantum picture, the development from arbitrariness to clearly predictable patterns (thanks to tons of constraints through relationships) ceases to be merely epistemic and becomes ontic.
+4. As an anti-climactic bonus, I expect General Relativity to be astonishingly simple on a conceptual level (though the technicalities will still provide us with much headache).
+General Relativity suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. And with my picture of Quantum Mechanics, *this makes sense now* at the quantum level. No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are *real* at interactions and this reality leaves a trace, and outside of interactions, you can not say anything. They *carry* their own coordinate system, and they fight it out through interactions.
 
-The wave function is epistemic *for us*, but our Bayesian updates converge against something that does *not* belong to us and is real - *mutual* *agreement*!
+5. Here, it becomes less programmatic and more musing: Maybe it helps to think of our motion through time in a similar manner as the Babylonians did - we face *towards* the past and go *backwards* into the future.
 
----
+6. Notice also: if a great mass is exactly behind your back, the only way you'd know is because of inexplicable motions of objects in your vincinity and even of distant stars...
 
-Another good insight from Hegelian philosophy that I can find *immediately* represented in this picture is that cause and effect seem to somehow change place and thereby become the same thing. Let me unpack this a little.
+
+## Some More Consequences
+
+Let me close the physics part with a few more consequences that follow either "in spirit" or even in a strong sense.
+
+Here's an "in spirit" consequence:
+
+**Free Will -** We make arbitrary "choices" as long as we are ignorant the consequences of our actions. As we become aware of the consequences through experience, we can not help but make more predictable choices. This is the old Hegelian paradox of [freedom as insight into necessity](https://www.marxists.org/archive/marx/works/1877/anti-duhring/ch09.htm): our freedom of choice *diminishes* as our freedom from ignorance grows. And in the Quantum picture, the development from arbitrariness to clearly predictable patterns (thanks to tons of constraints through relationships) ceases to be merely epistemic and becomes ontic.
+
+**Causal Direction -** Another good insight from Hegelian philosophy that I can find *immediately* represented in this picture (and this is, I think, a hard consequence) is that cause and effect seem to somehow change place and thereby become the same thing. Let me unpack this a little.
 
 Right at the point of interaction, there *is no* cause and effect. That’s why we call it an *inter*action to begin with! Every participant is equal - but it doesn’t *look* like it.
 
@@ -206,6 +239,8 @@ From the cat’s point of view, it just sees two sick and evil things conspiring
 In the above, we see some of the “relative facts” that Rovelli was looking for. But they are relative precisely because they’re not facts at all.
 
 It is *only* when we take *shared* knowledge transport through further interactions into account that cause and effect emerge. It is not really the decay of the Cesium atom that kills the cat, but a sequence of interactions - all dutifully recorded by Herr Schrödinger who does nothing to save the cat! - that leads to the release of poison which then kills the cat which too is not an instantaneous process but a ton of interactions.
+
+---
 
 That’s the type of shit that people leaning towards analytic rather than continental philosophy would miss. Their logic is instrumental to solve problems, but it can never stop and ask what the problem even *is*.
 
@@ -218,20 +253,6 @@ As Hegelians knew for ages: [he who studies the past is studied by it](https://w
 By the way: I mean this quite literally. We are teasing out an important distinction here: *information* versus *knowledge*. If we follow Rovelli's reasoning, this physical instance of the text that you are reading - no matter if it's represented with ink or bits and pixels - *contains* information about some causally potent principle, the "abstract" text. *Your* engagement with the text reproduces and produces *living* knowledge.
 
 And yes: If we take "causal information = correlation" to its logical conclusion, this means that the evolving *meaning* of the text for different readers is as physical as the momentum of an asteroid floating through space (which, by the way, is also observer-dependent as an observer in the same rest frame would describe the asteroid as stationary). And if you can still take me seriously here, I would hope that this gives you pause when scientists in other disciplines try to explain things in mechanistic terms while ignoring more complex channels of causality.
-
-If you saw a snapshot of a[ tea pot in space](https://en.wikipedia.org/wiki/Russell's_teapot), what would you think where it should go? I don’t know about you, but I would not have any expectation whatsoever, meaning I would have to begin with a totally unconstrained prior on its momentum which is at the moment *nowhere to be found* in nature. Only when information about the position of the tea pot becomes causally available to me would it and I simultaneously *wake up* to each other’s position, while also giving us a hint at who we are, how we got here and where we’re going. It would appear that macroscopic "momentum" of relatively simple objects is just an encoding of the effectively very low dimensional causes driving the motion of the system, and that talk of "momentum" of quantum objects is actually misleading. It's pure causality!
-
-Let me leave the stuff that can be said about this new *real* equivalence principle that already solves a ton of problems and is 90% of the way to something formal with two more *speculations* (and yes, these are now indeed completely wild and free speculations) where else we could take this idea:
-
-1. In order to “see” the facts, the observer should naturally somehow face towards the past, marching *backwards* into the future, just like the Babylonians correctly thought…  
-2. Notice how in GR, your geodesic future - if it has anything to do with a center of mass - would then only betray its existence by the strange motion of objects that you can’t account for by other known physics…
-3. Apropros gravity: GR suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. And with my picture of QM, *this makes sense now* at the quantum level. No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are *real* at interactions and this reality leaves a trace, and outside of interactions, you can not say anything.
-
-A last few things to mention on the conceptual roadblocks in academia that I just bulldozed over.
-
-There is a popular misconception that relativity removes facts. The reality, however, is that it *refines* them. This is well known even in academia where relativity (or “abstract universality of a placeholder” in Hegelese) has been elevated into the formalistic heavens as a concept called *gauge*. But where the formalist approach is to more or less blindly guess a gauge and see if it matches reality, the natural approach is to have reality constrain the gauge.
-
-By the way: Rovelli himself *did* draw this comparison of his relativity to gauge theory - but so far, he has not ventured into providing us with a proper (i.e. a “Yang-Mills”) gauge, forcing the early Rovelli to not just give up on actual facts, but to philosophically commit against their existence. More recently, Rovelli acknowledges that this is a problem, but his solution remains unsatisfying. My two requirements for becomeables should fix this technical gap, *if* they can be made formal.
 
 ---
 
