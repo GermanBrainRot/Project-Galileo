@@ -12,9 +12,9 @@ In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics
   - [Abstract](#abstract)
   - [Table of Contents](#table-of-contents)
   - [Back to Materialism!](#back-to-materialism)
-      - [Wigner's Friend: Thought Experiment](#wigners-friend-thought-experiment)
-      - [Here's a thought](#heres-a-thought)
-      - [Summary So Far](#summary-so-far)
+      - [Wigner's Friend: A Thought Experiment](#wigners-friend-a-thought-experiment)
+      - [Fixing Rovelli](#fixing-rovelli)
+      - [Summary of my Two Postulates](#summary-of-my-two-postulates)
   - [Road To Formalization?](#road-to-formalization)
   - [Some More Consequences](#some-more-consequences)
   - [Metaphysics - Dead Again!](#metaphysics---dead-again)
@@ -31,7 +31,7 @@ In [1996/97, Carlo Rovelli](https://arxiv.org/pdf/quant-ph/9609002) introduced t
 
 To motivate the idea of observer-dependence, he proposed a thought experiment which has since been [pointed out](https://arxiv.org/pdf/1710.07556) to be a restatement of the old thought experiment of Wigner's Friend. For the sake of clarity, I will therefore motivate Rovelli's idea starting from Wigner's Friend.
 
-#### Wigner's Friend: Thought Experiment
+#### Wigner's Friend: A Thought Experiment
 
 Eugene Wigner, like many physicists, once wondered what exactly constituted a measurement and what the mysterious "collapse of the wave function" during a measurement might mean.
 
@@ -75,7 +75,7 @@ Mr Rovelli, didn't you want to treat the wave function as a book keeping tool ra
 
 Alright, and *this* seems to be the state of the art here! At least as far as I am concerned, the mysteries have not *quite* gone away. If we invoke decoherence to explain the "emergence" of stable facts at the macroscopic level, we would have to say *what* decoheres. So, back to the drawing board!
 
-#### Here's a thought
+#### Fixing Rovelli
 
 What if we went a little further than Rovelli and simply treated facts as facts? That is: *measurement bases be damned*, once an interaction happened, *it is a fact*.
 
@@ -131,6 +131,7 @@ If you take it to mean that you can, in thought, place yourself at the heavens o
 **Counterfactual indefiniteness** - Star Wars already knew the answer:  
 
 ![](Records.jpg)
+
 If an item does not appear in our records, it does not exist. 
 
 Or to be more precise: What is *factual* is the record of the interaction, that is, the concrete values that observables took when interacting with each other (=measurement). The wave function is needed as an epistemic excess over the facts to explain their further development, making it at the same time ontic.
@@ -171,17 +172,15 @@ Well, if the observer lives *inside* the universe, then *his* epistemic wave fun
 
 ![](Facepalm.jpg)
 
-#### Summary So Far
+#### Summary of my Two Postulates
 
 Let me repeat my two postulates again for clarity.
 
-1. Real facts live in the causal past that any set of given observers share in common. Access to those facts is granted through interactions, and consistency becomes possible because facts are just facts.
+1. Real facts live in the causal past that any set of given observers share in common; that is: they live in the past light cone. Access to those facts is granted through interactions, and consistency becomes possible because facts are just facts.
 
-2. Whatever counts as physically real must be invariant under perspective changes between different quantum observers which I take to mean any maximal set of correlated observables that participate in two successive interactions.
+2. Whatever counts as physically real must be invariant under perspective changes between different quantum observers which I take to mean any maximal set of correlated observables that participate in two successive interactions. This includes facts about particles at a given time that have been revealed through interactions (and that would not have meaning outside of the context of an interaction); but what is real *also* includes the wave function associated to each observer which *for them* can be interpreted as the epistemic connective between past and future - the substrate of cause and effect. A *perspective* is a description of the world that "leaves the observer out of the picture", that is, the observer is a set of *hidden variables* that he can only know about via inference over the outside world.
 
-**Notice**: 
-
-With all of this, Bell’s beables become *becomables* which live at the same time at the point of an interaction and in the onto-epistemic (!) wave functions growing out of interactions.
+With all of this, [Bell’s beables](https://arxiv.org/pdf/2305.16194) become *becomables* which live at the same time at the point of an interaction *and* in the onto-epistemic wave functions growing out of interactions.
 
 Let's see how this plays out!
 
@@ -521,9 +520,11 @@ In case you are wondering whether Marxism wants to raise your taxes: Absolutely 
 
     One thing that comes to mind is that the people could conspire in large numbers to attend court sessions and keep an eye on whether justice is indeed spoken in the name of the people, and if not, record and share this and collectively do everything that is legally possible to revise unjust rulings.
 
-    In fact, if we think someone is complicit in actual criminal activity, why not try to have a conversation with them before witnesses and see whether they say something that incriminates them? A lot of social crime happens because people are just never held legally accountable. They hide in their echo chamber, thinking that crime is just normal.
+    In fact, if we think someone is complicit in actual criminal activity, why not try to bait them into a conversation with witnesses? They might happen to say something incriminating. A lot of social crime happens because people are just never held legally accountable. They hide in their echo chamber, thinking that crime is just normal.
     
-    I hope you are aware that some bourgeois constitutions give the people a right to revolt when the rule of law has effectively been abolished; now, one *should* wonder how a people would *establish* that this right is now applicable when the full abolition of the rule of law presupposes that the judges have been captured as well - this is what I am getting at here; and I sincerely hope that we find that the system is actually still working and we only had *a lot* of bad apples, since a revolution is not something that anyone who knows anything about history would *want* to live through. ✅
+    I hope you are aware that some bourgeois constitutions give the people a right to revolt when the rule of law has effectively been abolished; now, one *should* wonder how a people would *establish* that this right is now applicable when the full abolition of the rule of law presupposes that the judges have been captured as well - this is what I am getting at here; and I sincerely hope that we find that the system is actually still working and we only had *a lot* of bad apples, since a revolution is not something that anyone who knows anything about history would *want* to live through.
+    
+    Adherents of Marxism-Leninism would *love* to get proven wrong on their prediction that a *legal* revolution will eventually run into a brick wall. Wouldn't it be great if the promise of a peaceful transition of power actually held true even when the material interests of the establishment are at stake? ✅
 
 11. We do not live in a system, we live in an evolving historic organism. ✅
 
@@ -684,19 +685,26 @@ On the physics part, I want to express my special gratitude to:
 
 **Dedicated to**
 
-**The American Communist Party**  
-**Komitee Basierter Deutscher (Chat Group)**  
+**The American Communist Party**
+
+**Komitee Basierter Deutscher (Chat Group)**
+
 **Darmstadt für Palästina**
-**Palestine itself** 
+
+**Palestine itself**
+
 **People's MAGA**
-**Tung Tung Tung Sahur and**    
+
+**Tung Tung Tung Sahur and**
+
 **Last but not least:**
 
 **MY WIFE.**
 
 **I LOVE YOU.**
 
-Markus Kasperczyk  
+[Markus Kasperczyk](https://x.com/comradeKangaroo)
+
 14th of August 2025 \- 23rd of September (scheduled release)
 Hesse, Germany
 ![](Me.png)
