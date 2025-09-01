@@ -1,10 +1,31 @@
 # The Galilean Moment of Quantum Mechanics
 
-## Back to Materialism!
-
 !!! Attention: This work is still in refinement stage until 23rd or September 2025. After this, I hope I can limit myself to minor revisions and pointers to other contributions. Until then, everything you read is provisional !!!
 
+## Abstract
+
 In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics (RQM) and how it aims at resolving the measurement problem. Once I have explained how I think it works, I will point out an obvious type of criticism and how Rovelli tried to fix the problem. After this, I will show why it does not fix the issues, suggest a *much* better fix and discuss why, in my opinion, academia missed this despite being obvious and how this is just the tip of the iceberg of much more fundamental problems with western society.
+
+## Table of Contents
+
+- [The Galilean Moment of Quantum Mechanics](#the-galilean-moment-of-quantum-mechanics)
+  - [Abstract](#abstract)
+  - [Table of Contents](#table-of-contents)
+  - [Back to Materialism!](#back-to-materialism)
+      - [Wigner's Friend: Thought Experiment](#wigners-friend-thought-experiment)
+      - [Here's a thought](#heres-a-thought)
+      - [Summary So Far](#summary-so-far)
+  - [Road To Formalization?](#road-to-formalization)
+  - [Some More Consequences](#some-more-consequences)
+  - [Metaphysics - Dead Again!](#metaphysics---dead-again)
+  - [The Scientific Struggle](#the-scientific-struggle)
+  - [To the Suffering Peoples of the World](#to-the-suffering-peoples-of-the-world)
+  - [Confirmation of the Prophecy](#confirmation-of-the-prophecy)
+  - [License](#license)
+  - [Acknowledgements](#acknowledgements)
+
+
+## Back to Materialism!
 
 In [1996/97, Carlo Rovelli](https://arxiv.org/pdf/quant-ph/9609002) introduced the idea that descriptions of quantum systems could be observer-dependent. Here, "observer" does not refer to any "conscious" or "macroscopic" entity, but returns to the more sober and naturalistic meaning that the term used to have in physics prior to Quantum Mechanics - and which it still has in Special and General Relativity.
 
@@ -272,47 +293,65 @@ The scientifically accurate name for this theory is:
 
 ![](Dinos.png)
 
-# Metaphysics \- Dead Again\!
+## Metaphysics \- Dead Again\!
 ![](MetaphysBusters.jpg)
 
-I apologize to the polite academic reader whose feelings may get hurt here, but this section can be nothing but a victory lap of the outsiders. I am not here to make any personal attacks, but to expose structural brain rot (not of the [italian](https://italianbrainrotcharacters.com/) kind) which may make outsiders smile and which I want to offer to the academics as a tough pill to swallow for some *serious* soul searching.
+I apologize to the polite academic reader whose feelings may get hurt here, but this section can be nothing but a victory lap of the outsiders.
+
+You may have noticed from my style: I am not some tenured professor or any other kind of creature you find in the holy halls of academia. I am not even a patent clerk, nor do I have a Ph.D. I am just a lowly MES backend developer with an M.Sc., having majored in mathematics (minor subject: computer science).
+
+Yet, working *as an employee* in the private sector and solving real world problems has accustomed me to a different attitude when it comes to communication than tenured ivory tower dwellers. While academia rewards caution, the private sector rewards commitment. When there is a problem and we think we know how to fix it, the right thing to do is to champion this idea and mobilize whatever resources are necessary (our work and the work of colleagues) to find out if our idea is correct or not. And if it ends up being incorrect - completely or slightly - there is no shame in admitting failure and completely rethinking our approach.
+
+In this spirit, I will proceed from the assumption that the thoughts I layed out so far are not only correct, but will lead to the long sought after fixes that the foundations of our physical theories need.
+
+Did Galileo not do something very similar? He did *not* have the full formalism yet - just very good axioms distilled from experiments. They were good enough for Newton to build his formalism on top of them! The only difference would appear to be that Galileo conducted the key experiments himself while I can rely on a lot of experimental data and previous work where academia was somehow just unable to add 2 and 2 together.
+
+You know what? I do not expect academia to accept my work in its current form anytime soon. I expect that other couragous individuals will have to build on top of my work before the timid bureaucrats and gate keepers whose minds are filled with idealistic nonsense will even *consider* risking to engage with my work. Therefore, I will not attempt to flatter academic sensibilities by packaging my work in a form that is easily digestible to the weak of mind. I will instead fully lean into filtering my audience until only like 12 (or so) individuals worldwide remain who have the guts to engage with it and prove it. Academia will have to grudgingly take the L once this additional work (which is too big for one individual with limited resources) has been done.
+
+Is this not also a very Galilean move? Galileo did not phrase his insights in Aristotelian or Ptolemean terms to flatter the pornocracy residing in the Vatican. Nor did he stick to established scholastic bureaucratic language. Instead, he resorted to *polemics*.
+
+Admittedly, he did this *after* he found out that the scholastic universities of his times would not engage. I, instead, will do this in *anticipation* that mainstream academia will not give my work the time of the day anytime soon. There are just *too many* parallels to late medieval Europe, and my personal experience with gate keeping attitudes do *not* make me very optimistic.
+
+**Disclaimer**: I am *not* here to make any personal attacks, but to expose structural brain rot (not of the [italian](https://italianbrainrotcharacters.com/) kind) which may make outsiders smile and which I want to offer to the academics as a tough pill to swallow for some *serious* soul searching. What I have to say *will* make you feel uncomfortable. But science is not *supposed* to be a safe space, it is *supposed* to be about seeking truth. Ego has no place in it. Mine not either by the way! If I am wrong, I am wrong and that's the end of the story. Facts don't care about your feelings.
 
 Let me begin by picking on Mr Neil deGrasse Tyson because \- even though I believe he sincerely means well \- is so beautifully prototypical for having things backward.
 
-Two of his slogans are:
+Two of his slogans/beliefs are:
 
 1. The universe is under no obligation to make sense to you.  
 2. Philosophy has nothing more to contribute to science.
 
-I think in the light of the reception that I anticipate in the long run (\!) for this pamphlet (I am engaging in a social experiment here and champion a prediction), these two ideas should now seem naive, stupid and most importantly: gate keeping.
+I think in the light of the reception that I anticipate in the long run (!) for this pamphlet (I am engaging in a *social* experiment here and champion a prediction), these two ideas should now seem naive, stupid and most importantly: gate keeping.
 
-While, as a Hegelian, I agree with Mr Tyson *wholeheartedly* \- more than he could even imagine \- on his first observation, the *context* in which he keeps bringing this up is just backwards.
+While, as a Hegelian, I agree with Mr Tyson *wholeheartedly* - more than he could even imagine - on his first observation, the *context* in which he keeps bringing this up is just backwards.
 
-Isn’t science under an obligation to make sense *of* the universe, Mr Tyson?
+*Isn’t science under an obligation to make sense **of** the universe*, Mr Tyson?
 
 ![](ChosenOne.jpeg)
 
-Now, you will surely say that this is what you have been trying to do. I also acknowledge your contribution to spreading the mystery and wonder and a lot of insight to the people - *how desperately we need this*!
+Now, you will surely say that this is what you have been trying to do. I also acknowledge your contribution to spreading the mystery and wonder and a lot of insight to the people - *how desperately we need this*! Moreover, I acknowledge that Mr Tyson has clarified that there *is* a free seat at the table for philosophers to contribute meaningfully - and another *huge* portion of the blame goes to philosophers who didn't dare to develop and use their own understanding. "Damn it, Jim, I am a philosopher, not a physicist" - sounds familiar?
 
 But (and this is directed at academia as a whole rather than any specific person) by
 
 - treating academia as a place where some holy scripture gets perpetuated in the exact way it was intended to be received rather than letting it vibe a little  
-- treating experiment as a ritual by which we larp as the long gone giants, repeating exactly the steps by which they plucked insights from the tree of knowledge rather than encouraging the students to refine the question that the teacher asks  
-- encouraging asking our own questions only at specific points in our academic career where it is necessary to satisfy the bureaucracy of titles, and only after years and years of conditioning us almost *not to* ask good questions  
 - treating definitions as gospel rather than recognizing the epistemic interest with which they were formulated and making adaptations when the epistemic interest changes
+- treating experiment as a ritual by which we larp as the long gone giants, repeating exactly the steps by which they plucked insights from the tree of knowledge rather than encouraging the students to refine the question that the teacher asks with their own curiosity
+- encouraging asking our own questions only at specific points in our academic career where it is necessary to satisfy the bureaucracy of titles, and only after years and years of conditioning us - from childhood! - almost *not to* ask good questions  
 - valuing publication quantity over publication quality
 - often hand waving your way through explanations - or even being outright dismissive - whenever a question is uncomfortable given your philosophical commitments
 - thinking that truth can be meaningfully established through the inner-academic circle jerk of "peer review" rather than seeking the tax payers' approval (aka "people's review") for your general direction of inquiry
 
 Academia has become a dead and barren place where groundbreaking discoveries have as little room as in universities at the end of the scholastic era.
 
-To put it extremely bluntly: academia has become a *disgusting* place for people who can smell dishonesty from authority figures.
+**To put it extremely bluntly**: academia has become a *disgusting* place for people who can smell dishonesty from authority figures.
 
-I for one *could not stomach* academic physics. After having *one* good teacher who gave me real confidence that the world could be understood, I took physics as a Leistungskurs (along with mathematics) - a lesson for life, as it would turn out. How readily our teacher would feed us *obvious bullshit* when discussing Quantum Mechanics and how no one except for me would give any *serious* push back (while neglecting to shut up and calculate, which would then hurt my grades) made me stay away from academic physics.
+Do not get me wrong. I have met some *wonderful* people at university! A lot of my professors valued feedback from students. But *only* from students and other academics. It is as if they thought that meritocracy is a system where you can only come into positions of authority by having proven your competence; I for one think that a meritocracy is a system where you have to *keep proving* your competence throughout your entire career, even to lay people. *Notice the difference*?
 
-Mathematics seemed, at the time, to make far more sense which is why I ended up studying it - and believing a lot of bullshit from there (notably Platonism, initially the axiom of choice, and the law of excluded middle, but my first contacts with Marxism, computability theory and constructive mathematics had me reconsider; more intense exposure to Marxism had me throw Platonism out of the window as well - thanks, Friedrich Engels for giving us Anti-Dühring!).
+I for one *could not stomach* the didactics of physics. After having *one* good teacher who gave me real confidence that the world could be understood, I took physics as a Leistungskurs (along with mathematics) - a lesson for life, as it would turn out. How readily our teacher would feed us *obvious bullshit* when discussing Quantum Mechanics and how no one except for me would give any *serious* push back (while neglecting to shut up and calculate, which would then hurt my grades) made me stay away from academic physics.
 
-Just as a small tangent in what way I agree with Mr Tyson on “the universe is under no obligation to make sense to you”, here’s how a Hegelian thinks about *making* sense: the world does not only make no sense, it is in fact *riddled* with nonsense.
+Mathematics seemed, at the time, to make far more sense which is why I ended up studying it - and believing a lot of bullshit from there (notably Platonism, initially the axiom of choice, and the law of excluded middle, but my first contacts with Marxism, computability theory and constructive mathematics had me reconsider; more intense exposure to Marxism had me throw Platonism out of the window as well - thanks, Friedrich Engels for giving us [Anti-Dühring](https://www.marxists.org/archive/marx/works/1877/anti-duhring/)!).
+
+Just as a small tangent *in what way* I agree with Mr Tyson on “the universe is under no obligation to make sense to you”, here’s how a Hegelian thinks about *making* sense *of* the world: the world does not only make no sense, it is in fact *riddled* with nonsense.
 
 Think about it. How is it possible whatsoever that things on Earth fall down, yet on opposite sides of the planet, they fall in opposite directions? I don’t know about you, but I call bullshit on that.
 
@@ -322,7 +361,7 @@ And the nonsense is not even gone through this move! The initial observation is 
 
 Don't believe me that the nonsense is still there? Well, let's ask a jury then. But let the jury be unbiased! So, who could possibly be unbiased in regards to the two propositions "things fall down" and "things fall in opposite directions on opposite sides of the planet"? Ah, that's right: a jury that hears this stuff for the first time in their lives - children! And you know what they'll say? They will say that this does not make sense - because it doesn't. We make sense *of* it!
 
-Our mind is indeed extremely good at rationalizing bullshit - too good for its own good. Because we can also make sense of contradictions where half of the problem comes from you believing something that has been made up \- either by you or by someone else.
+Our mind is indeed extremely good at rationalizing bullshit - too good for its own good. Because we can also make sense of contradictions where half of the problem comes from you believing something that has been made up - either by you or by someone else.
 
 The problem here is *not* that it is nonsense, but that it is nonsense that will only cause further trouble elsewhere in your way of thinking about the world. Rather than reading the room when everyone is telling you that “the flow of time not existing” or observers being “outside of the universe” are bullshit, you start making excuses because you are unwilling to commit to a search for hidden presuppositions.
 
@@ -330,25 +369,21 @@ The amount of nonsense that we bring in from our mind is indeed quite indicative
 
 To conclude this section, I must of course mention that the outsiders/dissidents who never lost contact with their inner child can not be spared from criticism either. And I acknowledge that this criticism can and should also be directed against me insofar as I abstained from formally studying physics because it seemed not to make sense at the time (though, in defense of my honor, I *did* study mathematics).
 
-Just because you *see* that academia seems to systematically breed bureaucratic and barren minds who nevertheless *think* they are better than everyone else because they have jumped through all the right hoops and made a comfy career, this does not mean you can just stay away from authority.
+Just because you *see* that academia seems to systematically breed bureaucratic and barren minds who nevertheless *think* they are better than everyone else because they have jumped through all the right hoops and made a comfy career, this does not mean you can just stay away from the authority of competence.
 
-While academia is today incapable to ask any fundamental questions in the correct and honest way - constantly bringing in bullshit they made up and constantly bringing in their ego - *you* are dishonest as well if you do the same from the opposite end. If you fall into a habit of thinking that just because academia can’t see their own hypocrisy and you can, you have already proven your intellectual superiority and can just make shit up without first acquiring competence, you are simply a mirror image of the academics that you despise, and you deserve to be despised twice as hard by them because they at least proceed from *some* established competence.
+While academia is, in my opinion, today largely incapable to ask any fundamental questions in the correct and honest way - constantly bringing in bullshit they made up and constantly bringing in their ego - *you* are dishonest as well if you do the same from the opposite end. If you fall into a habit of thinking that just because academia can’t see their own hypocrisy and you can, you have already proven your intellectual superiority and can just make shit up without first acquiring competence (what disgusting schizo abomination is [this](https://www.youtube.com/watch?v=VS3h6O-gD8c&list=PLeiyeZGQd2P8cll3bpxzLYoxlAfCabQmh) for example?! Flat Earthers and intelligent design folks are *tame* compared to what is out there), you are simply a mirror image of the academics that you despise, and you deserve to be despised twice as hard by them because they at least proceed from *some* established competence.
 
 And the worst part if you take this idealist attitude? You never get to do anything about the problem you see so clearly while a lot of them can’t see it! This is just sad.
 
-Yes: academia is rotten from the inside, and it *did* take one of us dissidents (in particular, a practical Hegelian) who don’t identify with academia to give it a decisive blow (if you are an early reader, just be patient and share…). Socially, I *am* somewhat of an outsider: a wage worker, nowhere near the levers of power. Admittedly, I am not a blue collar worker, but I have come to appreciate y’alls grounded, down to Earth and pragmatic views on things on the interwebs where I interact with a bunch of you. You are the ones keeping it real, even if that hurts polite society’s feelings!
+Yes: academia is rotten from the inside, and it *did* take one of us dissidents (in particular, a practical Hegelian, a *Marxist*) who don’t identify with academia to give it a decisive blow (if you are an early reader, just be patient, share and if you can, build on this work...). Socially, I *am* somewhat of an outsider: a wage worker, nowhere near the levers of power. Admittedly, I am not a blue collar worker, but I have come to appreciate y’alls grounded, down to Earth and pragmatic views on things on the interwebs where I interact with a bunch of you. You are the ones keeping it real, even if that hurts polite society’s feelings!
 
-But if you do not learn how to handle technical and complicated things on your own, you will remain *dependent* on the academics whose superior attitude you despise, thereby making your criticisms irrelevant. You *will not succeed* in delivering them what their inability to humble themselves demands: humiliation.
+But if you do not learn how to handle technical and complicated things on your own, you will remain *dependent* on the academics (and the corporate overlords they serve) whose superior attitude you despise, thereby making your criticisms irrelevant. You *will not succeed* in delivering them what their inability to humble themselves demands: humiliation.
 
 So, come! learn, friend! There are a lot of cool people on the interwebs who *do* make an effort to be the people’s teachers. They may still have their blind spots, but do it like the Chinese did and just “steal their technology” and then do things with it for which you do not seek their approval.
 
-Blue collar workers - and workers in general - have nothing to lose but the chains of their self-imposed ignorance. They have a universe to conquer!
+Blue collar workers - and workers in general - have nothing to lose but the chains of their self-imposed ignorance. They have a universe to conquer! Sapere aude!
 
-# Some Commentaries
-
-A “critical” reader may object to how I present my insights, and that in order to get the approval of academia, politicians and think tanks, I should bury it all under a whole lot of mathematical formalism. This is like asking Galileo to phrase his insights in Ptolemaic and Aristotelian terms so that the Vatican approves. **I do not give a damn about approval by the gate keepers.**
-
-This text does not even want to be some "great unified theory" of physics. All I want to provide here for physics is some pointers where to find it; in the meantime, I am far more interested in providing a way out of a gigantic philosophical impasse that society has reached.
+## The Scientific Struggle
 
 If you are not completely delusional, you will have noticed that the quantum opium the academic dealers sell to the people nowadays is the mirror image of of a deep rot of western liberalism, and at the same time a mirror image of the medieval church's deal they had with the nobility: "we keep them stupid, you keep them poor".
 
@@ -357,27 +392,37 @@ Cautionary note here: I am *not* saying that a whole lot of academics are cynica
 - do not scorn them just so they can go and build Trotskyist cult followings and claim they are the underdog seeking honest debate only to find closed doors. Do *not* make that claim come true.  
 - do not address their deceptions *solely* behind the doors of peer review which are closed to everyday people since they are not technically versed enough to understand all the nuances.  
 - do not address their deceptions *solely* through reaction videos or other popular commentary, as you are just building your own cult following and the followers of the liars will never even click on your videos.  
-- instead, enter the arena of public debate with them. This *does* mean that you need to steelman their argument first so you know how to refute it correctly, and it does mean that you may get hit with some subtleties that you yourself have overlooked.  
-  I know, I know: the *horror* that you could *learn* something from the bad guys! But it is the only way. Here and there, you may actually find true surprises about a gigantic incorrect assumption that you have never examined.  
-  It also means that you need mastery not only of science, but of social skills - and this is hard. But this is the court of public opinion is the only place where truth ever *could* be established, if only there was real communication rather than echo chambers. If you fumble it and truth loses, well then at least you tried to do something meaningful and you can learn and do better! Do not run from the hard work.
+- instead, enter the arena of public debate with them. This *does* mean that you need to steelman their argument first so you know how to refute it *correctly*, and it does mean that you may get hit with some subtleties that you yourself have overlooked.  
+  I know, I know: the *horror* that you could *learn* something from the bad guys! But it is the *only* way. Here and there, you may actually find true surprises about a gigantic incorrect assumption that you have never examined.  
+  It also means that you need mastery not only of science, but of social skills - and this is hard. But the court of public opinion is the only place where truth ever *could* be established, if only there was real communication rather than echo chambers. If you fumble it and truth loses, well then at least you tried to do something meaningful and you can learn and do better! Do not run from the hard work. In the long run, truth *will* win! But *how* it will win and how long it takes depends on our collective skills in *fighting* for the truth - *including* the extremely uncomfortable work of critically examining our own contribution to the problem.
+
+In short: what I ask people to do is to *actually* commit to public debates. However, this does *not* mean that I agree with the traditional western debate setup. If we politely treat the protagonists of a debate fairly so as to not hurt their feelings, we are treating truth extremely unfairly. Giving completely nonsensical opinions equal attention as well researched opinions amounts to criminal disregard for truth.
+
+We should, therefore, proceed from Mao's take on freedom of opinion: no investigation, no right to speak!
+
+But how does this rhyme with my proposal that we must do public debates? Isn't this *already* giving the enemy space to spread his bullshit? Well, no. *Not* engaging in public debate gives them *far more* space! Therefore, we must apply this lesson *per debate*. Do *not* let the enemy filibuster. If it is clear that they are stretching what they have to say just so their flawed argument gets extra space, *dare to be rude*. Interrupt them and use the reaction of the audience as your cue whether you are right to interrupt. In a sufficiently broad audience, the people do surprisingly well in judging this!
+
+Conversely, how do we prevent that "no investigation, no right to speak" leads to someone with titles and stuff to abuse his authority? Well, once again public opinion does the trick! An audience who *knows* about the logical flaw of appeal to authority *will* not reward such bad faith.
 
 But apropos court of public opinion:   
 Historical precedent suggests that the people themselves must force the issue and (politely) bully the popular researchers they follow into real engagement. I have mapped four groups among the academics, and you can help by expanding it:
 
-- The well meaning ones who unfortunately have developed resentment against the “stupid people”. Shake them up! Be polite, and if they cut you down, step back and come back with fellow travellers. Refine your approach as you go. Force them to live up to the standards their ancestors set.  
+- The well meaning ones who unfortunately have developed resentment against the “stupid commoners“. Shake them up! Be polite, and if they cut you down, step back and come back with fellow travellers. Refine your approach as you go. Force them to live up to the standards their ancestors set.  
 - The black sheep who claim to hold the truth and who claim they are just as excluded as you are. Do nothing, kick the cavalry into action. They will expose who is just a fraud and who might even be *paid* to lie.  
-- Genuinely competent dissidents, raw gems that only wait to be polished. Seek them out and learn from them. Importantly, learn to *distinguish* these from the former.  
+- Genuinely competent dissidents, raw and rare gems that only wait to be polished. Seek them out and learn from them. Importantly, learn to *distinguish* these from the former.
 - Bureaucratic formalists who will, as this process starts to run wild, start to push back against the intrusions of the people into the holy halls of science. Eventually, they must be reformed or cast out of academia.
 
 But notice something interesting about the frauds: they do seem to fall into two subcategories! The confused ones, and the paid ones.
 
 Let us now test if *YOU* are among the confused ones.
 
-Yes! That is right. This text has LIED to you about its true nature! If you think this test is some weird superposition of a Zizekian pop philosophy lecture and some genuinely groundbreaking physical speculation in the raw that I should have polished more, then you are profoundly mistaken. All that has happened is that the text has succeeded in deceiving you - but according to the Shia God, that does *not* make it repulsive in the eyes of The Lord, as the lie was spoken in service of a holy mission.
+Yes! That is right. Did I mention already that this text might be uncomfortable? It will only become *more* uncomfortable now.
+
+In fact, this text has LIED to you about its true nature! If you think this text is some weird superposition of a Zizekian pop philosophy lecture and some genuinely groundbreaking physical speculation in the raw that I should have polished more, then you are *profoundly* mistaken. All that has happened is that the text has succeeded in deceiving you - but according to the Shia God, that does *not* make it repulsive in the eyes of The Lord, as the lie was spoken in service of a holy mission.
 
 I am not come to bring peace, I am come to bring the sword. In the good old Engelsian tradition, this piece of work is a philosophical siege weapon, and all the insights you have gained so far were only the cheese in the trap. You are so predictable, fool! To me as a German materialist hegelian, philosophy is not idle speculation, it is dead serious. In fact, to me, philosophy is WAR.
 
-Now, I have taken your intellect as a hostage, and the true meaning of the scripture is about to reveal itself to you. But only if you are insane enough to find my way of saying things irresistible rather than over the top and repulsive. You who yearn to break out of the dark night of ignorance, whose blood is red and who have a pure heart of gold - you whose soul is thirsty for Absolute Knowledge, leave your sanity behind and be reborn! And those who are not, leave yourselves behind and get lost.
+Now that I have taken your intellect as a hostage, the true meaning of the scripture is about to reveal itself to you. But only if you are insane enough to find my way of saying things irresistible rather than over the top and repulsive. You who yearn to break out of the dark night of ignorance, you whose blood is still red and who have a pure heart of gold - you whose soul is thirsty for Absolute Knowledge, leave your sanity behind and be reborn! And those who are not, leave yourselves behind and get lost.
 
 ![](EngelsZerg.png)
 
@@ -391,7 +436,7 @@ Read the commandment that inexorably follows from my words, and which I can inde
 
 - He who is worthy of my knowledge shall have it and go forth and multiply it.  
 
-- He who is not worthy of my knowledge, his comfy career shall go "shaka, when the walls fell!" And they shall no longer stand in the way of the march of history.
+- He who is not worthy of my knowledge, his comfy career shall go ["shaka, when the walls fell!"](https://www.youtube.com/watch?v=Jk4a79T1U2I) And they shall no longer stand in the way of the march of history.
 
 It is done. You have weighed your heart. *It* was the loose end all along!
 
@@ -405,7 +450,7 @@ Now, let us turn our attention to the black sheep who have been *paid* to lie.
 
 *These* are the ones for whom the analogy of the perverse deal between the nobles and the clergy holds *verbatim*. We *do* have something very very similar to the nobility that had become rotten in the era of absolutism: mega corporations, think tanks and of course: governments and even some courts.
 
-What I have to say here may make many uncomfortable again, but it must be said: The criticism and the proposed solution I am developing here *is* rooted in Marxism-Leninism. But unlike a lot of fraudulent caricatures that are circulating \- both among critics and among self-avowed “Marxists” \- I am ***NOT*** saying any of the following:
+What I have to say here may - *again* - make many uncomfortable, but it must be said: The criticism and the proposed solution I am developing here *is* rooted in Marxism-Leninism. But unlike a lot of fraudulent caricatures that are circulating - both among critics and among self-avowed “Marxists” - I am ***NOT*** saying any of the following:
 
 1. “capitalism bad 😡” ❌  
 2. “government good 😎“ ❌  
@@ -482,11 +527,33 @@ In case you are wondering whether Marxism wants to raise your taxes: Absolutely 
 
 11. We do not live in a system, we live in an evolving historic organism. ✅
 
-12. Communism has made many mistakes in its history, even tragic ones that cost many lives. Do not think I am excusing any of it. That is, I will not excuse mistakes I recognize as *fact* rather than bad things happening under communism and the rest being left to popular imagination.
+12. Communism has made many mistakes in its history, even tragic ones that cost many lives. Do not think I am excusing any of it. That is, I will not excuse mistakes I recognize as *fact* rather than the interpretation of bad things happening under communism being left to popular imagination.
 
     The best way, though, to honor those who lost their lives as people like you and me tried to figure out how to run a society is to study the mistakes as carefully as possible, understand *exactly* where they came from and march *forward* to a world of people’s power, not backward to a world of corporate power.
 
-    So, I will defend Lenin, Stalin, Mao, the meritocratic Kim “dynasty” and Lysenko from criticism that I *know* to be based on prejudice and misinformation. I *will* procede from the assumption that they fought for the working class. And I *will* defend the historic achievements of actually existing socialism. But do not think that I don’t have questions and criticisms of my own. ✅
+    So, I will defend Lenin, Stalin, Mao, the meritocratic Kim “dynasty” and [Lysenko](https://www.youtube.com/watch?v=VsT91tVMXe4) (longer [here](https://youtu.be/zeH5prPfq9w?si=HTwRJSNHdGU13QFn)) from criticism that I *know* to be based on prejudice and misinformation. I *will* procede from the assumption that they fought for the working class. And I *will* defend the historic achievements of actually existing socialism, and I recommend people to engage with the work of Grover Furr and Michael Parenti, as well as the work of the American Communist Party. But do not think that I don’t have questions and criticisms of my own.
+    
+    Notice something interesting though. When it comes to fascism, polite liberal society will (rightfully!) disagree with it - but it is quite normal to be told in private conversations that you *should* read Mein Kampf just to see what a sick and evil man Hitler was.
+    
+    Ok, good! I value this truth-seeking attitude. Always allow for the possibility of being wrong, this forces us to investigate and find out for ourselves - and I *do* think that the correct conclusion here is that Hitler and Mussolini were genuinely evil.
+    
+    But how come we apply this truth seeking attitude only to fascists? I have *never* been told by polite society to read a lot of the main works of communism. One *could* say that there *is* some social encouragement in some parts of society to read the [Manifesto of the Communist Party](https://www.marxists.org/admin/books/manifesto/Manifesto.pdf) or [Capital](https://www.marxists.org/archive/marx/works/1867-c1/). But those are *just* Marx, not all the other guys. Also, the Manifesto is not exactly a scientific work and just states results rather than showing how they were derived; and capital can be totally misread when you don't have a firm grasp on the underlying philosophy.
+    
+    Here's a question for you: *do you even know the titles* of some major works of the communist tradition? No? How come? Is it possible that contrary to Mein Kampf which makes Hitler look even worse, the main texts written by communists may *humanize* them - and that's why they're a social taboo?
+    
+    Well, go and check for yourselves!
+    
+    Marx: [German Ideology](https://www.marxists.org/archive/marx/works/1845/german-ideology/), [Critique of Hegel's Philosophy of Right](https://www.marxists.org/archive/marx/works/1843/critique-hpr/), [The Eighteenth Brumaire of Luis Bonaparte](https://www.marxists.org/archive/marx/works/1852/18th-brumaire/), [Critique of the Gotha Programme](https://www.marxists.org/archive/marx/works/1875/gotha/)
+
+    Engels: [Anti-Dühring](https://www.marxists.org/archive/marx/works/1877/anti-duhring/), [The Origin of The Family, Private Property and The State](https://www.marxists.org/archive/marx/works/1884/origin-family/), [Dialectics of Nature](https://www.marxists.org/archive/marx/works/1883/don/index.htm), [On Authority](https://www.marxists.org/archive/marx/works/1872/10/authority.htm)
+
+    Lenin: [What is to be done](https://www.marxists.org/archive/lenin/works/1901/witbd/), [State and Revolution](https://www.marxists.org/archive/lenin/works/1917/staterev/), [Disruption of Unity Under Cover of Outcries for Unity](https://www.marxists.org/archive/lenin/works/1914/may/x01.htm), [Left Communism - an infantile disorder](https://www.marxists.org/archive/lenin/works/1920/lwc/), [Two Tactics](https://www.marxists.org/archive/lenin/works/1905/tactics/index.htm), [Conspectus of Hegel's Science of Logic](https://www.marxists.org/archive/lenin/works/1914/cons-logic/)
+    
+    Stalin: [Dialectical and Historical Materialism](https://www.marxists.org/reference/archive/stalin/works/1938/09.htm), [Economic Problems of Socialism in the USSR](https://www.marxists.org/reference/archive/stalin/works/1951/economic-problems/index.htm)
+    
+    Mao: [On Contradiction](https://www.marxists.org/reference/archive/mao/selected-works/volume-1/mswv1_17.htm), [Combat Liberalism](https://www.marxists.org/reference/archive/mao/selected-works/volume-2/mswv2_03.htm)
+    
+    Xi Jinping: [The Governance of China](https://archive.org/details/the-governance-of-china/page/n1/mode/2up) ✅
 
 13. Communism is the *opposite* of a utopia. Friedrich Engels extracted from his encyclopedic work *Anti-Dühring* a relatively accessible excerpt called [“Socialism: Utopian and Scientific”](https://www.marxists.org/archive/marx/works/1880/soc-utop/index.htm), but the title should actually be more accurately translated from German as “The Development of Socialism *from* a Utopia *to* a Science”, and I can not recommend it highly enough.  
       
@@ -502,11 +569,13 @@ In case you are wondering whether Marxism wants to raise your taxes: Absolutely 
 
     All that we Marxists are trying to do is to replace bad nonsense with good nonsense. ✅
 
-This last point also clarifies why Marxists uphold the mysterious concept of the "dictatorship of the proletariat": It is *not* arbitrary despotism, but actually just the meritocratic rule of the competent as competence in solving material problems changes hands and gradually ends up in the hands of productive wage workers. It is a *democratic* dictatorship - a situation where the united demos actually holds the monopoly on violence and uses it against idlers. He who does not work (even though he could) shall not eat!
+This last point also clarifies why Marxists uphold the mysterious concept of the "dictatorship of the proletariat": It is *not* arbitrary despotism, but actually just the meritocratic rule of the competent as competence in solving material problems changes hands and gradually ends up in the hands of productive wage workers. It is a *democratic* dictatorship - a situation where the united demos actually holds the monopoly on violence and uses it against idlers.
+
+He who does not work (even though he could) shall not eat!
 
 ![](Ourglass.jpg)
 
-# To the Suffering Peoples of the World
+## To the Suffering Peoples of the World
 
 A text like this, designed to draw a lot of attention (in the *long* run, not the short run) to how we all participate in the worlds’ evils, would be unfinished without addressing the oppressed peoples of the world.
 
@@ -555,7 +624,7 @@ The difference this time would be that you - like all interested parties - shoul
 
 See how diplomacy can be a strength once you understand material interest?
 
-# Confirmation of the Prophecy
+## Confirmation of the Prophecy
 
 The following is part personal statement, part meme, part inside joke. What you make of it is up to you.
 
@@ -563,7 +632,15 @@ I hereby confirm that Islam - in particular Qizilbash Shia - is the correct reli
 
 ![](MoonGorilla.jpeg)
 
-# Acknowledgements
+## License
+
+Given how the West has historically used (or tried to use) the ludicrous notion of "intellectual property" to keep the peoples of the world in the dark, I would like to pay them back in kind.
+
+I hereby prohibit any monetization or military use of any potential practical applications based on this work by western economic or governmental entities, so long as these societies are still clearly bourgeois.
+
+Any other use of my work is permitted so long as any further publications using my insights retain this license condition.
+
+## Acknowledgements
 
 “Enlightenment is man's emergence from his self-imposed immaturity. Immaturity is the inability to use one’s understanding without guidance from another. This immaturity is self-imposed when its cause lies not in lack of understanding, but in lack of resolve and courage to use it without guidance from another. Sapere Aude! 'Have courage to use your own understanding!' - that is the motto of enlightenment.”  
 
@@ -609,8 +686,10 @@ On the physics part, I want to express my special gratitude to:
 
 **The American Communist Party**  
 **Komitee Basierter Deutscher (Chat Group)**  
-**Tung Tung Tung Sahur**  
-**People's MAGA and**   
+**Darmstadt für Palästina**
+**Palestine itself** 
+**People's MAGA**
+**Tung Tung Tung Sahur and**    
 **Last but not least:**
 
 **MY WIFE.**
