@@ -313,15 +313,19 @@ History is patient. Seeking the instant gratification of instant approval is wha
 
 Is this not also a very Galilean move? Galileo did not phrase his insights in Aristotelian or Ptolemean terms to flatter the pornocracy residing in the Vatican. Nor did he stick to established scholastic bureaucratic language. Instead, he resorted to *polemics*.
 
-Admittedly, he did this *after* he found out that the scholastic universities of his times would not engage. I, instead, will do this in *anticipation* that mainstream academia will not give my work the time of the day anytime soon. There are just *too many* parallels to late medieval Europe, and my personal experience with gate keeping attitudes do *not* make me very optimistic.
+Admittedly, he did this *after* he found out that the scholastic universities of his times would not engage. I, instead, will do this in *anticipation* that mainstream academia will not give my work the time of the day anytime soon. There are just *too many* parallels to late medieval Europe, and my personal experience with gate keeping and lazy attitudes do *not* make me very optimistic.
 
 **And let's be real here: if you reject this work *just because* its "ideological baggage" is a little uncomfortable - without providing a critique on the substance -, you weren't taking it seriously to begin with, thereby only proving my point. If you want to *disprove* my point, just stop reading here and build something new on top of my postulates. *I would love to be disproven.***
 
-Still here? Good. The remainder of this text *is* "ideological baggage" that will prepare the reader for the struggles *I think* they will face if they take this work seriously and try to expand it. I hope the readers who followed my advice to just go build something on top of my postulates consider continuing to read here *if* they face the kind of push back that I anticipate (and I am fully prepared to eat my words and adjust my views if resistance is less significant than I expect).
+Still here? Good. The remainder of this text *is* "ideological baggage" that will prepare the reader for the struggles *I think* they will face if they take this work seriously and try to expand it. The equations that my postulates suggest will *not* be spoon fed to you when we literally teach children at school to translate textual problems into math problems. You're a physicists or a mathematician? Then do your damn job. I'm just here to be real with you what you have to expect *if* you do this.
+
+I hope the readers who followed my advice to just go build something on top of my postulates consider continuing to read here *if* they face the kind of push back that I anticipate (and I am fully prepared to eat my words and adjust my views if resistance is less significant than I expect).
+
+Always remember that Newton was not just a genius, he also had *courage*. That's why Kant later wrote that you have to *dare* to use your own understanding.
 
 **Disclaimer**: I am *not* here to make any personal attacks, but to expose structural brain rot (not of the [italian](https://italianbrainrotcharacters.com/) kind) which may make outsiders smile and which I want to offer to the academics as a tough pill to swallow for some *serious* soul searching. What I have to say *will* make you feel uncomfortable. But science is not *supposed* to be a safe space, it is *supposed* to be about seeking truth. Ego has no place in it. Mine not either by the way! If I am wrong, I am wrong and that's the end of the story. Facts don't care about your feelings.
 
-Let me begin by picking on Mr Neil deGrasse Tyson because \- even though I believe he sincerely means well \- is so beautifully prototypical for having things backward.
+Let me begin by picking on Mr Neil deGrasse Tyson because - even though I believe he sincerely means well - is so beautifully prototypical for having things backward.
 
 Two of his slogans/beliefs are:
 
