@@ -6,16 +6,12 @@
 
 In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics (RQM) and how it aims at resolving the measurement problem. Once I have explained how I think it works, I will point out an obvious type of criticism and how Rovelli tried to fix the problem. After this, I will show why it does not fix the issues, suggest a *much* better fix and discuss why, in my opinion, academia missed this despite being obvious and how this is just the tip of the iceberg of much more fundamental problems with western society.
 
-## Note
-
-Western audiences may find it odd to mix physics with political philosophy. For me, political philosophy is just another field of scientific inquiry and historically, the idea of combining the two is not that odd. Also, when the [in-group does it](https://www.youtube.com/watch?v=MDVyGmdayAk), it is not seen as odd either. The western reader is asked to patiently read the text in the linear order intended by the author to maximize the chance of understanding the meaning.
-
 ## Table of Contents
 
 - [The Galilean Moment of Quantum Mechanics](#the-galilean-moment-of-quantum-mechanics)
   - [Abstract](#abstract)
-  - [Note](#note)
   - [Table of Contents](#table-of-contents)
+  - [Note](#note)
   - [Back to Materialism!](#back-to-materialism)
       - [Wigner's Friend: A Thought Experiment](#wigners-friend-a-thought-experiment)
       - [Fixing Rovelli](#fixing-rovelli)
@@ -29,6 +25,9 @@ Western audiences may find it odd to mix physics with political philosophy. For 
   - [Terms of Use](#terms-of-use)
   - [Acknowledgements](#acknowledgements)
 
+## Note
+
+Western audiences may find it odd to mix physics with political philosophy. For me, political philosophy is just another field of scientific inquiry and historically, the idea of combining the two is not that odd. Also, when the [in-group does it](https://www.youtube.com/watch?v=MDVyGmdayAk), it is not seen as odd either. The western reader is asked to patiently read the text in the linear order intended by the author to maximize the chance of understanding the meaning.
 
 ## Back to Materialism!
 
