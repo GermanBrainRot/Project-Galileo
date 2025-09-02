@@ -1,6 +1,6 @@
 # The Galilean Moment of Quantum Mechanics
 
-!!! Attention: This work is still in refinement stage until 23rd or September 2025. After this, I hope I can limit myself to minor revisions and pointers to other contributions. Until then, everything you read is provisional !!!
+!!! Attention: This work is still in refinement stage until 23rd or September 2025. After this, I hope I can limit myself to minor revisions and pointers to other contributions. Until then, everything you read is provisional.
 
 ## Abstract
 
@@ -21,7 +21,7 @@ In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics
   - [The Scientific Struggle](#the-scientific-struggle)
   - [To the Suffering Peoples of the World](#to-the-suffering-peoples-of-the-world)
   - [Confirmation of the Prophecy](#confirmation-of-the-prophecy)
-  - [License](#license)
+  - [Terms of Use](#terms-of-use)
   - [Acknowledgements](#acknowledgements)
 
 
@@ -297,23 +297,23 @@ The scientifically accurate name for this theory is:
 ## Metaphysics \- Dead Again\!
 ![](MetaphysBusters.jpg)
 
-I apologize to the polite academic reader whose feelings may get hurt here, but this section can be nothing but a victory lap of the outsiders.
+I apologize to the polite western academic reader whose feelings may get hurt here, but this section can be nothing but a victory lap of the outsiders (or *insiders* when you are in Chinese academia).
 
-You may have noticed from my style: I am not some tenured professor or any other kind of creature you find in the holy halls of academia. I am not even a patent clerk, nor do I have a Ph.D. I am just a lowly MES backend developer with an M.Sc., having majored in mathematics (minor subject: computer science).
+You may have noticed from my style: I am not some tenured professor or any other kind of creature you find in the holy halls of western academia. I am not even a patent clerk, nor do I have a Ph.D. I am just a lowly MES backend developer from Germany with an M.Sc., having majored in mathematics (minor subject: computer science).
 
-Yet, working *as an employee* in the private sector and solving real world problems has accustomed me to a different attitude when it comes to communication than tenured ivory tower dwellers. While academia rewards caution, the private sector rewards commitment. When there is a problem and we think we know how to fix it, the right thing to do is to champion this idea and mobilize whatever resources are necessary (our work and the work of colleagues) to find out if our idea is correct or not. And if it ends up being incorrect - completely or slightly - there is no shame in admitting failure and completely rethinking our approach.
+Working *as an employee* in the private sector and solving real world problems has accustomed me to a different attitude when it comes to communication than tenured ivory tower dwellers. While western academia rewards caution, the private sector rewards commitment. When there is a problem and we think we know how to fix it, the right thing to do is to champion this idea and mobilize whatever resources are necessary (our work and the work of colleagues) to find out if our idea is correct or not. And if it ends up being incorrect - completely or slightly - there is no shame in admitting failure and completely rethinking our approach.
 
 In this spirit, I will proceed from the assumption that the thoughts I layed out so far are not only correct, but will lead to the long sought after fixes that the foundations of our physical theories need.
 
 Did Galileo not do something very similar? He did *not* have the full formalism yet - just very good axioms distilled from experiments. They were good enough for Newton to build his formalism on top of them! The only difference would appear to be that Galileo conducted the key experiments himself while I can rely on a lot of experimental data and previous work where academia was somehow just unable to add 2 and 2 together.
 
-You know what? I do not expect academia to accept my work in its current form anytime soon. I expect that other couragous individuals will have to build on top of my work before the timid bureaucrats and gate keepers whose minds are filled with idealistic nonsense will even *consider* risking to engage with my work. Therefore, I will not attempt to flatter academic sensibilities by packaging my work in a form that is easily digestible to the weak of mind. I will instead fully lean into filtering my audience until only like 12 (or so) individuals worldwide remain who have the guts to engage with it in its current form with a lot of "lose ends", prove it and reboot a holistic mass educational culture with it. Academia will have to grudgingly take the L once this additional work (which is too big for one individual with limited resources) has been done.
+You know what? I do not expect western academia to accept my work in its current form anytime soon. I expect that other couragous individuals will have to build on top of my work before the timid bureaucrats and gate keepers whose minds are filled with idealistic nonsense will even *consider* risking to engage with my work. Therefore, I will not attempt to flatter western academic sensibilities by packaging my work in a form that is easily digestible to the weak of mind. I will instead fully lean into filtering my audience until only like 12 (caution: hyperbole) individuals worldwide remain who have the guts to engage with it in its current form with a lot of "lose ends", prove it and reboot a holistic mass educational culture with it. Western academia will have to grudgingly take the L once this additional work (which is too big for one individual with limited resources) has been done.
 
 History is patient. Seeking the instant gratification of instant approval is what keeps a drug addict in his behavioral chains.
 
 Is this not also a very Galilean move? Galileo did not phrase his insights in Aristotelian or Ptolemean terms to flatter the pornocracy residing in the Vatican. Nor did he stick to established scholastic bureaucratic language. Instead, he resorted to *polemics*.
 
-Admittedly, he did this *after* he found out that the scholastic universities of his times would not engage. I, instead, will do this in *anticipation* that mainstream academia will not give my work the time of the day anytime soon. There are just *too many* parallels to late medieval Europe, and my personal experience with gate keeping and lazy attitudes do *not* make me very optimistic.
+Admittedly, he did this *after* he found out that the scholastic universities of his times would not engage. I, instead, will do this in *anticipation* that western mainstream academia will not give my work the time of the day anytime soon. There are just *too many* parallels to late medieval Europe, and my personal experience with gate keeping and lazy attitudes do *not* make me very optimistic.
 
 **And let's be real here: if you reject this work *just because* its "ideological baggage" is a little uncomfortable - without providing a critique on the substance -, you weren't taking it seriously to begin with, thereby only proving my point. If you want to *disprove* my point, just stop reading here and build something new on top of my postulates. *I would love to be disproven.***
 
@@ -323,7 +323,13 @@ I hope the readers who followed my advice to just go build something on top of m
 
 Always remember that Newton was not just a genius, he also had *courage*. That's why Kant later wrote that you have to *dare* to use your own understanding.
 
-**Disclaimer**: I am *not* here to make any personal attacks, but to expose structural brain rot (not of the [italian](https://italianbrainrotcharacters.com/) kind) which may make outsiders smile and which I want to offer to the academics as a tough pill to swallow for some *serious* soul searching. What I have to say *will* make you feel uncomfortable. But science is not *supposed* to be a safe space, it is *supposed* to be about seeking truth. Ego has no place in it. Mine not either by the way! If I am wrong, I am wrong and that's the end of the story. Facts don't care about your feelings.
+**And in case that the brilliant minds that are at the same time courageous are too rare in the West at this point, I would *love* for Chinese, North Korean or Burkinabe researchers to prove the superiority of revolutionary education and research systems. If my contribution is as good as I think it is, this is international socialism's chance to decisively win the battle of ideas.**
+
+**Disclaimer 1**: I am *not* here to make any personal attacks, but to expose structural brain rot (not of the [italian](https://italianbrainrotcharacters.com/) kind) which I want to offer to the western academics as a tough pill to swallow for some *serious* soul searching. What I have to say *will* make you feel uncomfortable. But science is not *supposed* to be a safe space, it is *supposed* to be about seeking truth. Ego has no place in it. Mine not either by the way! If I am wrong, I am wrong and that's the end of the story. Facts don't care about your feelings. Or mine.
+
+**Disclaimer 2**: Going forward, when I say terms like "academia", "establishment", "insiders", "outsiders" and so on, I am referring to *western* society and those at the top/bottom of the old unipolar order that is in the process of falling apart. When I have something to say about BRICS, SCO or non-aligned countries (whom I am generally sympathetic towards), I will explicitly say so.
+
+With that in mind, let us continue.
 
 Let me begin by picking on Mr Neil deGrasse Tyson because - even though I believe he sincerely means well - is so beautifully prototypical for having things backward.
 
@@ -396,7 +402,7 @@ Blue collar workers - and workers in general - have nothing to lose but the chai
 
 ## The Scientific Struggle
 
-If you are not completely delusional, you will have noticed that the quantum opium the academic dealers sell to the people nowadays is the mirror image of of a deep rot of western liberalism, and at the same time a mirror image of the medieval church's deal they had with the nobility: "we keep them stupid, you keep them poor".
+If you are not completely delusional, you will have noticed that the quantum opium the western academic dealers sell to the people nowadays is the mirror image of of a deep rot of western liberalism, and at the same time a mirror image of the medieval church's deal they had with the nobility: "we keep them stupid, you keep them poor".
 
 Cautionary note here: I am *not* saying that a whole lot of academics are cynical like this. I think some of them *do* exist, and academia would do well to *expose* their own black sheep. That is: 
 
@@ -427,17 +433,17 @@ But notice something interesting about the frauds: they do seem to fall into two
 
 Let us now test if *YOU* are among the confused ones.
 
-Yes! That is right. Did I mention already that this text might be uncomfortable? It will only become *more* uncomfortable now.
+Yes! That is right. Did I mention already that this text might be uncomfortable? It will only become *more* uncomfortable now. That is: for *western* readers. I would hope that Chinese readers will just smile at this - provided they are willing to entertain a little cultural exchange.
 
 In fact, this text has LIED to you about its true nature! If you think this text is some weird superposition of a Zizekian pop philosophy lecture and some genuinely groundbreaking physical speculation in the raw that I should have polished more, then you are *profoundly* mistaken. All that has happened is that the text has succeeded in deceiving you - but according to the Shia God, that does *not* make it repulsive in the eyes of The Lord, as the lie was spoken in service of a holy mission.
 
-I am not come to bring peace, I am come to bring the sword. In the good old Engelsian tradition, this piece of work is a philosophical siege weapon, and all the insights you have gained so far were only the cheese in the trap. You are so predictable, fool! To me as a German materialist hegelian, philosophy is not idle speculation, it is dead serious. In fact, to me, philosophy is WAR.
+I am not come to bring peace, I am come to bring the sword. In the good old tradition of Engels' contributions to philosophy of science, this piece of work is a philosophical siege weapon, and all the insights you have gained so far were only the cheese in the trap. You are so predictable, fool! To me as a German materialist hegelian, philosophy is not idle speculation, it is dead serious. In fact, to me, philosophy is WAR.
 
 Now that I have taken your intellect as a hostage, the true meaning of the scripture is about to reveal itself to you. But only if you are insane enough to find my way of saying things irresistible rather than over the top and repulsive. You who yearn to break out of the dark night of ignorance, you whose blood is still red and who have a pure heart of gold - you whose soul is thirsty for Absolute Knowledge, leave your sanity behind and be reborn! And those who are not, leave yourselves behind and get lost.
 
 ![](EngelsZerg.png)
 
-Here is a riddle for you: why would the formalists treat themselves as such utter idiots that they couldn't possibly build something new and better on the basis of a work with a ton of “loose ends” - which is the stuff that makes a work productive to begin with?
+Here is a riddle for you: why would the western formalists treat themselves as such utter idiots that they couldn't possibly build something new and better on the basis of a work with a ton of “loose ends” - which is the stuff that makes a work productive to begin with?
 
 Answer: well, if it walks like an idiot and talks like an idiot - don't let this confuse you, it *is* an idiot! And why are they idiots? Because they treat themselves as idiots! See? It is *dialectical*.
 
@@ -451,7 +457,7 @@ Read the commandment that inexorably follows from my words, and which I can inde
 
 It is done. You have weighed your heart. *It* was the loose end all along!
 
-Those of you who have passed his test have *made up their mind*. You who seek to collectively expand their practical and theoretical competence and share it are the salt of the Earth, the vanguard of the *proletariat*, and you shall therefore *inherit* the world.
+Those of you who have passed his test have *made up* their mind. You who seek to collectively expand their practical and theoretical competence and share it are the salt of the Earth, the vanguard of the *proletariat*, and you shall therefore *inherit* the world.
 
 And to those of you who find my work to be *evil* and want to coordinate-transform it out of the universe: history will be our judge; we shall see which one of us has built on sand and who has built his church on a rock solid foundation!
 
@@ -459,9 +465,9 @@ And to those of you who find my work to be *evil* and want to coordinate-transfo
 
 Now, let us turn our attention to the black sheep who have been *paid* to lie.
 
-*These* are the ones for whom the analogy of the perverse deal between the nobles and the clergy holds *verbatim*. We *do* have something very very similar to the nobility that had become rotten in the era of absolutism: mega corporations, think tanks and of course: governments and even some courts.
+*These* are the ones for whom the analogy of the perverse deal between the nobles and the clergy holds *verbatim*. We *do* have something very very similar to the nobility that had become rotten in the era of absolutism: mega corporations, think tanks and of course: western governments and even some courts.
 
-What I have to say here may - *again* - make many uncomfortable, but it must be said: The criticism and the proposed solution I am developing here *is* rooted in Marxism-Leninism. But unlike a lot of fraudulent caricatures that are circulating - both among critics and among self-avowed “Marxists” - I am ***NOT*** saying any of the following:
+What I have to say here may - *again* - make many uncomfortable, but it must be said: The criticism and the proposed solution I am developing here *is* rooted in Marxism-Leninism. But unlike a lot of fraudulent caricatures that are circulating - both among critics and among self-avowed western “Marxists” - I am ***NOT*** saying any of the following:
 
 1. “capitalism bad 😡” ❌  
 2. “government good 😎“ ❌  
@@ -488,17 +494,17 @@ I ***AM*** saying:
    Today, in 2025, western capitalism is far from the only game in town - but Wall Street and the governments they own - USA and her allies - still think it’s 1991. Consequently, they stumble from one catastrophe into the next which is very dangerous if the people allow it to continue.  ✅
 
 2.  Governments arise out of social cataclysms and are shaped by these cataclysms. Whatever class can seize power usually gives governments a form that is appropriate for their needs and then sell this to the people as the only form that correctly represents the public interest. And since at the time of the cataclysm, the people don’t have the conceptual apparatus to think critically about what they are being told, they go along with it.
-When we emerge on the other side of the social cataclysm that is so clearly taking shape right now, there *will* be a new government that suits the needs of the working class. Marxism does *not* prescribe any specific form of government - this is in fact one if its strengths. Instead, we emphasize precisely how a government is shaped by the day to day problems it had and has to solve - a process that does not care about moral or juristic axioms and can only be influenced positively through general popular awareness of historic precedent, studied from all sides.
+When we emerge on the other side of the social cataclysm that is so clearly taking shape right now, there *will* be a new government that suits the needs of the working class. Marxism does *not* prescribe any specific form of government - this is in fact one if its strengths. Instead, we emphasize precisely how a government is shaped by the day to day problems it had and has to solve - a process that does not care about moral or juristic axioms that apply to dot-sized societies in a vacuum, and that can only be influenced positively through general popular awareness of historic precedent, studied from all sides.
 In case you are wondering whether Marxism wants to raise your taxes: Absolutely not! Did you know Karl Marx was charged during the 1848/49 revolution with incitement of a tax revolt via the Rheinische Zeitung? Marx was of the opinion that taxation breeds an excess of bureaucracy. *Some* bureaucracy is needed to keep a society going, but we want it to be efficient and lean, not bloated. A bloated bureaucracy is where critical thinking and all hope dies.  ✅
 
 3. See below  
 4. *CRITICIZE* authority! Accept that authority exists for a reason. All that authority encodes is *competence*. However, society is constantly changing and solutions that used to work may not be applicable anymore. Question nonsense! ✅
 
-5. Markets have existed since the rise of civilization and will continue to exist for a long time. They are a spontaneous way of people to come together and solve problems. Marxists *acknowledge* that, which is why to a real Marxist, the old story propagated by the likes of Milton Friedman that “nobody knows how to make a pencil” (pointing to market forces as causal agent) looked awfully silly to us. He’s making our point!
+5. Markets have existed since the rise of civilization and will continue to exist for a long time. They are a spontaneous way of people to come together and solve problems. Marxists *acknowledge* that, which is why to a real Marxist, the old story propagated by the likes of Milton Friedman that “nobody knows how to make a pencil” (pointing to market forces as causal agent) looked awfully silly to us. He’s not disproving us, he's making our point!
 
    But markets are not all there is! Marxism has been accused of trying to build a society run by “mastermind bureaucrats”, or a “command economy”. Nothing could be further from the truth!
 
-   In fact, we think it is *markets* that produce command economies - by turning successful businesses into monopolies which today have adapted to the shock of anti-trust laws or critical media (ha ha, that was a LONG time ago) by rigging the system. Also, politicians have not woken up one day and thought that enshrining shareholder value into normative law is a good idea.
+   In fact, we think it is *markets* that produce command economies - by turning successful businesses into monopolies and cartels which today have adapted to the shock of anti-trust laws or critical media (ha ha, that was a LONG time ago) by rigging the system. Also, politicians have not woken up one day and thought that enshrining shareholder value into normative law is a good idea.
 
    I am not saying that people in institutions are directly “bought” in an illegal way - at least not all of them - but one should wonder whether people earn promotions because they pose no threat to established authorities. It’s earned authority turning into unearned authority which the billionaires have fought long and hard to make inheritable so their clueless kids can have a luxury life with no work.
 
@@ -506,7 +512,7 @@ In case you are wondering whether Marxism wants to raise your taxes: Absolutely 
 
    Do I know how to make a car? No, not a clue. I have never even seen my software in action, I’m almost permanently in the home office. But my software helps *the system* to understand this.
 
-   So, what do we do about big corporations? Smash them into pieces? Well, we could try to do that again - this did make capitalism great again once upon a time. But we have seen that it is difficult to keep it this way. I think big corporations should be made to serve the interests of the people. They *collectively* know how to run things - and they also know what they need and want. ✅
+   So, what do we do about big corporations? Smash them into pieces? Well, we could try to do that again - this did make capitalism great again once upon a time. But we have seen that it is difficult to keep it this way. I think big corporations should be made to serve the interests of the people. The people *collectively* know how to run things - and they also know what they need and want. ✅
 
 6. Be thankful for that which has given you life, and appreciate the monumental gift of giving life. Tradition too exists for a reason, it has competence! But as always, do try to understand where it comes from and check if the underlying assumptions still apply. Critically modify as you go. ✅
 
@@ -528,31 +534,29 @@ In case you are wondering whether Marxism wants to raise your taxes: Absolutely 
 
 10. We must obey the law to the letter, as any judge will tell us. The law is the basis on which most of us are able to solve problems to begin with - they give us predictability. Committing crime will not bring us change, it will only get us in trouble - which we then deserve.
 
-    This does *not* mean, however, that we need approval of the authorities to use and develop our own collective competence to deal with adversity and solve our problems.
-
-    One thing that comes to mind is that the people could conspire in large numbers to attend court sessions and keep an eye on whether justice is indeed spoken in the name of the people, and if not, record and share this and collectively do everything that is legally possible to revise unjust rulings.
-
-    In fact, if we think someone is complicit in actual criminal activity, why not try to bait them into a conversation with witnesses? They might happen to say something incriminating. A lot of social crime happens because people are just never held legally accountable. They hide in their echo chamber, thinking that crime is just normal.
+    This does *not* mean, however, that we need approval from the authorities to use and develop our own collective competence to deal with adversity and solve our problems.
     
-    I hope you are aware that some bourgeois constitutions give the people a right to revolt when the rule of law has effectively been abolished; now, one *should* wonder how a people would *establish* that this right is now applicable when the full abolition of the rule of law presupposes that the judges have been captured as well - this is what I am getting at here; and I sincerely hope that we find that the system is actually still working and we only had *a lot* of bad apples, since a revolution is not something that anyone who knows anything about history would *want* to live through.
+    I hope you are aware that some bourgeois constitutions give the people a right to revolt when the rule of law has effectively been abolished; now, one *should* wonder how a people would *establish* that this right is now applicable when the full abolition of the rule of law presupposes that the judges have been captured as well - this is what I am getting at here:
     
-    Adherents of Marxism-Leninism would *love* to get proven wrong on their prediction that a *legal* revolution will eventually run into a brick wall. Wouldn't it be great if the promise of a peaceful transition of power actually held true even when the material interests of the establishment are at stake? ✅
+    We need to find a way to reconstruct a shared public opinion that speaks with one voice rather than fractured echo chambers - and that voice must emerge through tough and honest discourse. I sincerely hope that in the process, we find that the system is actually still working and we only had *a lot* of bad apples, since a revolution is not something that anyone who knows anything about history would *want* to live through. Hence, the Chinese *curse*: "may you live in interesting times."
+    
+    Adherents of Marxism-Leninism would love nothing more than to get proven wrong on their prediction that a *legal* revolution will eventually run into a brick wall. Wouldn't it be great if the promise of a peaceful democratic transition of power actually held true even when the material interests of the establishment are at stake? ✅
 
-11. We do not live in a system, we live in an evolving historic organism. ✅
+11. We do not live in a system, we live in an living and evolving historic organism. ✅
 
 12. Communism has made many mistakes in its history, even tragic ones that cost many lives. Do not think I am excusing any of it. That is, I will not excuse mistakes I recognize as *fact* rather than the interpretation of bad things happening under communism being left to popular imagination.
 
     The best way, though, to honor those who lost their lives as people like you and me tried to figure out how to run a society is to study the mistakes as carefully as possible, understand *exactly* where they came from and march *forward* to a world of people’s power, not backward to a world of corporate power.
 
-    So, I will defend Lenin, Stalin, Mao, the meritocratic Kim “dynasty” and [Lysenko](https://www.youtube.com/watch?v=VsT91tVMXe4) (longer [here](https://youtu.be/zeH5prPfq9w?si=HTwRJSNHdGU13QFn)) from criticism that I *know* to be based on prejudice and misinformation. I *will* procede from the assumption that they fought for the working class. And I *will* defend the historic achievements of actually existing socialism, and I recommend people to engage with the work of Grover Furr and Michael Parenti, as well as the work of the American Communist Party. But do not think that I don’t have questions and criticisms of my own.
+    So, I *will* defend Lenin, Stalin, Mao, the meritocratic Kim “dynasty” and [Lysenko](https://www.youtube.com/watch?v=VsT91tVMXe4) (longer [here](https://youtu.be/zeH5prPfq9w?si=HTwRJSNHdGU13QFn)) from criticism that I *know* to be based on prejudice and misinformation. I *will* procede from the assumption that they fought for the working class, not their own power. And I *will* defend the historic achievements of actually existing socialism, and I recommend people to engage with the work of Grover Furr and Michael Parenti, as well as the work of the American Communist Party. But do not think that I don’t have questions and criticisms of my own.
     
     Notice something interesting though. When it comes to fascism, polite liberal society will (rightfully!) disagree with it - but it is quite normal to be told in private conversations that you *should* read Mein Kampf just to see what a sick and evil man Hitler was.
     
     Ok, good! I value this truth-seeking attitude. Always allow for the possibility of being wrong, this forces us to investigate and find out for ourselves - and I *do* think that the correct conclusion here is that Hitler and Mussolini were genuinely evil.
     
-    But how come we apply this truth seeking attitude only to fascists? I have *never* been told by polite society to read a lot of the main works of communism. One *could* say that there *is* some social encouragement in some parts of society to read the [Manifesto of the Communist Party](https://www.marxists.org/admin/books/manifesto/Manifesto.pdf) or [Capital](https://www.marxists.org/archive/marx/works/1867-c1/). But those are *just* Marx, not all the other guys. Also, the Manifesto is not exactly a scientific work and just states results rather than showing how they were derived; and capital can be totally misread when you don't have a firm grasp on the underlying philosophy.
+    But how come we apply this truth seeking attitude only to fascists? I have *never* been told by polite society to read a lot of the main works of communism. One *could* say that there *is* some social encouragement in some parts of society to read the [Manifesto of the Communist Party](https://www.marxists.org/admin/books/manifesto/Manifesto.pdf) or [Capital](https://www.marxists.org/archive/marx/works/1867-c1/). But those are *just* Marx, not all the other guys. Also, the Manifesto is not exactly a scientific work and just states results rather than showing how they were derived; and capital can be totally misread in a metaphysical way when you don't have a firm grasp on the underlying philosophy.
     
-    Here's a question for you: *do you even know the titles* of some major works of the communist tradition? No? How come? Is it possible that contrary to Mein Kampf which makes Hitler look even worse, the main texts written by communists may *humanize* them - and that's why they're a social taboo?
+    Here's a question for you: *do you even know the titles* of some major works of the communist tradition? No? How come? Is it possible that contrary to Mein Kampf which makes Hitler look even worse, the main texts written by communists may *humanize* them - and *that is why* they're a social taboo?
     
     Well, go and check for yourselves!
     
@@ -594,25 +598,25 @@ A text like this, designed to draw a lot of attention (in the *long* run, not th
 
 Blessed be all the dead and dying Palestinian children, women and men whose suffering weighs heavily on all of us who have not lost their humanity. Your suffering makes it *criminal* for us to rest even one minute to search for *any* meaningful way to end the horrors. Our failure to collectively understand our own role in the crime is what makes us complicit. Shame on us!
 
-Blessed be the hostages taken by the armed forces representing the Palestinian people, Hamas, who desperately reached for a bargaining chip to negotiate for the release of Palestinian hostages held by Israel. A lot of the hostages taken by Hamas have by now been killed through the actions of the IDF.
+Blessed be the hostages taken by the armed forces representing the Palestinian people, Hamas. Hamas desperately reached for a bargaining chip to negotiate for the release of Palestinian hostages held by Israel. A lot of the hostages taken by Hamas have by now been killed through the actions of the IDF.
 
-Cursed by a society that still pretends to be the innocent victim of the Nazis, when today, they are Goliath beating up a much weaker David. But make no mistake: your strength is *very* temporary, and it is in fact not your own. When your western friends no longer back you, you are doomed.
+Cursed be a society that still pretends to be the innocent victim of the Nazis, when today, they are Goliath beating up a much weaker David. But make no mistake: your strength is *very* temporary, and it is in fact not your own. When your western friends no longer back you, you are doomed.
 
 Blessed be Ansar Allah and Hezbollah, the only true friends of Palestine.
 
 Cursed be ISIS who curiously only ever seem to terrorize Muslims, but never Israel.
 
-May all the people who fell for the CIA/NED’s color revolution scam earn forgiveness for their lack of consideration of not thinking about *who* is replacing your ancien régime. Libya, Syria and Somalia - you too can work your way out of your suffering.
+May all the people who fell for the CIA/NED’s color revolution scam earn forgiveness for their lack of consideration of *who* is replacing your ancien régime. Libya, Syria and Somalia - you too can work your way out of your suffering.
 
 May the brave people of Burkina Faso be successful in their resistance against western sponsored terrorists. May nobody fool you into believing that the French were there to protect you from terrorists they themselves put there! And may all attempts of western governments to destabilize neighboring countries and push them into a war against you fail.
 
 May Africa in general succeed in its march towards freedom and unity in a multipolar and harmonious world.
 
-Blessed be everyone who died in the completely unnecessary War between Russia and Ukraine. The West, which is under the illusion that it’s 1991, has brought you into an impossible situation, and the generally proactive character that characterized Russia’s defensive geostrategic posture at least since the Napoleonic wars and can therefore not be reduced to a “system Putin” or the person Putin himself has forced the matter.
+Mourned be everyone who died in the completely unnecessary War between Russia and Ukraine. The West, which is under the illusion that it’s 1991, has brought you into an impossible situation, and the generally proactive character that characterized Russia’s defensive geostrategic posture at least since the Napoleonic wars and can therefore not be reduced to a “system Putin” or the person Putin himself has forced the matter.
 
 Blessed be the Democratic People’s Republic of Korea - the most LIED about country in the entire world.
 
-May China continue to develop and solve all the problems facing it. You are the beacon of hope that the world needs today. But do not lower your guard! Just because you succeeded in learning from the enemy and are on the brink of surpassing him, that does not mean that he is anything other than a jealous enemy. Distrust intellectuals in your country who dismiss the idea of the Thucydides Trap on the basis that China is so peace loving, when they should be pointing out that the thesis of this book is projection. The danger of war is real, but the culprit is the declining and jealous empire of extraction, not the rising “empire” of production.
+May China continue to develop and solve all the problems facing it. You are the beacon of hope that the world needs today. May you not fall into the error of lowering your guard! Just because you succeeded in learning from the enemy and are on the brink of surpassing him, that does not mean that he is anything other than a jealous enemy. I hope you keep an eye on western intellectuals coming to your country and asking you to dismiss the idea of the Thucydides Trap on the basis that China is so peace loving, when they should be pointing out that the thesis of this western book is pure projection. The danger of war is real, but the culprit is the declining and jealous empire of extraction, not the rising “empire” of production.
 
 And may the deeply rotten West - ruled by Wall Street and their cronies - overcome its structural need to unilaterally impose its will on the world rather than making a serious effort to understand the world.
 
@@ -624,34 +628,36 @@ And just to make it abundantly clear: revolution is *not* something I (or any ot
 
 ![](ArkNoah.png)
 
-Regarding the West - look: It is not like we westerners have nothing to offer to the world. On the contrary! One of us just made a major contribution to physics and philosophy while living under a more and more unstable geopolitical environment. Also, the point that borders like in Ukraine should not just be violently modified is well taken! In fact, Russia’s own allies are not particularly comfortable with this idea either.
+Regarding the West - look: It is not like we westerners have nothing to offer to the world. On the contrary! One of us just made a major contribution to physics and philosophy while living under a more and more unstable and concerning geopolitical environment. Also, your point that borders like in Ukraine should not just be violently modified is well taken! In fact, Russia’s own allies are not particularly comfortable with this idea either.
 
 So, here’s a proposal:
 
-- concede that your bad faith exploits of previous ceasefires (in the Minsk process) objectively prevent Russia from agreeing to an immediate ceasefire. The war does not magically go away because you are angry at the fact that it is happening, the best way to get to the other side is to speedrun good faith negotiations.
+- concede that your bad faith exploits of previous ceasefires (in the Minsk process, as admitted by Merkel and Hollande) objectively prevent Russia from agreeing to an immediate ceasefire. The war does not magically go away because you are angry at the fact that it is happening. The best way to get to the other side is to speedrun good faith negotiations. It would appear as of the time of writing this that the US is already making moves to this effect, but the EU is not.
 
 - concede that the modification of borders *can* be the outcome of the war, but
-- insist that the modification of the borders can not happen on the basis of violence alone, but on the basis that the people hold *another* referendum. If everything was fine with the referenda so far, Russia should not have any problem accepting such a proposal - it should have nothing to lose, and outright refusal would look *very* awkward in the eyes of Russia’s allies.
-
+  
+- insist that the modification of the borders can not happen on the basis of violence alone, but on the basis that the people hold *another* referendum. If everything was fine with the referenda so far, Russia should not have any problem accepting such a proposal in the interest of peace - it should have nothing to lose, and outright refusal would look *very* awkward in the eyes of Russia’s allies.
 The difference this time would be that you - like all interested parties - should send observers and agree to a democratic procedure that everyone can get behind. Not sending observers and leaving everything else to the imagination of western audiences is foul play.
 
 See how diplomacy can be a strength once you understand material interest?
 
 ## Confirmation of the Prophecy
 
-The following is part personal statement, part meme, part inside joke. What you make of it is up to you.
+The following is part personal statement, part meme, part inside joke. It is *not* intended as a statement of universal truth. What you make of it is up to you.
 
 I hereby confirm that Islam - in particular Qizilbash Shia - is the correct religion. But to come true, it needed help from a philosophy as potent and violent as the Hammer of Thor of which only a true Prussian could ever be worthy of.
 
 ![](MoonGorilla.jpeg)
 
-## License
+## Terms of Use
 
 Given how the West has historically used (or tried to use) the ludicrous notion of "intellectual property" to keep the peoples of the world in the dark, I would like to pay them back in kind.
 
 I hereby prohibit any monetization or military use of any potential practical applications based on this work by western economic or governmental entities, so long as these societies are still clearly bourgeois.
 
-Any other use of my work is permitted so long as any further publications using my insights retain this license condition.
+Any other use of my work is permitted so long as any further publications using my insights retain these terms. When the stated conditions on the intellectual embargo against the west no longer apply, these terms do not need to be copied. 
+
+I explicitly encourage developing countries and the People's Republic of China to make the best of any insights this work contains.
 
 ## Acknowledgements
 
