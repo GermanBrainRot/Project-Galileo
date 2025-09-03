@@ -27,7 +27,7 @@ In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics
 
 ## Note
 
-Western audiences may find it odd to mix physics with political philosophy. For me, political philosophy is just another field of scientific inquiry and historically, the idea of combining the two is not that odd. Also, when the [in-group does it](https://www.youtube.com/watch?v=MDVyGmdayAk), it is not seen as odd either. The western reader is asked to patiently read the text in the linear order intended by the author to maximize the chance of understanding the meaning.
+Western audiences may find it odd to mix physics with political philosophy. For me, political philosophy is just another field of scientific inquiry and historically, [the idea of combining the two is not that odd](https://en.wikipedia.org/wiki/Galileo_affair). Also, when the [in-group does it](https://www.youtube.com/watch?v=MDVyGmdayAk), it is not seen as odd either. When the [out-group does it, then even apologizes and provides a neatly isolated philosophy-of-nature-only version and asks to be judged on the merit of the argument](https://www.umwelt-wissenschaft.de/forum/naturphilosophische-themen/340-entschuldigung-und-regelkonformer-versuch), it is unacceptable. The western reader is asked to patiently read the text in the linear order intended by the author to maximize the chance of understanding the meaning.
 
 ## Back to Materialism!
 
