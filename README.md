@@ -299,6 +299,10 @@ By the way: if we treat actions as probabilistic, **it would appear that we have
 
 In a pure quantum scale setting, this should be the natural "view from outside": it's a view from the inside.
 
+**Note of caution**: As it stands, this is a *naive* application of my second postulate and not super rigorous. I may have said what a perspective is supposed to be, but not what constitutes a *change* of perspective (this should be a group operation of sorts!) and I admit freely that "treat what 'we' are doing probabilistically" is a hand waving way to see my second postulate realized.
+
+Also, I expect interesting subtleties related to Bayesian updates to show up in *retrospective* applications. More research is certainly needed.
+
 So, in short:
 
 - The integral formalism boils down to composition of morphisms in the appropriate category.
