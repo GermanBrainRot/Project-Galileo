@@ -301,9 +301,11 @@ In a pure quantum scale setting, this should be the natural "view from outside":
 
 So, in short:
 
-- The integral formalism boils down to composition of morphisms in the appropriate category
-- The requirement to have a category forces us to treat interaction as *integration* over the Born density rather than sampling from it (which is a *retrospective* operation)
-- My second postulate boils down to treating the actions themselves as probabilistic and integrating them out
+- The integral formalism boils down to composition of morphisms in the appropriate category.
+- The requirement to have a category forces us to treat interaction as *integration* over the Born density rather than sampling from it (which is a *retrospective* operation).
+- My second postulate boils down to treating the actions themselves as probabilistic and integrating them out - which is what Feynman's path integral formalism is already doing. Except, Feynman did not apply the Born rule on interacting branches.
+
+The path integral formalism latent in my words differs from Feynman's mostly in this. And in many cases, this should not make much of a difference since in Feynman's formalism, the branches where interactions even happen tend to be few, and where interactions happen, the interacting branches tend to interfere their quantum properties away. Mine says that these properties do not exist on those few branches, and this should be testable under suitable conditions.
 
 ![](Bourne.png)
 
