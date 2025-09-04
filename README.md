@@ -16,7 +16,7 @@ In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics
       - [Wigner's Friend: A Thought Experiment](#wigners-friend-a-thought-experiment)
       - [Fixing Rovelli](#fixing-rovelli)
       - [Summary of my Two Postulates](#summary-of-my-two-postulates)
-  - [Road To Formalization?](#road-to-formalization)
+  - [Road To Formalization](#road-to-formalization)
   - [Some More Consequences](#some-more-consequences)
   - [Metaphysics - Dead Again!](#metaphysics---dead-again)
   - [The Scientific Struggle](#the-scientific-struggle)
@@ -221,25 +221,22 @@ With this, the following mystery also suddenly makes sense:
 
 This last part about the possibility of information being *destroyed* is something that Rovelli toys with as well in his more recent work, but he does not commit to the claim that this necessarily implies time-asymmetry. My causal-past refinement *does* strongly suggest such an asymmetry.
 
-## Road To Formalization?
+## Road To Formalization
 
-Here's the thing: I don't think the math to make this *fully* formal even exists yet. This is why I refer to my whole contribution as a "Galilean" moment (named after Galilean relativity) of Quantum Mechanics rather than a "Newtonian" moment. We basically have to build a new mathematical discipline here, and that is out of scope for this contribution.
-
-*However*, for any reader who has some respect for my intuitions by now, I'll leave you with some pointers.
+For the interested reader who wants to build on my work, here is what I would do - followed by what I have already done.
 
 1. The first thing I would do to formalize this is to study QBism. This "Quantum Bayesian" school has taken the epistemic interpretation of the wave function to a radical extreme, but in the process, they have done something useful: they gave us a formalism to treat measurement as statistical conditioning.
 
 2. It would seem to be a little dissatisfying that we now have a working ontology that treats superposition and measurement as equal to some extent *and then* end up with a formalism that treats measurement as a strange extra operation again.
-Here's the good news: in classical probability theory, we already know how to describe statistical processes in such a way that evolution of probabilities can be thought of as an aggregate of probabilistic evolution of each realized outcome. For sophisticated folks, this is the Giry monad (if you don't know what a monad is: don't worry, it's just a monoid in the category of endomorphisms - nothing intimidating). For more hands-on folks, it's for example Markov processes.
+Here's the good news: in classical probability theory, we already know how to describe statistical processes in such a way that evolution of probabilities can be thought of as an aggregate of probabilistic evolution of each realized outcome. For sophisticated folks, this is the Giry monad (if you don't know what a monad is: don't worry, it's just a monoid in the category of endomorphisms - nothing intimidating). For more hands-on folks, it's for example Markov chain.
 Here's even more good news: It [appears](https://www.youtube.com/watch?v=gEK4-XtMwro) that Jacob Barandes has made some significant progress in bridging the gap between classical statistical processes and quantum processes from a formal angle. I have not yet studies his work in any depth, but this is promising.
-Where it gets tricky: I think if we really want a Giry-style picture, we *will* have to think really hard how to use my second postulate to modify the involved subjective Bayesian conditioning.
 
-3. Once this extremely challenging second step has been made, baking Special Relativity into the equations should be relatively straightforward given my first postulate.
+3. Once this second step has been made, baking Special Relativity into the equations should be relatively straightforward given my first postulate.
 
 4. As an anti-climactic bonus, I expect General Relativity to be astonishingly simple on a conceptual level (though the technicalities will still provide us with much headache).
 General Relativity suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. And with my picture of Quantum Mechanics, *this makes sense now* at the quantum level. No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are *real* at interactions and this reality leaves a trace, and outside of interactions, you can not say anything. They *carry* their own coordinate system, and they fight it out through interactions.
 
-Let me now give a best effort on formalizing my second postulate (the first one is left to the reader as a trivial exercise). I will phrase this in a way that makes sense to software developers, as this is my profession and I think it makes it more accessible to a wider audience.
+Let me now give my own best effort on formalizing my second postulate (the first one is left to the reader as a trivial exercise). I will phrase this in a way that makes sense to software developers, as this is my profession and I think it makes it more accessible to a wider audience.
 
 In frontend development, there is the concept called "reducer". In essence, it is a neat pure functional representation how actions change program states. That is, it is a pure function the type of which can be expressed as
 
@@ -247,7 +244,7 @@ reducer: (Action) -> ((State) -> State).
 
 If you stare at this long enough, you realize that this is a mapping of actions into a function space that has a nice internal compositional structure that mathematicians call a "monoid". You can just apply one such "state change" function after the other. This is the "monoid of endomorphisms", and composition in a monoid is sometimes denoted as "+".
 
-If instead of a single action, we had a list of actions (for the mathematicians: the free monoid over the set of actions), using the composition operation in our endomorphism monoid, we can readily see that 
+If instead of a single action, we had an ordered list of actions (for the mathematicians: the free monoid over the set of actions), using the composition operation in our endomorphism monoid, we can readily see that 
 
 reducer': (Action*) -> ((State) -> State)
 
@@ -267,15 +264,26 @@ state_new = [ sum_{action: [Actions]} action d reducer ] (state_initial).
 
 Our reducer is just the dx of an integral.
 
-We can easily make this stochastic by making actions probabilistic: if we knew, for each state, what actions we had to expect with what probability, the sum would still make sense and the resulting state would be a probability distribution:
+We can easily make this stochastic by making actions probabilistic: if we knew, for each state, what actions we had to expect with what probability, we could use our reducer to describe the probability of the next state:
 
 ```
-P(state_new = X) = [sum_{p_a: probability of action a} p_a d reducer] (state_initial).
+P(state_new = X | state_initial)
+ = sum_{action} P(action | reducer(action)(state_initial) = X).
 ```
 
-But now, this is a function of type (Action) -> ((State) -> Dist(State)) where Dist(State) is the space of probability distributions over the State! Can we somehow compose these as well?
+But now, this is a function of type Dist(Action) -> ((State) -> Dist(State)) where Dist(.) is the probability distribution for actions/states! Can we somehow compose these as well to recover our integral?
 
 Yes! Easily! Just apply the probabilistic reducer *to each possible state* and then aggregate for each state all the probabilities. This is literally how probability tree diagrams that you may know from school work.
+
+```
+P(state_new = X) = sum_{state_initial} P(state_new = X | state_initial),
+```
+
+or more suggestively:
+
+```
+P(state_new = X) = sum_{state_initial} state_initial d P.
+```
 
 Oh, and this is also the "Giry monad" that I mentioned. It's just how probabilities compose in a Markovian setting.
 
@@ -285,21 +293,25 @@ So, how might this work in a quantum setting?
 
 Essentially, the evolving state remains the well-known wave function undergoing unitary evolution - until an interaction happens. Then what?
 
-Well, if we follow the above reasoning, we would have to apply the Born rule. But rather than sampling from the probability density this derived, we would basically take each possible measurement outcome, have the wave function evolve from there and then aggregate.
+Well, if we follow the above reasoning, we would have to apply the Born rule. But rather than sampling from the probability distribution thus derived (which is what happens physically), we would basically take each possible measurement outcome, have the wave function evolve from there and then aggregate. Since probabilities are just numbers and wave functions are just complex functions of fixed dimension, this should be possible and trivially give us the correct probabilities.
 
-It is only when looking *backward* that we can apply Bayesian conditioning to refine what our wave function is supposed to look like at a given time.
+By the way: if we treat actions as probabilistic, **it would appear that we have just found the natural mathematical expression of my second postulate**. In a traditional setup between a macroscopic experiment and a quantum system, it would amount to the scientist not having chosen a specific experimental setup yet - and if we take seriously the notion that the world is quantum, we would have to use a (heavily decohered, i.e. classically constrained) wave function to describe the evolution of his indecision.
 
-The nature of this Bayesian conditioning is the only place where this proposal needs further refinement and where I expect my second postulate to really do the heavy lifting. Notice also that I have specified what I think an *observer* or an *perspective* may be, but not what a *perspective transformation* would be in our setting - this is where I expect the new math to come from.
+In a pure quantum scale setting, this should be the natural "view from outside": it's a view from the inside.
 
-But honestly? I think this is where any *new* predictions from my second postulate may be lurking (I expect the first postulate to be productive in its own right): we take into account what can be said about the observer from the point of view of the world (including the observer). For normal quantum mechanics as we do it today, it feels like a satisfying and unifying explanation why it works.
+So, in short:
+
+- The integral formalism boils down to composition of morphisms in the appropriate category
+- The requirement to have a category forces us to treat interaction as *integration* over the Born density rather than sampling from it (which is a *retrospective* operation)
+- My second postulate boils down to treating the actions themselves as probabilistic and integrating them out
 
 ![](Bourne.png)
 
 Let me leave you with two more musings on further directions, but these are really just musings:
 
-5.  Maybe it helps to think of our motion through time in a similar manner as the Babylonians did - we face *towards* the past and go *backwards* into the future.
+1.  Maybe it helps to think of our motion through time in a similar manner as the Babylonians did - we face *towards* the past and go *backwards* into the future.
 
-6. Notice also: if a great mass is exactly behind your back, the only way you'd know is because of inexplicable motions of objects in your vincinity and even of distant stars...
+2. Notice also: if a great mass is exactly behind your back, the only way you'd know is because of inexplicable motions of objects in your vincinity and even of distant stars...
 
 ## Some More Consequences
 
