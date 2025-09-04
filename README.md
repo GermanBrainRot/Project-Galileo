@@ -239,10 +239,67 @@ Where it gets tricky: I think if we really want a Giry-style picture, we *will* 
 4. As an anti-climactic bonus, I expect General Relativity to be astonishingly simple on a conceptual level (though the technicalities will still provide us with much headache).
 General Relativity suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. And with my picture of Quantum Mechanics, *this makes sense now* at the quantum level. No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are *real* at interactions and this reality leaves a trace, and outside of interactions, you can not say anything. They *carry* their own coordinate system, and they fight it out through interactions.
 
-5. Here, it becomes less programmatic and more musing: Maybe it helps to think of our motion through time in a similar manner as the Babylonians did - we face *towards* the past and go *backwards* into the future.
+Let me now give a best effort on formalizing my second postulate (the first one is left to the reader as a trivial exercise). I will phrase this in a way that makes sense to software developers, as this is my profession and I think it makes it more accessible to a wider audience.
+
+In frontend development, there is the concept called "reducer". In essence, it is a neat pure functional representation how actions change program states. That is, it is a pure function the type of which can be expressed as
+
+reducer: (Action) -> ((State) -> State).
+
+If you stare at this long enough, you realize that this is a mapping of actions into a function space that has a nice internal compositional structure that mathematicians call a "monoid". You can just apply one such "state change" function after the other. This is the "monoid of endomorphisms", and composition in a monoid is sometimes denoted as "+".
+
+If instead of a single action, we had a list of actions (for the mathematicians: the free monoid over the set of actions), using the composition operation in our endomorphism monoid, we can readily see that 
+
+reducer': (Action*) -> ((State) -> State)
+
+is a very simple to implement structure-preserving map ("embedding") from one monoid into the other (technically, we have to treat sequences of actions that do the same thing to the state as equal to really call it an "embedding").
+
+Since we chose to denote monoidal composition using "+", we can implement reducer' like so:
+
+```
+state_new = [ sum_{state, action: [Actions]} reducer(action)(state) ] (state_initial)
+```
+
+or by a more suggestive abuse of notation:
+
+```
+state_new = [ sum_{action: [Actions]} action d reducer ] (state_initial).
+```
+
+Our reducer is just the dx of an integral.
+
+We can easily make this stochastic by making actions probabilistic: if we knew, for each state, what actions we had to expect with what probability, the sum would still make sense and the resulting state would be a probability distribution:
+
+```
+P(state_new = X) = [sum_{p_a: probability of action a} p_a d reducer] (state_initial).
+```
+
+But now, this is a function of type (Action) -> ((State) -> Dist(State)) where Dist(State) is the space of probability distributions over the State! Can we somehow compose these as well?
+
+Yes! Easily! Just apply the probabilistic reducer *to each possible state* and then aggregate for each state all the probabilities. This is literally how probability tree diagrams that you may know from school work.
+
+Oh, and this is also the "Giry monad" that I mentioned. It's just how probabilities compose in a Markovian setting.
+
+As we all know, it is *not* how probabilities compose in a quantum setting though. But we get the philosophy. If we want an assessment how probabilities evolve, what we need to do is to sum over *all possible* outcomes.
+
+So, how might this work in a quantum setting?
+
+Essentially, the evolving state remains the well-known wave function undergoing unitary evolution - until an interaction happens. Then what?
+
+Well, if we follow the above reasoning, we would have to apply the Born rule. But rather than sampling from the probability density this derived, we would basically take each possible measurement outcome, have the wave function evolve from there and then aggregate.
+
+It is only when looking *backward* that we can apply Bayesian conditioning to refine what our wave function is supposed to look like at a given time.
+
+The nature of this Bayesian conditioning is the only place where this proposal needs further refinement and where I expect my second postulate to really do the heavy lifting. Notice also that I have specified what I think an *observer* or an *perspective* may be, but not what a *perspective transformation* would be in our setting - this is where I expect the new math to come from.
+
+But honestly? I think this is where any *new* predictions from my second postulate may be lurking (I expect the first postulate to be productive in its own right): we take into account what can be said about the observer from the point of view of the world (including the observer). For normal quantum mechanics as we do it today, it feels like a satisfying and unifying explanation why it works.
+
+![](Bourne.png)
+
+Let me leave you with two more musings on further directions, but these are really just musings:
+
+5.  Maybe it helps to think of our motion through time in a similar manner as the Babylonians did - we face *towards* the past and go *backwards* into the future.
 
 6. Notice also: if a great mass is exactly behind your back, the only way you'd know is because of inexplicable motions of objects in your vincinity and even of distant stars...
-
 
 ## Some More Consequences
 
@@ -251,6 +308,8 @@ Let me close the physics part with a few more consequences that follow either "i
 Here's an "in spirit" consequence:
 
 **"Free Will" -** We make arbitrary "choices" as long as we are ignorant the consequences of our actions. As we become aware of the consequences through experience, we can not help but make more predictable choices. This is the old Hegelian paradox of [freedom as insight into necessity](https://www.marxists.org/archive/marx/works/1877/anti-duhring/ch09.htm): our freedom of choice *diminishes* as our freedom from ignorance grows. And in the Quantum picture, the development from arbitrariness to clearly predictable patterns (thanks to tons of constraints through relationships) ceases to be merely epistemic and becomes ontic.
+
+Here's a rather strong consequence:
 
 **Causal Direction -** Another good insight from Hegelian philosophy that I can find *immediately* represented in this picture (and this is, I think, a hard consequence) is that cause and effect seem to somehow change place and thereby become the same thing. Let me unpack this a little.
 
@@ -321,7 +380,7 @@ Admittedly, he did this *after* he found out that the scholastic universities of
 
 **And let's be real here: if you reject this work *just because* its "ideological baggage" is a little uncomfortable - without providing a critique on the substance -, you weren't taking it seriously to begin with, thereby only proving my point. If you want to *disprove* my point, just stop reading here and build something new on top of my postulates. *I would love to be disproven.***
 
-Still here? Good. The remainder of this text *is* "ideological baggage" that will prepare the reader for the struggles *I think* they will face if they take this work seriously and try to expand it. The equations that my postulates suggest will *not* be spoon fed to you when we literally teach children at school to translate textual problems into math problems. You're a physicists or a mathematician? Then do your damn job. I'm just here to be real with you what you have to expect *if* you do this.
+Still here? Good. The remainder of this text *is* "ideological baggage" that will prepare the reader for the struggles *I think* they will face if they take this work seriously and try to expand it. I'm just here to be real with you what you have to expect *if* you do this.
 
 I hope the readers who followed my advice to just go build something on top of my postulates consider continuing to read here *if* they face the kind of push back that I anticipate (and I am fully prepared to eat my words and adjust my views if resistance is less significant than I expect).
 
