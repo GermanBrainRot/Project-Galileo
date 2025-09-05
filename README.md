@@ -18,7 +18,7 @@ In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics
       - [Summary of my Two Postulates](#summary-of-my-two-postulates)
   - [Road To Formalization](#road-to-formalization)
   - [Some More Consequences](#some-more-consequences)
-  - [Metaphysics - Dead Again!](#metaphysics---dead-again)
+  - [Victory of the Little Guy](#victory-of-the-little-guy)
   - [The Scientific Struggle](#the-scientific-struggle)
   - [To the Suffering Peoples of the World](#to-the-suffering-peoples-of-the-world)
   - [Confirmation of the Prophecy](#confirmation-of-the-prophecy)
@@ -268,7 +268,8 @@ We can easily make this stochastic by making actions probabilistic: if we knew, 
 
 ```
 P(state_new = X | state_initial)
- = sum_{action} P(action | reducer(action)(state_initial) = X).
+ = sum_{action} 
+ P(action | reducer(action)(state_initial) = X).
 ```
 
 But now, this is a function of type Dist(Action) -> ((State) -> Dist(State)) where Dist(.) is the probability distribution for actions/states! Can we somehow compose these as well to recover our integral?
@@ -327,7 +328,13 @@ Here's an "in spirit" consequence:
 
 **"Free Will" -** We make arbitrary "choices" as long as we are ignorant the consequences of our actions. As we become aware of the consequences through experience, we can not help but make more predictable choices. This is the old Hegelian paradox of [freedom as insight into necessity](https://www.marxists.org/archive/marx/works/1877/anti-duhring/ch09.htm): our freedom of choice *diminishes* as our freedom from ignorance grows. And in the Quantum picture, the development from arbitrariness to clearly predictable patterns (thanks to tons of constraints through relationships) ceases to be merely epistemic and becomes ontic.
 
-Here's a rather strong consequence:
+Strong consequences:
+
+**Quantum Field Trickery -** I must admit that as a casual observer of physics, this one almost escaped me. Apparently, quantum fields were more of an ad-hoc invention to "resolve" contradictions of earlier attempts to make Quantum Mechanics relativistic - a trick that even physicists appear to have a hard time accepting, but it just works too well.
+
+If further research on my well-motivated formalism could *at least* give us a nicer way to reproduce predictions from QFT, I would be extremely satisfied.
+
+If, on top of that, it could give us a better explanation for effects that are currently explained by "vacuum energy" and dissolve "vacuum energy" into vacuum, it would be a total victory for the philosophy that enabled me to pull all this off and that anyone who wants to walk in my footsteps should take seriously and study.
 
 **Causal Direction -** Another good insight from Hegelian philosophy that I can find *immediately* represented in this picture (and this is, I think, a hard consequence) is that cause and effect seem to somehow change place and thereby become the same thing. Let me unpack this a little.
 
@@ -357,6 +364,10 @@ And yes: If we take "causal information = correlation" to its logical conclusion
 
  That you can find your own causal impact in the world that you live in can literally be understood as "what goes around, comes around". Actions have consequences, and with great power comes great responsibility. Your attitude to the life, the universe and everything *matters*.
 
+And if what I wrote contains any truth, then I can proclaim **metaphysics dead again**!
+
+![](MetaphysBusters.jpg)
+
 ---
 
 One very last thing on the science part: I want to suggest a name for what I discovered.
@@ -375,8 +386,7 @@ The scientifically accurate name for this theory is:
 
 ![](Dinos.png)
 
-## Metaphysics \- Dead Again\!
-![](MetaphysBusters.jpg)
+## Victory of the Little Guy
 
 I apologize to the polite western academic reader whose feelings may get hurt here, but this section can be nothing but a victory lap of the outsiders (or *insiders* when you are in Chinese academia).
 
