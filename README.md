@@ -306,11 +306,11 @@ Also, I expect interesting subtleties related to Bayesian updates to show up in 
 
 So, in short:
 
-- The integral formalism boils down to composition of morphisms in the appropriate category.
-- The requirement to have a category forces us to treat interaction as *integration* over the Born density rather than sampling from it (which is a *retrospective* operation).
+- A "good" integral formalism boils down to composition of morphisms in the appropriate category.
+- The requirement to have a category forces us to treat interaction as *integration* over the Born density rather than sampling from it and conditioning over it (which is a *retrospective* operation). This would also appear to be a mathematical trace left behind by my first postulate even in a Newtonian setting.
 - My second postulate boils down to treating the actions themselves as probabilistic and integrating them out - which is what Feynman's path integral formalism is already doing. Except, Feynman did not apply the Born rule on interacting branches.
 
-The path integral formalism latent in my words differs from Feynman's mostly in this. And in many cases, this should not make much of a difference since in Feynman's formalism, the branches where interactions even happen tend to be few, and where interactions happen, the interacting branches tend to interfere their quantum properties away. Mine says that these properties do not exist on those few branches, and this should be testable under suitable conditions.
+The path integral formalism latent in my words differs from Feynman's mostly in this. And in many cases, this should not make much of a difference since in Feynman's formalism, the branches where interactions even happen tend to be few, and where interactions happen, the interacting branches tend to interfere their quantum properties away. Mine says that these properties do not exist on those few branches - i.e. that the involved row of the density matrix and state vector should be classical and derived via Born rule there -, and this should be testable under suitable conditions.
 
 ![](Bourne.png)
 
@@ -340,7 +340,7 @@ If, on top of that, it could give us a better explanation for effects that are c
 
 Right at the point of interaction, there *is no* cause and effect. That’s why we call it an *inter*action to begin with! Every participant is equal - but it doesn’t *look* like it.
 
-If we were to model the point of interaction between The Cesium atom, the cat and Herr Schrödinger as an evolving Hilbert space of dimension 3 (that is, only these three objects exist in the universe) and repeated the setup where the three are aligned with the cat in the middle, Hilbert would indeed see the Cesium atom “cause” the cat to die. But the Cesium atom would be well within its right to complain that Schrödinger going from 🤓 state to 😱 state caused the cat to die!
+If we were to model the point of interaction between The Cesium atom, the cat and Herr Schrödinger as an evolving Hilbert space of dimension 3 (that is, only these three objects exist in the universe) and repeated the setup where the three are aligned with the cat in the middle, Schrödinger would indeed see the Cesium atom “cause” the cat to die. But the Cesium atom would be well within its right to complain that Schrödinger going from 🤓 state to 😱 state caused the cat to die!
 
 From the cat’s point of view, it just sees two sick and evil things conspiring against it. And about itself, it will probably think: why didn't I run while I still had time?
 
