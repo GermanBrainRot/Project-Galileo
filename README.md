@@ -295,7 +295,11 @@ $\ket{\psi(t)} \approx \sum_{j=0}^n \ket{\psi(0)} d P(j\cdot\delta t),$
 
 and we hope that mathematicians don't hurt themselves when taking the limit $\delta t \to 0$. This formulation can be thought of as unitary or Markovian evolution for now.
 
-To arrive at dynamics for *coupled* systems, the underlying state space should be a cartesian product of possible states of the different protagonists. Say, two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
+To arrive at dynamics for *coupled* systems, the underlying state space should be a cartesian product of possible states of the different protagonists.
+
+In the Markov chain community, this is a no-brainer and they have become quite creative in representing sparse transition matrices. In unitary evolution though, the pairing of states is done only after moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be a minor notational contribution of mine.
+
+Let us now think of two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
 
 $S_{A,B} = \mathbb{R}^2\times\mathbb{R}^2 = \mathbb{R^4}.$
 
@@ -351,7 +355,7 @@ Here's what's going on: our "measurement apparatus" is a simple yes/no device, a
 
 Now, here's where it becomes interesting: *if we assume the state of the measurement device to be fixed*, then we can condition on that state and the Born rules becomes
 
-$P(Y) = \|\psi\|^2$
+$P(Y\mid X=\phi) = \|\psi\|^2$
 
 for the wave function encoding the interaction we're looking for.
 
@@ -359,7 +363,7 @@ But the funny thing about squares of scalar products is that they are symmetric.
 
 The electron might just as well say that the probability of producing a fact with the measurement apparatus in this specific configuration is (taking into account its own known state)
 
-$P(X) = \|\phi\|^2.$
+$P(X\mid Y=\psi) = \|\phi\|^2.$
 
 If the electron can do *that*, why wouldn't it also do it in the wild when randomly meeting other electrons? In fact, if we can *find out*, say, the spins of two particles that have interacted in an experiment after the fact, wouldn't it be awfully reasonable to assume that *there was* a fact?
 
