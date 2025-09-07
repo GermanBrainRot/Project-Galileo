@@ -17,7 +17,12 @@ In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics
       - [Fixing Rovelli](#fixing-rovelli)
       - [Summary of my Two Postulates](#summary-of-my-two-postulates)
   - [Road To Formalization](#road-to-formalization)
-  - [Some More Consequences](#some-more-consequences)
+      - [The Wrong and the Right Question](#the-wrong-and-the-right-question)
+      - [The Math](#the-math)
+      - [Why Does This Not Break Things?](#why-does-this-not-break-things)
+      - [The Big Picture](#the-big-picture)
+      - [Research Directions](#research-directions)
+  - [Some More Philosophical Consequences](#some-more-philosophical-consequences)
   - [Victory of the Little Guy](#victory-of-the-little-guy)
   - [The Scientific Struggle](#the-scientific-struggle)
   - [To the Suffering Peoples of the World](#to-the-suffering-peoples-of-the-world)
@@ -119,6 +124,12 @@ But why should we evolve a consciousness so poorly suited to perceive actual rea
 Luckily, it is not real.  
 
 All that decoherence does is to quantify to what degree small things enter into fewer relationships than big things, therefore revealing less about themselves to the universe than big things do. It estimates and quantifies the *“relationship density”* of a thing: for an individual particle, *it is perfectly fine* not to go through the left or the right slit at the double slit *because* it has so many ways *not to* interact with the world.
+
+Think of it this way: if I was moving through outer space, I would always (in principle) be able to know where I am because I can triangulate my position relative to distant stars. We macroscopic entities live in an Argus universe, a quantum panopticon.
+
+![](ArgusUniverse.png)
+
+An electron, on the other hand, is not able to do that, because it is so small that the photons have a good chance to miss it. And then, *there is no fact of the matter*.
 
 More philosophically: decoherence is “Hegel's Law” (“quantitative change [here: system size] leads to qualitative change [here: weird absence of facts vs classical facticity]”) of quantum mechanics.
 
@@ -223,96 +234,209 @@ This last part about the possibility of information being *destroyed* is somethi
 
 ## Road To Formalization
 
-For the interested reader who wants to build on my work, here is what I would do - followed by what I have already done.
+#### The Wrong and the Right Question
 
-1. The first thing I would do to formalize this is to study QBism. This "Quantum Bayesian" school has taken the epistemic interpretation of the wave function to a radical extreme, but in the process, they have done something useful: they gave us a formalism to treat measurement as statistical conditioning.
+If the presentation so far has led you to believe that this is just the rant of a pop philosophical crack pot, you are profoundly mistaken and I will make you eat your words once more. Indeed, I will formalize parts of my second postulate and provide a mathematical picture so compelling that it is undeniable, yet also should be forbidden because a lot of very intelligent people will experience an existential crisis along the lines of "why didn't I think of this?"
 
-2. It would seem to be a little dissatisfying that we now have a working ontology that treats superposition and measurement as equal to some extent *and then* end up with a formalism that treats measurement as a strange extra operation again.
-Here's the good news: in classical probability theory, we already know how to describe statistical processes in such a way that evolution of probabilities can be thought of as an aggregate of probabilistic evolution of each realized outcome. For sophisticated folks, this is the Giry monad (if you don't know what a monad is: don't worry, it's just a monoid in the category of endomorphisms - nothing intimidating). For more hands-on folks, it's for example Markov chain.
-Here's even more good news: It [appears](https://www.youtube.com/watch?v=gEK4-XtMwro) that Jacob Barandes has made some significant progress in bridging the gap between classical statistical processes and quantum processes from a formal angle. I have not yet studies his work in any depth, but this is promising.
+Let me begin by opposing the question that has hitherto been asked with the correct question.
 
-3. Once this second step has been made, baking Special Relativity into the equations should be relatively straightforward given my first postulate.
+**The wrong question** is how we can justify the use of the Born rule by having it emerge from unitary evolution and then provide an ontological picture to make sense of that.
 
-4. As an anti-climactic bonus, I expect General Relativity to be astonishingly simple on a conceptual level (though the technicalities will still provide us with much headache).
-General Relativity suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. And with my picture of Quantum Mechanics, *this makes sense now* at the quantum level. No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are *real* at interactions and this reality leaves a trace, and outside of interactions, you can not say anything. They *carry* their own coordinate system, and they fight it out through interactions.
+The problem is that it is impossible to have the Born rule emerge *exactly* from unitary evolution. Therefore, we do not *ever* have probabilities from which we could sample anything.
 
-Let me now give my own best effort on formalizing my second postulate (the first one is left to the reader as a trivial exercise). I will phrase this in a way that makes sense to software developers, as this is my profession and I think it makes it more accessible to a wider audience.
+This is where even the otherwise very sober and honorable philosophical approach of [J. Barandes](https://arxiv.org/pdf/1405.6755) fails. He is more bold than Rovelli when it comes to facts being facts, but then (and here, he is less bold than Rovelli) introduces states that are completely epistemic. Our observer can only interpret the world, when the point is to explain how and why we can *change* it.
 
-In frontend development, there is the concept called "reducer". In essence, it is a neat pure functional representation how actions change program states. That is, it is a pure function the type of which can be expressed as
+A novelty in Barandes' picture that deserves mention is that at least officially, he gives decoherence a different role than everyone else: by having ontic facts be facts, decoherence is free to act only on epistemic states. Except that in reality, they never decohere so much that we would ever be fully justified to apply the Born rule. Our detached, out-of-universe observer is condemned to eternal indecision and nagging philosophical questions. Sad!
 
-reducer: (Action) -> ((State) -> State).
+**The right question** is whether we can provide an ontology based on empirical fact and *good* philosophy, then present the existing formalism in a form suitable to *extend* it with a Born *axiom* (where we need a mathematical justification mirroring the philosophical justification), then complete the picture of the path space and justify why the differences are small enough so we have empirically never noticed them - but maybe could.
 
-If you stare at this long enough, you realize that this is a mapping of actions into a function space that has a nice internal compositional structure that mathematicians call a "monoid". You can just apply one such "state change" function after the other. This is the "monoid of endomorphisms", and composition in a monoid is sometimes denoted as "+".
+In the next section, I will provide the academic reader with the math so he can shut up and calculate. And it is *disgustingly* simple.
 
-If instead of a single action, we had an ordered list of actions (for the mathematicians: the free monoid over the set of actions), using the composition operation in our endomorphism monoid, we can readily see that 
+#### The Math
 
-reducer': (Action*) -> ((State) -> State)
+Since I am a mathematician and am a bit confused about the mathematicial dialect physicists speak, allow me to first introduce some notational "main characters" that show up all over the place.
 
-is a very simple to implement structure-preserving map ("embedding") from one monoid into the other (technically, we have to treat sequences of actions that do the same thing to the state as equal to really call it an "embedding").
+Enter the "bra" $\bra{\psi}$ and the "ket" $\ket{\phi}$. These are just handy ways to denote row and column vectors in $\mathbb{C}^n$.
 
-Since we chose to denote monoidal composition using "+", we can implement reducer' like so:
+The setting that is appropriate to discuss my ideas is unitary evolution. But let us take a moment for a quick historic detour.
 
-```
-state_new = [ sum_{state, action: [Actions]} reducer(action)(state) ] (state_initial)
-```
+Historically, the first description of the full quantum state dynamics (as we currently understand it) was given by Schrödinger with his famous differential equation (see e.g. [here](https://site.physics.georgetown.edu/~jkf/grad_quant2/html/lecture25.html?utm_source=chatgpt.com)):
 
-or by a more suggestive abuse of notation:
+$
+i\hbar \frac{d}{d t}\psi(t) = H(t)\psi(t).
+$
 
-```
-state_new = [ sum_{action: [Actions]} action d reducer ] (state_initial).
-```
+Here, $i$ is the imaginary unit, $\hbar$ is a constant known as Planck's constant and $H$ is a (in general time dependent) Hermitian operator called "Hamiltonian".
 
-Our reducer is just the dx of an integral.
+In the time *in*dependent case, the solution is relatively straightforward (see derivation in the linked source):
 
-We can easily make this stochastic by making actions probabilistic: if we knew, for each state, what actions we had to expect with what probability, we could use our reducer to describe the probability of the next state:
+$
+\left|\psi(t)\right\rangle=\sum_n
+c_n(t_0)e^{-iE_n(t-t_0)/\hbar}\left|n\right\rangle.
+$
 
-```
-P(state_new = X | state_initial)
- = sum_{action} 
- P(action | reducer(action)(state_initial) = X).
-```
+But in the time *dependent* case, a general approach to practically solve the equation that even lends itself to numerical simulation is due to Feynman (see, for example, [here](https://web.mit.edu/dvp/www/Work/8.06/dvp-8.06-paper.pdf)): just discretize time steps, and whenever you have a wave function $\psi(t)$ at time $t$, the wave function at time $t+\delta t$ becomes, in each component, the sum over all possible complex continuations of the evolution:
 
-But now, this is a function of type Dist(Action) -> ((State) -> Dist(State)) where Dist(.) is the probability distribution for actions/states! Can we somehow compose these as well to recover our integral?
+$
+\ket{\psi(t+\delta t)}\approx \ket{\psi(t)}+\frac{dt}{d}∣\psi⟩​\delta t=\ket{\psi(t)}−\hbar i​H(t)\ket{\psi(t)}\delta t,
+$
 
-Yes! Easily! Just apply the probabilistic reducer *to each possible state* and then aggregate for each state all the probabilities. This is literally how probability tree diagrams that you may know from school work.
+where the minus sign comes from dividing by $i$.
 
-```
-P(state_new = X) = sum_{state_initial} P(state_new = X | state_initial),
-```
+Now, remember what this is supposed to encode though: we want to map complex unit vectors to complex unit vectors which locally should basically be a rotation which in complex math should involve an exponential. And here it is:
 
-or more suggestively:
+$
+\ket{\psi(t+\delta t)} \approx U(t+\delta t, t) \ket{\psi(t)}, \quad
+U(t+\delta t, t) \approx \exp\Big(-\frac{i}{\hbar} H(t)\, \delta t \Big)
+$
 
-```
-P(state_new = X) = sum_{state_initial} state_initial d P.
-```
+where U is supposed to be a "time ordered" exponential.
 
-Oh, and this is also the "Giry monad" that I mentioned. It's just how probabilities compose in a Markovian setting.
+Another way of looking at something that locally should be a rotation is multiplication with time dependent unitary operators. And lo and behold: $U$ is indeed unitary according to standard literature.
 
-As we all know, it is *not* how probabilities compose in a quantum setting though. But we get the philosophy. If we want an assessment how probabilities evolve, what we need to do is to sum over *all possible* outcomes.
+Since $H$ is technically an arbitrary Hermitian matrix that just so happens to encode something that physicists care about, a more statistics minded community has turned the path integral into a [different possible foundation](https://www.physics.umd.edu/courses/Phys851/Luty/notes/pathint.pdf) of quantum mechanics based on successive application of unitary matrices.
 
-So, how might this work in a quantum setting?
+As a pure formalism devoid of statistical interpretation, this is quite similar to what Markov chains do - which I happen to know a thing or two about.
 
-Essentially, the evolving state remains the well-known wave function undergoing unitary evolution - until an interaction happens. Then what?
+For my picture, I will put the Markovian and the Unitary picture side by side in a discretized form, while keeping the nice integral touch:
 
-Well, if we follow the above reasoning, we would have to apply the Born rule. But rather than sampling from the probability distribution thus derived (which is what happens physically), we would basically take each possible measurement outcome, have the wave function evolve from there and then aggregate. Since probabilities are just numbers and wave functions are just complex functions of fixed dimension, this should be possible and trivially give us the correct probabilities.
+$
+\ket{\psi(t)} \approx \sum_{j=0}^n \ket{\psi(0)} d P(j\cdot\delta t),
+$
 
-By the way: if we treat actions as probabilistic, **it would appear that we have just found the natural mathematical expression of my second postulate**. In a traditional setup between a macroscopic experiment and a quantum system, it would amount to the scientist not having chosen a specific experimental setup yet - and if we take seriously the notion that the world is quantum, we would have to use a (heavily decohered, i.e. classically constrained) wave function to describe the evolution of his indecision.
+and we hope that mathematicians don't hurt themselves when taking the limit $\delta t \to 0$. This formulation can be thought of as unitary or Markovian evolution for now.
 
-In a pure quantum scale setting, this should be the natural "view from outside": it's a view from the inside.
+To arrive at dynamics for *coupled* systems, the underlying state space should be a cartesian product of possible states of the different protagonists. Say, two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
 
-**Note of caution**: As it stands, this is a *naive* application of my second postulate and not super rigorous. I may have said what a perspective is supposed to be, but not what constitutes a *change* of perspective (this should be a group operation of sorts!) and I admit freely that "treat what 'we' are doing probabilistically" is a hand waving way to see my second postulate realized.
+$
+S_{A,B} = \mathbb{R}^2\times\mathbb{R}^2 = \mathbb{R^4}.
+$
 
-Also, I expect interesting subtleties related to Bayesian updates to show up in *retrospective* applications. More research is certainly needed.
+In this now rather inconveniently encoded state space, we can introduce dynamics via a random walk on each participant, where we restrict ourselves to just the four major axes and a single stepwidth:
 
-So, in short:
+$
+P(X(t+\delta t) = y \mid X(t) = x) = \begin{cases}\frac{1}{4}, y = x\pm v\cdot e_i,\\0, \text{otherwise}\end{cases}, X=A\lor X=B. 
+$
 
-- A "good" integral formalism boils down to composition of morphisms in the appropriate category.
-- The requirement to have a category forces us to treat interaction as *integration* over the Born density rather than sampling from it and conditioning over it (which is a *retrospective* operation). This would also appear to be a mathematical trace left behind by my first postulate even in a Newtonian setting.
-- My second postulate boils down to treating the actions themselves as probabilistic and integrating them out - which is what Feynman's path integral formalism is already doing. Except, Feynman did not apply the Born rule on interacting branches.
+Now, say that the billiard balls are dot sized and whenever they occupy the same place, we want them to collide. To make our mathematical lives easy and not think about momentum for now (we're drunken billiard balls!), let's just have the protagonists do something completely unphysical to get the point across: they'll just move together in their drunkards walk.
 
-The path integral formalism latent in my words differs from Feynman's mostly in this. And in many cases, this should not make much of a difference since in Feynman's formalism, the branches where interactions even happen tend to be few, and where interactions happen, the interacting branches tend to interfere their quantum properties away. Mine says that these properties do not exist on those few branches - i.e. that the involved row of the density matrix and state vector should be classical and derived via Born rule there -, and this should be testable under suitable conditions.
+Here's how the dynamics looks in the Markovian picture:
+
+$
+P((A,B)(t+\delta t) = y \mid (A,B)(t)=x \land A(t_-) = B(t_-) \text{for some } t_- \leq t) \\
+= (\text{see above}).
+$
+
+Notice something? We somehow had to completely change the system dynamics to make that happen. Now, the two billiard balls no longer have their own transition probabilities, but they are updated together so as to maintain their correlated state.
+
+This has *nothing* to do with the fact that we asked them to move together. I pulled that example out of my ass to keep the system simple. The dynamics are coupled because of the need to maintain correlations!
+
+*This* is what Bell was getting at with his famous theorem: in a classical Markovian picture, correlation forces us to introduce *extra dynamics* to maintain them.
+
+Sure: you could also have added velocities and imposed a realistic constraint on the correlation of the velocity after the interaction. But to make this correlation *stick*, you would have to make velocity dominate position evolution, and velocity itself would basically have to be deterministic. Otherwise, over time, the correlation imposed this way will still degenerate.
+
+Not so in the unitary picture!
+
+It is a well known [fact](https://arxiv.org/pdf/quant-ph/0407118) that unitary evolution in the non-interacting case preserves entanglement - the quantum analogy of correlation.
+
+An "**interaction**" in both the Markovian and Unitary picture is just a pair of states (think: both billiard balls at the same place) such that
+
+$
+P((A,B)(t+\delta t) = x,y | (A,B)(t) = a,b) \\ \neq P(A(t+\delta t) = x\mid A(t)=a)\cdot P(B(t)=y \mid B(t)=b).
+$
+
+We literally *introduce* a correlation dynamically - and unitary evolution preserves it as long as there are no further interactions. That's all there is to it.
+
+Except, that in the unitary picture, we have so far not seen a single thing that we could interpret as a probability. And honestly? This is a little mysterious. Think about it this way: we now have a dynamical system that can somehow introduce "correlations" - but what are the correlations *about*?
+
+This is where my second postulate steps in, which says three things here:
+- Facts are whatever is true at interaction.
+- We do not need decoherence to explain facts. Decoherence can go and explain something else.
+- Interactions are *mutual* quantum Bayesian updates between observers, where "observer" or "Bayesian" does not require consciousness or any of that voodoo.
+
+Ok, so mutual Bayesian update. What could that mean? Let us consider an actual typical quantum experiment: a macroscopic measurement device with wave function $\bra{\phi}$ measures the position of an electron with wave function $\ket{\psi}$.
+
+For this, the Measurement device uses *some* way to come up with a probability distribution on the electron's Hilbert space.
+
+Enter [Gleason's Theorem](https://mathweb.ucsd.edu/~nwallach/gleasonq.pdf). Gleason says that the *only* way to do that is the Born rule.
 
 ![](Bourne.png)
+
+And you know what? It turns out that if we treat both the apparatus and the electron as quantum, the Born rule predicting their *joint* probability looks like **this**:
+
+$
+P(X,Y) = \mid \langle \phi | \psi \rangle \mid^2.
+$
+
+Here's what's going on: our "measurement apparatus" is a simple yes/no device, and we just obtained the probability (a single number!) that the particle and the device will produce a "yes" fact. To obtain a more complex distribution, we just glue a ton of measurement devices together.
+
+Now, here's where it becomes interesting: *if we assume the state of the measurement device to be fixed*, then we can condition on that state and the Born rules becomes
+
+$
+P(Y) = \|\psi\|^2
+$
+
+for the wave function encoding the interaction we're looking for.
+
+But the funny thing about squares of scalar products is that they are symmetric.
+
+The electron might just as well say that the probability of producing a fact with the measurement apparatus in this specific configuration is (taking into account its own known state)
+
+$
+P(X) = \|\phi\|^2.
+$
+
+If the electron can do *that*, why wouldn't it also do it in the wild when randomly meeting other electrons? In fact, if we can *find out*, say, the spins of two particles that have interacted in an experiment after the fact, wouldn't it be awfully reasonable to assume that *there was* a fact?
+
+In the picture presented so far, this is actually awfully simple. We are under no obligation to obey the Schrödinger equation here, since our starting point was unitary evolution which faithfully encodes Schrödinger's picture.
+
+So, what's the fix?
+
+Just require that interactions (in the unitary sense discussed above) are followed by application of the Born rule over the observables that have become entangled and notice that this preserves unitary norm. The fact that the probabilities over interacting states don't sum to one is immaterial. That simply means there is still a chance we don't participate in an interaction.
+
+![](EurekaInterstellar.png)
+
+#### Why Does This Not Break Things?
+
+In the case that a single particle and a measurement device are the only thing that ever interacts, this produces the correct predictions by construction.
+
+In the case that particles interact, all that happens is that phase information (which is usually considered random) changes.
+
+In the case of particles interacting in the wild, the interactions are too rare to meaningfully contribute. Also, nearby interacting branches tend to interfere away in the unitary picture, making it look a bit like a single measurement.
+
+Honestly, it would seem that this is just something that hitherto, nobody has seriously considered - even though the philosophy (measurement *is* interaction) was there at least since Everett. The only concern about including this as another axiom was "but it would break unitary evolution!"
+
+*And*? So long as we break it subtly and in a well-motivated way, that shouldn't be a problem, right?
+
+But notice that this simple fix *does* make predictions. It may be subtle, but math that is *known* to be different should make different predictions at least in *some* scenarios that people far more experienced than me should be able to find.
+
+The only thing that you have to swallow is that we no longer have an operator *group* to encode evolution, but a only monoid. Or, if you represent the system as multiple individual agents, a category with some lossy morphisms. But weren't yall hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it *is* different from the future. Adding Lorentzian constraints to this picture in the way I hinted at should only strengthen this case.
+
+To the western academic who somehow has missed this even though they are way smarter than me, I want to say:
+
+You don't want to sell us any more quantum opium, you want to go home and rethink your lives.
+
+![](Rethink.gif)
+
+#### The Big Picture
+
+We now have a group of evolution operators (or one big evolution operator of a unitary followed by local Born rule applications in interacting states) that deserves a bit of reflection.
+
+As in the Markovian setting, applying our evolution operator(s) means that we are advancing a probabilistic ensemble. *With my fix*, we now know where the probabilities live and can interpret *those* as the probability of certain interactions taking place at a given time.
+
+*Conditioning* on interaction records is literally just a quantum Bayesian update. So is conditioning on a known state of the observer from whose "perspective" we are probing the ensemble.
+
+Recovering the full system dynamics from the perspective of an observers should be possible by the remainder of my second postulate: a fully Bayesian approach where the observer knows that he knows nothing about himself and conditions his beliefs about himself and his causal impact on the past.
+
+#### Research Directions
+
+1. I expect that this fix, along with my first postulate, should make it much easier to reconcile Quantum Mechanics with Special Relativity. Philosophizing about this is literally what got me here.
+
+2. General Relativity suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. With my picture of Quantum Mechanics, *this makes sense now* at the quantum level: No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are *real* at interactions and this reality leaves a trace, and outside of interactions, you can not say anything. They *carry* their own coordinate system, and they fight it out through interactions.
+
+3. Personally, I find it very satisfying that treating epistemic wave functions as ontic solves things. You know what would be even greater? If we could somehow treat the wave function as latent in the correlation between interaction-facts. The idea that quantum information could just be living in correlations of interaction-facts - extending that in such a way that material agents express their quantum expectations in the correlations of interaction-facts would be huge. Don't forget: quantum mechanics lives in books, storage devices and our material practice.
+
+4. This leads me to a "second decoherence conjecture": can we find, in this new version of quantum mechanics, some explanation why sufficiently complex quantum agents would be interested in bringing the universe *for itself* (onto-epistemic wave function) in congruence with the universe *in itself* (record trace of interaction-facts)? At least, we have for the first time a probabilistic calculus that allows the system to reason about itself, so we can treat this question *in the model*.
 
 Let me leave you with two more musings on further directions, but these are really just musings:
 
@@ -320,7 +444,7 @@ Let me leave you with two more musings on further directions, but these are real
 
 2. Notice also: if a great mass is exactly behind your back, the only way you'd know is because of inexplicable motions of objects in your vincinity and even of distant stars...
 
-## Some More Consequences
+## Some More Philosophical Consequences
 
 Let me close the physics part with a few more consequences that follow either "in spirit" or even in a strong sense.
 
