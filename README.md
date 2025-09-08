@@ -405,13 +405,13 @@ But you know what? If the changed predictions that come from the Born axiom are 
 
 But **do** use the notational tweak Barandes and later I made! It does even less to change the theory as such - but it makes it *so much more practical* and *in particular* enables us to think of imposing constraints like Lorentz invariance in a whole new way (which to my knowledge, I have the honor of being the first one to point out):
 
-Let $S$ be the global configuration space (a cartesian product over the possible configurations or all protagonists) and $\operatorname{Iso}(S)$ be the isomorphism group on S.
+Let $S$ be the global configuration space (a cartesian product over the possible configurations or all protagonists) and $\mathrm{Iso}(S)$ be the isomorphism group on S.
 
 Let $G_I$ be a family of groups with index set $I$ encoding the symmetries we care about: Galilean symmetry, Lorentzian symmetry - you name it. Now, define
 
-$$\operatorname{Iso}(S) \supseteq G := \bigcap_{i\in I}\operatorname{img}(f_i(G_i))$$
+$$\mathrm{Iso}(S) \supseteq G := \bigcap_{i\in I}\mathrm{img}(f_i(G_i))$$
 
-for a family of group embeddings into $\operatorname{Iso}(S)$ associated with each $G_i$.
+for a family of group embeddings into $\mathrm{Iso}(S)$ associated with each $G_i$.
 
 Our dynamic operator $P$ must be a (not necessarily linear if we consider the Born rule fix) unitary norm preserving map $P:\mathbb{C}^S\longmapsto\mathbb{C}^S$ such that for all $f\in G$
 
