@@ -244,11 +244,13 @@ Let me begin by opposing the question that has hitherto been asked with the corr
 
 The problem is that it is impossible to have the Born rule emerge *exactly* from unitary evolution. Therefore, we do not *ever* have probabilities from which we could sample anything.
 
-This is where even the otherwise very sober and honorable philosophical approach of [J. Barandes](https://arxiv.org/pdf/1405.6755) fails. He is more bold than Rovelli when it comes to facts being facts, but then (and here, he is less bold than Rovelli) introduces states that are completely epistemic. Our observer can only interpret the world, when the point is to explain how and why we can *change* it.
+This is where even the otherwise very sober and honorable philosophical approach of the early [J. Barandes](https://arxiv.org/pdf/1405.6755) fails. He is more bold than Rovelli when it comes to facts being facts, but then (and here, he is less bold than Rovelli) introduces states that are completely epistemic. Our observer can only interpret the world, when the point is to explain how and why we can *change* it.
 
-A novelty in Barandes' picture that deserves mention is that at least officially, he gives decoherence a different role than everyone else: by having ontic facts be facts, decoherence is free to act only on epistemic states. Except that in reality, they never decohere so much that we would ever be fully justified to apply the Born rule. Our detached, out-of-universe and rather [Feuerbachian](https://www.marxists.org/archive/marx/works/1845/theses/) observer is condemned to eternal indecision and nagging philosophical questions. Sad!
+A novelty in Barandes' picture from back then that deserves mention is that at least officially, he gives decoherence a different role than everyone else: by having ontic facts be facts, decoherence is free to act only on epistemic states. Except that in reality, they never decohere so much that we would ever be fully justified to apply the Born rule. Our detached, out-of-universe and rather [Feuerbachian](https://www.marxists.org/archive/marx/works/1845/theses/) observer is condemned to eternal indecision and nagging philosophical questions. Sad!
 
-**The right question** is whether we can provide an ontology based on empirical fact and *good* philosophy, then present the existing formalism in a form suitable to *extend* it with a Born *axiom* (where we need a mathematical justification mirroring the philosophical justification), then complete the picture of the path space and justify why the differences are small enough so we have empirically never noticed them - but maybe could.
+The *later* [Barandes](https://arxiv.org/pdf/2302.10778) has some much better ideas buried under a lot of formalism, but it is still presented as if all of this was *equivalent* to existing quantum mechanics, when one of the two ideas clearly is not (to be discussed)...
+
+**The right question** is whether we can provide an ontology based on empirical fact and *good* philosophy, then present the existing formalism in a form suitable to *extend* it with a Born *axiom* (where we need a mathematical justification mirroring the philosophical justification), then complete the picture of the path space and justify why the differences are small enough so we have empirically never noticed them - but maybe could. *Moreover*, one ought to examine if the latest changes in the formalism enable us to impose constraints like Special Relativity in novel ways.
 
 In the next section, I will provide the academic reader with the math so he can shut up and calculate. And it is *disgustingly* simple.
 
@@ -297,11 +299,11 @@ and we hope that mathematicians don't hurt themselves when taking the limit $\de
 
 To arrive at dynamics for *coupled* systems, the underlying state space should be a cartesian product of possible states of the different protagonists.
 
-In the Markov chain community, this is a no-brainer - that's how they do it. In unitary evolution though, the pairing of states is done only *after* moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be ***the*** the notational contribution that appears to be originally due to [Barandes](https://arxiv.org/pdf/2302.10778) that makes what I am trying to do at all possible.
+In the Markov chain community, this is a no-brainer - that's how they do it. In unitary evolution though, the pairing of states is done only *after* moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be ***the*** the notational contribution that appears to be originally due to the later Barandes that makes what I am trying to do at all possible.
 
 Just for the skeptical physicist: We are *not* talking about a Cartesian product of Hilbert spaces, we are talking about a Cartesian product of the underlying configuration spaces.
 
-Quick historical note: I made this shift in notation independently of Barandes (I am only vaguely familiar with his formalism heavy work) because to someone coming from the stochastic processes angle, it's awfully natural. It doesn't make computations intractable either because you can still exploit sparse vector math. All it does is to clarify the picture. I imagine generations of mathematicians having the same painfully obvious idea, but whenever they brought it up and assumed physicists to understand that they were talking about the configuration space, the physicists struck that idea down because they assumed the mathematician was talking about cartesian products of Hilbert spaces. The mathematician would then have concluded that QM is just an unintelligible mystery and the physicists would have moved on with the impression that the mathematicians just don't get it. Well, good that we talked about it.
+Quick historical note: I made this shift in notation independently of Barandes (I am only vaguely familiar with his formalism-heavy work) because to someone coming from the stochastic processes angle, it's awfully natural. It doesn't make computations intractable either, because you can still exploit sparse vector math. All it does is to clarify the picture. I imagine generations of mathematicians having the same painfully obvious idea, but whenever they brought it up and assumed physicists to understand that they were talking about the configuration space, the physicists struck that idea down because they assumed the mathematician was talking about cartesian products of Hilbert spaces. The mathematician would then have concluded that QM is just an unintelligible mystery and the physicists would have moved on with the impression that the mathematicians just don't get it. Well, *good that we talked about it*.
 
 Let us now think, for example, of two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
 
@@ -381,23 +383,27 @@ Just require that interactions (in the unitary sense discussed above) are follow
 
 #### Why Does This Not Break Things?
 
+It *does*! This is where my work differs from Barandes'. Barandes deserves credit for pointing out before me (though I have landed on the idea independently) that the Born rule should be applied universally, but he presents this as something that is in complete harmony with existing Quantum mechanics when I think it is not. But the change is *subtle*.
+
 In the case that a single particle and a measurement device are the only thing that ever interacts, this produces the correct predictions by construction.
 
 In the case that particles interact, all that happens is that phase information (which is usually considered random) changes.
 
 In the case of particles interacting in the wild, the interactions are too rare to meaningfully contribute to overall predictions. Also, nearby interacting branches tend to interfere away in the unitary picture, making it look a bit like a single measurement.
 
-Honestly, it would seem that this is just something that hitherto, nobody has seriously considered - even though the philosophy (measurement *is* interaction) was there at least since Everett. The only concern about including this as another axiom was "but it would break unitary evolution!"
+Honestly, it would seem that this is just something that hitherto, nobody except Barandes (who thought this would *follow* rather than being new) has seriously considered - even though the philosophy (measurement *is* interaction) was there at least since Everett. The only concern about including this as another axiom was "but it would break unitary evolution!"
 
-*And*? So long as we break it subtly and in a well-motivated way, that shouldn't be a problem, right?
+*And*? So long as we break it subtly and in a well-motivated way, that shouldn't be a problem, right? When the math gives us no reason to assume that the Born rule ought to be applied only in special situations and philosophy demands laws of the universe to be universal, my fix is probably a good idea.
 
-Upon further reflection, it occured to me that the conventional choice to represent unitary evolution via tensor math contributed to people not daring to make this move: they did not quite know how to. If your formalism is solipsistic and interaction is more of an embarrassing practical necessity imposed from outside the map, it's difficult to even imagine how to do this. And imagine encoding this refinement into a modified Schrödinger equation - oh, the horror!
+Upon further reflection, it occured to me that the conventional choice to represent unitary evolution via tensor math contributed to people not daring to make this move: they did not quite know how to. If your formalism is solipsistic and interaction is more of an embarrassing practical necessity imposed from outside the map, it's difficult to even *imagine* how to do this. And imagine encoding this refinement into a modified Schrödinger equation - oh, the horror!
 
 Notice that this simple fix *does* make predictions. It may be subtle, but math that is *known* to be different should make different predictions at least in *some* scenarios that people far more experienced than me should be able to find.
 
-The only thing that you have to swallow is that we no longer have an operator *group* to encode evolution, but a only monoid. Or, if you represent the system as multiple individual agents, a category with some lossy morphisms. But weren't yall hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it *is* different from the future.
+The only thing that you have to swallow is that we no longer have a *group* of linear operators to encode evolution, but a only monoid. Or, if you represent the system as multiple individual agents (sparse encoding for practical numerical computations), a category with some lossy morphisms. But weren't y'all hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it *is* different from the future.
 
-But you know what? If the changed predictions that come from the Born axiom are too subtle to be tested anytime soon, don't use it. It's an interesting interpretive twist so mathematicians and philosophers are finally happy to work with this. But **do** use the notational tweak I (and Barandes before me) made! It does even less to change the theory as such - but it makes it *so much more practical* and in particular enables us to think of imposing constraints like Lorentz invariance in a whole new way:
+But you know what? If the changed predictions that come from the Born axiom are too subtle to be tested anytime soon, don't use it. It's an interesting interpretive twist so mathematicians and philosophers are finally happy to work with this.
+
+But **do** use the notational tweak Barandes and later I made! It does even less to change the theory as such - but it makes it *so much more practical* and *in particular* enables us to think of imposing constraints like Lorentz invariance in a whole new way (which to my knowledge, I have the honor of being the first one to point out):
 
 Let $S$ be the global configuration space (a cartesian product over the possible configurations or all protagonists) and $\operatorname{Iso}(S)$ be the isomorphism group on S.
 
@@ -417,7 +423,7 @@ $$\begin{align*}\hat{f}:\mathbb{C}^S &\longmapsto \mathbb{C}^S,\\ \hat{f}(\phi_s
 
 That's a trick we have hitherto been using on *each object's* Hilbert space, but never on a global Hilbert space encoding the big picture.
 
-Oh, and to fully incorporate my first postulate and make this truly Lorentz compatible, one probably has to impose symmetry constrainds on the time dimension (which so far was just a parameter to index our unitary operators!) as well and think carefully about what that means. In particular, I expect a stark asymmetry between the known past and the unknown future.
+Oh, and to fully incorporate my first postulate and make this truly Lorentz compatible, one probably has to impose symmetry constraints on the time dimension (which so far was just a parameter to index our unitary operators!) as well and think carefully about what that means. In particular, I expect a stark asymmetry between the known past and the unknown future.
 
 To the western academic who somehow has missed this even though they are way smarter than me, I want to say:
 
