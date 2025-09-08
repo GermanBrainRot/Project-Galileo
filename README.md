@@ -417,6 +417,8 @@ $$\begin{align*}\hat{f}:\mathbb{C}^S &\longmapsto \mathbb{C}^S,\\ \hat{f}(\phi_s
 
 That's a trick we have hitherto been using on *each object's* Hilbert space, but never on a global Hilbert space encoding the big picture.
 
+Oh, and to fully incorporate my first postulate and make this truly Lorentz compatible, one probably has to impose symmetry constrainds on the time dimension (which so far was just a parameter to index our unitary operators!) as well and think carefully about what that means. In particular, I expect a stark asymmetry between the known past and the unknown future.
+
 To the western academic who somehow has missed this even though they are way smarter than me, I want to say:
 
 You don't want to sell us any more quantum opium, you want to go home and rethink your lives.
