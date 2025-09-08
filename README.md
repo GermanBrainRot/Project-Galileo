@@ -297,13 +297,15 @@ and we hope that mathematicians don't hurt themselves when taking the limit $\de
 
 To arrive at dynamics for *coupled* systems, the underlying state space should be a cartesian product of possible states of the different protagonists.
 
-In the Markov chain community, this is a no-brainer and they have become quite creative in representing sparse transition matrices. In unitary evolution though, the pairing of states is done only after moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be a minor notational contribution of mine.
+In the Markov chain community, this is a no-brainer - that's how they do it. In unitary evolution though, the pairing of states is done only after moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be ***the*** the notational contribution of mine that makes what I am trying to do at all possible.
 
-Let us now think of two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
+Just for the skeptical physicist: I am *not* talking about a Cartesian product of Hilbert spaces, I am talking about a Cartesian product of the underlying configuration spaces.
+
+Let us think, for example, of two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
 
 $$S_{A,B} = \mathbb{R}^2\times\mathbb{R}^2 = \mathbb{R^4}.$$
 
-In this now rather inconveniently encoded state space, we can introduce dynamics via a random walk on each participant, where we restrict ourselves to just the four major axes and a single stepwidth:
+In this now rather inconveniently encoded state space (but remember that with cartesian products, switching to other representations than a 4-vector is mere childsplay), we can introduce dynamics via a random walk on each participant, where we restrict ourselves to just the four major axes and a single stepwidth:
 
 $$\begin{align*}P(X(t+\delta t) = y \mid X(t) = x) = &\frac{1}{4} \text{ if } y = x\pm v\cdot e_i,\\ &0, \text{otherwise},\\ &X=A\lor X=B. \end{align*}$$
 
@@ -318,7 +320,7 @@ Notice something? We somehow had to completely change the system dynamics to mak
 
 This has *nothing* to do with the fact that we asked them to move together. I pulled that example out of my ass to keep the system simple. The dynamics are coupled because of the need to maintain correlations!
 
-*This* is what Bell was getting at with his famous theorem: in a classical Markovian picture, correlation forces us to introduce *extra dynamics* to maintain them.
+*This* is what Bell was getting at with his famous theorem: in a classical Markovian picture, correlation forces us to introduce *extra dynamics* to maintain it.
 
 Sure: you could also have added velocities and imposed a realistic constraint on the correlation of the velocity after the interaction. But to make this correlation *stick*, you would have to make velocity dominate position evolution, and velocity itself would basically have to be deterministic. Otherwise, over time, the correlation imposed this way will still degenerate.
 
@@ -326,7 +328,7 @@ Not so in the unitary picture!
 
 It is a well known [fact](https://arxiv.org/pdf/quant-ph/0407118) that unitary evolution in the non-interacting case preserves entanglement - the quantum analogy of correlation.
 
-An "**interaction**" in both the Markovian and Unitary picture is just a pair of states (think: both billiard balls at the same place) such that
+An "**interaction**" in both the Markovian and Unitary picture is just a pair of states (think: both billiard balls at the same place, but this is just modelling choice in my toy model) such that
 
 $$\begin{align*}&P((A,B)(t+\delta t) = x,y | (A,B)(t) = a,b) \\ \neq &P(A(t+\delta t) = x\mid A(t)=a)\cdot P(B(t)=y \mid B(t)=b).\end{align*}$$
 
@@ -381,15 +383,37 @@ In the case that a single particle and a measurement device are the only thing t
 
 In the case that particles interact, all that happens is that phase information (which is usually considered random) changes.
 
-In the case of particles interacting in the wild, the interactions are too rare to meaningfully contribute. Also, nearby interacting branches tend to interfere away in the unitary picture, making it look a bit like a single measurement.
+In the case of particles interacting in the wild, the interactions are too rare to meaningfully contribute to overall predictions. Also, nearby interacting branches tend to interfere away in the unitary picture, making it look a bit like a single measurement.
 
 Honestly, it would seem that this is just something that hitherto, nobody has seriously considered - even though the philosophy (measurement *is* interaction) was there at least since Everett. The only concern about including this as another axiom was "but it would break unitary evolution!"
 
 *And*? So long as we break it subtly and in a well-motivated way, that shouldn't be a problem, right?
 
-But notice that this simple fix *does* make predictions. It may be subtle, but math that is *known* to be different should make different predictions at least in *some* scenarios that people far more experienced than me should be able to find.
+Upon further reflection, it occured to me that the conventional choice to represent unitary evolution via tensor math contributed to people not daring to make this move: they did not quite know how to. If your formalism is solipsistic and interaction is more of an embarrassing practical necessity imposed from outside the map, it's difficult to even imagine how to do this. And imagine encoding this refinement into a modified Schrödinger equation - oh, the horror!
 
-The only thing that you have to swallow is that we no longer have an operator *group* to encode evolution, but a only monoid. Or, if you represent the system as multiple individual agents, a category with some lossy morphisms. But weren't yall hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it *is* different from the future. Adding Lorentzian constraints to this picture in the way I hinted at should only strengthen this case.
+Notice that this simple fix *does* make predictions. It may be subtle, but math that is *known* to be different should make different predictions at least in *some* scenarios that people far more experienced than me should be able to find.
+
+The only thing that you have to swallow is that we no longer have an operator *group* to encode evolution, but a only monoid. Or, if you represent the system as multiple individual agents, a category with some lossy morphisms. But weren't yall hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it *is* different from the future.
+
+But you know what? If the changed predictions that come from the Born axiom are too subtle to be tested anytime soon, don't use it. It's an interesting interpretive twist so mathematicians and philosophers are finally happy to work with this. But **do** use the notational tweak I made! It does even less to change the theory as such - but it makes it *so much more practical* and in particular enables us to think of imposing constraints like Lorentz invariance in a whole new way:
+
+Let $S$ be the global configuration space (a cartesian product over the possible configurations or all protagonists) and $\operatorname{Iso}(S)$ be the isomorphism group on S.
+
+Let $G_I$ be a family of groups with index set $I$ encoding the symmetries we care about: Galilean symmetry, Lorentzian symmetry - you name it. Now, define
+
+$$\operatorname{Iso}(S) \supseteq G := \bigcap_{i\in I}\operatorname{img}(f_i(G_i))$$
+
+for a family of group embeddings into $\operatorname{Iso}(S)$ associated with each $G_i$.
+
+Our dynamic operator $P$ must be a (not necessarily linear if we consider the Born rule fix) unitary norm preserving map $P:\mathbb{C}^S\longmapsto\mathbb{C}^S$ such that for all $f\in G$
+
+$$\hat{f}\circ P\circ \hat{f}^{-1} = P,$$
+
+where
+
+$$\begin{align*}\hat{f}:\mathbb{C}^S &\longmapsto \mathbb{C}^S,\\ \hat{f}(\phi_s) &\mapsto \phi_{f(s)}.\end{align*}$$
+
+That's a trick we have hitherto been using on *each object's* Hilbert space, but never on a global Hilbert space encoding the big picture.
 
 To the western academic who somehow has missed this even though they are way smarter than me, I want to say:
 
@@ -409,11 +433,11 @@ Recovering the full system dynamics from the perspective of an observers should 
 
 #### Research Directions
 
-1. I expect that this fix, along with my first postulate, should make it much easier to reconcile Quantum Mechanics with Special Relativity. Philosophizing about this is literally what got me here.
+1. I have given a novel way to inject Lorentz invariance - or any other symmetry we care about - into the search criteria for dynamic operators in the path integral formalism. Whether the search space needs to include nonlinear operators that apply the Born rule at interaction, I do not know. But at least, we have a new way to even look for an answer and I hope that this will produce results that differ in fundamental ways from QFT. This would be exciting, and the predictions coming out of *this* would probably be testable much sooner than my Born rule idea.
 
 2. General Relativity suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. With my picture of Quantum Mechanics, *this makes sense now* at the quantum level: No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are *real* at interactions and this reality leaves a trace, and outside of interactions, you can not say anything. They *carry* their own coordinate system, and they fight it out through interactions.
 
-3. Personally, I find it very satisfying that treating epistemic wave functions as ontic solves things. You know what would be even greater? If we could somehow treat the wave function as latent in the correlation between interaction-facts. The idea that quantum information could just be living in correlations of interaction-facts - extending that in such a way that material agents express their quantum expectations in the correlations of interaction-facts would be huge. Don't forget: quantum mechanics lives in books, storage devices and our material practice.
+3. Personally, I find it very satisfying that treating epistemic wave functions as ontic solves things philosophically. You know what would be even greater? If we could somehow treat the wave function as latent in the correlation between interaction-facts (that is: the real statistical trace left behind by interactions, *not* the mathematical ghosts moving through Hilbert spaces). The idea that quantum information could just be living in correlations of interaction-facts - extending that in such a way that material agents express their quantum expectations in the correlations of interaction-facts would be huge. Don't forget: quantum mechanics lives in books, storage devices and our material practice, not some otherworldy Platonic ideals.
 
 4. This leads me to a "second decoherence conjecture": can we find, in this new version of quantum mechanics, some explanation why sufficiently complex quantum agents would be interested in bringing the universe *for itself* (onto-epistemic wave function) in congruence with the universe *in itself* (record trace of interaction-facts)? At least, we have for the first time a probabilistic calculus that allows the system to reason about itself, so we can treat this question *in the model*.
 
