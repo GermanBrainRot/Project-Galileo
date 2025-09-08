@@ -246,7 +246,7 @@ The problem is that it is impossible to have the Born rule emerge *exactly* from
 
 This is where even the otherwise very sober and honorable philosophical approach of [J. Barandes](https://arxiv.org/pdf/1405.6755) fails. He is more bold than Rovelli when it comes to facts being facts, but then (and here, he is less bold than Rovelli) introduces states that are completely epistemic. Our observer can only interpret the world, when the point is to explain how and why we can *change* it.
 
-A novelty in Barandes' picture that deserves mention is that at least officially, he gives decoherence a different role than everyone else: by having ontic facts be facts, decoherence is free to act only on epistemic states. Except that in reality, they never decohere so much that we would ever be fully justified to apply the Born rule. Our detached, out-of-universe observer is condemned to eternal indecision and nagging philosophical questions. Sad!
+A novelty in Barandes' picture that deserves mention is that at least officially, he gives decoherence a different role than everyone else: by having ontic facts be facts, decoherence is free to act only on epistemic states. Except that in reality, they never decohere so much that we would ever be fully justified to apply the Born rule. Our detached, out-of-universe and rather [Feuerbachian](https://www.marxists.org/archive/marx/works/1845/theses/) observer is condemned to eternal indecision and nagging philosophical questions. Sad!
 
 **The right question** is whether we can provide an ontology based on empirical fact and *good* philosophy, then present the existing formalism in a form suitable to *extend* it with a Born *axiom* (where we need a mathematical justification mirroring the philosophical justification), then complete the picture of the path space and justify why the differences are small enough so we have empirically never noticed them - but maybe could.
 
@@ -262,24 +262,24 @@ The setting that is appropriate to discuss my ideas is unitary evolution. But le
 
 Historically, the first description of the full quantum state dynamics (as we currently understand it) was given by Schrödinger with his famous differential equation (see e.g. [here](https://site.physics.georgetown.edu/~jkf/grad_quant2/html/lecture25.html?utm_source=chatgpt.com)):
 
-$i\hbar \frac{d}{d t}\psi(t) = H(t)\psi(t).$
+$$i\hbar \frac{d}{d t}\psi(t) = H(t)\psi(t).$$
 
 Here, $i$ is the imaginary unit, $\hbar$ is a constant known as Planck's constant and $H$ is a (in general time dependent) Hermitian operator called "Hamiltonian".
 
 In the time *in*dependent case, the solution is relatively straightforward (see derivation in the linked source):
 
-$\left|\psi(t)\right\rangle=\sum_n c_n(t_0)e^{-iE_n(t-t_0)/\hbar}\left|n\right\rangle.$
+$$\left|\psi(t)\right\rangle=\sum_n c_n(t_0)e^{-iE_n(t-t_0)/\hbar}\left|n\right\rangle.$$
 
 But in the time *dependent* case, a general approach to practically solve the equation that even lends itself to numerical simulation is due to Feynman (see, for example, [here](https://web.mit.edu/dvp/www/Work/8.06/dvp-8.06-paper.pdf)): just discretize time steps, and whenever you have a wave function $\psi(t)$ at time $t$, the wave function at time $t+\delta t$ becomes, in each component, the sum over all possible complex continuations of the evolution:
 
-$\ket{\psi(t+\delta t)}\approx \ket{\psi(t)}+\frac{dt}{d}∣\psi⟩​\delta t=\ket{\psi(t)}−\hbar i​H(t)\ket{\psi(t)}\delta t,$
+$$\ket{\psi(t+\delta t)}\approx \ket{\psi(t)}+\frac{dt}{d}∣\psi⟩​\delta t=\ket{\psi(t)}−\hbar i​H(t)\ket{\psi(t)}\delta t,$$
 
 where the minus sign comes from dividing by $i$.
 
 Now, remember what this is supposed to encode though: we want to map complex unit vectors to complex unit vectors which locally should basically be a rotation which in complex math should involve an exponential. And here it is:
 
-$\ket{\psi(t+\delta t)} \approx U(t+\delta t, t) \ket{\psi(t)}, \quad
-U(t+\delta t, t) \approx \exp\Big(-\frac{i}{\hbar} H(t)\, \delta t \Big)$
+$$\ket{\psi(t+\delta t)} \approx U(t+\delta t, t) \ket{\psi(t)}, \quad
+U(t+\delta t, t) \approx \exp\Big(-\frac{i}{\hbar} H(t)\, \delta t \Big)$$
 
 where U is supposed to be a "time ordered" exponential.
 
@@ -291,7 +291,7 @@ As a pure formalism devoid of statistical interpretation, this is quite similar 
 
 For my picture, I will put the Markovian and the Unitary picture side by side in a discretized form, while keeping the nice integral touch:
 
-$\ket{\psi(t)} \approx \sum_{j=0}^n \ket{\psi(0)} d P(j\cdot\delta t),$
+$$\ket{\psi(t)} \approx \sum_{j=0}^n \ket{\psi(0)} d P(j\cdot\delta t),$$
 
 and we hope that mathematicians don't hurt themselves when taking the limit $\delta t \to 0$. This formulation can be thought of as unitary or Markovian evolution for now.
 
@@ -301,18 +301,18 @@ In the Markov chain community, this is a no-brainer and they have become quite c
 
 Let us now think of two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
 
-$S_{A,B} = \mathbb{R}^2\times\mathbb{R}^2 = \mathbb{R^4}.$
+$$S_{A,B} = \mathbb{R}^2\times\mathbb{R}^2 = \mathbb{R^4}.$$
 
 In this now rather inconveniently encoded state space, we can introduce dynamics via a random walk on each participant, where we restrict ourselves to just the four major axes and a single stepwidth:
 
-$P(X(t+\delta t) = y \mid X(t) = x) = \begin{cases}\frac{1}{4}, y = x\pm v\cdot e_i,\\0, \text{otherwise}\end{cases}, X=A\lor X=B. $
+$$\begin{align*}P(X(t+\delta t) = y \mid X(t) = x) = &\frac{1}{4} \text{ if } y = x\pm v\cdot e_i,\\ &0, \text{otherwise},\\& X=A\lor X=B. \end{align*}$$
 
 Now, say that the billiard balls are dot sized and whenever they occupy the same place, we want them to collide. To make our mathematical lives easy and not think about momentum for now (we're drunken billiard balls!), let's just have the protagonists do something completely unphysical to get the point across: they'll just move together in their drunkards walk.
 
 Here's how the dynamics looks in the Markovian picture:
 
-$P((A,B)(t+\delta t) = y \mid (A,B)(t)=x \land A(t_-) = B(t_-) \text{for some } t_- \leq t) \\
-= (\text{see above}).$
+$$\begin{align*}P((A,B)(t+\delta t) &= y \mid (A,B)(t)=x \land A(t_-) = B(t_-) \text{for some } t_- \leq t) \\
+&= (\text{see above}).\end{align*}$$
 
 Notice something? We somehow had to completely change the system dynamics to make that happen. Now, the two billiard balls no longer have their own transition probabilities, but they are updated together so as to maintain their correlated state.
 
@@ -328,7 +328,7 @@ It is a well known [fact](https://arxiv.org/pdf/quant-ph/0407118) that unitary e
 
 An "**interaction**" in both the Markovian and Unitary picture is just a pair of states (think: both billiard balls at the same place) such that
 
-$P((A,B)(t+\delta t) = x,y | (A,B)(t) = a,b) \\ \neq P(A(t+\delta t) = x\mid A(t)=a)\cdot P(B(t)=y \mid B(t)=b).$
+$$\begin{align*}&P((A,B)(t+\delta t) = x,y | (A,B)(t) = a,b) \\ \neq &P(A(t+\delta t) = x\mid A(t)=a)\cdot P(B(t)=y \mid B(t)=b).\end{align*}$$
 
 We literally *introduce* a correlation dynamically - and unitary evolution preserves it as long as there are no further interactions. That's all there is to it.
 
@@ -349,13 +349,13 @@ Enter [Gleason's Theorem](https://mathweb.ucsd.edu/~nwallach/gleasonq.pdf). Glea
 
 And you know what? It turns out that if we treat both the apparatus and the electron as quantum, the Born rule predicting their *joint* probability looks like **this**:
 
-$P(X,Y) = \mid \langle \phi | \psi \rangle \mid^2.$
+$$P(X,Y) = \mid \langle \phi | \psi \rangle \mid^2.$$
 
 Here's what's going on: our "measurement apparatus" is a simple yes/no device, and we just obtained the probability (a single number!) that the particle and the device will produce a "yes" fact. To obtain a more complex distribution, we just glue a ton of measurement devices together.
 
 Now, here's where it becomes interesting: *if we assume the state of the measurement device to be fixed*, then we can condition on that state and the Born rules becomes
 
-$P(Y\mid X=\phi) = \|\psi\|^2$
+$$P(Y\mid X=\phi) = \|\psi\|^2$$
 
 for the wave function encoding the interaction we're looking for.
 
@@ -363,7 +363,7 @@ But the funny thing about squares of scalar products is that they are symmetric.
 
 The electron might just as well say that the probability of producing a fact with the measurement apparatus in this specific configuration is (taking into account its own known state)
 
-$P(X\mid Y=\psi) = \|\phi\|^2.$
+$$P(X\mid Y=\psi) = \|\phi\|^2.$$
 
 If the electron can do *that*, why wouldn't it also do it in the wild when randomly meeting other electrons? In fact, if we can *find out*, say, the spins of two particles that have interacted in an experiment after the fact, wouldn't it be awfully reasonable to assume that *there was* a fact?
 
@@ -847,9 +847,9 @@ I hereby confirm that Islam - in particular Qizilbash Shia - is the correct reli
 
 Given how the West has historically used (or tried to use) the ludicrous notion of "intellectual property" to keep the peoples of the world in the dark, I would like to pay them back in kind.
 
-I hereby prohibit any monetization or military use of any potential practical applications based on this work by western economic or governmental entities, so long as these societies are still clearly bourgeois.
+I hereby prohibit any monetization or military use of any potential practical applications based on this work by western big (>100 employees) economic or governmental entities, so long as these societies are still clearly bourgeois (that is: politically dominated by big corporations and their lobbies rather than the interests of working people). Also, the West must stop protecting Isreal from accountability for its actions before their economic powerhouses are allowed to use my work economically.
 
-Any other use of my work is permitted so long as any further publications using my insights retain these terms. When the stated conditions on the intellectual embargo against the west no longer apply, these terms do not need to be copied. 
+Any other use of my work - economic or not - is permitted for free, so long as any further publications using my insights retain these terms. When the stated conditions on the intellectual embargo against the west no longer apply, these terms do not need to be copied anymore. 
 
 I explicitly encourage developing countries and the People's Republic of China to make the best of any insights this work contains.
 
