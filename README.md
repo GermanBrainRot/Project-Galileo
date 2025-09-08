@@ -305,7 +305,7 @@ $$S_{A,B} = \mathbb{R}^2\times\mathbb{R}^2 = \mathbb{R^4}.$$
 
 In this now rather inconveniently encoded state space, we can introduce dynamics via a random walk on each participant, where we restrict ourselves to just the four major axes and a single stepwidth:
 
-$$\begin{align*}P(X(t+\delta t) = y \mid X(t) = x) = &\frac{1}{4} \text{ if } y = x\pm v\cdot e_i,\\ &0, \text{otherwise},\\& X=A\lor X=B. \end{align*}$$
+$$\begin{align*}P(X(t+\delta t) = y \mid X(t) = x) = &\frac{1}{4} \text{ if } y = x\pm v\cdot e_i,\\ &0, \text{otherwise},\\ &X=A\lor X=B. \end{align*}$$
 
 Now, say that the billiard balls are dot sized and whenever they occupy the same place, we want them to collide. To make our mathematical lives easy and not think about momentum for now (we're drunken billiard balls!), let's just have the protagonists do something completely unphysical to get the point across: they'll just move together in their drunkards walk.
 
