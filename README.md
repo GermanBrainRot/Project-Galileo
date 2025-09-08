@@ -297,11 +297,13 @@ and we hope that mathematicians don't hurt themselves when taking the limit $\de
 
 To arrive at dynamics for *coupled* systems, the underlying state space should be a cartesian product of possible states of the different protagonists.
 
-In the Markov chain community, this is a no-brainer - that's how they do it. In unitary evolution though, the pairing of states is done only after moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be ***the*** the notational contribution of mine that makes what I am trying to do at all possible.
+In the Markov chain community, this is a no-brainer - that's how they do it. In unitary evolution though, the pairing of states is done only *after* moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be ***the*** the notational contribution that appears to be originally due to [Barandes](https://arxiv.org/pdf/2302.10778) that makes what I am trying to do at all possible.
 
-Just for the skeptical physicist: I am *not* talking about a Cartesian product of Hilbert spaces, I am talking about a Cartesian product of the underlying configuration spaces.
+Just for the skeptical physicist: We are *not* talking about a Cartesian product of Hilbert spaces, we are talking about a Cartesian product of the underlying configuration spaces.
 
-Let us think, for example, of two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
+Quick historical note: I made this shift in notation independently of Barandes (I am only vaguely familiar with his formalism heavy work) because to someone coming from the stochastic processes angle, it's awfully natural. It doesn't make computations intractable either because you can still exploit sparse vector math. All it does is to clarify the picture. I imagine generations of mathematicians having the same painfully obvious idea, but whenever they brought it up and assumed physicists to understand that they were talking about the configuration space, the physicists struck that idea down because they assumed the mathematician was talking about cartesian products of Hilbert spaces. The mathematician would then have concluded that QM is just an unintelligible mystery and the physicists would have moved on with the impression that the mathematicians just don't get it. Well, good that we talked about it.
+
+Let us now think, for example, of two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
 
 $$S_{A,B} = \mathbb{R}^2\times\mathbb{R}^2 = \mathbb{R^4}.$$
 
@@ -395,7 +397,7 @@ Notice that this simple fix *does* make predictions. It may be subtle, but math 
 
 The only thing that you have to swallow is that we no longer have an operator *group* to encode evolution, but a only monoid. Or, if you represent the system as multiple individual agents, a category with some lossy morphisms. But weren't yall hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it *is* different from the future.
 
-But you know what? If the changed predictions that come from the Born axiom are too subtle to be tested anytime soon, don't use it. It's an interesting interpretive twist so mathematicians and philosophers are finally happy to work with this. But **do** use the notational tweak I made! It does even less to change the theory as such - but it makes it *so much more practical* and in particular enables us to think of imposing constraints like Lorentz invariance in a whole new way:
+But you know what? If the changed predictions that come from the Born axiom are too subtle to be tested anytime soon, don't use it. It's an interesting interpretive twist so mathematicians and philosophers are finally happy to work with this. But **do** use the notational tweak I (and Barandes before me) made! It does even less to change the theory as such - but it makes it *so much more practical* and in particular enables us to think of imposing constraints like Lorentz invariance in a whole new way:
 
 Let $S$ be the global configuration space (a cartesian product over the possible configurations or all protagonists) and $\operatorname{Iso}(S)$ be the isomorphism group on S.
 
