@@ -403,6 +403,8 @@ Honestly, it would seem that this is just something that hitherto, nobody except
 
 It was only upon further reflection that it occured to me that the conventional choice to represent unitary evolution via tensor math may have contributed to people not daring to make this move: they did not quite know how to. If your formalism is solipsistic and interaction is more of an embarrassing practical necessity imposed from outside the map, it's difficult to even *imagine* how to do this. And imagine encoding this refinement into a modified Schrödinger equation - oh, the horror!
 
+The only thing that you have to swallow is that we no longer have a *group* of linear operators to encode evolution, but a only monoid, as the Born rule - while it *does* preserve the norm - is *not* injective. Or, if you represent the system as multiple individual agents (sparse encoding for practical numerical computations), it becomes a category with some lossy morphisms. But weren't y'all hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it *is* different from the future.
+
 Notice that this simple fix *does* make predictions. It may be subtle, but math that is *known* to be different should make different predictions at least in *some* scenarios that people far more experienced than me should be able to find.
 
 But you know what? If the changed predictions that come from the Born axiom are too subtle to be tested anytime soon, don't use it. It's an interesting interpretive twist so mathematicians and philosophers are finally happy to work with this.
