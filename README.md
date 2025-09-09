@@ -383,6 +383,8 @@ So, what's the fix?
 
 Just require that interactions (in the unitary sense discussed above) are followed by application of the Born rule over the observables that have become entangled and notice that this preserves unitary norm. The fact that the probabilities over interacting states don't sum to one is immaterial. That simply means there is still a chance we don't participate in an interaction.
 
+**All that unitary evolution does is introducing and transporting correlation. In my picture, states where interactions (correlation introduction) happen are explicit and therefore, we have a natural place to apply the Born rule and obtain probabilities that naturally encode how likely it is for the involved participants to participate in a certain interaction at a given time.**
+
 ![](EurekaInterstellar.png)
 
 #### Why Does This Not Break Things?
@@ -439,9 +441,9 @@ You don't want to sell us any more quantum opium, you want to go home and rethin
 
 #### The Big Picture
 
-We now have a group of evolution operators (or one big evolution operator of a unitary followed by local Born rule applications in interacting states) that deserves a bit of reflection.
+We now have a monoid of evolution operators (or one big evolution operator of a unitary followed by local Born rule applications in interacting states) that deserves a bit of reflection.
 
-As in the Markovian setting, applying our evolution operator(s) means that we are advancing a probabilistic ensemble. *With my fix*, we now know where the probabilities live and can interpret *those* as the probability of certain interactions taking place at a given time.
+As in the Unitary setting, applying our evolution operator(s) means that we are transporting correlations of an ensemble. *With my fix*, we now know where probabilities live and can interpret *those* as the probability of certain interactions taking place at a given time.
 
 *Conditioning* on interaction records is literally just a quantum Bayesian update. So is conditioning on a known state of the observer from whose "perspective" we are probing the ensemble.
 
