@@ -4,7 +4,7 @@
 
 ## Abstract
 
-In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics (RQM) and how it aims at resolving the measurement problem. Once I have explained how I think it works, I will point out an obvious type of criticism and how Rovelli tried to fix the problem. After this, I will show why it does not fix the issues, suggest a *much* better fix and discuss why, in my opinion, academia missed this despite being obvious and how this is just the tip of the iceberg of much more fundamental problems with western society.
+In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics (RQM) and how it aims at resolving the measurement problem. Once I have explained how I think it works, I will point out an obvious type of criticism and how Rovelli tried to fix the problem. After this, I will show why it does not fix the issues, suggest a *much* better fix. In the section "Road to Formalization", starting from a simple change in notation that I recognized only later as novel and clarifying, I develop how some of this plays out mathematically. Finally, I discuss why, in my opinion, academia missed this despite being obvious and how this is just the tip of the iceberg of much more fundamental problems with western society.
 
 ## Table of Contents
 
@@ -244,11 +244,11 @@ Let me begin by opposing the question that has hitherto been asked with the corr
 
 The problem is that it is impossible to have the Born rule emerge *exactly* from unitary evolution. Therefore, we do not *ever* have probabilities from which we could sample anything.
 
-This is where even the otherwise very sober and honorable philosophical approach of the early [J. Barandes](https://arxiv.org/pdf/1405.6755) fails. He is more bold than Rovelli when it comes to facts being facts, but then (and here, he is less bold than Rovelli) introduces states that are completely epistemic. Our observer can only interpret the world, when the point is to explain how and why we can *change* it.
+This is where even the otherwise very sober and honorable philosophical approach of the [early J. Barandes](https://arxiv.org/pdf/1405.6755) fails. He is more bold than Rovelli when it comes to facts being facts, but in order to make that work (and here, he is less bold than Rovelli) introduces states that are *completely* epistemic. Our observer can only interpret the world, when the point is to explain how and why we can *change* it.
 
-A novelty in Barandes' picture from back then that deserves mention is that at least officially, he gives decoherence a different role than everyone else: by having ontic facts be facts, decoherence is free to act only on epistemic states. Except that in reality, they never decohere so much that we would ever be fully justified to apply the Born rule. Our detached, out-of-universe and rather [Feuerbachian](https://www.marxists.org/archive/marx/works/1845/theses/) observer is condemned to eternal indecision and nagging philosophical questions. Sad!
+A novelty in Barandes' old picture from back then that deserves mention is that at least officially, he gives decoherence a different role than everyone else: by having ontic facts be facts, decoherence is free to act only on epistemic states. Except that in reality, they never decohere so much that we would ever be fully justified to apply the Born rule. Our detached, out-of-universe and rather [Feuerbachian](https://www.marxists.org/archive/marx/works/1845/theses/) observer is condemned to eternal indecision and nagging philosophical questions. Sad!
 
-The *later* [Barandes](https://arxiv.org/pdf/2302.10778) has some much better ideas buried under a lot of formalism, but it is still presented as if all of this was *equivalent* to existing quantum mechanics, when one of the two ideas clearly is not (to be discussed)...
+The [*later* Barandes](https://arxiv.org/pdf/2302.10778) has some much better ideas buried under a lot of formalism, but it is still presented as if all of this was *equivalent* to existing quantum mechanics, when one of the two big ideas clearly is not - but in a good way (to be discussed)...
 
 **The right question** is whether we can provide an ontology based on empirical fact and *good* philosophy, then present the existing formalism in a form suitable to *extend* it with a Born *axiom* (where we need a mathematical justification mirroring the philosophical justification), then complete the picture of the path space and justify why the differences are small enough so we have empirically never noticed them - but maybe could. *Moreover*, one ought to examine if the latest changes in the formalism enable us to impose constraints like Special Relativity in novel ways.
 
@@ -274,7 +274,7 @@ $$\left|\psi(t)\right\rangle=\sum_n c_n(t_0)e^{-iE_n(t-t_0)/\hbar}\left|n\right\
 
 But in the time *dependent* case, a general approach to practically solve the equation that even lends itself to numerical simulation is due to Feynman (see, for example, [here](https://web.mit.edu/dvp/www/Work/8.06/dvp-8.06-paper.pdf)): just discretize time steps, and whenever you have a wave function $\psi(t)$ at time $t$, the wave function at time $t+\delta t$ becomes, in each component, the sum over all possible complex continuations of the evolution:
 
-$$\ket{\psi(t+\delta t)}\approx \ket{\psi(t)}+\frac{dt}{d}∣\psi⟩​\delta t=\ket{\psi(t)}−\hbar i​H(t)\ket{\psi(t)}\delta t,$$
+$$\ket{\psi(t+\delta t)}\approx \ket{\psi(t)}+\frac{dt}{d}∣\psi⟩​\delta t=\ket{\psi(t)}−\frac{i}{\hbar }​H(t)\ket{\psi(t)}\delta t,$$
 
 where the minus sign comes from dividing by $i$.
 
@@ -299,11 +299,15 @@ and we hope that mathematicians don't hurt themselves when taking the limit $\de
 
 To arrive at dynamics for *coupled* systems, the underlying state space should be a cartesian product of possible states of the different protagonists.
 
-In the Markov chain community, this is a no-brainer - that's how they do it. In unitary evolution though, the pairing of states is done only *after* moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be ***the*** the notational contribution that appears to be originally due to the later Barandes that makes what I am trying to do at all possible.
+In the Markov chain community, this is a no-brainer - that's how they do it. In unitary evolution though, the pairing of states is done only *after* moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be ***the*** the notational contribution that appears to be originally due to the later Barandes (cited above) that makes what I am trying to do at all possible.
 
-Just for the skeptical physicist: We are *not* talking about a Cartesian product of Hilbert spaces, we are talking about a Cartesian product of the underlying configuration spaces.
+Just for the skeptical physicist: We are *not* talking about a Cartesian product of Hilbert spaces, we are talking about a Cartesian product of the underlying *configuration* spaces.
 
-Quick historical note: I made this shift in notation independently of Barandes (I am only vaguely familiar with his formalism-heavy work) because to someone coming from the stochastic processes angle, it's awfully natural. It doesn't make computations intractable either, because you can still exploit sparse vector math. All it does is to clarify the picture. I imagine generations of mathematicians having the same painfully obvious idea, but whenever they brought it up and assumed physicists to understand that they were talking about the configuration space, the physicists struck that idea down because they assumed the mathematician was talking about cartesian products of Hilbert spaces. The mathematician would then have concluded that QM is just an unintelligible mystery and the physicists would have moved on with the impression that the mathematicians just don't get it. Well, *good that we talked about it*.
+Historical note: I made this shift in notation independently of Barandes (I am only vaguely familiar with his formalism-heavy work) because to someone coming from the stochastic processes angle, it's awfully natural. It doesn't make computations intractable either, because you can still exploit sparse vector math. All it does is to clarify the picture -
+
+that is, provided you are *not* Mr Barandes. Listen, good Sir! Math is just math. You do not need to move to "unistochastic matrices" that only make everything more complicated just because you find wave function realism philosophically unappealing. You say it is [difficult to extract](https://arxiv.org/pdf/2402.16935) relevant information from textbooks and publications? Please stop contributing to the problem. (By the way: thanks to AI, it's no longer quite true). Yes: good philosophers should be on a constant crusade against metaphysics - but you do not fight metaphysics with new and different "unistochastic" metaphysics and bury all the good stuff under a lot of math.
+
+Honestly? The change one really needs to make is *much* simpler: just use a configuration space that is a cartesian product, draw out as many analogies from Markov chains as you can and see where it breaks. That's all we need to do.
 
 Let us now think, for example, of two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
 
@@ -322,11 +326,11 @@ $$\begin{align*}P((A,B)(t+\delta t) &= y \mid (A,B)(t)=x \land A(t_-) = B(t_-) \
 
 Notice something? We somehow had to completely change the system dynamics to make that happen. Now, the two billiard balls no longer have their own transition probabilities, but they are updated together so as to maintain their correlated state.
 
-This has *nothing* to do with the fact that we asked them to move together. I pulled that example out of my ass to keep the system simple. The dynamics are coupled because of the need to maintain correlations!
+This has *nothing* to do with the fact that we asked them to move together. I pulled that example out of my ass to keep the system simple. What I want to draw your attention to here is that both random variables from now into perpetuity depend on a single, shared "coin toss".
 
-*This* is what Bell was getting at with his famous theorem: in a classical Markovian picture, correlation forces us to introduce *extra dynamics* to maintain it.
+*This* is what Bell was getting at with his famous theorem: in a classical Markovian picture, correlation forces us to introduce *global* dynamics to maintain it.
 
-Sure: you could also have added velocities and imposed a realistic constraint on the correlation of the velocity after the interaction. But to make this correlation *stick*, you would have to make velocity dominate position evolution, and velocity itself would basically have to be deterministic. Otherwise, over time, the correlation imposed this way will still degenerate.
+Sure: you could also have added velocities and imposed a realistic constraint on the correlation of the velocity after the interaction. But to make this correlation *stick*, you would have to make velocity dominate position evolution, and velocity itself would basically have to be deterministic. Otherwise, over time, the correlation imposed this way will still degenerate in the Markovian picture.
 
 Not so in the unitary picture!
 
@@ -334,11 +338,11 @@ It is a well known [fact](https://arxiv.org/pdf/quant-ph/0407118) that unitary e
 
 An "**interaction**" in both the Markovian and Unitary picture is just a pair of states (think: both billiard balls at the same place, but this is just modelling choice in my toy model) such that
 
-$$\begin{align*}&P((A,B)(t+\delta t) = x,y | (A,B)(t) = a,b) \\ \neq &P(A(t+\delta t) = x\mid A(t)=a)\cdot P(B(t)=y \mid B(t)=b).\end{align*}$$
+$$\begin{align*}&P((A,B)(t+\delta t) = (x,y) | (A,B)(t)) \\ \neq &P(A(t+\delta t) = x\mid A(t))\cdot P(B(t+\delta t)=y \mid B(t)).\end{align*}$$
 
-We literally *introduce* a correlation dynamically - and unitary evolution preserves it as long as there are no further interactions. That's all there is to it.
+We literally *introduce* a correlation/entanglement dynamically - and unitary evolution preserves it as long as there are no further interactions in the above sense. That's all there is to it.
 
-Except, that in the unitary picture, we have so far not seen a single thing that we could interpret as a probability. And honestly? This is a little mysterious. Think about it this way: we now have a dynamical system that can somehow introduce "correlations" - but what are the correlations *about*?
+Except that in the unitary picture, we have so far not seen a single thing that we could interpret as a probability. And honestly? This is a little mysterious. Think about it this way: we now have a dynamical system that can somehow introduce "correlations" - but what are the correlations *about*?
 
 This is where my second postulate steps in, which says three things here:
 - Facts are whatever is true at interaction.
@@ -383,7 +387,9 @@ Just require that interactions (in the unitary sense discussed above) are follow
 
 #### Why Does This Not Break Things?
 
-It *does*! This is where my work differs from Barandes'. Barandes deserves credit for pointing out before me (though I have landed on the idea independently) that the Born rule should be applied universally, but he presents this as something that is in complete harmony with existing Quantum mechanics when I think it is not. But the change is *subtle*.
+It *does*! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, *also* applies the Born rule whenever it is meaningful - because his cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics when it is clearly not. How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and *not* change the dynamics? You just did, champ (I just did it with less metaphysics)! That's a huge success, at it is philosophically grounded.
+
+But the change is empirically *subtle*.
 
 In the case that a single particle and a measurement device are the only thing that ever interacts, this produces the correct predictions by construction.
 
@@ -393,17 +399,15 @@ In the case of particles interacting in the wild, the interactions are too rare 
 
 Honestly, it would seem that this is just something that hitherto, nobody except Barandes (who thought this would *follow* rather than being new) has seriously considered - even though the philosophy (measurement *is* interaction) was there at least since Everett. The only concern about including this as another axiom was "but it would break unitary evolution!"
 
-*And*? So long as we break it subtly and in a well-motivated way, that shouldn't be a problem, right? When the math gives us no reason to assume that the Born rule ought to be applied only in special situations and philosophy demands laws of the universe to be universal, my fix is probably a good idea.
+*And*? So long as we break it subtly and in a well-motivated way that makes our understanding *more* consistent, that shouldn't be a problem, right? When the math gives us no reason to assume that the Born rule ought to be applied only in special situations and philosophy demands laws of the universe to be - well - universal, this fix is probably a good idea.
 
-Upon further reflection, it occured to me that the conventional choice to represent unitary evolution via tensor math contributed to people not daring to make this move: they did not quite know how to. If your formalism is solipsistic and interaction is more of an embarrassing practical necessity imposed from outside the map, it's difficult to even *imagine* how to do this. And imagine encoding this refinement into a modified Schrödinger equation - oh, the horror!
+It was only upon further reflection that it occured to me that the conventional choice to represent unitary evolution via tensor math may have contributed to people not daring to make this move: they did not quite know how to. If your formalism is solipsistic and interaction is more of an embarrassing practical necessity imposed from outside the map, it's difficult to even *imagine* how to do this. And imagine encoding this refinement into a modified Schrödinger equation - oh, the horror!
 
 Notice that this simple fix *does* make predictions. It may be subtle, but math that is *known* to be different should make different predictions at least in *some* scenarios that people far more experienced than me should be able to find.
 
-The only thing that you have to swallow is that we no longer have a *group* of linear operators to encode evolution, but a only monoid. Or, if you represent the system as multiple individual agents (sparse encoding for practical numerical computations), a category with some lossy morphisms. But weren't y'all hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it *is* different from the future.
-
 But you know what? If the changed predictions that come from the Born axiom are too subtle to be tested anytime soon, don't use it. It's an interesting interpretive twist so mathematicians and philosophers are finally happy to work with this.
 
-But **do** use the notational tweak Barandes and later I made! It does even less to change the theory as such - but it makes it *so much more practical* and *in particular* enables us to think of imposing constraints like Lorentz invariance in a whole new way (which to my knowledge, I have the honor of being the first one to point out):
+But **do** use the notational tweak Barandes and later I made! It does even less to change the theory as such - but it makes it *so much more practical* and *in particular* enables us to think of imposing constraints like Lorentz invariance in a whole new way (which to my knowledge, I have the honor of being the first one to point out, as my formulation is much clearer):
 
 Let $S$ be the global configuration space (a cartesian product over the possible configurations or all protagonists) and $\mathrm{Iso}(S)$ be the isomorphism group on S.
 
@@ -411,7 +415,7 @@ Let $G_I$ be a family of groups with index set $I$ encoding the symmetries we ca
 
 $$\mathrm{Iso}(S) \supseteq G := \bigcap_{i\in I}\mathrm{img}(f_i(G_i))$$
 
-for a family of group embeddings into $\mathrm{Iso}(S)$ associated with each $G_i$.
+for a family of group embeddings $f_i$ into $\mathrm{Iso}(S)$ associated with each $G_i$.
 
 Our dynamic operator $P$ must be a (not necessarily linear if we consider the Born rule fix) unitary norm preserving map $P:\mathbb{C}^S\longmapsto\mathbb{C}^S$ such that for all $f\in G$
 
@@ -421,7 +425,7 @@ where
 
 $$\begin{align*}\hat{f}:\mathbb{C}^S &\longmapsto \mathbb{C}^S,\\ \hat{f}(\phi_s) &\mapsto \phi_{f(s)}.\end{align*}$$
 
-That's a trick we have hitherto been using on *each object's* Hilbert space, but never on a global Hilbert space encoding the big picture.
+That's a trick we have hitherto been using on *each object's* Hilbert space, but never on a global Hilbert space encoding the big picture - at least not in such clear terms.
 
 Oh, and to fully incorporate my first postulate and make this truly Lorentz compatible, one probably has to impose symmetry constraints on the time dimension (which so far was just a parameter to index our unitary operators!) as well and think carefully about what that means. In particular, I expect a stark asymmetry between the known past and the unknown future.
 
