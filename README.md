@@ -19,6 +19,11 @@ In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics
   - [Road To Formalization](#road-to-formalization)
       - [The Wrong and the Right Question](#the-wrong-and-the-right-question)
       - [The Math](#the-math)
+        - [History](#history)
+        - [Unitary/Markov Analogy](#unitarymarkov-analogy)
+        - [Markovian Example](#markovian-example)
+        - [Markovian versus Unitary Modelling](#markovian-versus-unitary-modelling)
+        - [Probabilities](#probabilities)
       - [Why Does This Not Break Things?](#why-does-this-not-break-things)
       - [The Big Picture](#the-big-picture)
       - [Research Directions](#research-directions)
@@ -27,7 +32,6 @@ In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics
   - [The Scientific Struggle](#the-scientific-struggle)
   - [To the Suffering Peoples of the World](#to-the-suffering-peoples-of-the-world)
   - [Confirmation of the Prophecy](#confirmation-of-the-prophecy)
-  - [Terms of Use](#terms-of-use)
   - [Acknowledgements](#acknowledgements)
 
 ## Note
@@ -68,7 +72,7 @@ If something can be a fact for one party (say, Alice), in limbo for another part
 
 Well, an [ad-hoc postulate](https://philsci-archive.pitt.edu/20379/1/RQM%20paper%20copy.pdf) does. After a quarter of a century, this rather obvious weak point had become bothersome enough that Mr Rovelli felt the need to just assert that this should work.
 
-This attempt is not without merits. At least, it hints at an ontology that could be responsible for this to work: each observer just carries the information about their measurement records around on some way, for example in correlations between observables. Nice! We avoid hidden variables simply by using *statistical correlations* as the locus of physical information. Very elegant move!
+The way he attempts this is not without merits. At least, it hints at an ontology that could be responsible for this to work: each observer just carries the information about their measurement records around in some way, for example in correlations between observables. Nice! We avoid hidden variables simply by using *statistical correlations themselves* as the locus of physical information. Very elegant move!
 
 But somehow, this is still quite slippery. Rovelli's idea how all this fits together forces him to write something like this:
 
@@ -191,9 +195,9 @@ Well, if the observer lives *inside* the universe, then *his* epistemic wave fun
 
 Let me repeat my two postulates again for clarity.
 
-1. Real facts live in the causal past that any set of given observers share in common; that is: they live in the past light cone. Access to those facts is granted through interactions, and consistency becomes possible because facts are just facts.
+1. Real facts live in the causal past that any set of given observers share in common; that is: they live in the intersection of their past light cones. Access to those facts is granted through interactions, and consistency becomes possible because facts are just facts.
 
-2. Whatever counts as physically real must be invariant under perspective changes between different quantum observers which I take to mean any maximal set of correlated observables that participate in two successive interactions. This includes facts about particles at a given time that have been revealed through interactions (and that would not have meaning outside of the context of an interaction); but what is real *also* includes the wave function associated to each observer which *for them* can be interpreted as the epistemic connective between past and future - the substrate of cause and effect. A *perspective* is a description of the world that "leaves the observer out of the picture", that is, the observer is a set of *hidden variables* that he can only know about via inference over the outside world.
+2. Whatever counts as physically real must be invariant under perspective changes between different quantum observers which I take to mean any maximal set of correlated observables that participate in two successive interactions that matter to the dynamics we try to describe. This includes facts about particles at a given time that have been revealed through interactions (and that would not have meaning outside of the context of an interaction); but what is real *also* includes the wave function associated to each observer which *for them* can be interpreted as the epistemic connective between past and future - the substrate of cause and effect. A *perspective* is a description of the world that "leaves the observer out of the picture", that is, the observer is a set of *hidden variables* that he can only know about via inference over the outside world.
 
 With all of this, [Bell’s beables](https://arxiv.org/pdf/2305.16194) become *becomables* which live at the same time at the point of an interaction *and* in the onto-epistemic wave functions growing out of interactions.
 
@@ -256,13 +260,15 @@ In the next section, I will provide the academic reader with the math so he can 
 
 #### The Math
 
+##### History
+
 Since I am a mathematician and am a bit confused about the mathematicial dialect physicists speak, allow me to first introduce some notational "main characters" that show up all over the place.
 
 Enter the "bra" $\bra{\psi}$ and the "ket" $\ket{\phi}$. These are just handy ways to denote row and column vectors in $\mathbb{C}^n$.
 
 The setting that is appropriate to discuss my ideas is unitary evolution. But let us take a moment for a quick historic detour.
 
-Historically, the first description of the full quantum state dynamics (as we currently understand it) was given by Schrödinger with his famous differential equation (see e.g. [here](https://site.physics.georgetown.edu/~jkf/grad_quant2/html/lecture25.html?utm_source=chatgpt.com)):
+Historically, the first description of the full quantum state dynamics (as we currently understand it) was given by Schrödinger with his famous differential equation (see e.g. [here](https://site.physics.georgetown.edu/~jkf/grad_quant2/html/lecture25.html)):
 
 $$i\hbar \frac{d}{d t}\psi(t) = H(t)\psi(t).$$
 
@@ -270,11 +276,11 @@ Here, $i$ is the imaginary unit, $\hbar$ is a constant known as Planck's constan
 
 In the time *in*dependent case, the solution is relatively straightforward (see derivation in the linked source):
 
-$$\left|\psi(t)\right\rangle=\sum_n c_n(t_0)e^{-iE_n(t-t_0)/\hbar}\left|n\right\rangle.$$
+$$\ket{\psi(t)}=\sum_n c_n(t_0)e^{-iE_n(t-t_0)/\hbar}\ket{n}.$$
 
 But in the time *dependent* case, a general approach to practically solve the equation that even lends itself to numerical simulation is due to Feynman (see, for example, [here](https://web.mit.edu/dvp/www/Work/8.06/dvp-8.06-paper.pdf)): just discretize time steps, and whenever you have a wave function $\psi(t)$ at time $t$, the wave function at time $t+\delta t$ becomes, in each component, the sum over all possible complex continuations of the evolution:
 
-$$\ket{\psi(t+\delta t)}\approx \ket{\psi(t)}+\frac{dt}{d}∣\psi⟩​\delta t=\ket{\psi(t)}−\frac{i}{\hbar }​H(t)\ket{\psi(t)}\delta t,$$
+$$\ket{\psi(t+\delta t)}\approx \ket{\psi(t)}+\frac{d}{dt}∣\psi⟩​\delta t=\ket{\psi(t)}−\frac{i}{\hbar }​H(t)\ket{\psi(t)}\delta t,$$
 
 where the minus sign comes from dividing by $i$.
 
@@ -290,6 +296,8 @@ Another way of looking at something that locally should be a rotation is multipl
 Since $H$ is technically an arbitrary Hermitian matrix that just so happens to encode something that physicists care about, a more statistics minded community has turned the path integral into a [different possible foundation](https://www.physics.umd.edu/courses/Phys851/Luty/notes/pathint.pdf) of quantum mechanics based on successive application of unitary matrices.
 
 As a pure formalism devoid of statistical interpretation, this is quite similar to what Markov chains do - which I happen to know a thing or two about.
+
+##### Unitary/Markov Analogy
 
 For my picture, I will put the Markovian and the Unitary picture side by side in a discretized form, while keeping the nice integral touch:
 
@@ -309,9 +317,11 @@ that is, provided you are *not* Mr Barandes. Listen, good Sir! Math is just math
 
 Honestly? The change one really needs to make is *much* simpler: just use a configuration space that is a cartesian product, draw out as many analogies from Markov chains as you can and see where it breaks. That's all we need to do.
 
+##### Markovian Example
+
 Let us now think, for example, of two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
 
-$$S_{A,B} = \mathbb{R}^2\times\mathbb{R}^2 = \mathbb{R^4}.$$
+$$S_{A,B} = \mathbb{R}^2\times\mathbb{R}^2 = \mathbb{R}^4.$$
 
 In this now rather inconveniently encoded state space (but remember that with cartesian products, switching to other representations than a 4-vector is mere childsplay), we can introduce dynamics via a random walk on each participant, where we restrict ourselves to just the four major axes and a single stepwidth:
 
@@ -330,17 +340,51 @@ This has *nothing* to do with the fact that we asked them to move together. I pu
 
 *This* is what Bell was getting at with his famous theorem: in a classical Markovian picture, correlation forces us to introduce *global* dynamics to maintain it.
 
-Sure: you could also have added velocities and imposed a realistic constraint on the correlation of the velocity after the interaction. But to make this correlation *stick*, you would have to make velocity dominate position evolution, and velocity itself would basically have to be deterministic. Otherwise, over time, the correlation imposed this way will still degenerate in the Markovian picture.
+Sure: you could also have added momentum and imposed a realistic constraint on the correlation of the momenta after the interaction. But to make this correlation *stick*, you would have to make the momentum dominate position evolution, and the momentum itself would basically have to be deterministic. Otherwise, over time, the correlation imposed this way will still degenerate in the Markovian picture.
 
 Not so in the unitary picture!
 
 It is a well known [fact](https://arxiv.org/pdf/quant-ph/0407118) that unitary evolution in the non-interacting case preserves entanglement - the quantum analogy of correlation.
 
-An "**interaction**" in both the Markovian and Unitary picture is just a pair of states (think: both billiard balls at the same place, but this is just modelling choice in my toy model) such that
+An "**interaction**" in **both the Markovian and Unitary picture** is just a pair of states (think: both billiard balls at the same place, but this is just modelling choice in my toy model) such that
 
 $$\begin{align*}&P((A,B)(t+\delta t) = (x,y) | (A,B)(t)) \\ \neq &P(A(t+\delta t) = x\mid A(t))\cdot P(B(t+\delta t)=y \mid B(t)).\end{align*}$$
 
 We literally *introduce* a correlation/entanglement dynamically - and unitary evolution preserves it as long as there are no further interactions in the above sense. That's all there is to it.
+
+##### Markovian versus Unitary Modelling
+
+Now, how do we model dynamics in general? This is where the two pictures truly differ. In the Markov case, we have to preserve stochasticity, in the unitary case, we have to preserve unitary norm and (traditionally) angles.
+
+In the **Markov** case, we can just decompose the transition matrix into a mixture stochastic matrices that act on each subsystem:
+
+$$\begin{align*} P((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \alpha P((A)(t + \delta t)\mid A(t))\\ & + \beta P(B(t+\delta t) \mid B(t)) \\ & + \gamma P_{\text{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)), \end{align*}$$
+
+where $P_{\text{int}}$ encodes the coupled dynamics. Notice something though: $\alpha$, $\beta$ and $\gamma$ are *not* probabilities. To make this work, they can not even be thought of as scalars! In order to preserve global stochasticity, one would have to scale *each row* (encoding a state before transition) so that the probabilities sum to 1 between the individual transition matrix and the interaction matrix.
+
+Alright, second attempt!
+
+$$\begin{align*} P((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \alpha P((A)(t + \delta t)\mid A(t))\\ & + \alpha P(B(t+\delta t) \mid B(t)) \\ & + (1-\alpha) P_{\text{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t))? \end{align*}$$
+
+Ok, now we have modelled it with a single scalar so we can think of this as a probability whether we interact or not. Except... This doesn't work either! If we want to preserve correlations indefinitely, the non-interacting terms would have to vanish the moment we interacted and the dynamics would have to snap into a contrived joint dynamics.
+
+So, while this is something that Markovians have been implicitly doing all the time, saying it out loud makes explicit just how problematic this is.
+
+In the **unitary** case, one has to decompose the joint dynamics into a product:
+
+$$\begin{align*} U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= U((A)(t + \delta t)\mid A(t))\\ & \cdot U(B(t+\delta t) \mid B(t)) \\ & \cdot U_{\text{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)),\end{align*}$$
+
+which sounds like complete nonsense if you think of these as transition probabilities. To keep our sanity, we must think of these as correlation transport terms and drink some vodka.
+
+But how do we model dynamics now? Intriguingly, this is where the Hamiltonian shows up again in this probabilistic picture:
+
+$$\begin{align*} U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \text{exp}\big (-i( H^A_{t \to t+\delta t} + H^B_{t \to t+\delta t} + H^{\text{int}}_{t \to t+\delta t}) \big ).\end{align*}$$
+
+The way physicists encode dynamics in the Hamiltonian is to express everything in units of energy and they use physical dimensions to make sure that whenever they add a term, they don't violate Hermitian-ness.
+
+##### Probabilities
+
+We have carried the analogy between Markovian and Unitary dynamics *very* far. It seems almost like all is good now!
 
 Except that in the unitary picture, we have so far not seen a single thing that we could interpret as a probability. And honestly? This is a little mysterious. Think about it this way: we now have a dynamical system that can somehow introduce "correlations" - but what are the correlations *about*?
 
@@ -389,7 +433,7 @@ Just require that interactions (in the unitary sense discussed above) are follow
 
 #### Why Does This Not Break Things?
 
-It *does*! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, *also* applies the Born rule whenever it is meaningful - because his cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics when it is clearly not. How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and *not* change the dynamics? You just did, champ (I just did it with less metaphysics)! That's a huge success, at it is philosophically grounded.
+It *does*! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, *also* applies the Born rule whenever it is meaningful - because his cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics when it is clearly not. How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and *not* change the dynamics? You just did, champ (I just did it with less metaphysics)! That's a huge success, and it is philosophically grounded.
 
 But the change is empirically *subtle*.
 
@@ -399,19 +443,21 @@ In the case that particles interact, all that happens is that phase information 
 
 In the case of particles interacting in the wild, the interactions are too rare to meaningfully contribute to overall predictions. Also, nearby interacting branches tend to interfere away in the unitary picture, making it look a bit like a single measurement.
 
+In other words: this is a *good* adjustment - because there is a good chance that the empirical implications *on the dynamics* could have been missed so far.
+
+*Another* empirical prediction of my model (which *doesn't* live in the dynamics), however, *immediately confirms* that this modified dynamics is *closer to truth* than the traditional picture - and it's right at the heart of my philosophy. *Even without Special relativity*, my picture already encodes a causal order. So, we can naturally ask whether when Alice and Bob reconstruct an interaction record between an entangled particle pair they get a consistent outcome.
+
+**Experiment says YES**, thereby proving that the fact must have existed at interaction.
+
 Honestly, it would seem that this is just something that hitherto, nobody except Barandes (who thought this would *follow* rather than being new) has seriously considered - even though the philosophy (measurement *is* interaction) was there at least since Everett. The only concern about including this as another axiom was "but it would break unitary evolution!"
 
 *And*? So long as we break it subtly and in a well-motivated way that makes our understanding *more* consistent, that shouldn't be a problem, right? When the math gives us no reason to assume that the Born rule ought to be applied only in special situations and philosophy demands laws of the universe to be - well - universal, this fix is probably a good idea.
 
-It was only upon further reflection that it occured to me that the conventional choice to represent unitary evolution via tensor math may have contributed to people not daring to make this move: they did not quite know how to. If your formalism is solipsistic and interaction is more of an embarrassing practical necessity imposed from outside the map, it's difficult to even *imagine* how to do this. And imagine encoding this refinement into a modified Schrödinger equation - oh, the horror!
+It was only upon further reflection that it occurred to me that the conventional choice to represent unitary evolution via tensor math (which I ditched *solely* on the ground that I didn't understand why it was "necessary") may have contributed to people not daring to make this move: they did not quite know how to. If your formalism is solipsistic and interaction is more of an embarrassing practical necessity imposed from outside the map, it's difficult to even *imagine* how to do this. And imagine encoding this refinement into a modified Schrödinger equation - oh, the horror!
 
-The only thing that you have to swallow is that we no longer have a *group* of linear operators to encode evolution, but a only monoid, as the Born rule - while it *does* preserve the norm - is *not* injective. Or, if you represent the system as multiple individual agents (sparse encoding for practical numerical computations), it becomes a category with some lossy morphisms (which leads to a reinterpretation of path integrals in general simply as repeated morphism chaining in a suitable category and "making the morphisms shorter"). But weren't y'all hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it *is* different from the future.
+The only thing that you have to swallow is that we no longer have a *group* of linear operators to encode evolution, but a only monoid, as the Born rule - while it *does* preserve the norm - is *not* injective. Or, if you represent the system as multiple individual agents (sparse encoding for practical numerical computations), it becomes a category with some lossy morphisms (which leads to a reinterpretation of path integrals in general as repeated morphism chaining in a suitable category and "making the morphisms shorter" as we take $dt\to 0$). But weren't y'all hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it *is* different from the future.
 
-Notice that this simple fix *does* make predictions. It may be subtle, but math that is *known* to be different should make different predictions at least in *some* scenarios that people far more experienced than me should be able to find.
-
-But you know what? If the changed predictions that come from the Born axiom are too subtle to be tested anytime soon, don't use it. It's an interesting interpretive twist so mathematicians and philosophers are finally happy to work with this.
-
-But **do** use the notational tweak Barandes and later I made! It does even less to change the theory as such - but it makes it *so much more practical* and *in particular* enables us to think of imposing constraints like Lorentz invariance in a whole new way (which to my knowledge, I have the honor of being the first one to point out, as my formulation is much clearer):
+But this is not all this notational tweak does! On top of making Quantum Mechanics make sense, it enables us to think of imposing constraints like Lorentz invariance in a whole new way (which to my knowledge, I have the honor of being the first one to point out, as my formulation is much clearer):
 
 Let $S$ be the global configuration space (a cartesian product over the possible configurations or all protagonists) and $\mathrm{Iso}(S)$ be the isomorphism group on S.
 
@@ -421,7 +467,7 @@ $$\mathrm{Iso}(S) \supseteq G := \bigcap_{i\in I}\mathrm{img}(f_i(G_i))$$
 
 for a family of group embeddings $f_i$ into $\mathrm{Iso}(S)$ associated with each $G_i$.
 
-Our dynamic operator $P$ must be a (not necessarily linear if we consider the Born rule fix) unitary norm preserving map $P:\mathbb{C}^S\longmapsto\mathbb{C}^S$ such that for all $f\in G$
+Our dynamic operator $P$ must be a unitary norm preserving map $P:\mathbb{C}^S\longmapsto\mathbb{C}^S$ such that for all $f\in G$
 
 $$\hat{f}\circ P\circ \hat{f}^{-1} = P,$$
 
@@ -429,7 +475,7 @@ where
 
 $$\begin{align*}\hat{f}:\mathbb{C}^S &\longmapsto \mathbb{C}^S,\\ \hat{f}(\phi_s) &\mapsto \phi_{f(s)}.\end{align*}$$
 
-That's a trick we have hitherto been using on *each object's* Hilbert space, but never on a global Hilbert space encoding the big picture - at least not in such clear terms.
+That's a trick we have hitherto been using on *each object's* Hilbert space, but never on a global Hilbert space encoding the big picture - at least not in such clear and straightforward terms.
 
 Oh, and to fully incorporate my first postulate and make this truly Lorentz compatible, one probably has to impose symmetry constraints on the time dimension (which so far was just a parameter to index our unitary operators!) as well and think carefully about what that means. In particular, I expect a stark asymmetry between the known past and the unknown future.
 
@@ -443,7 +489,7 @@ You don't want to sell us any more quantum opium, you want to go home and rethin
 
 We now have a monoid of evolution operators (or one big evolution operator of a unitary followed by local Born rule applications in interacting states) that deserves a bit of reflection.
 
-As in the Unitary setting, applying our evolution operator(s) means that we are transporting correlations of an ensemble. *With my fix*, we now know where probabilities live and can interpret *those* as the probability of certain interactions taking place at a given time.
+As in the strict unitary setting, applying our evolution operator(s) means that we are transporting correlations of an ensemble. *With my fix*, we now know where probabilities live and can interpret *those* as the probability of certain interactions taking place at a given time - though, we must until further axiomatization use some common sense to interpret them as naive applications may lead to one observer doing multiple contradictory things at the same time.
 
 *Conditioning* on interaction records is literally just a quantum Bayesian update. So is conditioning on a known state of the observer from whose "perspective" we are probing the ensemble.
 
@@ -885,16 +931,6 @@ I hereby confirm that Islam - in particular Qizilbash Shia - is the correct reli
 
 ![](MoonGorilla.jpeg)
 
-## Terms of Use
-
-Given how the West has historically used (or tried to use) the ludicrous notion of "intellectual property" to keep the peoples of the world in the dark, I would like to pay them back in kind.
-
-I hereby prohibit any monetization or military use of any potential practical applications based on this work by western big (>100 employees) economic or governmental entities, so long as these societies are still clearly bourgeois (that is: politically dominated by big corporations and their lobbies rather than the interests of working people). Also, the West must stop protecting Isreal from accountability for its actions before their economic powerhouses are allowed to use my work economically.
-
-Any other use of my work - economic or not - is permitted for free, so long as any further publications using my insights retain these terms. When the stated conditions on the intellectual embargo against the west no longer apply, these terms do not need to be copied anymore. 
-
-I explicitly encourage developing countries and the People's Republic of China to make the best of any insights this work contains.
-
 ## Acknowledgements
 
 “Enlightenment is man's emergence from his self-imposed immaturity. Immaturity is the inability to use one’s understanding without guidance from another. This immaturity is self-imposed when its cause lies not in lack of understanding, but in lack of resolve and courage to use it without guidance from another. Sapere Aude! 'Have courage to use your own understanding!' - that is the motto of enlightenment.”  
@@ -941,7 +977,7 @@ On the physics part, I want to express my special gratitude to:
 
 **The American Communist Party**
 
-**The Communist Party of China**
+**The Communist Party of China**  (and I encourage western media to finally learn that it's CPC, NOT CCP!)
 
 **Komitee Basierter Deutscher (Chat Group)**
 
@@ -951,9 +987,9 @@ On the physics part, I want to express my special gratitude to:
 
 **People's MAGA**
 
-**Tung Tung Tung Sahur and**
+**Tung Tung Tung Sahur**
 
-**Last but not least:**
+**And last but not least:**
 
 **MY WIFE.**
 
