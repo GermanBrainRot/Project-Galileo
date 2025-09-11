@@ -376,6 +376,8 @@ $$\begin{align*} U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= U((A)(t + \delta t
 
 which sounds like complete nonsense if you think of these as transition probabilities. To keep our sanity, we must think of these as correlation transport terms and drink some vodka.
 
+However, these terms *do* make it clear how and why correlations are actually preserved here: the multiplication of unitary operators can readily be understood as *function chaining* which means that here, everyone does indeed "get their own dice roll".
+
 But how do we model dynamics now? Intriguingly, this is where the Hamiltonian shows up again in this probabilistic picture:
 
 $$\begin{align*} U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \text{exp}\big (-i( H^A_{t \to t+\delta t} + H^B_{t \to t+\delta t} + H^{\text{int}}_{t \to t+\delta t}) \big ).\end{align*}$$
@@ -401,23 +403,43 @@ Enter [Gleason's Theorem](https://mathweb.ucsd.edu/~nwallach/gleasonq.pdf). Glea
 
 ![](Bourne.png)
 
-And you know what? It turns out that if we treat both the apparatus and the electron as quantum, the Born rule predicting their *joint* probability looks like **this**:
+And you know what? It turns out that if we treat both the apparatus and the electron as quantum, the Born rule predicts their *joint* probability. *Moreover*, in my cartesian picture, the spelling $\bra{\phi}$ is actually completely inappropriate and you have to spell it $\ket{\phi}$. That is, the Born rule looks like **this**:
 
-$$P(X,Y) = \mid \langle \phi | \psi \rangle \mid^2.$$
+$$
+\begin{align*}
+P(\ket{\phi}=i,\ket{\psi}=j) = \mid \ket{\phi(i), \psi(j)} \mid^2,
+\end{align*}
+$$
 
-Here's what's going on: our "measurement apparatus" is a simple yes/no device, and we just obtained the probability (a single number!) that the particle and the device will produce a "yes" fact. To obtain a more complex distribution, we just glue a ton of measurement devices together.
+where we have to understand the norm to be taken over *each* possible configuration so as to induce something that looks like a density.
+
+(Let me also just mention as a side note that $n$ particle interactions are trivial to model now, since we literally just concatenate the interacting configurations into one vector).
+
+One has to be a *little* careful to think of this as a density, because it doesn't integrate to 1. But this is fine in our picture since we do not integrate over the *entire* wave function - just the part in an interaction state induced by the dynamics.
 
 Now, here's where it becomes interesting: *if we assume the state of the measurement device to be fixed*, then we can condition on that state and the Born rules becomes
 
-$$P(Y\mid X=\phi) = \|\psi\|^2$$
+$$
+\begin{align*}
+P(\ket{\psi}=j\mid \ket{\phi}=i) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(i), \psi(k)}\|}\right)^2
+\end{align*}
+$$
 
-for the wave function encoding the interaction we're looking for.
+for the wave function encoding the interaction we're looking for. But to recover the standard Born rule (and this *beautifully* aligns with my "a measurement apparatus can not see itself" idea), we have to *marginalize the apparatus out*:
 
-But the funny thing about squares of scalar products is that they are symmetric.
+$$
+\begin{align*}
+P(\ket{\psi}=j\mid \ket{\phi}) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(k), \psi(j)}\|}\right)^2.
+\end{align*}
+$$
 
-The electron might just as well say that the probability of producing a fact with the measurement apparatus in this specific configuration is (taking into account its own known state)
+The funny thing about what we have done is that we could also do it the other way around because we are no longer treating the measurement apparatus as privileged:
 
-$$P(X\mid Y=\psi) = \|\phi\|^2.$$
+$$
+\begin{align*}
+P(\ket{\phi}=i\mid \ket{\psi}=j) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(k), \psi(j)}\|}\right)^2.
+\end{align*}
+$$
 
 If the electron can do *that*, why wouldn't it also do it in the wild when randomly meeting other electrons? In fact, if we can *find out*, say, the spins of two particles that have interacted in an experiment after the fact, wouldn't it be awfully reasonable to assume that *there was* a fact?
 
@@ -491,7 +513,7 @@ We now have a monoid of evolution operators (or one big evolution operator of a 
 
 As in the strict unitary setting, applying our evolution operator(s) means that we are transporting correlations of an ensemble. *With my fix*, we now know where probabilities live and can interpret *those* as the probability of certain interactions taking place at a given time - though, we must until further axiomatization use some common sense to interpret them as naive applications may lead to one observer doing multiple contradictory things at the same time.
 
-*Conditioning* on interaction records is literally just a quantum Bayesian update. So is conditioning on a known state of the observer from whose "perspective" we are probing the ensemble.
+*Conditioning* on interaction records is literally just a quantum Bayesian update. So is conditioning on a known state of the observer from whose "perspective" we are probing the ensemble. The traditional Born rule, on the other hand, is recovered through marginalization.
 
 Recovering the full system dynamics from the perspective of an observers should be possible by the remainder of my second postulate: a fully Bayesian approach where the observer knows that he knows nothing about himself and conditions his beliefs about himself and his causal impact on the past.
 
@@ -499,11 +521,13 @@ Recovering the full system dynamics from the perspective of an observers should 
 
 1. I have given a novel way to inject Lorentz invariance - or any other symmetry we care about - into the search criteria for dynamic operators in the path integral formalism. Whether the search space needs to include nonlinear operators that apply the Born rule at interaction, I do not know. But at least, we have a new way to even look for an answer and I hope that this will produce results that differ in fundamental ways from QFT. This would be exciting, and the predictions coming out of *this* would probably be testable much sooner than my Born rule idea.
 
-2. General Relativity suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. With my picture of Quantum Mechanics, *this makes sense now* at the quantum level: No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are *real* at interactions and this reality leaves a trace, and outside of interactions, you can not say anything. They *carry* their own coordinate system, and they fight it out through interactions.
+2. The reason why I think QFT could be sidestepped is not just because fields were basically a mathematical hack to solve inconsistencies when imposing Lorentz invariance naively in a particle-theoretical setting. The other reason is that the relational picture naturally leads to a different way to think about how fermions "emit" bosons: rather than "exciting a field", I think of the process as, say, an electron just constantly attempting to emit a photon - but this only becomes real when the photon actually hits something. This *naturally* leads to a more Lorentzian picture of the system's dynamics where an interaction has to be thought of as local to the receiver and boils down to a ton of logical constraints snapping into place and leaving a footprint in the system's correlations.
 
-3. Personally, I find it very satisfying that treating epistemic wave functions as ontic solves things philosophically. You know what would be even greater? If we could somehow treat the wave function as latent in the correlation between interaction-facts (that is: the real statistical trace left behind by interactions, *not* the mathematical ghosts moving through Hilbert spaces). The idea that quantum information could just be living in correlations of interaction-facts - extending that in such a way that material agents express their quantum expectations in the correlations of interaction-facts would be huge. Don't forget: quantum mechanics lives in books, storage devices and our material practice, not some otherworldy Platonic ideals.
+3. General Relativity suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. With my picture of Quantum Mechanics, *this makes sense now* at the quantum level: No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are *real* at interactions and this reality leaves a trace, and outside of interactions, you can not say anything. They *carry* their own coordinate system, and they fight it out through interactions.
 
-4. This leads me to a "second decoherence conjecture": can we find, in this new version of quantum mechanics, some explanation why sufficiently complex quantum agents would be interested in bringing the universe *for itself* (onto-epistemic wave function) in congruence with the universe *in itself* (record trace of interaction-facts)? At least, we have for the first time a probabilistic calculus that allows the system to reason about itself, so we can treat this question *in the model*.
+4. Personally, I find it very satisfying that treating epistemic wave functions as ontic solves things philosophically. You know what would be even greater? If we could somehow treat the wave function as latent in the correlation between interaction-facts (that is: the real statistical trace left behind by interactions, *not* the mathematical ghosts moving through Hilbert spaces). The idea that quantum information could just be living in correlations of interaction-facts - extending that in such a way that material agents express their quantum expectations in the correlations of interaction-facts would be huge. Don't forget: quantum mechanics lives in books, storage devices and our material practice, not some otherworldy Platonic ideals.
+
+5. This leads me to a "second decoherence conjecture": can we find, in this new version of quantum mechanics, some explanation why sufficiently complex quantum agents would be interested in bringing the universe *for itself* (onto-epistemic wave function) in congruence with the universe *in itself* (record trace of interaction-facts)? At least, we have for the first time a probabilistic calculus that allows the system to reason about itself, so we can treat this question *in the model*.
 
 Let me leave you with two more musings on further directions, but these are really just musings:
 
@@ -520,12 +544,6 @@ Here's an "in spirit" consequence:
 **"Free Will" -** We make arbitrary "choices" as long as we are ignorant the consequences of our actions. As we become aware of the consequences through experience, we can not help but make more predictable choices. This is the old Hegelian paradox of [freedom as insight into necessity](https://www.marxists.org/archive/marx/works/1877/anti-duhring/ch09.htm): our freedom of choice *diminishes* as our freedom from ignorance grows. And in the Quantum picture, the development from arbitrariness to clearly predictable patterns (thanks to tons of constraints through relationships) ceases to be merely epistemic and becomes ontic.
 
 Strong consequences:
-
-**Quantum Field Trickery -** I must admit that as a casual observer of physics, this one almost escaped me. Apparently, quantum fields were more of an ad-hoc invention to "resolve" contradictions of earlier attempts to make Quantum Mechanics relativistic - a trick that even physicists appear to have a hard time accepting, but it just works too well.
-
-If further research on my well-motivated formalism could *at least* give us a nicer way to reproduce predictions from QFT, I would be extremely satisfied.
-
-If, on top of that, it could give us a better explanation for effects that are currently explained by "vacuum energy" and dissolve "vacuum energy" into vacuum, it would be a total victory for the philosophy that enabled me to pull all this off and that anyone who wants to walk in my footsteps should take seriously and study.
 
 **Causal Direction -** Another good insight from Hegelian philosophy that I can find *immediately* represented in this picture (and this is, I think, a hard consequence) is that cause and effect seem to somehow change place and thereby become the same thing. Let me unpack this a little.
 
