@@ -505,6 +505,8 @@ You don't want to sell us any more quantum opium, you want to go home and rethin
 
 ![](Rethink.gif)
 
+In case you are curious enough to wonder *what* to rethink, please consider reading the "more interdisciplinary" version mentioned in the beginning. Don't worry - up to this point, they are virtually identical except for the remark about the version and the table of contents.
+
 #### The Big Picture
 
 We now have a monoid of evolution operators (or one big evolution operator of a unitary followed by local Born rule applications in interacting states) that deserves a bit of reflection.
