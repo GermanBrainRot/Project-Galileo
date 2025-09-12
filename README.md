@@ -309,7 +309,7 @@ To arrive at dynamics for *coupled* systems, the underlying state space should b
 
 In the Markov chain community, this is a no-brainer - that's how they do it. In unitary evolution though, the pairing of states is done only *after* moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be ***the*** the notational contribution that appears to be originally due to the later Barandes (cited above) that makes what I am trying to do at all possible.
 
-Just for the skeptical physicist: We are *not* talking about a Cartesian product of Hilbert spaces, we are talking about a Cartesian product of the underlying *configuration* spaces.
+Just for the skeptical physicist: We are *not* talking about a Cartesian product of Hilbert spaces, we are talking about a Cartesian product of the underlying *configuration* spaces. You *should* be aware that $\bigotimes_{i \in I} L^2(K_i) \cong L^2(\prod_{i_\in I}K_i)$. This is not a new insight. It's just that no one has seriously explored a construction based on the other side of the equation, that is, starting from cartesian products.
 
 Historical note: I made this shift in notation independently of Barandes (I am only vaguely familiar with his formalism-heavy work) because to someone coming from the stochastic processes angle, it's awfully natural. It doesn't make computations intractable either, because you can still exploit sparse vector math. All it does is to clarify the picture -
 
@@ -360,7 +360,7 @@ In the **Markov** case, we can just decompose the transition matrix into a mixtu
 
 $$\begin{align*} P((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \alpha P((A)(t + \delta t)\mid A(t))\\ & + \beta P(B(t+\delta t) \mid B(t)) \\ & + \gamma P_{\text{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)), \end{align*}$$
 
-where $P_{\text{int}}$ encodes the coupled dynamics. Notice something though: $\alpha$, $\beta$ and $\gamma$ are *not* probabilities. To make this work, they can not even be thought of as scalars! In order to preserve global stochasticity, one would have to scale *each row* (encoding a state before transition) so that the probabilities sum to 1 between the individual transition matrix and the interaction matrix.
+where $P_{\text{int}}$ encodes the coupled dynamics. Notice something though: $\alpha$, $\beta$ and $\gamma$ are *not* probabilities. To make this work, they can not even be thought of as scalars! In order to preserve global stochasticity, one would have to scale *each row* (encoding a state before transition) so that the probabilities sum to 1 between the individual transition matrix and the interaction matrix. That is, they would have to be diagonal matrices multiplied from the right that fit together in an odd way.
 
 Alright, second attempt!
 
@@ -374,9 +374,11 @@ In the **unitary** case, one has to decompose the joint dynamics into a product:
 
 $$\begin{align*} U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= U((A)(t + \delta t)\mid A(t))\\ & \cdot U(B(t+\delta t) \mid B(t)) \\ & \cdot U_{\text{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)),\end{align*}$$
 
-which sounds like complete nonsense if you think of these as transition probabilities. To keep our sanity, we must think of these as correlation transport terms and drink some vodka.
+which sounds like complete nonsense if you think of these as transition probabilities. To keep our sanity, we must think of these as correlation transport terms or "transition amplitudes" and drink some vodka.
 
-However, these terms *do* make it clear how and why correlations are actually preserved here: the multiplication of unitary operators can readily be understood as *function chaining* which means that here, everyone does indeed "get their own dice roll".
+Minor note: the "$\mid$" in $U((A)(t + \delta t)\mid A(t))$ is supposed to denote that we are deriving this mathematical object from the full transition matrix in the same way as we would in the case of a stochastic matrix: by multiplying a row with the current state vector. But we *remain* in the unitary picture!
+
+What these terms *are* doing for us is make it clear how and why correlations are actually preserved here: the multiplication of unitary operators can readily be understood as *function chaining* which means that here, everyone does indeed "get their own dice roll".
 
 But how do we model dynamics now? Intriguingly, this is where the Hamiltonian shows up again in this probabilistic picture:
 
