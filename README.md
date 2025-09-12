@@ -243,6 +243,8 @@ You don't want to sell us any more quantum opium, you want to go home and rethin
 
 ![](Rethink.gif)
 
+In case you are curious enough to wonder *what* to rethink, please consider reading the "more interdisciplinary" version mentioned in the beginning. Don't worry - up to this point, they are virtually identical except for the remark about the version and the table of contents.
+
 ## Some More Philosophical Consequences
 
 Let me close the physics part with one more consequence that is quite a bit more speculative:
