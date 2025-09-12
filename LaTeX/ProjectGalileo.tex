@@ -1,0 +1,552 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{csquotes}
+
+\usepackage{xcolor} 
+\usepackage[colorlinks=true]{hyperref}
+
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{ProjectGalileo.bib}
+
+\usepackage{braket}
+
+\title{The Galilean Moment of Quantum Mechanics \\ \large Condensed Version for Researchers}
+\author{Markus Kasperczyk}
+\date{September 11, 2025}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\begin{abstract}
+
+In this article, I will discuss Carlo Rovelli's Relational Quantum Mechanics (RQM) and how it aims at resolving the measurement problem. Once I have explained how I think it works, I will point out an obvious type of criticism, and how Rovelli tried to fix the problem. After this, I will show why it does not fix the issues, suggest a \textit{much} better fix which then leads to refinements of other assumptions of his work. Finally, I make an attempt to formalize this in a similar spirit to Jacob Barandes and stumble on a new way to encode unitary dynamics (and beyond) that may help to sidestep some quirks of Quantum Field Theory.
+
+\end{abstract}
+
+\newpage
+
+\subsection*{Note}
+
+You are reading the condensed version of this work optimized for publication in a visible spot. If you are interested in a more philosophically engaging discussion with memes, you can find this on \href{https://github.com/GermanBrainRot/Project-Galileo/tree/for-western-audiences}{GitHub}.
+
+\newpage
+
+\tableofcontents
+
+\pagebreak
+
+\subsection*{Introduction}
+
+In 1996/97, Carlo Rovelli introduced \cite{Rovelli_1996} the idea that descriptions of quantum systems could be observer-dependent. Here, "observer" does not refer to any "conscious" or "macroscopic" entity, but returns to the more sober and naturalistic meaning that the term used to have in physics prior to Quantum Mechanics - and which it still has in Special and General Relativity.
+
+To motivate the idea of observer-dependence, he proposed a thought experiment which has since been pointed out \cite{laudisa2017openproblemsrelationalquantum} to be a restatement of the old thought experiment of Wigner's Friend. For the sake of clarity, I will therefore motivate Rovelli's idea starting from Wigner's Friend.
+
+\section{Philosophy}
+
+\subsection{Wigner's Friend: A Thought Experiment}
+
+Eugene Wigner, like many physicists, once wondered what exactly constituted a measurement and what the mysterious "collapse of the wave function" during a measurement might mean.
+
+For him, the collapse had to have something to do with quantum systems interacting with consciousness. Here's how he justified this:
+
+Suppose, instead of Wigner himself conducting a quantum measurement, he would have a friend conduct the measurement. Wigner himself would stand outside of the lab. So far, so good.
+
+Now, after the measurement, Wigner's friend comes out of the lab and is asked by Wigner about the outcome of the experiment. Notice something here: \textit{from Wigner's point of view}, if quantum mechanics is correct, the answer must at this point be described using a superposition between the different possible outcomes. It is only upon hearing (i.e. "measuring") the answer that Wigner's description can collapse to a single state.
+
+So, does this mean that Wigner's friend was in a superposition until that point as well? Well, let's find out! Wigner asks his friend: "what did it feel like to be in a superposition?" His friend looks confused, then replies: "What do you mean? I was not in a superposition!"
+
+And this leads Wigner to the "only" correct interpretation: consciousness collapses wave functions! -
+
+Yeah, except that this is obvious nonsense and has since been challanged in various ways. Today's consensus seems to be that it's not about consciousness, but about interactions with macroscopic environments which "decohere" into a single classical reality (more on this idea later).
+
+In his key contribution, Rovelli added his own unique take: What if Wigner's friend truly \textit{is} in a superposition - \text{for} Wigner? Yes, you read this right: Rovelli's solution boils down to stating that superposition for me can be facts for thee and vice versa.
+
+In particular, this means that for Rovelli, the wave function is epistemic: it's just a book keeping tool to account for the state of systems that you have not interacted with yet.
+
+You know what? This is actually a genius idea! I am \textit{not} being sarcastic here. It's the \textit{exact} type of idea that got us from Newtonian physics plus weird Lorentz transformations to account for the constancy of the speed of light for any observer to Einstein's relativity - and Rovelli is bold enough to draw this comparison himself in his initial paper.
+
+Except, it doesn't quite work. Here's the problem:
+
+If something can be a fact for one party (say, Alice), in limbo for another party (say, Bob) and once again a fact for a third party (say Charlie), who or what guarantees that Alice's and Charlie's facts agree once Bob learns of Alice's and Bob's notes?
+
+Well, an ad-hoc postulate does. After a quarter of a century, this rather obvious weak point had become bothersome enough that Mr Rovelli felt the need to just assert \cite{pittphilsci20469} that this should work.
+
+The way he attempts this is not without merits. At least, it hints at an ontology that could be responsible for this to work: each observer just carries the information about their measurement records around in some way, for example in correlations between observables. Nice! We avoid hidden variables simply by using \textit{statistical correlations themselves} as the locus of physical information. Very elegant move!
+
+But somehow, this is still quite slippery. Rovelli's idea how all this fits together forces him to write something like this:
+
+\blockquote[Rovelli]{
+This postulate implies that the information stored in Alice’s physical variables about the variable V of the system S is accessible in principle to any observer who measures her in the right basis, so at least at an emergent level this information about V is an observer-independent fact.
+}
+
+Excuse me? What if I measure her in the wrong basis? Is the information forever inaccessible to me? What does measuring "someone" in the wrong basis even mean?
+
+Honestly, this sounds like Rovelli's interpretation slips right back into some version of Many Worlds - a criticism that he has been struggling with from the start. And indeed, the "fix" for this is to be found in the exact same place as with Many Worlds, as the "at an emergent level" part of the sentence I quoted gives away:
+
+\blockquote[Rovelli]{
+It is clear that decoherence should play some role in this story. And in fact, decoherence provides exactly what it needed here: it picks out a basis which is dynamically favoured and then disseminates information stored in that basis through the environment.
+}
+
+Mr Rovelli, didn't you want to treat the wave function as a book keeping tool rather than something physical? So, what is it that "decoheres" here? Certainly not quantum branches, right? How can a set of systems "decohere" into a single reality - unless you basically allow an ontic wave function and even Everettian branching again?
+
+Alright, and \textit{this} seems to be the state of the art here! At least as far as I am concerned, the mysteries have not \textit{quite} gone away. If we invoke decoherence to explain the "emergence" of stable facts at the macroscopic level, we would have to say \textit{what} decoheres. So, back to the drawing board!
+
+\subsection{Fixing Rovelli}
+
+What if we went a little further than Rovelli and simply treated facts as facts? That is: \textit{measurement bases be damned}, once an interaction happened, \textit{it is a fact}.
+
+But hold on! Is this not in a direct contradiction with the idea that facticity or superposition should be \textit{relative} to an observer, that is, \textit{observer-dependent}? How can an interaction that happened \textit{just be a fact} when \textit{at the same time} we require that another observer who doesn't know about the interaction record yet could somehow still \textit{validly} describe the situation as a superposition?
+
+The answer is actually somewhat obvious once you read it. It is \textit{so} obvious that I couldn't \textit{believe} that it hadn't occurred to anyone for a quarter of a century - at least to my knowledge.
+
+Mr Rovelli, was your theory not supposed to make Quantum Mechanics \textit{directly} compatible with Special Relativity? In Special Relativity, whether an event has happened or not is \textit{relative} to the observer! Just because the interaction already resides in the causal past of Wigner's friend, this does not mean that it is already in Wigner's causal past!
+
+For the casual reader who might be confused about this, you can find a nice explanation how the speed of light is related to causality \href{https://www.youtube.com/watch?v=msVuCEs8Ydo}{here} and how relativity of simultaneity (within a discussion of relativistic length contraction) \href{https://www.youtube.com/watch?v=TxW6_E3uLuo}{here}.
+
+The above insight leads to a natural refinement of RQM. It is \textit{not} an ad-hoc axiom or postulate, it is \textit{well motivated} by known physics:
+
+\textbf{Interaction records are factual for any pair of observers such that the interaction resides in the intersection of their causal past.}
+
+If we simply dump everything we consider a definite fact into the shared causal past of all the observers for whom we require agreement, these facts can simply not bother any other observer; for there are only two other types of observers:
+
+\begin{itemize}
+\item Those who can never interact with the fact because, for example, they have fallen into a black hole  
+\item Those for whom the fact lives in the future and for whom the wave function is the absolute horizon
+\end{itemize}
+
+\textbf{It would appear that we can have definite facts in the universe again!}
+
+Except, what implications does this have? Let's think about Rovelli's philosophy a little more carefully.
+
+If interaction records can now just be facts, doesn't that mean that we don't \textit{need} decoherence to explain how facts come into the world? Actually, it would appear that decoherence has a completely \textit{different} role in such a more materialist picture: it would basically just quantify to what extent small things have more ways \textit{not to} interact, which would naturally mean that its properties are ill-defined.
+
+Think of it this way: If I was an astronaut floating through space, I could always in principle triangulate my position in relation to distant stars. An electron does not have that luxury, as it is so small that the photons coming from the stars may simply miss it. In that case, \textit{neither the electron nor the universe} knows where the electron is at these times.
+
+Which leads directly to another important refinement to Rovelli's ideas.
+
+Rovelli's main point is that world descriptions should be \textit{relative} to the observer. Rovelli himself then correctly concludes from this that the observer is \textit{part} of the universe and we can not describe the universe "from nowhere in particular".
+
+Very good, Mr Rovelli! (Again, if this sounds ironic or sarcastic, I apologize - I think this is genuinely good). But how to operationalize this? Alas, Rovelli is a little shy here. He assumes that Quantum Mechanics is basically complete, so we can just use its formal apparatus and maybe derive it from an axiomatic basis that makes sense. The best we get is some notation indicating that we are looking at a world description from a given perspective. That is a little disappointing.
+
+\textbf{Alright, let's give it a shot then!}
+
+Let us start with a simple observation: in everyday language, relativity "removes" facts. This is, I think, the trap that Rovelli has fallen into. What relativity \textit{actually} does is that it \textit{refines} our notion of what counts as a fact.
+
+In mathematics, this is well known. It is the reason why we pin objects down "up to isomorphism" and work out properties that are invariant under these isomorphisms. In category theory, this concept is known as "universal properties". And in theoretical physics, there is a notion of "gauge invariance" that is related to this.
+
+In the narrow sense, a gauge (here: Yang-Mills gauge) can be thought of as a set of symmetries so that contributions to interactions are redundant and naively summing them all up would over-count. It's basically a very fancy $dx$ in an integral.
+
+In a broader sense though, we come right back to the familiar notion from pure mathematics: if we know how spacetime works, we can change our coordinates - and whatever changes we observe through such a move, we would not interpret them as a change of the physical \textit{facts}. That is: what is a fact is that which is left invariant under all admissible perspective changes.
+
+Alright, let's do this for Quantum Mechanics then!
+
+If I am a measurement aparatus, what is measurement \textit{about} from my perspective? Fundamentally, it is about \textit{other} quantum objects, \textit{not} about me. I can not see myself directly! I \textit{can} see what \textit{other} objects are doing, but I must infer anything about myself from observations of the rest of the world. Whatever we do: to get a \textit{complete} picture of reality, we must try to learn not only about the outside world, but also about ourselves and our causal impact \textit{by using the universe as a mirror}.
+
+This suggests that we have to restrict what we mean by "fact" to anything that is true from the point of view of any observer \textit{as we leave this observer out of the picture}.
+
+Here, it also becomes a bit clearer what an "observer" could even be. In essence, it's a set of correlated observables moving from one interaction to the next one. In general, such a "causal principle" can branch apart: just because the N observables all participated in one interaction, this doesn't mean that all N of them will participate in the next interaction - this should actually be more of an exception in general. But under certain circumstances, we end up with self-reinforcing interactions so we can treat all the involved observables as one very complex "macroscopic" observable.
+
+Oh, and by the way, in case you didn't notice it: if we take Rovelli's relativity completely seriously, we're actually forced to treat the wave function not \textit{just} as epistemic, but as \text{both} epistemic \text{and} ontic at the same time now. Which by the way also answers why it seems to difficult to commit to either stance.
+
+Pause here if you need another minute to see if you can figure out why.
+
+Ready?
+
+Well, if the observer lives \textit{inside} the universe, then \textit{his} epistemic wave function through which he understands the past and predicts the future \textit{must be physical}.
+
+\subsection{Summary of my two Postulates}
+
+Let me repeat my two postulates again for clarity.
+
+1. Real facts live in the causal past that any set of given observers share in common; that is: they live in the intersection of their past light cones. Access to those facts is granted through interactions, and consistency becomes possible because facts are just facts.
+
+2. Whatever counts as physically real must be invariant under perspective changes between different quantum observers which I take to mean any maximal set of correlated observables that participate in two successive interactions that matter to the dynamics we try to describe. This includes facts about particles at a given time that have been revealed through interactions (and that would not have meaning outside of the context of an interaction); but what is real \textit{also} includes the wave function associated to each observer which \textit{for them} can be interpreted as the epistemic connective between past and future - the substrate of cause and effect. A \textit{perspective} is a description of the world that "leaves the observer out of the picture", that is, the observer is a set of \textit{hidden variables} that he can only know about via inference over the outside world.
+
+With all of this, Bell's beables \cite{laudisa2023evolutionbellnotionbeable} become \textit{becomables} which live at the same time at the point of an interaction \textit{and} in the onto-epistemic wave functions growing out of interactions.
+
+\section{Formalization}
+
+\subsection{The Wrong and the Right Question}
+
+Armed with the above philosophy (and more that can be found in the extended version on GitHub), I decided to attempt a formalization of what I have to say. For this, I first had to acquaint myself with the existing formalism and its historic development. While I only managed to encode parts of my second postulate and only hint at how to encode my first one, I \textit{did} find something so astonishing that I thought this is worth publishing in a reputable place.
+
+But let me begin by opposing the question that has hitherto been asked by interpreters of Quantum Mechanics with \textit{my} question to motivate what I am doing.
+
+\textbf{The wrong question} is how we can justify the use of the Born rule by having it emerge from unitary evolution and then provide an ontological picture to make sense of that.
+
+The problem is that it is impossible to have the Born rule emerge \textit{exactly} from unitary evolution. Therefore, we do not \textit{ever} have probabilities from which we could sample anything.
+
+This is where even the otherwise very sober and honorable philosophical approach of the early J. Barandes \cite{barandes2014minimalmodalinterpretationquantum} fails. He is more bold than Rovelli when it comes to facts being facts, but in order to make that work (and here, he is less bold than Rovelli) introduces states that are \textit{completely} epistemic - even more so than in Rovelli's picture. Our observer can only interpret the world, when the point is to explain how and why we can \textit{change} it.
+
+A novelty in Barandes' old picture from back then (which has since evolved mostly on the formal level - his philosophy hasn't changed much) that deserves mention is that at least officially, he gives decoherence a different role than everyone else: by having ontic facts be facts, decoherence is free to act only on epistemic states. Except that in reality, they never decohere so much that we would ever be fully justified to apply the Born rule. Our detached out-of-universe observer is condemned to eternal indecision and nagging philosophical questions. Sad!
+
+The \textit{later} Barandes has some much better ideas buried under a lot of formalism \cite{Barandes_2025}, but it is still presented as if all of this was physically \textit{equivalent} to existing quantum mechanics, when one of the two big ideas clearly is not - but in a good way (to be discussed)...
+
+\textbf{The right question} is whether we can provide an ontology based on empirical fact and \textit{good} philosophy, then present the existing formalism in a form suitable to \textit{extend} it with a Born \textit{axiom} (where we need a mathematical justification mirroring the philosophical justification), then complete the picture of the path space and justify why the differences are small enough so we have empirically never noticed them - but maybe could. \textit{Moreover}, one ought to examine if the latest changes in the formalism enable us to impose constraints like Special Relativity in novel ways.
+
+In the next section, I will provide the academic reader with the math so he can shut up and calculate. And it is \textit{astonishingly} simple.
+
+
+\subsection{The Math}
+
+\subsubsection{History}
+
+Since I am a mathematician and am a bit confused about the mathematicial dialect physicists speak, allow me to first introduce some notational "main characters" that show up all over the place.
+
+Enter the "bra" $\bra{\psi}$ and the "ket" $\ket{\phi}$. These are just handy ways to denote row and column vectors in $\mathbb{C}^n$.
+
+The setting that is appropriate to discuss my ideas is unitary evolution. But let us take a moment for a quick historic detour.
+
+Historically, the first description of the full quantum state dynamics (as we currently understand it) was given by Schrödinger with his famous differential equation (see e.g. \cite{Lecture25}):
+
+\begin{align*}
+i\hbar \frac{d}{d t}\psi(t) = H(t)\psi(t).
+\end{align*}
+
+Here, $i$ is the imaginary unit, $\hbar$ is a constant known as Planck's constant and $H$ is a (in general time dependent) Hermitian operator called "Hamiltonian".
+
+In the time \textit{in}dependent case, the solution is relatively straightforward (see derivation in the linked source):
+
+\begin{align*}
+\ket{\psi(t)}=\sum_n c_n(t_0)e^{-iE_n(t-t_0)/\hbar}\ket{n}.
+\end{align*}
+
+But in the time \textit{dependent} case, a general approach to practically solve the equation that even lends itself to numerical simulation is due to Feynman (see, for example, \cite{Perepelitsa_PathIntegrals}): just discretize time steps, and whenever you have a wave function $\psi(t)$ at time $t$, the wave function at time $t+\delta t$ becomes, in each component, the sum over all possible complex continuations of the evolution:
+
+\begin{align*}
+\ket{\psi(t+\delta t)}\approx \ket{\psi(t)}+\frac{d}{dt}\ket{\psi}\delta t=\ket{\psi(t)}-\frac{i}{\hbar}H(t)\ket{\psi(t)}\delta t,
+\end{align*}
+
+where the minus sign comes from dividing by $i$.
+
+Now, remember what this is supposed to encode though: we want to map complex unit vectors to complex unit vectors which locally should basically be a rotation which in complex math should involve an exponential. And here it is:
+
+\begin{align*}
+\ket{\psi(t+\delta t)} \approx U(t+\delta t, t) \ket{\psi(t)}, \quad
+U(t+\delta t, t) \approx \exp\Big(-\frac{i}{\hbar} H(t)\, \delta t \Big)
+\end{align*}
+
+where U is supposed to be a "time ordered" exponential.
+
+Another way of looking at something that locally should be a rotation is multiplication with time dependent unitary operators. And lo and behold: $U$ is indeed unitary according to standard literature.
+
+Since $H$ is technically an arbitrary Hermitian matrix that just so happens to encode something that physicists care about, a more statistics minded community has turned the path integral into a different possible foundation \cite{Luty2007PathIntegrals} of quantum mechanics based on successive application of unitary matrices.
+
+As a pure formalism devoid of statistical interpretation, this is quite similar to what Markov chains (see \cite{LevinPeres2017}) do - which I happen to know a thing or two about.
+
+\subsubsection{Unitary/Markov Analogy}
+
+For my picture, I will put the Markovian and the Unitary picture side by side in a discretized form, while keeping the nice integral touch:
+
+\begin{align*}
+\ket{\psi(t)} \approx \sum_{j=0}^n \ket{\psi(0)} d P(j\cdot\delta t),
+\end{align*}
+
+and we hope that mathematicians don't hurt themselves when taking the limit $\delta t \to 0$. This formulation can be thought of as unitary or Markovian evolution for now.
+
+To arrive at dynamics for \textit{coupled} systems, the underlying state space should be a cartesian product of possible states of the different protagonists.
+
+In the Markov chain community, this is a no-brainer - that's how they do it because it's how you keep your sanity.
+
+In unitary evolution though, the pairing of states is done only \textit{after} moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be \textbf{the} the notational contribution that appears to be originally due to the later Barandes (cited above) that makes what I am trying to do at all possible.
+
+Just for the skeptical physicist: We are \textit{not} talking about a Cartesian product of Hilbert spaces, we are talking about a Cartesian product of the underlying \textit{configuration} spaces. You \textit{should} be aware that $\bigotimes_{i \in I} L^2(K_i) \cong L^2(\prod_{i_\in I}K_i)$. This is not a new insight. It's just that no one has seriously explored a construction based on the other side of the equation, that is, starting from cartesian products.
+
+Historical note: I made this shift in notation independently of Barandes (I am only vaguely familiar with his formalism-heavy work) because to someone coming from the stochastic processes angle, it's awfully natural. It doesn't make computations intractable either, because you can still exploit sparse vector math. All it does is to clarify the picture.
+
+Except, Barandes - instead of just doing the normal and sane thing to just do unitary evolution based on a cartesian configuration space - builds an entire "unistochastic" edifice on top of all that. But why? That does seem a bit like complete overkill. The Markov chain notation provides all we need: we just need to switch out stochastic matrices with unitary matrices and probability vectors with complex vectors of complex unit length. The real innovation here is to do what the Markov chain people already do and describe coupling by moving to a cartesian product of each entities' possible configurations.
+
+In other words: draw out as many analogies from Markov chains as you can and see where it breaks. That's all we need to do.
+
+\subsubsection{Markovian Example}
+
+Let us now think, for example, of two billiard balls $A$ and $B$, each with $\mathbb{R}^2$ as position space (remember that billiard balls move on tables):
+
+\begin{align*}
+S_{A,B} = \mathbb{R}^2\times\mathbb{R}^2 = \mathbb{R}^4.
+\end{align*}
+
+In this now rather inconveniently encoded state space (but remember that with cartesian products, switching to other representations than a 4-vector is mere childsplay), we can introduce dynamics via a random walk on each participant, where we restrict ourselves to just the four major axes and a single stepwidth:
+
+\begin{align*}
+P(X(t+\delta t) = y \mid X(t) = x) = \begin{cases}
+&\frac{1}{4} \text{ if } y = x\pm v\cdot e_i,\\
+&0, \text{otherwise}
+\end{cases}, X=A\lor X=B. 
+\end{align*}
+
+Now, say that the billiard balls are dot sized and whenever they occupy the same place, we want them to collide. To make our mathematical lives easy and not think about momentum for now (we're drunken billiard balls!), let's just have the protagonists do something completely unphysical to get the point across: they'll just move together in their drunkards walk.
+
+Here's how the dynamics looks in the Markovian picture:
+
+\begin{align*}
+P((A,B)(t+\delta t) &= y \mid (A,B)(t)=x \land A(t_-) = B(t_-) \text{ for some } t_- \leq t) \\
+&= (\text{see above}).
+\end{align*}
+
+Notice something? We somehow had to completely change the system dynamics to make that happen. Now, the two billiard balls no longer have their own transition probabilities, but they are updated together so as to maintain their correlated state.
+
+This has \textit{nothing} to do with the fact that we asked them to move together. I pulled that example out of my ass to keep the system simple. What I want to draw your attention to here is that both random variables from now into perpetuity depend on a single, shared "coin toss".
+
+\textit{This} is what Bell was getting at with his famous theorem: in a classical Markovian picture, correlation forces us to introduce \textit{global} dynamics to maintain it.
+
+Sure: you could also have added momentum and imposed a realistic constraint on the correlation of the momenta after the interaction. But to make this correlation \textit{stick}, you would have to make the momentum dominate position evolution, and the momentum itself would basically have to be deterministic. Otherwise, over time, the correlation imposed this way will still degenerate in the Markovian picture.
+
+Not so in the unitary picture!
+
+It is a well known fact \cite{Hulpke_2006} that unitary evolution in the non-interacting case preserves entanglement - the quantum analogy of correlation.
+
+An "\textbf{interaction}" in \textbf{both the Markovian and Unitary picture} is just a pair of states (think: both billiard balls at the same place, but this is just modelling choice in my toy model) such that
+
+\begin{mdframed}
+\begin{align*}
+&P((A,B)(t+\delta t) = (x,y) | (A,B)(t)) \\ \neq &P(A(t+\delta t) = x\mid A(t))\cdot P(B(t+\delta t)=y \mid B(t)).
+\end{align*}
+\end{mdframed}
+
+We literally \textit{introduce} a correlation/entanglement dynamically - and unitary evolution preserves it as long as there are no further interactions in the above sense. That's all there is to it.
+
+\subsubsection{Markovian versus Unitary Modelling}
+
+Now, how do we model dynamics in general? This is where the two pictures truly differ. In the Markov case, we have to preserve stochasticity, in the unitary case, we have to preserve unitary norm and (traditionally) angles.
+
+In the \textbf{Markov} case, we can just decompose the transition matrix into a mixture stochastic matrices that act on each subsystem:
+
+\begin{align*}
+ P((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \alpha P((A)(t + \delta t)\mid A(t))\\ & + \beta P(B(t+\delta t) \mid B(t)) \\ & + \gamma P_{\operatorname{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)), 
+\end{align*}
+
+where $P_{\operatorname{int}}$ encodes the coupled dynamics. Notice something though: $\alpha$, $\beta$ and $\gamma$ are \textit{not} probabilities. To make this work, they can not even be thought of as scalars! In order to preserve global stochasticity, one would have to scale \textit{each row} (encoding a state before transition) so that the probabilities sum to 1 between the individual transition matrix and the interaction matrix. That is, they would have to be diagonal matrices multiplied from the right that fit together in an odd way.
+
+Alright, second attempt!
+
+\begin{align*}
+ P((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \alpha P((A)(t + \delta t)\mid A(t))\\ & + \alpha P(B(t+\delta t) \mid B(t)) \\ & + (1-\alpha) P_{\operatorname{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t))? 
+ \end{align*}
+
+Ok, now we have modelled it with a single scalar so we can think of this as a probability whether we interact or not. Except... This doesn't work either! If we want to preserve correlations indefinitely, the non-interacting terms would have to vanish the moment we interacted and the dynamics would have to snap into a contrived joint dynamics.
+
+So, while this is something that Markovians have been implicitly doing all the time, saying it out loud makes explicit just how problematic this is.
+
+In the \textit{unitary} case, one has to decompose the joint dynamics into a product:
+
+\begin{align*}
+ U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= U((A)(t + \delta t)\mid A(t))\\ & \cdot U(B(t+\delta t) \mid B(t)) \\ & \cdot U_{\operatorname{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)),
+ \end{align*}
+
+which sounds like complete nonsense if you think of these as transition probabilities. To keep our sanity, we must think of these as correlation transport terms or "transition amplitudes" and drink some vodka.
+
+
+Minor note: the "$\mid$" in $U((A)(t + \delta t)\mid A(t))$ is supposed to denote that we are deriving this mathematical object from the full transition matrix in the same way as we would in the case of a stochastic matrix: by multiplying a row with the current state vector. But we \textit{remain} in the unitary picture!
+
+What these terms \textit{are} doing for us is make it clear how and why correlations are actually preserved here: the multiplication of unitary operators can readily be understood as \textit{function chaining} which means that here, everyone does indeed "get their own dice roll".
+
+But how do we model dynamics now? Intriguingly, this is where the Hamiltonian shows up again in this probabilistic picture:
+
+\begin{align*}
+ U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \operatorname{exp}\big (-i( H^A_{t \to t+\delta t} + H^B_{t \to t+\delta t} + H^{\operatorname{int}}_{t \to t+\delta t}) \big ).
+\end{align*}
+
+\textbf{The way physicists encode dynamics in the Hamiltonian is to express everything in units of energy and they use physical dimensions to make sure that whenever they add a term, they don't violate Hermitian-ness.}
+
+\subsubsection{Probabilities}
+
+We have carried the analogy between Markovian and Unitary dynamics \textit{very} far. It seems almost like all is good now!
+
+Except that in the unitary picture, we have so far not seen a single thing that we could interpret as a probability. And honestly? This is a little mysterious. Think about it this way: we now have a dynamical system that can somehow introduce "correlations" - but what are the correlations \textit{about}?
+
+This is where my second postulate steps in, which says three things here:
+- Facts are whatever is true at interaction.
+- We do not need decoherence to explain facts. Decoherence can go and explain something else.
+- Interactions are \textit{mutual} quantum Bayesian updates between observers, where "observer" or "Bayesian" does not require consciousness or any of that voodoo.
+
+Ok, so mutual Bayesian update. What could that mean? Let us consider an actual typical quantum experiment: a macroscopic measurement device with wave function $\bra{\phi}$ measures the position of an electron with wave function $\ket{\psi}$.
+
+For this, the measurement device uses \textit{some} way to come up with a probability distribution on the electron's Hilbert space.
+
+Enter Gleason's Theorem \cite{Gleason1957}. Gleason says that the \textit{only} way to do that is the Born rule.
+
+And you know what? It turns out that if we treat both the apparatus and the electron as quantum, the Born rule predicts their \textit{joint} probability. \textit{Moreover}, in my cartesian picture, the spelling $\bra{\phi}$ is actually completely inappropriate and you have to spell it $\ket{\phi}$. That is, the Born rule looks like \textbf{this}:
+
+\begin{mdframed}
+\begin{align*}
+P(\ket{\phi}=i,\ket{\psi}=j) = \mid \ket{\phi(i), \psi(j)} \mid^2,
+\end{align*}
+\end{mdframed}
+
+where we have to understand the norm to be taken over \textit{each} possible configuration so as to induce something that looks like a density.
+
+(Let me also just mention as a side note that $n$ particle interactions are trivial to model now, since we literally just concatenate the interacting configurations into one vector).
+
+One has to be a \textit{little} careful to think of this as a density, because it doesn't integrate to 1. But this is fine in our picture since we do not integrate over the \textit{entire} wave function - just the part in an interaction state induced by the dynamics.
+
+Now, here's where it becomes interesting: \textit{if we assume the state of the measurement device to be fixed}, then we can condition on that state and the Born rules becomes
+
+\begin{align*}
+P(\ket{\psi}=j\mid \ket{\phi}=i) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(i), \psi(k)}\|}\right)^2
+\end{align*}
+
+for the wave function encoding the interaction we're looking for. But to recover the standard Born rule (and this \textit{beautifully} aligns with my "a measurement apparatus can not see itself" idea), we have to \textit{marginalize the apparatus out}:
+
+\begin{align*}
+P(\ket{\psi}=j\mid \ket{\phi}) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(k), \psi(j)}\|}\right)^2.
+\end{align*}
+
+The funny thing about what we have done is that we could also do it the other way around because we are no longer treating the measurement apparatus as privileged:
+
+\begin{align*}
+P(\ket{\phi}=i\mid \ket{\psi}=j) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(k), \psi(j)}\|}\right)^2.
+\end{align*}
+
+If the electron can do \textit{that}, why wouldn't it also do it in the wild when randomly meeting other electrons? In fact, if we can \textit{find out}, say, the spins of two particles that have interacted in an experiment after the fact, wouldn't it be awfully reasonable to assume that \textit{there was} a fact?
+
+In the picture presented so far, this is actually awfully simple. We are under no obligation to obey the Schrödinger equation here, since our starting point was unitary evolution which faithfully encodes Schrödinger's picture.
+
+So, what's the fix?
+
+Just require that interactions (in the unitary sense discussed above) are followed by application of the Born rule over the observables that have become entangled and notice that this preserves unitary norm. The fact that the probabilities over interacting states don't sum to one is immaterial. That simply means there is still a chance we don't participate in an interaction.
+
+\textbf{All that unitary evolution does is introducing and transporting correlation. In my picture, states where interactions (correlation introduction) happen are explicit and therefore, we have a natural place to apply the Born rule and obtain probabilities that naturally encode how likely it is for the involved participants to participate in a certain interaction at a given time.}
+
+
+\subsection{Why Does This Not Break Things?}
+
+It \textit{does}! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, \textit{also} applies the Born rule whenever it is meaningful - because his cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics (just with different math) when it is clearly not. How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and \textit{not} change the dynamics? You just did, champ (I just did it more clearly)! That's a huge success, and it is philosophically grounded.
+
+But the change is empirically \textit{subtle}.
+
+In the case that a single particle and a measurement device are the only thing that ever interacts, this produces the correct predictions by construction.
+
+In the case that particles interact, all that happens is that phase information (which is usually considered random) changes.
+
+In the case of particles interacting in the wild, the interactions are too rare to meaningfully contribute to overall predictions. Also, nearby interacting branches tend to interfere away in the unitary picture, making it look a bit like a single measurement.
+
+In other words: this is a \textit{good} adjustment - because there is a good chance that the empirical implications \textit{on the dynamics} could have been missed so far.
+
+\textit{Another} empirical prediction of my model (which \textit{doesn't} live in the dynamics), however, \textit{immediately confirms} that this modified dynamics is \textit{closer to truth} than the traditional picture - and it's right at the heart of my philosophy. \textit{Even without Special relativity}, my picture already encodes a causal order. So, we can naturally ask whether when Alice and Bob reconstruct an interaction record between an entangled particle pair they get a consistent outcome.
+
+\textbf{Experiment says YES}, thereby proving that the fact must have existed at interaction.
+
+Honestly, it would seem that this is just something that hitherto, nobody except Barandes (who thought this would \textit{follow} rather than being new) has seriously considered - even though the philosophy (measurement \textit{is} interaction) was there at least since Everett. The only concern about including this as another axiom was "but it would break unitary evolution!"
+
+\textit{And}? So long as we break it subtly and in a well-motivated way that makes our understanding \textit{more} consistent, that shouldn't be a problem, right? When the math gives us no reason to assume that the Born rule ought to be applied only in special situations and philosophy demands laws of the universe to be - well - universal, this fix is probably a good idea.
+
+It was only upon further reflection that it occurred to me that the conventional choice to represent unitary evolution via tensor math (which I ditched \textit{solely} on the ground that I didn't understand why it was "necessary") may have contributed to people not daring to make this move: they did not quite know how to. If your formalism is solipsistic and interaction is more of an embarrassing practical necessity imposed from outside the map, it's difficult to even \textit{imagine} how to do this. And imagine encoding this refinement into a modified Schrödinger equation - oh, the horror!
+
+The only thing that you have to swallow is that we no longer have a \textit{group} of linear operators to encode evolution, but a only monoid, as the Born rule - while it \textit{does} preserve the norm - is \textit{not} injective. Or, if you represent the system as multiple individual agents (sparse encoding for practical numerical computations), it becomes a category with some lossy morphisms (which leads to a reinterpretation of path integrals in general as repeated morphism chaining in a suitable category and "making the morphisms shorter" as we take $dt\to 0$). But weren't y'all hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it \textit{is} different from the future.
+
+But this is not all this notational tweak does! On top of making Quantum Mechanics make sense, it enables us to think of imposing constraints like Lorentz invariance in a whole new way (which to my knowledge, I have the honor of being the first one to point out, as my formulation is much clearer):
+
+Let $S$ be the global configuration space (a cartesian product over the possible configurations or all protagonists) and $\mathrm{Iso}(S)$ be the isomorphism group on S.
+
+Let $G_I$ be a family of groups with index set $I$ encoding the symmetries we care about: Galilean symmetry, Lorentzian symmetry - you name it. Now, define
+
+\begin{align*}
+\mathrm{Iso}(S) \supseteq G := \bigcap_{i\in I}\mathrm{img}(f_i(G_i))
+\end{align*}
+
+for a family of group embeddings $f_i$ into $\mathrm{Iso}(S)$ associated with each $G_i$.
+
+Our dynamic operator $P$ must be a unitary norm preserving map $P:\mathbb{C}^S\longmapsto\mathbb{C}^S$ such that for all $f\in G$
+
+\begin{mdframed}
+\begin{align*}
+\hat{f}\circ P\circ \hat{f}^{-1} = P,
+\end{align*}
+
+where
+
+\begin{align*}
+\hat{f}:\mathbb{C}^S &\longmapsto \mathbb{C}^S,\\ \hat{f}(\phi_s) &\mapsto \phi_{f(s)}.
+\end{align*}
+\end{mdframed}
+
+That's a trick we have hitherto been using on \textit{each object's} Hilbert space, but never on a global Hilbert space encoding the big picture - at least not in such clear and straightforward terms.
+
+Oh, and to fully incorporate my first postulate and make this truly Lorentz compatible, one probably has to impose symmetry constraints on the time dimension (which so far was just a parameter to index our unitary operators!) as well and think carefully about what that means. In particular, I expect a stark asymmetry between the known past and the unknown future.
+
+\subsection{The Big Picture}
+
+We now have a monoid of evolution operators (or one big evolution operator of a unitary followed by local Born rule applications in interacting states) that deserves a bit of reflection.
+
+As in the strict unitary setting, applying our evolution operator(s) means that we are transporting correlations of an ensemble. \textit{With my fix}, we now know where probabilities live and can interpret \textit{those} as the probability of certain interactions taking place at a given time - though, we must until further axiomatization use some common sense to interpret them as naive applications may lead to one observer doing multiple contradictory things at the same time.
+
+\textit{Conditioning} on interaction records is literally just a quantum Bayesian update. So is conditioning on a known state of the observer from whose "perspective" we are probing the ensemble. The traditional Born rule, on the other hand, is recovered through marginalization.
+
+Recovering the full system dynamics from the perspective of an observers should be possible by the remainder of my second postulate: a fully Bayesian approach where the observer knows that he knows nothing about himself and conditions his beliefs about himself and his causal impact on the past.
+
+\subsection{Research Directions}
+
+\begin{enumerate}
+
+\item I have given a novel way to inject Lorentz invariance - or any other symmetry we care about - into the search criteria for dynamic operators in the path integral formalism. Whether the search space needs to include nonlinear operators that apply the Born rule at interaction, I do not know. But at least, we have a new way to even look for an answer and I hope that this will produce results that differ in fundamental ways from QFT. This would be exciting, and the predictions coming out of \textit{this} would probably be testable much sooner than my Born rule idea.
+
+\item The reason why I think QFT could be sidestepped is not just because fields were basically a mathematical hack to solve inconsistencies when imposing Lorentz invariance naively in a particle-theoretical setting. The other reason is that the relational picture naturally leads to a different way to think about how fermions "emit" bosons: rather than "exciting a field", I think of the process as, say, an electron just constantly attempting to emit a photon - but this only becomes real when the photon actually hits something. This \textit{naturally} leads to a more Lorentzian picture of the system's dynamics where an interaction has to be thought of as local to the receiver and boils down to a ton of logical constraints snapping into place and leaving a footprint in the system's correlations.
+
+\item General Relativity suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. With my picture of Quantum Mechanics, \textit{this makes sense now} at the quantum level: No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are \textit{real} at interactions and this reality leaves a trace, and outside of interactions, you can not say anything. They \textit{carry} their own coordinate system, and they fight it out through interactions.
+
+\item Personally, I find it very satisfying that treating epistemic wave functions as ontic solves things philosophically. You know what would be even greater? If we could somehow treat the wave function as latent in the correlation between interaction-facts (that is: the real statistical trace left behind by interactions, \textit{not} the mathematical ghosts moving through Hilbert spaces). The idea that quantum information could just be living in correlations of interaction-facts - extending that in such a way that material agents express their quantum expectations in the correlations of interaction-facts would be huge. Don't forget: quantum mechanics lives in books, storage devices and our material practice, not some otherworldy Platonic ideals.
+
+\item This leads me to a "second decoherence conjecture": can we find, in this new version of quantum mechanics, some explanation why sufficiently complex quantum agents would be interested in bringing the universe \textit{for itself} (onto-epistemic wave function) in congruence with the universe \textit{in itself} (record trace of interaction-facts)? At least, we have for the first time a probabilistic calculus that allows the system to reason about itself, so we can treat this question \textit{in the model}.
+
+\end{enumerate}
+
+\pagebreak
+
+\section{Acknowledgements}
+
+\blockquote[Immanuel Kant]{
+Enlightenment is man's emergence from his self-imposed immaturity. Immaturity is the inability to use one’s understanding without guidance from another. This immaturity is self-imposed when its cause lies not in lack of understanding, but in lack of resolve and courage to use it without guidance from another. Sapere Aude! 'Have courage to use your own understanding!' - that is the motto of enlightenment.
+}
+
+\blockquote[Karl Marx]{
+Criticism has plucked the imaginary flowers on the chain not in order that man shall continue to bear that chain without fantasy or consolation, but so that he shall throw off the chain and pluck the living flower. The criticism of religion disillusions man, so that he will think, act, and fashion his reality like a man who has discarded his illusions and regained his senses, so that he will move around himself as his own true Sun. Religion is only the illusory Sun which revolves around man as long as he does not revolve around himself. 
+}
+
+
+On the physics part, I want to express my special gratitude to:
+
+\begin{itemize}
+
+\item Looking Glass Universe from whom I have learned that measurements and entanglement are \href{https://www.youtube.com/watch?v=xBlpOGdk-0U&}{deeply interconnected}. In fact, this had me intuit that this should be an equivalence principle \- independently of Rovelli. Many thanks for making sense\!
+
+\item ChatGPT which told me that I had discovered nothing new with this relativity, just something so obscure it had not made it into the general discourse.  
+  Except, further engagement with the matter led to the realization that I \textit{had} discovered something new, because for whatever reason, academics seem to be unable to put 2 and 2 together.
+  And the worst part? The actual insight had been known to us since Everett’s work, which is why it just so happened to give rise to the new quantitative tool of decoherence. Except, he had everything backward.  
+  Also, ChatGPT was my most productive critic, forcing me to relentlessly refine my arguments. The old words are very true: give the capitalists enough rope, and they will hang themselves.
+
+\item PBS Space Time for \href{https://www.youtube.com/watch?v=1JCRDaa3ehk}{coming so close to something real, yet getting it totally wrong}. The “present foliation” is not only arbitrary, it is, when taken as ontic, a Newtonian fossil. What must be understood about solutions to PDEs is that they are solutions because they \textit{satisfy} them. That is, whatever shape the solution may take, it can not possibly prove that the differential that gave rise to it isn’t real, but on the contrary: it gives it a home.
+
+\item Science Asylum whose \href{https://www.youtube.com/watch?v=5HKH1ZjGutA}{graphical explanations with squirrels} I trust more than the formalistic cope that had him walk back his fresh approach to make General Relativity make \textit{sense}. In the future, please stick to your own lesson that we need \textit{better} nonsense, not worse. Keep at it! What you have been doing is exactly what the revolutionary proletariat desperately needs.
+
+\end{itemize}
+
+\pagebreak
+
+\textbf{Dedicated to}
+
+\begin{itemize}
+\item The American Communist Party
+\item The Communist Party of China (and I encourage western media to finally learn that it's CPC, NOT CCP!)
+\item Komitee Basierter Deutscher (Chat Group)
+\item Darmstadt für Palästina
+\item Palestine itself
+\item People's MAGA and MAGA Communism
+\item Tung Tung Tung Sahur and last but not least
+\item MY WIFE whom I love from the bottom of my heart
+\end{itemize}
+
+\href{https://x.com/comradeKangaroo}{Find me on social media}
+
+\pagebreak
+
+\printbibliography
+
+\end{document}
