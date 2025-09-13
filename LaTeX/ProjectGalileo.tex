@@ -14,7 +14,7 @@
 
 \usepackage{braket}
 
-\title{The Galilean Moment of Quantum Mechanics \\ \large Condensed Version for Researchers}
+\title{A Minor Contribution to Resolving the Consistency Problem of RQM \\ \large And an Attempt at Formalization}
 \author{Markus Kasperczyk}
 \date{September 11, 2025}
 
@@ -26,7 +26,7 @@
 
 \begin{abstract}
 
-In this article, I will discuss Carlo Rovelli's Relational Quantum Mechanics (RQM) and how it aims at resolving the measurement problem. Once I have explained how I think it works, I will point out an obvious type of criticism, and how Rovelli tried to fix the problem. After this, I will show why it does not fix the issues, suggest a \textit{much} better fix which then leads to refinements of other assumptions of his work. Finally, I make an attempt to formalize this in a similar spirit to Jacob Barandes and stumble on a new way to encode unitary dynamics (and beyond) that may help to sidestep some quirks of Quantum Field Theory.
+Relational Quantum Mechanics (RQM) as devised by Carlo Rovelli has one problem that prevents broader adoption: it offers no good explanation why observers should ever agree on the facts. Rovelli's postulate that is supposed to address this did not lead to wider acceptance. In this article, I propose a modification of this postulate based on the relativity of simultaneity which motivates to some broader refinements of RQM's core tenets. Finally, I attempt a meaningful formalization and build a solid bridge to Markov Chain theory.
 
 \end{abstract}
 
@@ -34,7 +34,7 @@ In this article, I will discuss Carlo Rovelli's Relational Quantum Mechanics (RQ
 
 \subsection*{Note}
 
-You are reading the condensed version of this work optimized for publication in a visible spot. If you are interested in a more philosophically engaging discussion with memes, you can find this on \href{https://github.com/GermanBrainRot/Project-Galileo/tree/for-western-audiences}{GitHub}.
+You are reading the arXiv version of this article. If you are interested in a more philosophically engaging discussion with memes, you can find this on \href{https://github.com/GermanBrainRot/Project-Galileo/tree/for-western-audiences}{GitHub}.
 
 \newpage
 
@@ -62,53 +62,55 @@ Now, after the measurement, Wigner's friend comes out of the lab and is asked by
 
 So, does this mean that Wigner's friend was in a superposition until that point as well? Well, let's find out! Wigner asks his friend: "what did it feel like to be in a superposition?" His friend looks confused, then replies: "What do you mean? I was not in a superposition!"
 
-And this leads Wigner to the "only" correct interpretation: consciousness collapses wave functions! -
+And this leads Wigner to his interpretation: The collapse of the wave function must have been caused by the measurement outcome being understood by his friend's consciousness.
 
-Yeah, except that this is obvious nonsense and has since been challanged in various ways. Today's consensus seems to be that it's not about consciousness, but about interactions with macroscopic environments which "decohere" into a single classical reality (more on this idea later).
+This view has since been challanged in various ways. Today's consensus seems to be that it's not about consciousness, but about interactions with macroscopic environments which "decohere" into a single classical reality (more on this idea later).
 
 In his key contribution, Rovelli added his own unique take: What if Wigner's friend truly \textit{is} in a superposition - \text{for} Wigner? Yes, you read this right: Rovelli's solution boils down to stating that superposition for me can be facts for thee and vice versa.
 
 In particular, this means that for Rovelli, the wave function is epistemic: it's just a book keeping tool to account for the state of systems that you have not interacted with yet.
 
-You know what? This is actually a genius idea! I am \textit{not} being sarcastic here. It's the \textit{exact} type of idea that got us from Newtonian physics plus weird Lorentz transformations to account for the constancy of the speed of light for any observer to Einstein's relativity - and Rovelli is bold enough to draw this comparison himself in his initial paper.
+This is a very good idea. It's the type of idea that got us from Newtonian physics plus weird Lorentz transformations to account for the constancy of the speed of light for any observer to Einstein's relativity - and Rovelli is bold enough to draw this comparison himself in his initial paper.
 
 Except, it doesn't quite work. Here's the problem:
 
 If something can be a fact for one party (say, Alice), in limbo for another party (say, Bob) and once again a fact for a third party (say Charlie), who or what guarantees that Alice's and Charlie's facts agree once Bob learns of Alice's and Bob's notes?
 
-Well, an ad-hoc postulate does. After a quarter of a century, this rather obvious weak point had become bothersome enough that Mr Rovelli felt the need to just assert \cite{pittphilsci20469} that this should work.
+In 2022, Adlam and Rovelli \cite{pittphilsci20469} modified RQM to include the following postulate:
 
-The way he attempts this is not without merits. At least, it hints at an ontology that could be responsible for this to work: each observer just carries the information about their measurement records around in some way, for example in correlations between observables. Nice! We avoid hidden variables simply by using \textit{statistical correlations themselves} as the locus of physical information. Very elegant move!
+\blockquote[Adlam/Rovelli]{
+In a scenario where some observer Alice measures a variable V of a system S, then provided that Alice does not undergo any interactions which destroy the information about V stored in Alice’s physical variables, if Bob subsequently measures the physical variable representing Alice’s information about the variable V, then Bob’s measurement result will match Alice’s measurement result.
+}
+
+This attempt attempt is not without merits. At least, it hints at an ontology that could be responsible for this to work: each observer just carries the information about their measurement records around in some way, for example in correlations between observables. Nice! We avoid hidden variables simply by using \textit{statistical correlations themselves} as the locus of physical information. Very elegant move!
 
 But somehow, this is still quite slippery. Rovelli's idea how all this fits together forces him to write something like this:
 
-\blockquote[Rovelli]{
+\blockquote[Adlam/Rovelli]{
 This postulate implies that the information stored in Alice’s physical variables about the variable V of the system S is accessible in principle to any observer who measures her in the right basis, so at least at an emergent level this information about V is an observer-independent fact.
 }
 
 Excuse me? What if I measure her in the wrong basis? Is the information forever inaccessible to me? What does measuring "someone" in the wrong basis even mean?
 
-Honestly, this sounds like Rovelli's interpretation slips right back into some version of Many Worlds - a criticism that he has been struggling with from the start. And indeed, the "fix" for this is to be found in the exact same place as with Many Worlds, as the "at an emergent level" part of the sentence I quoted gives away:
+To me, this sounds like Rovelli's interpretation slips right back into some version of Many Worlds - a criticism that the notion of "relative facts" has invited from the start. And indeed, the "fix" for this is to be found in the exact same place as with Many Worlds, as the "at an emergent level" part of the sentence I quoted gives away:
 
-\blockquote[Rovelli]{
+\blockquote[Adlam/Rovelli]{
 It is clear that decoherence should play some role in this story. And in fact, decoherence provides exactly what it needed here: it picks out a basis which is dynamically favoured and then disseminates information stored in that basis through the environment.
 }
 
-Mr Rovelli, didn't you want to treat the wave function as a book keeping tool rather than something physical? So, what is it that "decoheres" here? Certainly not quantum branches, right? How can a set of systems "decohere" into a single reality - unless you basically allow an ontic wave function and even Everettian branching again?
+But if the wave function is supposed to be epistemic, what exactly is it that "decoheres" here? Certainly not quantum branches, right? How can a set of systems "decohere" into a single reality - unless you basically allow an ontic wave function and even Everettian branching again?
 
-Alright, and \textit{this} seems to be the state of the art here! At least as far as I am concerned, the mysteries have not \textit{quite} gone away. If we invoke decoherence to explain the "emergence" of stable facts at the macroscopic level, we would have to say \textit{what} decoheres. So, back to the drawing board!
+Unfortunately, it seems that not much more has been written on this matter. At least as far as I am concerned, the mysteries have not \textit{quite} gone away. If we invoke decoherence to explain the "emergence" of stable facts at the macroscopic level, we would have to say \textit{what} decoheres. So, back to the drawing board!
 
-\subsection{Fixing Rovelli}
+\subsection{Refining Rovelli}
 
 What if we went a little further than Rovelli and simply treated facts as facts? That is: \textit{measurement bases be damned}, once an interaction happened, \textit{it is a fact}.
 
 But hold on! Is this not in a direct contradiction with the idea that facticity or superposition should be \textit{relative} to an observer, that is, \textit{observer-dependent}? How can an interaction that happened \textit{just be a fact} when \textit{at the same time} we require that another observer who doesn't know about the interaction record yet could somehow still \textit{validly} describe the situation as a superposition?
 
-The answer is actually somewhat obvious once you read it. It is \textit{so} obvious that I couldn't \textit{believe} that it hadn't occurred to anyone for a quarter of a century - at least to my knowledge.
+The answer is actually somewhat obvious once you read it.
 
-Mr Rovelli, was your theory not supposed to make Quantum Mechanics \textit{directly} compatible with Special Relativity? In Special Relativity, whether an event has happened or not is \textit{relative} to the observer! Just because the interaction already resides in the causal past of Wigner's friend, this does not mean that it is already in Wigner's causal past!
-
-For the casual reader who might be confused about this, you can find a nice explanation how the speed of light is related to causality \href{https://www.youtube.com/watch?v=msVuCEs8Ydo}{here} and how relativity of simultaneity (within a discussion of relativistic length contraction) \href{https://www.youtube.com/watch?v=TxW6_E3uLuo}{here}.
+All that we have to do here is to invoke Special Relativity. In Special Relativity, whether an event has happened or not is \textit{relative} to the observer. Just because the interaction already resides in the causal past of Wigner's friend, this does not mean that it is already in Wigner's causal past.
 
 The above insight leads to a natural refinement of RQM. It is \textit{not} an ad-hoc axiom or postulate, it is \textit{well motivated} by known physics:
 
@@ -123,9 +125,9 @@ If we simply dump everything we consider a definite fact into the shared causal 
 
 \textbf{It would appear that we can have definite facts in the universe again!}
 
-Except, what implications does this have? Let's think about Rovelli's philosophy a little more carefully.
+Except, what implications does this have? Let us think about Rovelli's philosophy a little more carefully.
 
-If interaction records can now just be facts, doesn't that mean that we don't \textit{need} decoherence to explain how facts come into the world? Actually, it would appear that decoherence has a completely \textit{different} role in such a more materialist picture: it would basically just quantify to what extent small things have more ways \textit{not to} interact, which would naturally mean that its properties are ill-defined.
+If interaction records can now just be facts, doesn't that mean that we don't \textit{need} decoherence to explain how facts come into the world? Actually, it would appear that decoherence has a completely \textit{different} role in such a more realist picture: it would basically just quantify to what extent small things have more ways \textit{not to} interact, which would naturally mean that its relational properties are ill-defined.
 
 Think of it this way: If I was an astronaut floating through space, I could always in principle triangulate my position in relation to distant stars. An electron does not have that luxury, as it is so small that the photons coming from the stars may simply miss it. In that case, \textit{neither the electron nor the universe} knows where the electron is at these times.
 
@@ -133,9 +135,9 @@ Which leads directly to another important refinement to Rovelli's ideas.
 
 Rovelli's main point is that world descriptions should be \textit{relative} to the observer. Rovelli himself then correctly concludes from this that the observer is \textit{part} of the universe and we can not describe the universe "from nowhere in particular".
 
-Very good, Mr Rovelli! (Again, if this sounds ironic or sarcastic, I apologize - I think this is genuinely good). But how to operationalize this? Alas, Rovelli is a little shy here. He assumes that Quantum Mechanics is basically complete, so we can just use its formal apparatus and maybe derive it from an axiomatic basis that makes sense. The best we get is some notation indicating that we are looking at a world description from a given perspective. That is a little disappointing.
+Once again, an observation that makes perfect sense. But how to operationalize this? Alas, Rovelli is a little shy here. He assumes that Quantum Mechanics is basically complete, so we can just use its formal apparatus and maybe derive it from an axiomatic basis that makes sense. RQM does not give us much in terms of putting its postulates into a form so we could hope to make mathematical use of them.
 
-\textbf{Alright, let's give it a shot then!}
+Therefore, I tried to tease out what I could from the above insight on a philosophical level.
 
 Let us start with a simple observation: in everyday language, relativity "removes" facts. This is, I think, the trap that Rovelli has fallen into. What relativity \textit{actually} does is that it \textit{refines} our notion of what counts as a fact.
 
@@ -145,15 +147,15 @@ In the narrow sense, a gauge (here: Yang-Mills gauge) can be thought of as a set
 
 In a broader sense though, we come right back to the familiar notion from pure mathematics: if we know how spacetime works, we can change our coordinates - and whatever changes we observe through such a move, we would not interpret them as a change of the physical \textit{facts}. That is: what is a fact is that which is left invariant under all admissible perspective changes.
 
-Alright, let's do this for Quantum Mechanics then!
+With this, we are prepared to reason more carefully about the in-universe observers and their epistemic wave functions.
 
-If I am a measurement aparatus, what is measurement \textit{about} from my perspective? Fundamentally, it is about \textit{other} quantum objects, \textit{not} about me. I can not see myself directly! I \textit{can} see what \textit{other} objects are doing, but I must infer anything about myself from observations of the rest of the world. Whatever we do: to get a \textit{complete} picture of reality, we must try to learn not only about the outside world, but also about ourselves and our causal impact \textit{by using the universe as a mirror}.
+If I am a measurement aparatus, what is measurement \textit{about} from my perspective? Fundamentally, it is about \textit{other} quantum objects, \textit{not} about me. I can not measure myself directly! I \textit{can} measure what \textit{other} objects are doing, but I must infer anything about myself from observations of the rest of the world. Whatever we do: to get a \textit{complete} picture of reality, we must try to learn not only about the outside world, but also about ourselves and our causal impact \textit{by using the universe as a mirror}.
 
 This suggests that we have to restrict what we mean by "fact" to anything that is true from the point of view of any observer \textit{as we leave this observer out of the picture}.
 
 Here, it also becomes a bit clearer what an "observer" could even be. In essence, it's a set of correlated observables moving from one interaction to the next one. In general, such a "causal principle" can branch apart: just because the N observables all participated in one interaction, this doesn't mean that all N of them will participate in the next interaction - this should actually be more of an exception in general. But under certain circumstances, we end up with self-reinforcing interactions so we can treat all the involved observables as one very complex "macroscopic" observable.
 
-Oh, and by the way, in case you didn't notice it: if we take Rovelli's relativity completely seriously, we're actually forced to treat the wave function not \textit{just} as epistemic, but as \text{both} epistemic \text{and} ontic at the same time now. Which by the way also answers why it seems to difficult to commit to either stance.
+One final thing needs to be pointed out about the epistemic wave function: if we take Rovelli's relativity completely seriously, we're actually forced to treat the wave function not \textit{just} as epistemic, but as \text{both} epistemic \text{and} ontic at the same time now. Which also answers why it seems to difficult to commit to either stance.
 
 Pause here if you need another minute to see if you can figure out why.
 
@@ -173,26 +175,21 @@ With all of this, Bell's beables \cite{laudisa2023evolutionbellnotionbeable} bec
 
 \section{Formalization}
 
-\subsection{The Wrong and the Right Question}
+\subsection{Guiding Principle}
 
-Armed with the above philosophy (and more that can be found in the extended version on GitHub), I decided to attempt a formalization of what I have to say. For this, I first had to acquaint myself with the existing formalism and its historic development. While I only managed to encode parts of my second postulate and only hint at how to encode my first one, I \textit{did} find something so astonishing that I thought this is worth publishing in a reputable place.
+Here is where it becomes tricky. If we want actual facts, it would seem that we somehow have to smuggle the Born rule into our dynamics in a principled way without breaking the math.
 
-But let me begin by opposing the question that has hitherto been asked by interpreters of Quantum Mechanics with \textit{my} question to motivate what I am doing.
+So far, interpretations of Quantum Mechanics ranged from "let's not think about this too hard" (Copenhagen) to mathematically questionable assertions that entanglement and decoherence could by themselves account for measurement (for example Many Worlds or RQM as it stands right now).
 
-\textbf{The wrong question} is how we can justify the use of the Born rule by having it emerge from unitary evolution and then provide an ontological picture to make sense of that.
+In this category, a more recent attempt would be the philosophy of the early J. Barandes \cite{barandes2014minimalmodalinterpretationquantum}. He is more bold than Rovelli when it comes to facts being facts, but in order to make that work (and here, he is less bold than Rovelli) introduces states that are \textit{completely} epistemic - even more so than in Rovelli's picture. Our observer can only interpret the world, when the point is to explain how and why we can \textit{change} it.
 
-The problem is that it is impossible to have the Born rule emerge \textit{exactly} from unitary evolution. Therefore, we do not \textit{ever} have probabilities from which we could sample anything.
+A novelty in Barandes' old picture from back then (which has since evolved mostly on the formal level - his philosophy seems not to have changed much) that deserves mention is that at least officially, he gives decoherence a different role than everyone else: by having ontic facts be facts, decoherence is free to act only on epistemic states.
 
-This is where even the otherwise very sober and honorable philosophical approach of the early J. Barandes \cite{barandes2014minimalmodalinterpretationquantum} fails. He is more bold than Rovelli when it comes to facts being facts, but in order to make that work (and here, he is less bold than Rovelli) introduces states that are \textit{completely} epistemic - even more so than in Rovelli's picture. Our observer can only interpret the world, when the point is to explain how and why we can \textit{change} it.
+Except that in reality, they never decohere so much that we would ever be fully justified to apply the Born rule. A trillion interactions is still not the same as a mathematical limit. Our detached out-of-universe observer is condemned to eternal indecision and nagging philosophical questions. Sad!
 
-A novelty in Barandes' old picture from back then (which has since evolved mostly on the formal level - his philosophy hasn't changed much) that deserves mention is that at least officially, he gives decoherence a different role than everyone else: by having ontic facts be facts, decoherence is free to act only on epistemic states. Except that in reality, they never decohere so much that we would ever be fully justified to apply the Born rule. Our detached out-of-universe observer is condemned to eternal indecision and nagging philosophical questions. Sad!
+The \textit{later} Barandes \cite{Barandes_2025} contributes a lot of formalism to make his ideas more precise. In his recent work, Barandes finds a different way to derive the Born rule from his axioms. This is \textit{very} interesting, but given the hard constraints of the Schrödinger equation, this either means that the derivation contains an error that has not yet been noticed or that his axioms are in a subtle way \textit{different} from standard Quantum Mechanics. The latter would be a far more exciting option, as his work seems internally consistent.
 
-The \textit{later} Barandes has some much better ideas buried under a lot of formalism \cite{Barandes_2025}, but it is still presented as if all of this was physically \textit{equivalent} to existing quantum mechanics, when one of the two big ideas clearly is not - but in a good way (to be discussed)...
-
-\textbf{The right question} is whether we can provide an ontology based on empirical fact and \textit{good} philosophy, then present the existing formalism in a form suitable to \textit{extend} it with a Born \textit{axiom} (where we need a mathematical justification mirroring the philosophical justification), then complete the picture of the path space and justify why the differences are small enough so we have empirically never noticed them - but maybe could. \textit{Moreover}, one ought to examine if the latest changes in the formalism enable us to impose constraints like Special Relativity in novel ways.
-
-In the next section, I will provide the academic reader with the math so he can shut up and calculate. And it is \textit{astonishingly} simple.
-
+The precedent of Barandes' work indicates that it \textit{might} be possible to find a principled place where to apply the Born rule. And this naturally sets the stage for my attempt. I am specifically looking for a criterion when two observers could be described as "interacting" with each other and in what states, and for a mathematical formalism that allows me to just use the Born rule, Schrödinger equation be damned (so long as I can justify that predictions differ only subtly).
 
 \subsection{The Math}
 
@@ -253,17 +250,31 @@ and we hope that mathematicians don't hurt themselves when taking the limit $\de
 
 To arrive at dynamics for \textit{coupled} systems, the underlying state space should be a cartesian product of possible states of the different protagonists.
 
-In the Markov chain community, this is a no-brainer - that's how they do it because it's how you keep your sanity.
+In the Markov chain community, this is a no-brainer.
 
 In unitary evolution though, the pairing of states is done only \textit{after} moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be \textbf{the} the notational contribution that appears to be originally due to the later Barandes (cited above) that makes what I am trying to do at all possible.
 
-Just for the skeptical physicist: We are \textit{not} talking about a Cartesian product of Hilbert spaces, we are talking about a Cartesian product of the underlying \textit{configuration} spaces. You \textit{should} be aware that $\bigotimes_{i \in I} L^2(K_i) \cong L^2(\prod_{i_\in I}K_i)$. This is not a new insight. It's just that no one has seriously explored a construction based on the other side of the equation, that is, starting from cartesian products.
+Just for the skeptical physicist: We are \textit{not} talking about a Cartesian product of Hilbert spaces, we are talking about a Cartesian product of the underlying \textit{configuration} spaces. You \textit{should} be aware that 
+
+\begin{align*}
+\bigotimes_{i \in I} L^2(K_i) \cong L^2(\prod_{i_\in I}K_i).
+\end{align*}
+
+This is not a new insight. It's just that no one has seriously explored a construction based on the other side of the equation, that is, starting from Cartesian products.
+
+And just to make it abundantly clear: the notion of entanglement \textit{can} be expressed in this picture, as carries over verbatim from correlated random variables:
+
+\begin{align*}
+\psi(A, B) \neq \psi_1(A) \cdot \psi_2(B)
+\end{align*}
+
+for any $\psi_1$ and $\psi_2$.
 
 Historical note: I made this shift in notation independently of Barandes (I am only vaguely familiar with his formalism-heavy work) because to someone coming from the stochastic processes angle, it's awfully natural. It doesn't make computations intractable either, because you can still exploit sparse vector math. All it does is to clarify the picture.
 
-Except, Barandes - instead of just doing the normal and sane thing to just do unitary evolution based on a cartesian configuration space - builds an entire "unistochastic" edifice on top of all that. But why? That does seem a bit like complete overkill. The Markov chain notation provides all we need: we just need to switch out stochastic matrices with unitary matrices and probability vectors with complex vectors of complex unit length. The real innovation here is to do what the Markov chain people already do and describe coupling by moving to a cartesian product of each entities' possible configurations.
+Except, Barandes - instead of just doing the normal thing to just do unitary evolution based on a Cartesian configuration space - builds an entire "unistochastic" edifice on top of all that. But why? That does seem a bit like complete overkill that only adds confusion. The Markov chain notation provides all we need: we just need to switch out stochastic matrices with unitary matrices and probability vectors with complex vectors of complex unit length. The real innovation here is to do what the Markov chain people already do (and what Barandes did!) and describe coupling by moving to a Cartesian product of each entities' possible configurations.
 
-In other words: draw out as many analogies from Markov chains as you can and see where it breaks. That's all we need to do.
+In other words: \textit{my} idea here is to draw out as many analogies from Markov chains as you can and see where it breaks. That's all we need to do.
 
 \subsubsection{Markovian Example}
 
@@ -273,7 +284,7 @@ Let us now think, for example, of two billiard balls $A$ and $B$, each with $\ma
 S_{A,B} = \mathbb{R}^2\times\mathbb{R}^2 = \mathbb{R}^4.
 \end{align*}
 
-In this now rather inconveniently encoded state space (but remember that with cartesian products, switching to other representations than a 4-vector is mere childsplay), we can introduce dynamics via a random walk on each participant, where we restrict ourselves to just the four major axes and a single stepwidth:
+In this now rather inconveniently encoded state space (but remember that with Cartesian products, switching to other representations than a 4-vector is mere childsplay), we can introduce dynamics via a random walk on each participant, where we restrict ourselves to just the four major axes and a single step-width:
 
 \begin{align*}
 P(X(t+\delta t) = y \mid X(t) = x) = \begin{cases}
@@ -293,7 +304,7 @@ P((A,B)(t+\delta t) &= y \mid (A,B)(t)=x \land A(t_-) = B(t_-) \text{ for some }
 
 Notice something? We somehow had to completely change the system dynamics to make that happen. Now, the two billiard balls no longer have their own transition probabilities, but they are updated together so as to maintain their correlated state.
 
-This has \textit{nothing} to do with the fact that we asked them to move together. I pulled that example out of my ass to keep the system simple. What I want to draw your attention to here is that both random variables from now into perpetuity depend on a single, shared "coin toss".
+This has \textit{nothing} to do with the fact that we asked them to move together. I chose this example to keep the system simple. What I want to draw your attention to here is that both random variables from now into perpetuity depend on a single, shared "coin toss".
 
 \textit{This} is what Bell was getting at with his famous theorem: in a classical Markovian picture, correlation forces us to introduce \textit{global} dynamics to maintain it.
 
@@ -363,9 +374,12 @@ We have carried the analogy between Markovian and Unitary dynamics \textit{very}
 Except that in the unitary picture, we have so far not seen a single thing that we could interpret as a probability. And honestly? This is a little mysterious. Think about it this way: we now have a dynamical system that can somehow introduce "correlations" - but what are the correlations \textit{about}?
 
 This is where my second postulate steps in, which says three things here:
-- Facts are whatever is true at interaction.
-- We do not need decoherence to explain facts. Decoherence can go and explain something else.
-- Interactions are \textit{mutual} quantum Bayesian updates between observers, where "observer" or "Bayesian" does not require consciousness or any of that voodoo.
+
+\begin{itemize}
+\item Facts are whatever is true at interaction.
+\item We do not need decoherence to explain facts. Decoherence can go and explain something else.
+\item Interactions are \textit{mutual} quantum Bayesian updates between observers, where "observer" or "Bayesian" does not require consciousness or any of that voodoo.
+\end{itemize}
 
 Ok, so mutual Bayesian update. What could that mean? Let us consider an actual typical quantum experiment: a macroscopic measurement device with wave function $\bra{\phi}$ measures the position of an electron with wave function $\ket{\psi}$.
 
@@ -385,7 +399,7 @@ where we have to understand the norm to be taken over \textit{each} possible con
 
 (Let me also just mention as a side note that $n$ particle interactions are trivial to model now, since we literally just concatenate the interacting configurations into one vector).
 
-One has to be a \textit{little} careful to think of this as a density, because it doesn't integrate to 1. But this is fine in our picture since we do not integrate over the \textit{entire} wave function - just the part in an interaction state induced by the dynamics.
+One has to be a \textit{little} careful to think of this as a density, because it doesn't integrate to 1. This is because we do not integrate over the \textit{entire} wave function - just the part in an interaction state induced by the dynamics. The way my postulates guide me to interpret this is that we should see these "sub-probabilities" as observer-centric, which means that in order to get to a full probability, we would have to normalize by the unitary norm capturing the entire subsystem - interacting or not.
 
 Now, here's where it becomes interesting: \textit{if we assume the state of the measurement device to be fixed}, then we can condition on that state and the Born rules becomes
 
@@ -418,9 +432,9 @@ Just require that interactions (in the unitary sense discussed above) are follow
 
 \subsection{Why Does This Not Break Things?}
 
-It \textit{does}! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, \textit{also} applies the Born rule whenever it is meaningful - because his cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics (just with different math) when it is clearly not. How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and \textit{not} change the dynamics? You just did, champ (I just did it more clearly)! That's a huge success, and it is philosophically grounded.
+It \textit{does}! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, \textit{also} applies the Born rule whenever it is meaningful - because his Cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics (just with different math) when it is clearly not. How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and \textit{not} change the dynamics? You just did! And so did I. That's a huge success, and it is philosophically grounded.
 
-But the change is empirically \textit{subtle}.
+Here is my reasoning why the change is empirically \textit{subtle}.
 
 In the case that a single particle and a measurement device are the only thing that ever interacts, this produces the correct predictions by construction.
 
@@ -442,7 +456,7 @@ It was only upon further reflection that it occurred to me that the conventional
 
 The only thing that you have to swallow is that we no longer have a \textit{group} of linear operators to encode evolution, but a only monoid, as the Born rule - while it \textit{does} preserve the norm - is \textit{not} injective. Or, if you represent the system as multiple individual agents (sparse encoding for practical numerical computations), it becomes a category with some lossy morphisms (which leads to a reinterpretation of path integrals in general as repeated morphism chaining in a suitable category and "making the morphisms shorter" as we take $dt\to 0$). But weren't y'all hunting for the holy grail of why the past appears different from the future? Well, there's your answer: it's because it \textit{is} different from the future.
 
-But this is not all this notational tweak does! On top of making Quantum Mechanics make sense, it enables us to think of imposing constraints like Lorentz invariance in a whole new way (which to my knowledge, I have the honor of being the first one to point out, as my formulation is much clearer):
+But this is not all this notational tweak does! On top of making Quantum Mechanics make sense, it enables us to think of imposing constraints like Lorentz invariance in a whole new way:
 
 Let $S$ be the global configuration space (a cartesian product over the possible configurations or all protagonists) and $\mathrm{Iso}(S)$ be the isomorphism group on S.
 
@@ -488,7 +502,7 @@ Recovering the full system dynamics from the perspective of an observers should 
 
 \item I have given a novel way to inject Lorentz invariance - or any other symmetry we care about - into the search criteria for dynamic operators in the path integral formalism. Whether the search space needs to include nonlinear operators that apply the Born rule at interaction, I do not know. But at least, we have a new way to even look for an answer and I hope that this will produce results that differ in fundamental ways from QFT. This would be exciting, and the predictions coming out of \textit{this} would probably be testable much sooner than my Born rule idea.
 
-\item The reason why I think QFT could be sidestepped is not just because fields were basically a mathematical hack to solve inconsistencies when imposing Lorentz invariance naively in a particle-theoretical setting. The other reason is that the relational picture naturally leads to a different way to think about how fermions "emit" bosons: rather than "exciting a field", I think of the process as, say, an electron just constantly attempting to emit a photon - but this only becomes real when the photon actually hits something. This \textit{naturally} leads to a more Lorentzian picture of the system's dynamics where an interaction has to be thought of as local to the receiver and boils down to a ton of logical constraints snapping into place and leaving a footprint in the system's correlations.
+\item The reason why I think QFT could be sidestepped is not just because fields were basically a mathematical hack to solve inconsistencies when imposing Lorentz invariance naively in a particle-theoretical setting. The other reason is that the relational picture naturally leads to a different way to think about how fermions "emit" bosons: rather than "exciting a field", I think of the process as, say, an electron just constantly attempting to emit a photon - but this only becomes real when the photon actually hits something. This \textit{naturally} leads to a more Lorentzian picture of the system's dynamics where an interaction has to be thought of as local to the receiver and boils down to a ton of logical constraints snapping into place and leaving a footprint in the system's correlations. Basically, an interaction triggers a giant belief-propagation.
 
 \item General Relativity suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. With my picture of Quantum Mechanics, \textit{this makes sense now} at the quantum level: No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are \textit{real} at interactions and this reality leaves a trace, and outside of interactions, you can not say anything. They \textit{carry} their own coordinate system, and they fight it out through interactions.
 
@@ -506,42 +520,7 @@ Recovering the full system dynamics from the perspective of an observers should 
 Enlightenment is man's emergence from his self-imposed immaturity. Immaturity is the inability to use one’s understanding without guidance from another. This immaturity is self-imposed when its cause lies not in lack of understanding, but in lack of resolve and courage to use it without guidance from another. Sapere Aude! 'Have courage to use your own understanding!' - that is the motto of enlightenment.
 }
 
-\blockquote[Karl Marx]{
-Criticism has plucked the imaginary flowers on the chain not in order that man shall continue to bear that chain without fantasy or consolation, but so that he shall throw off the chain and pluck the living flower. The criticism of religion disillusions man, so that he will think, act, and fashion his reality like a man who has discarded his illusions and regained his senses, so that he will move around himself as his own true Sun. Religion is only the illusory Sun which revolves around man as long as he does not revolve around himself. 
-}
-
-
-On the physics part, I want to express my special gratitude to:
-
-\begin{itemize}
-
-\item Looking Glass Universe from whom I have learned that measurements and entanglement are \href{https://www.youtube.com/watch?v=xBlpOGdk-0U&}{deeply interconnected}. In fact, this had me intuit that this should be an equivalence principle \- independently of Rovelli. Many thanks for making sense\!
-
-\item ChatGPT which told me that I had discovered nothing new with this relativity, just something so obscure it had not made it into the general discourse.  
-  Except, further engagement with the matter led to the realization that I \textit{had} discovered something new, because for whatever reason, academics seem to be unable to put 2 and 2 together.
-  And the worst part? The actual insight had been known to us since Everett’s work, which is why it just so happened to give rise to the new quantitative tool of decoherence. Except, he had everything backward.  
-  Also, ChatGPT was my most productive critic, forcing me to relentlessly refine my arguments. The old words are very true: give the capitalists enough rope, and they will hang themselves.
-
-\item PBS Space Time for \href{https://www.youtube.com/watch?v=1JCRDaa3ehk}{coming so close to something real, yet getting it totally wrong}. The “present foliation” is not only arbitrary, it is, when taken as ontic, a Newtonian fossil. What must be understood about solutions to PDEs is that they are solutions because they \textit{satisfy} them. That is, whatever shape the solution may take, it can not possibly prove that the differential that gave rise to it isn’t real, but on the contrary: it gives it a home.
-
-\item Science Asylum whose \href{https://www.youtube.com/watch?v=5HKH1ZjGutA}{graphical explanations with squirrels} I trust more than the formalistic cope that had him walk back his fresh approach to make General Relativity make \textit{sense}. In the future, please stick to your own lesson that we need \textit{better} nonsense, not worse. Keep at it! What you have been doing is exactly what the revolutionary proletariat desperately needs.
-
-\end{itemize}
-
-\pagebreak
-
-\textbf{Dedicated to}
-
-\begin{itemize}
-\item The American Communist Party
-\item The Communist Party of China (and I encourage western media to finally learn that it's CPC, NOT CCP!)
-\item Komitee Basierter Deutscher (Chat Group)
-\item Darmstadt für Palästina
-\item Palestine itself
-\item People's MAGA and MAGA Communism
-\item Tung Tung Tung Sahur and last but not least
-\item MY WIFE whom I love from the bottom of my heart
-\end{itemize}
+\textbf{Dedicated to my wife whom I love from the bottom of my heart.}\\
 
 \href{https://x.com/comradeKangaroo}{Find me on social media}
 
