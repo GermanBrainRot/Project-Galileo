@@ -380,7 +380,7 @@ which sounds like complete nonsense if you think of these as transition probabil
 
 Minor note: the "$\mid$" in $U((A)(t + \delta t)\mid A(t))$ is supposed to denote that we are deriving this mathematical object from the full transition matrix in the same way as we would in the case of a stochastic matrix: by multiplying a row with the current state vector. But we \textit{remain} in the unitary picture!
 
-What these terms \textit{are} doing for us is make it clear how and why correlations are actually preserved here: the multiplication of unitary operators can readily be understood as *function chaining* which means that here, everyone does indeed "get their own dice roll".
+What these terms \textit{are} doing for us is make it clear how and why correlations are actually preserved here: the multiplication of unitary operators can readily be understood as \textit{function chaining} which means that here, everyone does indeed "get their own dice roll".
 
 But how do we model dynamics now? Intriguingly, this is where the Hamiltonian shows up again in this probabilistic picture:
 
@@ -405,7 +405,7 @@ This is where my second postulate steps in, which says three things here:
 
 Ok, so mutual Bayesian update. What could that mean? Let us consider an actual typical quantum experiment: a macroscopic measurement instrument $A$ and an electron $B$ which have just interacted according to dynamic $U$ on interaction outcome set $I$.
 
-For this, the Measurement device uses textit{some} way to come up with a probability distribution on the electron's Hilbert space.
+For this, the Measurement device uses \textit{some} way to come up with a probability distribution on the electron's Hilbert space.
 
 Enter Gleason's Theorem \cite{Gleason1957}. Gleason says that the \textit{only} way to do that is the Born rule.
 
@@ -438,9 +438,9 @@ P(Y) &\neq P(Y\mid X) \text{ or} \\
 P(X) &\neq P(X\mid Y).
 \end{align*}
 
-We note that this relation is in general not transitive: if $X$ and $Y$ are directly interdependent and $Y$ and $Z$ are directly interdependent, this does not mean that $X$ and $Z$ are directly interdependent (in such a situation, literature calls $X$ and $Z$ "conditionally independent"). For our purposes, we are interested in the transitive closure - that is: if $X$ and $Y$ are directly interdependent and $Y$ and $Z$ are directly interdependent, we call $X$, $Y$ and $Z$ **interdependent**.
+We note that this relation is in general not transitive: if $X$ and $Y$ are directly interdependent and $Y$ and $Z$ are directly interdependent, this does not mean that $X$ and $Z$ are directly interdependent (in such a situation, literature calls $X$ and $Z$ "conditionally independent"). For our purposes, we are interested in the transitive closure - that is: if $X$ and $Y$ are directly interdependent and $Y$ and $Z$ are directly interdependent, we call $X$, $Y$ and $Z$ \textbf{interdependent}.
 
-By trivially having $X$ be interdepentent with $X$, interdependence forms an \textbf{equivalence relation} which allows us to partition $O_I$ into equivalence classes of different interactions. Let us denote interdependence as $\sim$ and let us define $\mathcal{O}_J = \frac{O_I}{\sim}$. where I have omitted the step that I am actually re-indexing and hope that the reader understands what is going on here.
+By trivially having $X$ be interdepentent with $X$, interdependence forms an \textbf{equivalence relation} which allows us to partition $O_I$ into equivalence classes of different interactions. Let us denote interdependence as $\sim$ and let us define $\mathcal{O}_J = \frac{O_I}{\sim}$ where I have omitted the step that I am actually re-indexing and hope that the reader understands what is going on here.
 
 Now, we can do what we set out to do. For a given $O\in\mathcal{O}_J$, we marginalize out all observables that are irrelevant:
 
@@ -536,19 +536,9 @@ where
 \end{align*}
 \end{mdframed}
 
-That's a trick we have hitherto been using on \textit{each object's} Hilbert space, but never on a global Hilbert space encoding the big picture - at least not in such clear and straightforward terms.
+That's a trick we have hitherto been using on \textit{each object's} Hilbert space, but to my knowledge never on a global Hilbert space encoding the big picture - at least not in such clear and straightforward terms.
 
 Oh, and to fully incorporate my first postulate and make this truly Lorentz compatible, one probably has to impose symmetry constraints on the time dimension (which so far was just a parameter to index our unitary operators!) as well and think carefully about what that means. In particular, I expect a stark asymmetry between the known past and the unknown future.
-
-\subsection{The Big Picture}
-
-We now have a monoid of evolution operators (or one big evolution operator of a unitary followed by local Born rule applications in interacting states) that deserves a bit of reflection.
-
-As in the strict unitary setting, applying our evolution operator(s) means that we are transporting correlations of an ensemble. \textit{With my fix}, we now know where probabilities live and can interpret \textit{those} as the probability of certain interactions taking place at a given time - though, we must until further axiomatization use some common sense to interpret them as naive applications may lead to one observer doing multiple contradictory things at the same time.
-
-\textit{Conditioning} on interaction records is literally just a quantum Bayesian update. So is conditioning on a known state of the observer from whose "perspective" we are probing the ensemble. The traditional Born rule, on the other hand, is recovered through marginalization.
-
-Recovering the full system dynamics from the perspective of an observers should be possible by the remainder of my second postulate: a fully Bayesian approach where the observer knows that he knows nothing about himself and conditions his beliefs about himself and his causal impact on the past.
 
 \subsection{Research Directions}
 
