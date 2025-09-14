@@ -365,6 +365,8 @@ $$
 
 We literally *introduce* a correlation/entanglement dynamically - and unitary evolution preserves it as long as there are no further interactions in the above sense. That's all there is to it.
 
+![](x-marks-the-spot.jpg)
+
 ##### Small Sparsity Exploit
 
 One *very* neat thing that comes out of this way of wording the *process* of entanglement is that the valid interaction outcomes are "marked". If we think of the entire probability or quantum state, it would assign a probability or amplitude to each possible configuration. But with the above observation, we can do the following:
@@ -452,9 +454,11 @@ whenever $i\in I$. *Except* this doesn't sum to 1. In fact, if we do this naivel
 
 Alright, so let's refine this. Let us begin by assuming we marginalized everyone who does not participate in this interaction out. Then, we are now left with the wave function only of the interaction participants.
 
-The idea how we apply the Born rule is as follows: first, we "plug in a 1" in a configuration that has been realized and set every other configuration to 0, then we integrate over the admissible configurations with their Born weight and normalize to 1. Then, we try to recover everything we marginalized out.
+The idea how we apply the Born rule is as follows: first, we "plug in a 1" in a configuration that has been realized and set every other configuration to 0, then we integrate over the admissible configurations with their Born weight and normalize to 1.
 
-Here is the problem: we have not quite marginalized out everything that we should. By defining interactions broadly as a situation between observers, we have discarded the important nuance that the observers may interact in different ways. So, how do we find these "different ways"?
+Here is the problem: we have not quite marginalized out everything that we should. The "plug in a 1" part works for a single configuration, but not if it is paired with a ton of irrelevant configurations. If these were finitely many irrelevant configurations, we could maybe assign equal weight to every configuration that keeps the component we care about the same. But if the marginal configuration is paired with a non-compact configuration space, an "equal weight" for all copies becomes ill-defined! 
+
+The mistake here is defining interactions broadly as a situation between observers. With this move, we have discarded the important nuance that the observers may interact in different ways, not just with different outcomes. So, how do we find these "different ways"?
 
 Let us re-index our joint quantum state with observables $O_I$. In essence, we are looking for configurations $j\in I$ such that
 
@@ -507,7 +511,7 @@ In order to recover, from the perspective of an individual interaction, the enti
 
 Over the years, physicists have found a few intuitions where the Kraus operator should be applied: open systems, strong decoherence regimes and so on. The novelty in my approach lies not in finding a way to include the Born rule as an axiom (in a sense, Kraus already did that) but finding a principled place where to do that that.
 
-For the sake of completion, let me spell out what the Kraus operator does and what it looks like in my picture.
+For the sake of completeness, let me spell out what the Kraus operator does and what it looks like in my picture.
 
 In essence, we look at each possible realization $o_i$ of $o$. Keep in mind that in my Cartesian picture, this is just a configuration of $o$. In the probability space we just found through marginalizing everything else out and applying the Born rule, obtaining $o_i$ means that we would assign probability $1$ to this configuration and $0$ to everything else - an operation formally known as the Dirac delta at $o_i$, or $\delta_{o_i}$.
 
@@ -531,7 +535,7 @@ with the same normalization caveat.
 
 #### Why Does This Not Break Things?
 
-It *does*! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, *also* applies the Born rule whenever it is meaningful - because his cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics when it is clearly not (Kraus recognized that!). How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and *not* change the dynamics? You just did, champ (I just did it with less metaphysics)! That's a huge success, and it is philosophically grounded.
+It *does*! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, *also* applies the Born rule whenever it is meaningful - because his Cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics when it is clearly not (Kraus recognized that!). How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and *not* change the dynamics? You just did, champ (I just did it with less metaphysics)! That's a huge success, and it is philosophically grounded.
 
 But the change is empirically *subtle*.
 
