@@ -314,7 +314,13 @@ Not so in the unitary picture!
 
 It is a well known fact \cite{Hulpke_2006} that unitary evolution in the non-interacting case preserves entanglement - the quantum analogy of correlation.
 
-An "\textbf{interaction}" in \textbf{both the Markovian and Unitary picture} is just a pair of states (think: both billiard balls at the same place, but this is just modelling choice in my toy model) such that
+An "\textbf{interaction}" is just a situation where the dynamics and the prior state make it so that
+
+\begin{align*}
+&P((A,B)(t+\delta t) | (A,B)(t)) \\ \neq &P(A(t+\delta t)\mid A(t))\cdot P(B(t+\delta t) \mid B(t)),
+\end{align*}
+
+and a valid "\textbf{interaction outcome}" in \textbf{both the Markovian and Unitary picture} is just a pair of states (think: both billiard balls at the same place, but this is just modelling choice in my toy model) such that
 
 \begin{mdframed}
 \begin{align*}
@@ -324,6 +330,24 @@ An "\textbf{interaction}" in \textbf{both the Markovian and Unitary picture} is 
 
 We literally \textit{introduce} a correlation/entanglement dynamically - and unitary evolution preserves it as long as there are no further interactions in the above sense. That's all there is to it.
 
+\subsubsection{Small Sparsity Exploit}
+
+One \textit{very} neat thing that comes out of this way of wording the \textit{process} of entanglement is that the valid interaction outcomes are "marked". If we think of the entire probability or quantum state, it would assign a probability or amplitude to each possible configuration. But with the above observation, we can do the following:
+
+Given an interaction happens at $t\mapsto t+\delta t$. Let $I$ be the set of all valid interaction outcomes. Then, we can encode the entire posterior joint state $P_{\text{post}}$ (probability or quantum) as
+
+\begin{align*}
+P_{\text{post}}(A,B) = P_{\text{post}}(A,B) \odot 1_I \ ?? \ P_{\text{post}}(A)\cdot P_{\text{post}}(B)
+\end{align*}
+
+where $\odot$ is the pointwise product, $1_I$ is a 0/1 indicator whether we are in $I$ or not and $??$ is an operator inspired by modern programming languages like Swift which here has the meaning
+
+\begin{align*}
+A(i) \ ?? \ B(i) := B(i) \text{ if } A(i) = 0, A(i) \text{ otherwise}.
+\end{align*}
+
+If interactions are rare or only have a small amount of possible outcomes, this should lower the required storage space in a simulation.
+
 \subsubsection{Markovian versus Unitary Modelling}
 
 Now, how do we model dynamics in general? This is where the two pictures truly differ. In the Markov case, we have to preserve stochasticity, in the unitary case, we have to preserve unitary norm and (traditionally) angles.
@@ -331,41 +355,40 @@ Now, how do we model dynamics in general? This is where the two pictures truly d
 In the \textbf{Markov} case, we can just decompose the transition matrix into a mixture stochastic matrices that act on each subsystem:
 
 \begin{align*}
- P((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \alpha P((A)(t + \delta t)\mid A(t))\\ & + \beta P(B(t+\delta t) \mid B(t)) \\ & + \gamma P_{\operatorname{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)), 
-\end{align*}
+ P((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \alpha P((A)(t + \delta t)\mid A(t))\\ & + \beta P(B(t+\delta t) \mid B(t)) \\ & + \gamma P_{\text{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)), 
+ \end{align*}
 
-where $P_{\operatorname{int}}$ encodes the coupled dynamics. Notice something though: $\alpha$, $\beta$ and $\gamma$ are \textit{not} probabilities. To make this work, they can not even be thought of as scalars! In order to preserve global stochasticity, one would have to scale \textit{each row} (encoding a state before transition) so that the probabilities sum to 1 between the individual transition matrix and the interaction matrix. That is, they would have to be diagonal matrices multiplied from the right that fit together in an odd way.
+where $P_{\text{int}}$ encodes the coupled dynamics. Notice something though: $\alpha$, $\beta$ and $\gamma$ are \textit{not} probabilities. To make this work, they can not even be thought of as scalars! In order to preserve global stochasticity, one would have to scale \textit{each row} (encoding a state before transition) so that the probabilities sum to 1 between the individual transition matrix and the interaction matrix. That is, they would have to be diagonal matrices multiplied from the right that fit together in an odd way.
 
 Alright, second attempt!
 
 \begin{align*}
- P((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \alpha P((A)(t + \delta t)\mid A(t))\\ & + \alpha P(B(t+\delta t) \mid B(t)) \\ & + (1-\alpha) P_{\operatorname{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t))? 
- \end{align*}
+ P((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \alpha P((A)(t + \delta t)\mid A(t))\\ & + \alpha P(B(t+\delta t) \mid B(t)) \\ & + (1-\alpha) P_{\text{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t))? 
+\end{align*}
 
 Ok, now we have modelled it with a single scalar so we can think of this as a probability whether we interact or not. Except... This doesn't work either! If we want to preserve correlations indefinitely, the non-interacting terms would have to vanish the moment we interacted and the dynamics would have to snap into a contrived joint dynamics.
 
 So, while this is something that Markovians have been implicitly doing all the time, saying it out loud makes explicit just how problematic this is.
 
-In the \textit{unitary} case, one has to decompose the joint dynamics into a product:
+In the \textbf{unitary} case, one has to decompose the joint dynamics into a product:
 
 \begin{align*}
- U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= U((A)(t + \delta t)\mid A(t))\\ & \cdot U(B(t+\delta t) \mid B(t)) \\ & \cdot U_{\operatorname{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)),
+ U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= U((A)(t + \delta t)\mid A(t))\\ & \cdot U(B(t+\delta t) \mid B(t)) \\ & \cdot U_{\text{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)),
  \end{align*}
 
 which sounds like complete nonsense if you think of these as transition probabilities. To keep our sanity, we must think of these as correlation transport terms or "transition amplitudes" and drink some vodka.
 
-
 Minor note: the "$\mid$" in $U((A)(t + \delta t)\mid A(t))$ is supposed to denote that we are deriving this mathematical object from the full transition matrix in the same way as we would in the case of a stochastic matrix: by multiplying a row with the current state vector. But we \textit{remain} in the unitary picture!
 
-What these terms \textit{are} doing for us is make it clear how and why correlations are actually preserved here: the multiplication of unitary operators can readily be understood as \textit{function chaining} which means that here, everyone does indeed "get their own dice roll".
+What these terms \textit{are} doing for us is make it clear how and why correlations are actually preserved here: the multiplication of unitary operators can readily be understood as *function chaining* which means that here, everyone does indeed "get their own dice roll".
 
 But how do we model dynamics now? Intriguingly, this is where the Hamiltonian shows up again in this probabilistic picture:
 
 \begin{align*}
- U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \operatorname{exp}\big (-i( H^A_{t \to t+\delta t} + H^B_{t \to t+\delta t} + H^{\operatorname{int}}_{t \to t+\delta t}) \big ).
-\end{align*}
+ U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \text{exp}\big (-i( H^A_{t \to t+\delta t} + H^B_{t \to t+\delta t} + H^{\text{int}}_{t \to t+\delta t}) \big ).
+ \end{align*}
 
-\textbf{The way physicists encode dynamics in the Hamiltonian is to express everything in units of energy and they use physical dimensions to make sure that whenever they add a term, they don't violate Hermitian-ness.}
+The way physicists encode dynamics in the Hamiltonian is to express everything in units of energy and they use physical dimensions to make sure that whenever they add a term, they don't violate Hermitian-ness.
 
 \subsubsection{Probabilities}
 
@@ -374,65 +397,96 @@ We have carried the analogy between Markovian and Unitary dynamics \textit{very}
 Except that in the unitary picture, we have so far not seen a single thing that we could interpret as a probability. And honestly? This is a little mysterious. Think about it this way: we now have a dynamical system that can somehow introduce "correlations" - but what are the correlations \textit{about}?
 
 This is where my second postulate steps in, which says three things here:
-
 \begin{itemize}
-\item Facts are whatever is true at interaction.
+\item Facts are whatever is true at interaction, independent of which observer's perspective we choose.
 \item We do not need decoherence to explain facts. Decoherence can go and explain something else.
 \item Interactions are \textit{mutual} quantum Bayesian updates between observers, where "observer" or "Bayesian" does not require consciousness or any of that voodoo.
 \end{itemize}
 
-Ok, so mutual Bayesian update. What could that mean? Let us consider an actual typical quantum experiment: a macroscopic measurement device with wave function $\bra{\phi}$ measures the position of an electron with wave function $\ket{\psi}$.
+Ok, so mutual Bayesian update. What could that mean? Let us consider an actual typical quantum experiment: a macroscopic measurement instrument $A$ and an electron $B$ which have just interacted according to dynamic $U$ on interaction outcome set $I$.
 
-For this, the measurement device uses \textit{some} way to come up with a probability distribution on the electron's Hilbert space.
+For this, the Measurement device uses textit{some} way to come up with a probability distribution on the electron's Hilbert space.
 
 Enter Gleason's Theorem \cite{Gleason1957}. Gleason says that the \textit{only} way to do that is the Born rule.
 
-And you know what? It turns out that if we treat both the apparatus and the electron as quantum, the Born rule predicts their \textit{joint} probability. \textit{Moreover}, in my cartesian picture, the spelling $\bra{\phi}$ is actually completely inappropriate and you have to spell it $\ket{\phi}$. That is, the Born rule looks like \textbf{this}:
-
-\begin{mdframed}
-\begin{align*}
-P(\ket{\phi}=i,\ket{\psi}=j) = \mid \ket{\phi(i), \psi(j)} \mid^2,
-\end{align*}
-\end{mdframed}
-
-where we have to understand the norm to be taken over \textit{each} possible configuration so as to induce something that looks like a density.
-
-(Let me also just mention as a side note that $n$ particle interactions are trivial to model now, since we literally just concatenate the interacting configurations into one vector).
-
-One has to be a \textit{little} careful to think of this as a density, because it doesn't integrate to 1. This is because we do not integrate over the \textit{entire} wave function - just the part in an interaction state induced by the dynamics. The way my postulates guide me to interpret this is that we should see these "sub-probabilities" as observer-centric, which means that in order to get to a full probability, we would have to normalize by the unitary norm capturing the entire subsystem - interacting or not.
-
-Now, here's where it becomes interesting: \textit{if we assume the state of the measurement device to be fixed}, then we can condition on that state and the Born rules becomes
+In my picture, this would essentially mean
 
 \begin{align*}
-P(\ket{\psi}=j\mid \ket{\phi}=i) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(i), \psi(k)}\|}\right)^2
+\widehat{U}((A,B) = i) = \|U((A,B) = i)\|^2
 \end{align*}
 
-for the wave function encoding the interaction we're looking for. But to recover the standard Born rule (and this \textit{beautifully} aligns with my "a measurement apparatus can not see itself" idea), we have to \textit{marginalize the apparatus out}:
+whenever $i\in I$. \textit{Except} this doesn't sum to 1. In fact, if we do this naively, our entire wave function $U$ does not have norm 1 anymore!
+
+Alright, so let's refine this. Let us begin by assuming we marginalized everyone who does not participate in this interaction out. Then, we are now left with the wave function only of the interaction participants.
+
+The idea how we apply the Born rule is as follows: first, we "plug in a 1" in a configuration that has been realized and set every other configuration to 0, then we integrate over the admissible configurations with their Born weight and normalize to 1. Then, we try to recover everything we marginalized out.
+
+Here is the problem: we have not quite marginalized out everything that we should. By defining interactions broadly as a situation between observers, we have discarded the important nuance that the observers may interact in different ways. So, how do we find these "different ways"?
+
+Let us re-index our joint quantum state with observables $O_I$. In essence, we are looking for configurations $j\in I$ such that
 
 \begin{align*}
-P(\ket{\psi}=j\mid \ket{\phi}) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(k), \psi(j)}\|}\right)^2.
+P(O_I) = P(O_i) \cdot P(O_{I\setminus\lbrace i\rbrace}).
 \end{align*}
 
-The funny thing about what we have done is that we could also do it the other way around because we are no longer treating the measurement apparatus as privileged:
+Can this be done in some unique way? Can we somehow partition our interaction condition into different interactions?
+
+Indeed, we can! Conditional probabilities/amplitudes help us here. Let $X$, $Y$ and $Z$ be observables. We can call $X$ and $Y$ \textbf{directly interdependent}, if either
 
 \begin{align*}
-P(\ket{\phi}=i\mid \ket{\psi}=j) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(k), \psi(j)}\|}\right)^2.
+P(Y) &\neq P(Y\mid X) \text{ or} \\
+P(X) &\neq P(X\mid Y).
 \end{align*}
 
-If the electron can do \textit{that}, why wouldn't it also do it in the wild when randomly meeting other electrons? In fact, if we can \textit{find out}, say, the spins of two particles that have interacted in an experiment after the fact, wouldn't it be awfully reasonable to assume that \textit{there was} a fact?
+We note that this relation is in general not transitive: if $X$ and $Y$ are directly interdependent and $Y$ and $Z$ are directly interdependent, this does not mean that $X$ and $Z$ are directly interdependent (in such a situation, literature calls $X$ and $Z$ "conditionally independent"). For our purposes, we are interested in the transitive closure - that is: if $X$ and $Y$ are directly interdependent and $Y$ and $Z$ are directly interdependent, we call $X$, $Y$ and $Z$ **interdependent**.
 
-In the picture presented so far, this is actually awfully simple. We are under no obligation to obey the Schrödinger equation here, since our starting point was unitary evolution which faithfully encodes Schrödinger's picture.
+By trivially having $X$ be interdepentent with $X$, interdependence forms an \textbf{equivalence relation} which allows us to partition $O_I$ into equivalence classes of different interactions. Let us denote interdependence as $\sim$ and let us define $\mathcal{O}_J = \frac{O_I}{\sim}$. where I have omitted the step that I am actually re-indexing and hope that the reader understands what is going on here.
 
-So, what's the fix?
+Now, we can do what we set out to do. For a given $O\in\mathcal{O}_J$, we marginalize out all observables that are irrelevant:
 
-Just require that interactions (in the unitary sense discussed above) are followed by application of the Born rule over the observables that have become entangled and notice that this preserves unitary norm. The fact that the probabilities over interacting states don't sum to one is immaterial. That simply means there is still a chance we don't participate in an interaction.
+\begin{align*}
+P(O) = \sum_{O^\prime \text{ observable}, O^\prime \notin O} P(O\mid O^\prime) P(O^\prime).
+\end{align*}
+
+\textit{Now} we are in a situation where the Born rule makes perfect sense: for any $o\in O$ (where we have to keep in mind that $o$ is a tuple here),
+
+\begin{align*}
+P_{\text{Born}}(o) = \|P(o)\|^2
+\end{align*}
+
+where $P$ represents our wave function.
 
 \textbf{All that unitary evolution does is introducing and transporting correlation. In my picture, states where interactions (correlation introduction) happen are explicit and therefore, we have a natural place to apply the Born rule and obtain probabilities that naturally encode how likely it is for the involved participants to participate in a certain interaction at a given time.}
 
+\subsubsection{How to Zoom Back Out?}
 
-\subsection{Why Does This Not Break Things?}
+In order to recover, from the perspective of an individual interaction, the entire wave function, we can use Kraus operators (see for example \cite{griffiths_qitd412}). These have been around since 1971! Kraus himself apparently did not quite know where and when to apply them, but he did point out that they allow to include the Born rule into Quantum Mechanics in a coherent manner going \textit{beyond} unitary evolution.
 
-It \textit{does}! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, \textit{also} applies the Born rule whenever it is meaningful - because his Cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics (just with different math) when it is clearly not. How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and \textit{not} change the dynamics? You just did! And so did I. That's a huge success, and it is philosophically grounded.
+Over the years, physicists have found a few intuitions where the Kraus operator should be applied: open systems, strong decoherence regimes and so on. The novelty in my approach lies not in finding a way to include the Born rule as an axiom (in a sense, Kraus already did that) but finding a principled place where to do that that.
+
+For the sake of completion, let me spell out what the Kraus operator does and what it looks like in my picture.
+
+In essence, we look at each possible realization $o_i$ of $o$. Keep in mind that in my Cartesian picture, this is just a configuration of $o$. In the probability space we just found through marginalizing everything else out and applying the Born rule, obtaining $o_i$ means that we would assign probability $1$ to this configuration and $0$ to everything else - an operation formally known as the Dirac delta at $o_i$, or $\delta_{o_i}$.
+
+That is, for each configuration $o_i$, we can say what the wave function should be if $o_i$ is the realized outcome:
+
+\begin{align*}
+P_{o_i}(\Omega) \sim P(\Omega)\cdot \delta_{o_i}
+\end{align*}
+
+where $\sim$ means that we need to normalize, and then
+
+\begin{align*}
+\widehat{P}(o \times \Omega) \sim \sum_{o_i\in o} P_{o_i}(\Omega) dP_{\text{Born}}(o_i)
+\end{align*}
+
+with the same normalization caveat.
+
+Philosophical note: this is precisely the mathematical realization of "what is globally true must be true in each perspective". The global picture re-emerges \textit{from} perspectives. The wave function so recovered is unique up to global phase, which, according to my understanding or relativity, marks the global phase as non-physical.
+
+\subsubsection{Why Does This Not Break Things?}
+
+It \textit{does}! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, \textit{also} applies the Born rule whenever it is meaningful - because his cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics when it is clearly not (Kraus recognized that!). How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and \textit{not} change the dynamics? You did! I only repeated it in unitary language with more accessible math. That's a huge success, and it is philosophically grounded.
 
 Here is my reasoning why the change is empirically \textit{subtle}.
 
