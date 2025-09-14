@@ -22,10 +22,11 @@ In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics
         - [History](#history)
         - [Unitary/Markov Analogy](#unitarymarkov-analogy)
         - [Markovian Example](#markovian-example)
+        - [Small Sparsity Exploit](#small-sparsity-exploit)
         - [Markovian versus Unitary Modelling](#markovian-versus-unitary-modelling)
         - [Probabilities](#probabilities)
+      - [How to Zoom Back Out?](#how-to-zoom-back-out)
       - [Why Does This Not Break Things?](#why-does-this-not-break-things)
-      - [The Big Picture](#the-big-picture)
       - [Research Directions](#research-directions)
   - [Some More Philosophical Consequences](#some-more-philosophical-consequences)
   - [Victory of the Little Guy](#victory-of-the-little-guy)
@@ -346,11 +347,45 @@ Not so in the unitary picture!
 
 It is a well known [fact](https://arxiv.org/pdf/quant-ph/0407118) that unitary evolution in the non-interacting case preserves entanglement - the quantum analogy of correlation.
 
-An "**interaction**" in **both the Markovian and Unitary picture** is just a pair of states (think: both billiard balls at the same place, but this is just modelling choice in my toy model) such that
+An "**interaction**" is just a situation where the dynamics and the prior state make it so that
 
-$$\begin{align*}&P((A,B)(t+\delta t) = (x,y) | (A,B)(t)) \\ \neq &P(A(t+\delta t) = x\mid A(t))\cdot P(B(t+\delta t)=y \mid B(t)).\end{align*}$$
+$$
+\begin{align*}
+&P((A,B)(t+\delta t) | (A,B)(t)) \\ \neq &P(A(t+\delta t)\mid A(t))\cdot P(B(t+\delta t) \mid B(t)),
+\end{align*}
+$$
+
+and a valid "**interaction outcome**" in **both the Markovian and Unitary picture** is just a pair of states (think: both billiard balls at the same place, but this is just modelling choice in my toy model) such that
+
+$$
+\begin{align*}
+&P((A,B)(t+\delta t) = (x,y) | (A,B)(t)) \\ \neq &P(A(t+\delta t) = x\mid A(t))\cdot P(B(t+\delta t)=y \mid B(t)).
+\end{align*}
+$$
 
 We literally *introduce* a correlation/entanglement dynamically - and unitary evolution preserves it as long as there are no further interactions in the above sense. That's all there is to it.
+
+##### Small Sparsity Exploit
+
+One *very* neat thing that comes out of this way of wording the *process* of entanglement is that the valid interaction outcomes are "marked". If we think of the entire probability or quantum state, it would assign a probability or amplitude to each possible configuration. But with the above observation, we can do the following:
+
+Given an interaction happens at $t\mapsto t+\delta t$. Let $I$ be the set of all valid interaction outcomes. Then, we can encode the entire posterior joint state $P_{\text{post}}$ (probability or quantum) as
+
+$$
+\begin{align*}
+P_{\text{post}}(A,B) = P_{\text{post}}(A,B) \odot 1_I \ ?? \ P_{\text{post}}(A)\cdot P_{\text{post}}(B)
+\end{align*}
+$$
+
+where $\odot$ is the pointwise product, $1_I$ is a 0/1 indicator whether we are in $I$ or not and $??$ is an operator inspired by modern programming languages like Swift which here has the meaning
+
+$$
+\begin{align*}
+A(i) \ ?? \ B(i) := B(i) \text{ if } A(i) = 0, A(i) \text{ otherwise}.
+\end{align*}
+$$
+
+If interactions are rare or only have a small amount of possible outcomes, this should lower the required storage space in a simulation.
 
 ##### Markovian versus Unitary Modelling
 
@@ -393,11 +428,11 @@ We have carried the analogy between Markovian and Unitary dynamics *very* far. I
 Except that in the unitary picture, we have so far not seen a single thing that we could interpret as a probability. And honestly? This is a little mysterious. Think about it this way: we now have a dynamical system that can somehow introduce "correlations" - but what are the correlations *about*?
 
 This is where my second postulate steps in, which says three things here:
-- Facts are whatever is true at interaction.
+- Facts are whatever is true at interaction, independent of which observer's perspective we choose.
 - We do not need decoherence to explain facts. Decoherence can go and explain something else.
 - Interactions are *mutual* quantum Bayesian updates between observers, where "observer" or "Bayesian" does not require consciousness or any of that voodoo.
 
-Ok, so mutual Bayesian update. What could that mean? Let us consider an actual typical quantum experiment: a macroscopic measurement device with wave function $\bra{\phi}$ measures the position of an electron with wave function $\ket{\psi}$.
+Ok, so mutual Bayesian update. What could that mean? Let us consider an actual typical quantum experiment: a macroscopic measurement instrument $A$ and an electron $B$ which have just interacted according to dynamic $U$ on interaction outcome set $I$.
 
 For this, the Measurement device uses *some* way to come up with a probability distribution on the electron's Hilbert space.
 
@@ -405,59 +440,98 @@ Enter [Gleason's Theorem](https://mathweb.ucsd.edu/~nwallach/gleasonq.pdf). Glea
 
 ![](Bourne.png)
 
-And you know what? It turns out that if we treat both the apparatus and the electron as quantum, the Born rule predicts their *joint* probability. *Moreover*, in my cartesian picture, the spelling $\bra{\phi}$ is actually completely inappropriate and you have to spell it $\ket{\phi}$. That is, the Born rule looks like **this**:
+In my picture, this would essentially mean
 
 $$
 \begin{align*}
-P(\ket{\phi}=i,\ket{\psi}=j) = \mid \ket{\phi(i), \psi(j)} \mid^2,
+\widehat{U}((A,B) = i) = \|U((A,B) = i)\|^2
 \end{align*}
 $$
 
-where we have to understand the norm to be taken over *each* possible configuration so as to induce something that looks like a density.
+whenever $i\in I$. *Except* this doesn't sum to 1. In fact, if we do this naively, our entire wave function $U$ does not have norm 1 anymore!
 
-(Let me also just mention as a side note that $n$ particle interactions are trivial to model now, since we literally just concatenate the interacting configurations into one vector).
+Alright, so let's refine this. Let us begin by assuming we marginalized everyone who does not participate in this interaction out. Then, we are now left with the wave function only of the interaction participants.
 
-One has to be a *little* careful to think of this as a density, because it doesn't integrate to 1. But this is fine in our picture since we do not integrate over the *entire* wave function - just the part in an interaction state induced by the dynamics.
+The idea how we apply the Born rule is as follows: first, we "plug in a 1" in a configuration that has been realized and set every other configuration to 0, then we integrate over the admissible configurations with their Born weight and normalize to 1. Then, we try to recover everything we marginalized out.
 
-Now, here's where it becomes interesting: *if we assume the state of the measurement device to be fixed*, then we can condition on that state and the Born rules becomes
+Here is the problem: we have not quite marginalized out everything that we should. By defining interactions broadly as a situation between observers, we have discarded the important nuance that the observers may interact in different ways. So, how do we find these "different ways"?
+
+Let us re-index our joint quantum state with observables $O_I$. In essence, we are looking for configurations $j\in I$ such that
 
 $$
 \begin{align*}
-P(\ket{\psi}=j\mid \ket{\phi}=i) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(i), \psi(k)}\|}\right)^2
+P(O_I) = P(O_i) \cdot P(O_{I\setminus\lbrace i\rbrace}).
 \end{align*}
 $$
 
-for the wave function encoding the interaction we're looking for. But to recover the standard Born rule (and this *beautifully* aligns with my "a measurement apparatus can not see itself" idea), we have to *marginalize the apparatus out*:
+Can this be done in some unique way? Can we somehow partition our interaction condition into different interactions?
+
+Indeed, we can! Conditional probabilities/amplitudes help us here. Let $X$, $Y$ and $Z$ be observables. We can call $X$ and $Y$ **directly interdependent**, if either
 
 $$
 \begin{align*}
-P(\ket{\psi}=j\mid \ket{\phi}) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(k), \psi(j)}\|}\right)^2.
+P(Y) &\neq P(Y\mid X) \text{ or} \\
+P(X) &\neq P(X\mid Y).
 \end{align*}
 $$
 
-The funny thing about what we have done is that we could also do it the other way around because we are no longer treating the measurement apparatus as privileged:
+We note that this relation is in general not transitive: if $X$ and $Y$ are directly interdependent and $Y$ and $Z$ are directly interdependent, this does not mean that $X$ and $Z$ are directly interdependent (in such a situation, literature calls $X$ and $Z$ "conditionally independent"). For our purposes, we are interested in the transitive closure - that is: if $X$ and $Y$ are directly interdependent and $Y$ and $Z$ are directly interdependent, we call $X$, $Y$ and $Z$ **interdependent**.
+
+By trivially having $X$ be interdepentent with $X$, interdependence forms an **equivalence relation** which allows us to partition $O_I$ into equivalence classes of different interactions. Let us denote interdependence as $\sim$ and let us define $\mathcal{O}_J = \frac{O_I}{\sim}$. where I have omitted the step that I am actually re-indexing and hope that the reader understands what is going on here.
+
+Now, we can do what we set out to do. For a given $O\in\mathcal{O}_J$, we marginalize out all observables that are irrelevant:
 
 $$
 \begin{align*}
-P(\ket{\phi}=i\mid \ket{\psi}=j) = \left(\frac{\|\ket{\phi(i), \psi(j)}\|}{\sum_k \|\ket{\phi(k), \psi(j)}\|}\right)^2.
+P(O) = \sum_{O^\prime \text{ observable}, O^\prime \notin O} P(O\mid O^\prime) P(O^\prime).
 \end{align*}
 $$
 
-If the electron can do *that*, why wouldn't it also do it in the wild when randomly meeting other electrons? In fact, if we can *find out*, say, the spins of two particles that have interacted in an experiment after the fact, wouldn't it be awfully reasonable to assume that *there was* a fact?
+*Now* we are in a situation where the Born rule makes perfect sense: for any $o\in O$ (where we have to keep in mind that $o$ is a tuple here),
 
-In the picture presented so far, this is actually awfully simple. We are under no obligation to obey the Schrödinger equation here, since our starting point was unitary evolution which faithfully encodes Schrödinger's picture.
+$$
+\begin{align*}
+P_{\text{Born}}(o) = \|P(o)\|^2
+\end{align*}
+$$
 
-So, what's the fix?
-
-Just require that interactions (in the unitary sense discussed above) are followed by application of the Born rule over the observables that have become entangled and notice that this preserves unitary norm. The fact that the probabilities over interacting states don't sum to one is immaterial. That simply means there is still a chance we don't participate in an interaction.
+where $P$ represents our wave function.
 
 **All that unitary evolution does is introducing and transporting correlation. In my picture, states where interactions (correlation introduction) happen are explicit and therefore, we have a natural place to apply the Born rule and obtain probabilities that naturally encode how likely it is for the involved participants to participate in a certain interaction at a given time.**
 
 ![](EurekaInterstellar.png)
 
+#### How to Zoom Back Out?
+
+In order to recover, from the perspective of an individual interaction, the entire wave function, we can use Kraus operators (see for example [here](https://quantum.phys.cmu.edu/QCQI/qitd412.pdf)). These have been around since 1971! Kraus himself apparently did not quite know where and when to apply them, but he did point out that they allow to include the Born rule into Quantum Mechanics in a coherent manner going *beyond* unitary evolution.
+
+Over the years, physicists have found a few intuitions where the Kraus operator should be applied: open systems, strong decoherence regimes and so on. The novelty in my approach lies not in finding a way to include the Born rule as an axiom (in a sense, Kraus already did that) but finding a principled place where to do that that.
+
+For the sake of completion, let me spell out what the Kraus operator does and what it looks like in my picture.
+
+In essence, we look at each possible realization $o_i$ of $o$. Keep in mind that in my Cartesian picture, this is just a configuration of $o$. In the probability space we just found through marginalizing everything else out and applying the Born rule, obtaining $o_i$ means that we would assign probability $1$ to this configuration and $0$ to everything else - an operation formally known as the Dirac delta at $o_i$, or $\delta_{o_i}$.
+
+That is, for each configuration $o_i$, we can say what the wave function should be if $o_i$ is the realized outcome:
+
+$$
+\begin{align*}
+P_{o_i}(\Omega) \sim P(\Omega)\cdot \delta_{o_i}
+\end{align*}
+$$
+
+where $\sim$ means that we need to normalize, and then
+
+$$
+\begin{align*}
+\widehat{P}(o \times \Omega) \sim \sum_{o_i\in o} P_{o_i}(\Omega) dP_{\text{Born}}(o_i)
+\end{align*}
+$$
+
+with the same normalization caveat.
+
 #### Why Does This Not Break Things?
 
-It *does*! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, *also* applies the Born rule whenever it is meaningful - because his cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics when it is clearly not. How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and *not* change the dynamics? You just did, champ (I just did it with less metaphysics)! That's a huge success, and it is philosophically grounded.
+It *does*! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, *also* applies the Born rule whenever it is meaningful - because his cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics when it is clearly not (Kraus recognized that!). How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and *not* change the dynamics? You just did, champ (I just did it with less metaphysics)! That's a huge success, and it is philosophically grounded.
 
 But the change is empirically *subtle*.
 
@@ -509,21 +583,11 @@ You don't want to sell us any more quantum opium, you want to go home and rethin
 
 ![](Rethink.gif)
 
-#### The Big Picture
-
-We now have a monoid of evolution operators (or one big evolution operator of a unitary followed by local Born rule applications in interacting states) that deserves a bit of reflection.
-
-As in the strict unitary setting, applying our evolution operator(s) means that we are transporting correlations of an ensemble. *With my fix*, we now know where probabilities live and can interpret *those* as the probability of certain interactions taking place at a given time - though, we must until further axiomatization use some common sense to interpret them as naive applications may lead to one observer doing multiple contradictory things at the same time.
-
-*Conditioning* on interaction records is literally just a quantum Bayesian update. So is conditioning on a known state of the observer from whose "perspective" we are probing the ensemble. The traditional Born rule, on the other hand, is recovered through marginalization.
-
-Recovering the full system dynamics from the perspective of an observers should be possible by the remainder of my second postulate: a fully Bayesian approach where the observer knows that he knows nothing about himself and conditions his beliefs about himself and his causal impact on the past.
-
 #### Research Directions
 
 1. I have given a novel way to inject Lorentz invariance - or any other symmetry we care about - into the search criteria for dynamic operators in the path integral formalism. Whether the search space needs to include nonlinear operators that apply the Born rule at interaction, I do not know. But at least, we have a new way to even look for an answer and I hope that this will produce results that differ in fundamental ways from QFT. This would be exciting, and the predictions coming out of *this* would probably be testable much sooner than my Born rule idea.
 
-2. The reason why I think QFT could be sidestepped is not just because fields were basically a mathematical hack to solve inconsistencies when imposing Lorentz invariance naively in a particle-theoretical setting. The other reason is that the relational picture naturally leads to a different way to think about how fermions "emit" bosons: rather than "exciting a field", I think of the process as, say, an electron just constantly attempting to emit a photon - but this only becomes real when the photon actually hits something. This *naturally* leads to a more Lorentzian picture of the system's dynamics where an interaction has to be thought of as local to the receiver and boils down to a ton of logical constraints snapping into place and leaving a footprint in the system's correlations.
+2. The reason why I think QFT could be sidestepped is not just because fields were basically a mathematical hack to solve inconsistencies when imposing Lorentz invariance naively in a particle-theoretical setting. The other reason is that the relational picture naturally leads to a different way to think about how fermions "emit" bosons: rather than "exciting a field", I think of the process as, say, an electron just constantly attempting to emit a photon - but this only becomes real when the photon actually hits something. This *naturally* leads to a more Lorentzian picture of the system's dynamics where an interaction has to be thought of as local to the receiver and boils down to a ton of logical constraints snapping into place and leaving a footprint in the system's correlations. Basically, an interaction triggers a giant belief-propagation.
 
 3. General Relativity suggests that gravity is just coordinate-frame carrying masses fighting it out with each other, constantly trying to reconcile their different notions of up, down, left, right, back, forth, past and future. With my picture of Quantum Mechanics, *this makes sense now* at the quantum level: No more discretization of spacetime, no more quantum foam, no more Calabi-Yaus. Particles are *real* at interactions and this reality leaves a trace, and outside of interactions, you can not say anything. They *carry* their own coordinate system, and they fight it out through interactions.
 
