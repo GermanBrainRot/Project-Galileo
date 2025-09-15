@@ -598,7 +598,7 @@ $$\mathrm{Iso}(S) \supseteq G := \bigcap_{i\in I}\mathrm{img}(f_i(G_i))$$
 
 for a family of group embeddings $f_i$ into $\mathrm{Iso}(S)$ associated with each $G_i$.
 
-Our dynamic operator $P$ must be a unitary norm preserving map $P:\mathbb{C}^S\longmapsto\mathbb{C}^S$ such that for all $f\in G$
+Our dynamic operator $P$ must be a *global* linear unitary map $P:\mathbb{C}^S\longmapsto\mathbb{C}^S$ such that for all $f\in G$
 
 $$\hat{f}\circ P\circ \hat{f}^{-1} = P,$$
 
@@ -606,7 +606,9 @@ where
 
 $$\begin{align*}\hat{f}:\mathbb{C}^S &\longmapsto \mathbb{C}^S,\\ \hat{f}(\phi_s) &\mapsto \phi_{f(s)}.\end{align*}$$
 
-That's a trick we have hitherto been using on *each object's* Hilbert space, but never on a global Hilbert space encoding the big picture - at least not in such clear and straightforward terms.
+That's a trick we have - to my knowledge - hitherto been using on *each object's* Hilbert space, but never on a global Hilbert space encoding the big picture. Here, it is straightforward, for example, to tie a coordinate transformation in one particle's position/momentum space to that of another particle.
+
+After finding our evolution operator, incorporating my collpase dynamics is a mechanical transformation which is optional in scenarios where the weight of the Born branches can be considered negligible.
 
 Oh, and to fully incorporate my first postulate and make this truly Lorentz compatible, one probably has to impose symmetry constraints on the time dimension (which so far was just a parameter to index our unitary operators!) as well and think carefully about what that means. In particular, I expect a stark asymmetry between the known past and the unknown future.
 
@@ -618,7 +620,7 @@ You don't want to sell us any more quantum opium, you want to go home and rethin
 
 #### Research Directions
 
-1. I have given a novel way to inject Lorentz invariance - or any other symmetry we care about - into the search criteria for dynamic operators in the path integral formalism. Whether the search space needs to include nonlinear operators that apply the Born rule at interaction, I do not know. But at least, we have a new way to even look for an answer and I hope that this will produce results that differ in fundamental ways from QFT. This would be exciting, and the predictions coming out of *this* would probably be testable much sooner than my Born rule idea.
+1. I have given a novel way to inject Lorentz invariance - or any other symmetry we care about - into the search criteria for dynamic operators in the path integral formalism. But at least, we have a new way to even look for an answer and I hope that this will produce results that differ in fundamental ways from QFT. This would be exciting, and the predictions coming out of *this* would probably be testable much sooner than my Born rule idea.
 
 2. The reason why I think QFT could be sidestepped is not just because fields were basically a mathematical hack to solve inconsistencies when imposing Lorentz invariance naively in a particle-theoretical setting. The other reason is that the relational picture naturally leads to a different way to think about how fermions "emit" bosons: rather than "exciting a field", I think of the process as, say, an electron just constantly attempting to emit a photon - but this only becomes real when the photon actually hits something. This *naturally* leads to a more Lorentzian picture of the system's dynamics where an interaction has to be thought of as local to the receiver and boils down to a ton of logical constraints snapping into place and leaving a footprint in the system's correlations. Basically, an interaction triggers a giant belief-propagation.
 
