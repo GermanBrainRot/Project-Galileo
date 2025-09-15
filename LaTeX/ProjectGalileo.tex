@@ -369,18 +369,19 @@ Alright, second attempt!
 Ok, now we have modelled it with a single scalar so we can think of this as a probability whether we interact or not. Except... This doesn't work either! If we want to preserve correlations indefinitely, the non-interacting terms would have to vanish the moment we interacted and the dynamics would have to snap into a contrived joint dynamics.
 
 So, while this is something that Markovians have been implicitly doing all the time, saying it out loud makes explicit just how problematic this is.
-
-In the \textbf{unitary} case, one has to decompose the joint dynamics into a product:
+In the \textbf{unitary} case, one has to decompose the joint dynamics \textit{in the non-interacting case} into a product:
 
 \begin{align*}
- U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= U((A)(t + \delta t)\mid A(t))\\ & \cdot U(B(t+\delta t) \mid B(t)) \\ & \cdot U_{\text{int}}((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)),
- \end{align*}
+ U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= U((A)(t + \delta t)\mid A(t))\\ & \cdot U(B(t+\delta t) \mid B(t)),
+\end{align*}
 
 which sounds like complete nonsense if you think of these as transition probabilities. To keep our sanity, we must think of these as correlation transport terms or "transition amplitudes" and drink some vodka.
 
 Minor note: the "$\mid$" in $U((A)(t + \delta t)\mid A(t))$ is supposed to denote that we are deriving this mathematical object from the full transition matrix in the same way as we would in the case of a stochastic matrix: by multiplying a row with the current state vector. But we \textit{remain} in the unitary picture!
 
 What these terms \textit{are} doing for us is make it clear how and why correlations are actually preserved here: the multiplication of unitary operators can readily be understood as \textit{function chaining} which means that here, everyone does indeed "get their own dice roll".
+
+When we have an interaction, we would still have to insert a term where factorization fails - but this is now ok because we only need to do this during interaction where we actually \textit{replace} the independent evolution of each participant. After interaction, the "everyone gets their own dice roll" story applies again, and correlations are locally preserved "simply" by using "imaginary probabilities" (which means: we treat the relevant configurations as unreal).
 
 But how do we model dynamics now? Intriguingly, this is where the Hamiltonian shows up again in this probabilistic picture:
 
