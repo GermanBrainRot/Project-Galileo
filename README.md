@@ -306,7 +306,7 @@ $$\ket{\psi(t)} \approx \sum_{j=0}^n \ket{\psi(0)} d P(j\cdot\delta t),$$
 
 and we hope that mathematicians don't hurt themselves when taking the limit $\delta t \to 0$. This formulation can be thought of as unitary or Markovian evolution for now.
 
-To arrive at dynamics for *coupled* systems, the underlying state space should be a cartesian product of possible states of the different protagonists.
+To arrive at dynamics for *coupled* systems, the underlying state space should be a Cartesian product of possible states of the different protagonists.
 
 In the Markov chain community, this is a no-brainer - that's how they do it. In Quantum Mechanics though, the pairing of states is done only *after* moving to quantum "probabilities" (amplitudes), leading to tensor products which appear mathematically awkward. So this may already be ***the*** the notational contribution that appears to be originally due to the later Barandes (cited above) that makes what I am trying to do at all possible.
 
@@ -561,6 +561,12 @@ $$
 \widehat{P}(u\times\mathcal{O}\times\Omega) = \ket{p_o \widehat{P}(o\times\Omega)}_{o\in\mathcal{O}\cup \lbrace u\rbrace}.
 \end{align*}
 $$
+
+Philosophical note: by "you *only* get entanglement, I of course do not mean that we now get pure correlation that is about nothing. The whole point of this investigation was to make correlations about something! So what are they about in the non-interacting case?
+
+Non-interaction! We are talking about a situation when an interaction *could have* happened, but didn't. This means precisely that our two observers were *not* in a configuration where an interaction took place. This is a *negative* constraint, a *recorded fact* in the book of the universe that all subsequent observations must be compatible with.
+
+Further philosophical note of caution: saying that the observers were *not* in an interacting configuration is *not* the same as saying that they were in a non-interacting one. Those configurations are more about book-keeping.
 
 #### Why Does This Not Break Things?
 
