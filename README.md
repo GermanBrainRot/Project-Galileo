@@ -308,7 +308,7 @@ and we hope that mathematicians don't hurt themselves when taking the limit $\de
 
 To arrive at dynamics for *coupled* systems, the underlying state space should be a cartesian product of possible states of the different protagonists.
 
-In the Markov chain community, this is a no-brainer - that's how they do it. In unitary evolution though, the pairing of states is done only *after* moving to quantum "probabilities", leading to tensor products which appear mathematically awkward. So this may already be ***the*** the notational contribution that appears to be originally due to the later Barandes (cited above) that makes what I am trying to do at all possible.
+In the Markov chain community, this is a no-brainer - that's how they do it. In Quantum Mechanics though, the pairing of states is done only *after* moving to quantum "probabilities" (amplitudes), leading to tensor products which appear mathematically awkward. So this may already be ***the*** the notational contribution that appears to be originally due to the later Barandes (cited above) that makes what I am trying to do at all possible.
 
 Just for the skeptical physicist: We are *not* talking about a Cartesian product of Hilbert spaces, we are talking about a Cartesian product of the underlying *configuration* spaces. You *should* be aware that $\bigotimes_{i \in I} L^2(K_i) \cong L^2(\prod_{i_\in I}K_i)$. This is not a new insight. It's just that no one has seriously explored a construction based on the other side of the equation, that is, starting from cartesian products.
 
@@ -533,25 +533,54 @@ $$
 
 with the same normalization caveat.
 
+*However*, this is just for all configurations relevant to *one specific* interaction. This is where we have to consider one more concept: so-called "mixed states". Basically, these are classical probabilistic mixtures of wave functions - which makes perfect sense here, because we just "collapsed the wave function" into a probability distribution.
+
+Notation-wise, our Cartesian picture once again makes our live comparatively easy as a mixture of wave functions is just that: a probabilistic mixture of elements of some set that in the probabilistic picture, we can treat as a black box.
+
+$$
+\begin{align*}
+\widehat{P}_{\text{interact}}(\mathcal{O}\times\Omega) = \ket{p_o \widehat{P}(o\times\Omega)}_{o\in\mathcal{O}}
+\end{align*}
+$$
+
+where the $p_o$ sum to $1$ (this is still not the full picture, we are still assuming that we actually interacted!). How to derive the $p_o$? In order to stay consistent, these should be the aggregated Born measures:
+
+$$
+\begin{align*}
+p_o \sim \sum_{o_i\in o}P_{\text{Born}}(o_i)
+\end{align*}
+$$
+
+Note that this is independent of which interaction-participant looks at it.
+
+Finally, in order to bring all the states where the two observers *don't* interact back into the picture, observe that the states where the two don't interact are again *joint* configurations of both objects. Therefore, their contribution to the joint Born density is in theory well-defined. Let's all all these configurations $u$. They are associated with the standard unitary wave function $P$ where you *only* get entanglement. Therefore,
+
+
+$$
+\begin{align*}
+\widehat{P}(u\times\mathcal{O}\times\Omega) = \ket{p_o \widehat{P}(o\times\Omega)}_{o\in\mathcal{O}\cup \lbrace u\rbrace}.
+\end{align*}
+$$
+
 #### Why Does This Not Break Things?
 
-It *does*! This is where my work differs from Barandes'. The later Barandes, and this is his second big contribution, *also* applies the Born rule whenever it is meaningful - because his Cartesian configuration space makes it simple for him (and me) to do so. He deserves credit for that! But, maybe confused by much more complicated math than mine, he presents this as something that is in complete harmony with existing Quantum mechanics when it is clearly not (Kraus recognized that!). How can you add the Born rule to the Feynman picture (which is equivalent to the Schrödinger equation) and *not* change the dynamics? You just did, champ (I just did it with less metaphysics)! That's a huge success, and it is philosophically grounded.
+It *does*! My evolution is no longer strictly unitary. Instead, at interaction, we enter a mixed state.
 
-But the change is empirically *subtle*.
+Here is how I see my work in comparison to Barandes' work whose philosophy may appear vaguely similar to mine (which is why I include him here): I admit that I have not looked super deeply into Barandes' work, but I have seen that he derives the Born rule from his axioms and it seems like he finds a "good" place where to apply it consistently. I think that finding this "good place" has a whole lot to do with him using a Cartesian configuration space. I think it is well established that the Born rule can not fit into unitary evolution (which is equivalent to the Schrödinger equation). So, either his derivation of the Born rule relies on some implicit assumption (in which case he might be reproducing my picture but in a complicated unistochastic language, or something else entirely) or his proof that his axioms reproduce unitary evolution would seem to be wrong.
 
-In the case that a single particle and a measurement device are the only thing that ever interacts, this produces the correct predictions by construction.
+Here is how I reason about why the differences between my dynamics and unitary evolution may so far not have been observed:
 
-In the case that particles interact, all that happens is that phase information (which is usually considered random) changes.
+- In the case that a single particle and a measurement device are the only thing that ever interacts, this produces the correct predictions by construction.
 
-In the case of particles interacting in the wild, the interactions are too rare to meaningfully contribute to overall predictions. Also, nearby interacting branches tend to interfere away in the unitary picture, making it look a bit like a single measurement.
+- Experiments that care mostly about entanglement work whether or not an interaction actually happens. 
+
+- In the case of particles interacting in the wild, the interactions are too rare to meaningfully contribute to overall predictions.
+
+- In situations like interferometers, I assume that even there, the contribution of actual interactions are negligible, and it would be rather difficult to separate these cases from environmental influences. Running this particular math is *way* out of scope for this contribution though. But once it is done, one might be able to *test* this by checking after interference failure whether the particles are still correlated. If the correlation is slightly stronger than predicted purely from environmental influences, that would prove me right.
 
 In other words: this is a *good* adjustment - because there is a good chance that the empirical implications *on the dynamics* could have been missed so far.
 
-*Another* empirical prediction of my model (which *doesn't* live in the dynamics), however, *immediately confirms* that this modified dynamics is *closer to truth* than the traditional picture - and it's right at the heart of my philosophy. *Even without Special relativity*, my picture already encodes a causal order. So, we can naturally ask whether when Alice and Bob reconstruct an interaction record between an entangled particle pair they get a consistent outcome.
-
-**Experiment says YES**, thereby proving that the fact must have existed at interaction.
-
-Honestly, it would seem that this is just something that hitherto, nobody except Barandes (who thought this would *follow* rather than being new) has seriously considered - even though the philosophy (measurement *is* interaction) was there at least since Everett. The only concern about including this as another axiom was "but it would break unitary evolution!"
+Honestly, it would seem that this is just something that hitherto, nobody has seriously considered - even though the philosophy (interaction as such can lead to measurement) was there at least since Everett. The only concern about including this as another axiom was "but it would break unitary evolution!"
 
 *And*? So long as we break it subtly and in a well-motivated way that makes our understanding *more* consistent, that shouldn't be a problem, right? When the math gives us no reason to assume that the Born rule ought to be applied only in special situations and philosophy demands laws of the universe to be - well - universal, this fix is probably a good idea.
 
