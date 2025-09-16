@@ -290,7 +290,7 @@ Now, remember what this is supposed to encode though: we want to map complex uni
 $$\ket{\psi(t+\delta t)} \approx U(t+\delta t, t) \ket{\psi(t)}, \quad
 U(t+\delta t, t) \approx \exp\Big(-\frac{i}{\hbar} H(t)\, \delta t \Big)$$
 
-where U is supposed to be a "time ordered" exponential.
+where U is supposed to be a "time ordered" exponential (explanation comes later).
 
 Another way of looking at something that locally should be a rotation is multiplication with time dependent unitary operators. And lo and behold: $U$ is indeed unitary according to standard literature.
 
@@ -406,10 +406,9 @@ $$\begin{align*} P((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= \alpha P((A)(t + \
 Ok, now we have modelled it with a single scalar so we can think of this as a probability whether we interact or not. Except... This doesn't work either! If we want to preserve correlations indefinitely, the non-interacting terms would have to vanish the moment we interacted and the dynamics would have to snap into a contrived joint dynamics.
 
 So, while this is something that Markovians have been implicitly doing all the time, saying it out loud makes explicit just how problematic this is.
+In the **unitary** case, one has to decompose the joint dynamics into a product:
 
-In the **unitary** case, one has to decompose the joint dynamics *in the non-interacting case* into a product:
-
-$$\begin{align*} U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= U((A)(t + \delta t)\mid A(t))\\ & \cdot U(B(t+\delta t) \mid B(t)),\end{align*}$$
+$$\begin{align*} U((A,B)(t+\delta t) = (x,y)\mid (A,B)(t)) &= U((A)(t + \delta t)\mid A(t))\\ & \cdot U(B(t+\delta t) \mid B(t))\\& \cdot U_{\text{int}}((A,B)(t+\delta t)\mid (A,B)(t)),\end{align*}$$
 
 which sounds like complete nonsense if you think of these as transition probabilities. To keep our sanity, we must think of these as correlation transport terms or "transition amplitudes" and drink some vodka.
 
@@ -417,7 +416,7 @@ Minor note: the "$\mid$" in $U((A)(t + \delta t)\mid A(t))$ is supposed to denot
 
 What these terms *are* doing for us is make it clear how and why correlations are actually preserved here: the multiplication of unitary operators can readily be understood as *function chaining* which means that here, everyone does indeed "get their own dice roll".
 
-When we have an interaction, we would still have to insert a term where factorization fails - but this is now ok because we only need to do this during interaction where we actually *replace* the independent evolution of each participant. After interaction, the "everyone gets their own dice roll" story applies again, and correlations are locally preserved "simply" by using "imaginary probabilities" (which means: we treat the relevant configurations as unreal).
+One thing to keep in mind though is that due to the interaction terms, the *order* of the factorization matters now. Products of matrices do not commute! So, the above way of doing it is just one possibility - which is why we had that "time ordered exponential" in the Feynman picture. This really just means that in the exponent, we have to treat the sum/integral as ordered.
 
 But how do we model dynamics now? Intriguingly, this is where the Hamiltonian shows up again in this probabilistic picture:
 
