@@ -568,7 +568,7 @@ Non-interaction! We are talking about a situation when an interaction *could hav
 
 Further philosophical note of caution: saying that the observers were *not* in an interacting configuration is *not* the same as saying that they were in a non-interacting one. Those configurations are more about book-keeping.
 
-Closing observation for this section: this is precisely the mathematical realization of "what is globally true must be true in each perspective". The global picture re-emerges \textit{from} perspectives: we have to marginalize our way to a perspective where applying the Born rule even becomes meaningful, then we have to Kraus our way out - suggesting that marginalization and Kraus construction (without collapse) are in some sense inverse to each other. The wave function so recovered is unique up to global phase, which, according to my understanding or relativity, marks the global phase as non-physical.
+Closing observation for this section: this is precisely the mathematical realization of "what is globally true must be true in each perspective". The global picture re-emerges *from* perspectives: we have to marginalize our way to a perspective where applying the Born rule even becomes meaningful, then we have to Kraus our way out - suggesting that marginalization and Kraus construction (without collapse) are in some sense inverse to each other. The wave function so recovered is unique up to global phase, which, according to my understanding or relativity, marks the global phase as non-physical.
 
 #### Why Does This Not Break Things?
 
