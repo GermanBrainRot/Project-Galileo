@@ -556,7 +556,6 @@ Note that this is independent of which interaction-participant looks at it.
 
 Finally, in order to bring all the states where the two observers *don't* interact back into the picture, observe that the states where the two don't interact are again *joint* configurations of both objects. Therefore, their contribution to the joint Born density is in theory well-defined. Let's all all these configurations $u$. They are associated with the standard unitary wave function $P$ where you *only* get entanglement. Therefore,
 
-
 $$
 \begin{align*}
 \widehat{P}(u\times\mathcal{O}\times\Omega) = \ket{p_o \widehat{P}(o\times\Omega)}_{o\in\mathcal{O}\cup \lbrace u\rbrace}.
@@ -568,6 +567,8 @@ Philosophical note: by "you *only* get entanglement, I of course do not mean tha
 Non-interaction! We are talking about a situation when an interaction *could have* happened, but didn't. This means precisely that our two observers were *not* in a configuration where an interaction took place. This is a *negative* constraint, a *recorded fact* in the book of the universe that all subsequent observations must be compatible with.
 
 Further philosophical note of caution: saying that the observers were *not* in an interacting configuration is *not* the same as saying that they were in a non-interacting one. Those configurations are more about book-keeping.
+
+Closing observation for this section: this is precisely the mathematical realization of "what is globally true must be true in each perspective". The global picture re-emerges \textit{from} perspectives: we have to marginalize our way to a perspective where applying the Born rule even becomes meaningful, then we have to Kraus our way out - suggesting that marginalization and Kraus construction (without collapse) are in some sense inverse to each other. The wave function so recovered is unique up to global phase, which, according to my understanding or relativity, marks the global phase as non-physical.
 
 #### Why Does This Not Break Things?
 
