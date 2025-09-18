@@ -228,7 +228,7 @@ This last part about the possibility of information being *destroyed* is somethi
 
 ## Road To Formalization
 
-From these sources of philosophical inspiration, I wrote a [scientific article](https://github.com/GermanBrainRot/Project-Galileo/tree/for-western-audiences/LaTeX) that I am currently trying to place on ArXiv. Walking you through it all here would distract too much from philosophy, so let me just give you some important way stations.
+From these sources of philosophical inspiration, I wrote a [scientific article](https://github.com/GermanBrainRot/Project-Galileo/blob/for-western-audiences/LaTeX/ProjectGalileo.pdf) that I am currently trying to place on ArXiv (but there is a greater rewrite pending at the moment). Walking you through it all here would distract too much from philosophy, so let me just give you some important way stations.
 
 - I found out that there is a way to define *dynamically* when an interaction actually occurs.
 
