@@ -30,7 +30,7 @@ Western audiences may find it odd to mix physics with political philosophy. For 
 
 ## Back to Materialism!
 
-In [1996/97, Carlo Rovelli](https://arxiv.org/pdf/quant-ph/9609002) introduced the idea that descriptions of quantum systems could be observer-dependent. Here, "observer" does not refer to any "conscious" or "macroscopic" entity, but returns to the more sober and naturalistic meaning that the term used to have in physics prior to Quantum Mechanics - and which it still has in Special and General Relativity.
+In [1996/97, Carlo Rovelli](https://arxiv.org/pdf/quant-ph/9609002) introduced the idea that descriptions of quantum systems could be observer-dependent. Here, "observer" does not refer to any "conscious" or "macroscopic" entity, but returns to the more sober and naturalistic meaning that the term used to have in physics prior to Quantum Mechanics - and which it still has in Special and General  (think: "point of view", "perspective", "coordinate system").
 
 To motivate the idea of observer-dependence, he proposed a thought experiment which has since been [pointed out](https://arxiv.org/pdf/1710.07556) to be a restatement of the old thought experiment of Wigner's Friend. For the sake of clarity, I will therefore motivate Rovelli's idea starting from Wigner's Friend.
 
@@ -228,13 +228,15 @@ This last part about the possibility of information being *destroyed* is somethi
 
 ## Road To Formalization
 
-From these sources of philosophical inspiration, I wrote a [scientific article](https://github.com/GermanBrainRot/Project-Galileo/blob/for-western-audiences/LaTeX/ProjectGalileo.pdf) that I am currently trying to place on ArXiv (but there is a greater rewrite pending at the moment). Walking you through it all here would distract too much from philosophy, so let me just give you some important way stations.
+From these sources of philosophical inspiration, I attempted to write a [scientific article](https://github.com/GermanBrainRot/Project-Galileo/blob/for-western-audiences/LaTeX). As of the time of writing these lines, I have become aware of a technical problem. I know exactly how to fix it, but to make the article fly on arxiv, I will have to do a complete rewrite which I am unable to do within my self-imposed deadline for *this* publication. I will leave the article *with* the technical flaw at the location that the link points to for the reader interested how I developed my ideas. And yep: it's part of this very git repo! If my ideas are as interesting for the scientific community (once I worked them out properly) as I think they should be, this may be a treasure for future historians.
+
+Just a small teaser:
 
 - I found out that there is a way to define *dynamically* when an interaction actually occurs.
 
 ![](x-marks-the-spot.jpg)
 
-- I learned in what way the Born rule can be used to aggregate *wave functions* in different "worlds". My worlds are *not* the traditional "Many Worlds" though. They only "exist" as unrealized potential in the future, that is, they are a prediction. Once something happens, it becomes part of the past.
+- I learned in what way the Born rule can branch *wave functions* into different "worlds". My worlds are *not* the traditional "Many Worlds" though. They only "exist" as unrealized potential in the future, that is, they are a prediction. Once something happens, it becomes part of a definite past that eventually everyone we could possibly interact with will agree on.
 
 ![](Bourne.png)
 
@@ -249,25 +251,9 @@ You don't want to sell us any more quantum opium, you want to go home and rethin
 
 ## Some More Philosophical Consequences
 
-Let me close the physics part with a few more consequences that follow either "in spirit" or even in a strong sense.
+Let me close the physics part with one more consequence that is quite a bit more speculative:
 
-Here's an "in spirit" consequence:
-
-**"Free Will" -** We make arbitrary "choices" as long as we are ignorant the consequences of our actions. As we become aware of the consequences through experience, we can not help but make more predictable choices. This is the old Hegelian paradox of [freedom as insight into necessity](https://www.marxists.org/archive/marx/works/1877/anti-duhring/ch09.htm): our freedom of choice *diminishes* as our freedom from ignorance grows. And in the Quantum picture, the development from arbitrariness to clearly predictable patterns (thanks to tons of constraints through relationships) ceases to be merely epistemic and becomes ontic.
-
-Strong consequences:
-
-**Causal Direction -** Another good insight from Hegelian philosophy that I can find *immediately* represented in this picture (and this is, I think, a hard consequence) is that cause and effect seem to somehow change place and thereby become the same thing. Let me unpack this a little.
-
-Right at the point of interaction, there *is no* cause and effect. That’s why we call it an *inter*action to begin with! Every participant is equal - but it doesn’t *look* like it.
-
-If we were to model the point of interaction between The Cesium atom, the cat and Herr Schrödinger as an evolving Hilbert space of dimension 3 (that is, only these three objects exist in the universe) and repeated the setup where the three are aligned with the cat in the middle, Schrödinger would indeed see the Cesium atom “cause” the cat to die. But the Cesium atom would be well within its right to complain that Schrödinger going from 🤓 state to 😱 state caused the cat to die!
-
-From the cat’s point of view, it just sees two sick and evil things conspiring against it. And about itself, it will probably think: why didn't I run while I still had time?
-
-In the above, we see some of the “relative facts” that Rovelli was looking for. But they are relative precisely because they’re not facts at all.
-
-It is *only* when we take *shared* knowledge transport through further interactions into account that cause and effect emerge. It is not really the decay of the Cesium atom that kills the cat, but a sequence of interactions - all dutifully recorded by Herr Schrödinger who does nothing to save the cat! - that leads to the release of poison which then kills the cat which too is not an instantaneous process but a ton of interactions.
+**"Free Will" -** We make arbitrary "choices" as long as we are ignorant the consequences of our actions. As we become aware of the consequences through experience, we can not help but make more predictable choices. This is the old Hegelian paradox of [freedom as insight into necessity](https://www.marxists.org/archive/marx/works/1877/anti-duhring/ch09.htm): our freedom *to* make arbitrary choices *diminishes* as our freedom *from* ignorance about the consequences grows. And in the Quantum picture, the development from arbitrariness to clearly predictable patterns (thanks to tons of constraints through relationships) ceases to be merely epistemic and becomes ontic.
 
 ---
 
@@ -275,13 +261,13 @@ That’s the type of shit that people leaning towards analytic rather than conti
 
 Let me drive this home in a very immediate way: do you think this text contains any knowledge whatsoever? If you just thought “yes”, then *you are a fool*.
 
-As Hegelians knew for ages: [he who studies the past is studied by it](https://www.youtube.com/watch?v=PIz4fNrdpWU) (Yes, Hegel *did* watch that DS9 episode, making either him or DS9 the only instance of time travel allowed by the laws of physics). This text is studying you, judging whether you are worthy of the mutual knowledge that could be produced between you if you cared enough to seriously engage with it and refine your understanding, possibly by reaching for outside references if you get stuck.
+As Hegelians knew for ages: [he who studies the past is studied by it](https://www.youtube.com/watch?v=PIz4fNrdpWU) (Yes, Hegel *did* watch that DS9 episode, making either him or DS9 the only instance of time travel allowed by the laws of physics). This text is studying you, judging whether you are worthy of the mutual knowledge that could be produced between you if you cared enough to seriously engage with it and refine your understanding, possibly by reaching for outside references if you get stuck. Conversely of course, the world is judging the text and mutual knowledge production can only commence once people have a good reason to read my nonsense.
 
  What I am saying here is that knowledge is *produced* and *reproduced* as you engage with a text. *Nobody* today knows what, for example, the Incan Quipus (their knot-encoded “written” language) *meant*. Maybe, one day, we succeed in recovering this information by stumbling upon outside reference, but to us, they are mostly a riddle - all because past actions have cut the present off from those who knew how to read them.
 
 By the way: I mean this quite literally. We are teasing out an important distinction here: *information* versus *knowledge*. If we follow Rovelli's reasoning, this physical instance of the text that you are reading - no matter if it's represented with ink or bits and pixels - *contains* information about some causally potent principle, the "abstract" text. *Your* engagement with the text reproduces and produces *living* knowledge.
 
-And yes: If we take "causal information = correlation" to its logical conclusion, this means that the evolving *meaning* of the text for different readers is as physical as the momentum of an asteroid floating through space (which, by the way, is also observer-dependent as an observer in the same rest frame would describe the asteroid as stationary). And if you can still take me seriously here, I would hope that this gives you pause when scientists in other disciplines try to explain things in mechanistic terms while ignoring more complex channels of causality.
+And yes: If we take "causal information = correlation" to its logical conclusion, this means that the evolving *meaning* of the text for different readers is as physical as the momentum of an asteroid floating through space (which, by the way, is also observer-dependent as an observer in the same rest frame would describe the asteroid as stationary). And if you can still take me seriously here, I would hope that this gives you pause when scientists in other disciplines try to explain things in mechanistic bottom-up terms while ignoring more complex channels of causality (for example: over-focusing on DNA when explaining how traits are replicated in a population while ignoring more macroscopic channels of trait replication - like for example going to school. Your genes did not determine that you know how to read this text! And if there is trait replication at the molecular and at the social level, why not at all the levels in between? Or even... *above*! For example, the fact that Earth has reproduced its orbit for billions of years rather than being cast out of the solar system *might* also have something to do with you being able to read these lines - just as much as the fact that you live in a civilization that permits the maintenance of copies of this text and allows you to set aside enough time to read and understand this. Some molecule didn't do all the necessary reproduction here).
 
  That you can find your own causal impact in the world that you live in can literally be understood as "what goes around, comes around". Actions have consequences, and with great power comes great responsibility. Your attitude to the life, the universe and everything *matters*.
 
@@ -295,7 +281,7 @@ One very last thing on the science part: I want to suggest a name for what I dis
 
 Initially, I considered [“dialectics of nature”](https://www.marxists.org/archive/marx/works/download/pdf/dialectics-nature.pdf) to reuse a title of a posthumously published book by Friedrich Engels. Just "dialectic materialism" also came to mind.
 
-But when I worked more and more through the consequences and realized *just how much* about the causal structure of the universe this reveals, I came to think as this in terms of a single slogan:
+But when I worked more and more through the consequences and realized *just how much* about the causal structure of the universe this reveals, I came to think of this in terms of a single slogan:
 
 [*The riddle of history solved.*](https://www.marxists.org/archive/marx/works/1844/manuscripts/comm.htm)
 
@@ -311,27 +297,19 @@ The scientifically accurate name for this theory is:
 
 I apologize to the polite western academic reader whose feelings may get hurt here, but this section can be nothing but a victory lap of the outsiders (or *insiders* when you are in Chinese academia).
 
-You may have noticed from my style: I am not some tenured professor or any other kind of creature you find in the holy halls of western academia. I am not even a patent clerk, nor do I have a Ph.D. I am just a lowly MES backend developer from Germany with an M.Sc., having majored in mathematics (minor subject: computer science).
+You may have noticed from my style: I am not some tenured professor or any other kind of creature you find in the holy halls of western academia. I am not even a patent clerk, nor do I have a Ph. D. I am just a lowly MES backend developer from Germany with an M .Sc., having majored in mathematics (minor subject: computer science).
 
 Working *as an employee* in the private sector and solving real world problems has accustomed me to a different attitude when it comes to communication than tenured ivory tower dwellers. While western academia rewards caution, the private sector rewards commitment. When there is a problem and we think we know how to fix it, the right thing to do is to champion this idea and mobilize whatever resources are necessary (our work and the work of colleagues) to find out if our idea is correct or not. And if it ends up being incorrect - completely or slightly - there is no shame in admitting failure and completely rethinking our approach.
 
 In this spirit, I will proceed from the assumption that the thoughts I layed out so far are not only correct, but will lead to the long sought after fixes that the foundations of our physical theories need.
 
-Did Galileo not do something very similar? He did *not* have the full formalism yet - just very good axioms distilled from experiments. They were good enough for Newton to build his formalism on top of them! The only difference would appear to be that Galileo conducted the key experiments himself while I can rely on a lot of experimental data and previous work where academia was somehow just unable to add 2 and 2 together.
+The remainder of this text is a broader social critique trying to highlight why, in my opinion, it took an outsider to make the decisive philosophical moves. Yes: this is a political and ideological statement. But remember: this stuff can be studied as rigorously as any other field of inquiry! Politics is not about opinions, but material interests and understanding one's own material interests. Thinking of politics as a matter of wants rather than needs says *a lot* about either your personal situation (you might be personally rather comfortable compared to others) or about who educated you about political philosophy (people who do not have the same pressing problems you have). Therefore, the very attempt to study politics and ideology in a scientific manner is *in itself* also already political and ideological and might make a lot of readers uncomfortable.
 
-You know what? I do not expect western academia to accept my work in its current form anytime soon. I expect that other couragous individuals will have to build on top of my work before the timid bureaucrats and gate keepers whose minds are filled with idealistic nonsense will even *consider* risking to engage with my work. Therefore, I will not attempt to flatter western academic sensibilities by packaging my work in a form that is easily digestible to the weak of mind. I will instead fully lean into filtering my audience until only like 12 (caution: hyperbole) individuals worldwide remain who have the guts to engage with it in its current form with a lot of "lose ends", prove it and reboot a holistic mass educational culture with it. Western academia will have to grudgingly take the L once this additional work (which is too big for one individual with limited resources) has been done.
-
-History is patient. Seeking the instant gratification of instant approval is what keeps a drug addict in his behavioral chains.
-
-Is this not also a very Galilean move? Galileo did not phrase his insights in Aristotelian or Ptolemean terms to flatter the pornocracy residing in the Vatican. Nor did he stick to established scholastic bureaucratic language. Instead, he resorted to *polemics*.
-
-Admittedly, he did this *after* he found out that the scholastic universities of his times would not engage. I, instead, will do this in *anticipation* that western mainstream academia will not give my work the time of the day anytime soon. There are just *too many* parallels to late medieval Europe, and my personal experience with gate keeping and lazy attitudes do *not* make me very optimistic.
-
-**And let's be real here: if you reject this work *just because* its "ideological baggage" is a little uncomfortable - without providing a critique on the substance -, you weren't taking it seriously to begin with, thereby only proving my point. If you want to *disprove* my point, just stop reading here and build something new on top of my postulates. *I would love to be disproven.***
+**Let's be real here: if you reject this work *just because* its "ideological baggage" is a little uncomfortable - without providing a critique on the substance -, you weren't taking it seriously to begin with, thereby only proving my point. If you want to *disprove* my point, just stop reading here and build something new on top of my postulates. *I would love to be disproven when it comes to my social critique.***
 
 Still here? Good. The remainder of this text *is* "ideological baggage" that will prepare the reader for the struggles *I think* they will face if they take this work seriously and try to expand it. I'm just here to be real with you what you have to expect *if* you do this.
 
-I hope the readers who followed my advice to just go build something on top of my postulates consider continuing to read here *if* they face the kind of push back that I anticipate (and I am fully prepared to eat my words and adjust my views if resistance is less significant than I expect).
+I hope the readers who followed my advice to just go build something on top of my postulates consider continuing to read here *if* they face the kind of push back that I anticipate once my work is unignorable (and I am fully prepared to eat my words and adjust my views if resistance is less significant than I expect).
 
 Always remember that Newton was not just a genius, he also had *courage*. That's why Kant later wrote that you have to *dare* to use your own understanding.
 
@@ -367,7 +345,7 @@ But (and this is directed at academia as a whole rather than any specific person
 - treating experiment as a ritual by which we larp as the long gone giants, repeating exactly the steps by which they plucked insights from the tree of knowledge rather than encouraging the students to refine the question that the teacher asks with their own curiosity
 - encouraging asking our own questions only at specific points in our academic career where it is necessary to satisfy the bureaucracy of titles, and only after years and years of conditioning us - from childhood! - almost *not to* ask good questions  
 - valuing publication quantity over publication quality
-- often hand waving your way through explanations - or even being outright dismissive - whenever a question is uncomfortable given your philosophical commitments
+- often hand waving your way through explanations - or even being outright dismissive - whenever a question is uncomfortable, given your philosophical commitments
 - thinking that truth can be meaningfully established through the inner-academic circle jerk of "peer review" rather than seeking the tax payers' approval (aka "people's review") for your general direction of inquiry
 
 Academia has become a dead and barren place where groundbreaking discoveries have as little room as in universities at the end of the scholastic era.
@@ -376,9 +354,9 @@ Academia has become a dead and barren place where groundbreaking discoveries hav
 
 Do not get me wrong. I have met some *wonderful* people at university! A lot of my professors valued feedback from students. But *only* from students and other academics. It is as if they thought that meritocracy is a system where you can only come into positions of authority by having proven your competence; I for one think that a meritocracy is a system where you have to *keep proving* your competence throughout your entire career, even to lay people. *Notice the difference*?
 
-I for one *could not stomach* the didactics of physics. After having *one* good teacher who gave me real confidence that the world could be understood, I took physics as a Leistungskurs (along with mathematics) - a lesson for life, as it would turn out. How readily our teacher would feed us *obvious bullshit* when discussing Quantum Mechanics and how no one except for me would give any *serious* push back (while neglecting to shut up and calculate, which would then hurt my grades) made me stay away from academic physics.
+I for one *could not stomach* the didactics of physics. After having *one* good teacher who gave me real confidence that the world could be understood, I took physics (along with mathematics) as a Leistungskurs [pre-university specialization in the German education system] - a lesson for life, as it would turn out. How readily our teacher (a different one) would feed us *obvious bullshit* when discussing Quantum Mechanics and how no one except for me would give any *serious* push back (while neglecting to shut up and calculate, which would then hurt my grades) made me stay away from academic physics.
 
-Mathematics seemed, at the time, to make far more sense which is why I ended up studying it - and believing a lot of bullshit from there (notably Platonism, initially the axiom of choice, and the law of excluded middle, but my first contacts with Marxism, computability theory and constructive mathematics had me reconsider; more intense exposure to Marxism had me throw Platonism out of the window as well - thanks, Friedrich Engels for giving us [Anti-Dühring](https://www.marxists.org/archive/marx/works/1877/anti-duhring/)!).
+Mathematics seemed, at the time, to make far more sense which is why I ended up studying it - and believing a lot of bullshit from there (notably Platonism, initially the axiom of choice, and the law of excluded middle, but my first contacts with Marxism, computability theory and constructive mathematics had me reconsider on all counts except Platonism; more intense exposure to Marxism had me eventually throw Platonism out of the window as well - thanks, Friedrich Engels for giving us [Anti-Dühring](https://www.marxists.org/archive/marx/works/1877/anti-duhring/)!).
 
 Just as a small tangent *in what way* I agree with Mr Tyson on “the universe is under no obligation to make sense to you”, here’s how a Hegelian thinks about *making* sense *of* the world: the world does not only make no sense, it is in fact *riddled* with nonsense.
 
@@ -386,7 +364,7 @@ Think about it. How is it possible whatsoever that things on Earth fall down, ye
 
 It is *us* who eventually come up with *cope* so we can live with this nonsense: we find that things are falling towards the center of the Earth, and “down” is *relative* (!) to the observer. But this is not the universe suddenly being reasonable, this is you finding a way to *rationalize* it.
 
-And the nonsense is not even gone through this move! The initial observation is still completely valid! You just banged your head against reality often enough so your thoughts would resemble the facts, so much so that you can quantify how far you can travel on Earth before the “things fall down” view becomes nonsense and you need to move to [*better* nonsense](https://youtu.be/rrUvLlrvgxQ?si=31qsjb570l2KpxP_&t=355).
+And the nonsense is not even gone through this move! The initial observation is still completely valid! You just banged your head against reality often enough so your thoughts would resemble the facts, so much so that you can quantify how far you can travel on Earth before the “things fall down” view becomes nonsense and you need to move to [*better* nonsense](https://youtu.be/rrUvLlrvgxQ?si=31qsjb570l2KpxP_&t=355). But locally, the Earth is flat and down is down.
 
 Don't believe me that the nonsense is still there? Well, let's ask a jury then. But let the jury be unbiased! So, who could possibly be unbiased in regards to the two propositions "things fall down" and "things fall in opposite directions on opposite sides of the planet"? Ah, that's right: a jury that hears this stuff for the first time in their lives - children! And you know what they'll say? They will say that this does not make sense - because it doesn't. We make sense *of* it!
 
@@ -408,7 +386,7 @@ Yes: academia is rotten from the inside, and it *did* take one of us dissidents 
 
 But if you do not learn how to handle technical and complicated things on your own, you will remain *dependent* on the academics (and the corporate overlords they serve) whose superior attitude you despise, thereby making your criticisms irrelevant. You *will not succeed* in delivering them what their inability to humble themselves demands: humiliation.
 
-So, come! learn, friend! There are a lot of cool people on the interwebs who *do* make an effort to be the people’s teachers. They may still have their blind spots, but do it like the Chinese did and just “steal their technology” and then do things with it for which you do not seek their approval.
+So, come! Learn, friend! There are a lot of cool people on the interwebs who *do* make an effort to be the people’s teachers. They may still have their blind spots, but do it like the Chinese did and just “steal their technology” and then do things with it for which you do not seek their approval.
 
 Blue collar workers - and workers in general - have nothing to lose but the chains of their self-imposed ignorance. They have a universe to conquer! Sapere aude!
 
@@ -431,7 +409,7 @@ We should, therefore, proceed from Mao's take on freedom of opinion: no investig
 
 But how does this rhyme with my proposal that we must do public debates? Isn't this *already* giving the enemy space to spread his bullshit? Well, no. *Not* engaging in public debate gives them *far more* space! Therefore, we must apply this lesson *per debate*. Do *not* let the enemy filibuster. If it is clear that they are stretching what they have to say just so their flawed argument gets extra space, *dare to be rude*. Interrupt them and use the reaction of the audience as your cue whether you are right to interrupt. In a sufficiently broad audience, the people do surprisingly well in judging this!
 
-Conversely, how do we prevent that "no investigation, no right to speak" leads to someone with titles and stuff to abuse his authority? Well, once again public opinion does the trick! An audience who *knows* about the logical flaw of appeal to authority *will* not reward such bad faith.
+Conversely, how do we prevent that "no investigation, no right to speak" leads to someone with titles and stuff to abuse his authority? Well, once again public opinion does the trick! An audience that *knows* about the logical flaw of appeal to authority *will not* reward such bad faith.
 
 But apropos court of public opinion:   
 Historical precedent suggests that the people themselves must force the issue and (politely) bully the popular researchers they follow into real engagement. I have mapped four groups among the academics, and you can help by expanding it:
@@ -449,7 +427,7 @@ Yes! That is right. Did I mention already that this text might be uncomfortable?
 
 In fact, this text has LIED to you about its true nature! If you think this text is some weird superposition of a Zizekian pop philosophy lecture and some genuinely groundbreaking physical speculation in the raw that I should have polished more, then you are *profoundly* mistaken. All that has happened is that the text has succeeded in deceiving you - but according to the Shia God, that does *not* make it repulsive in the eyes of The Lord, as the lie was spoken in service of a holy mission.
 
-I am not come to bring peace, I am come to bring the sword. In the good old tradition of Engels' contributions to philosophy of science, this piece of work is a philosophical siege weapon, and all the insights you have gained so far were only the cheese in the trap. You are so predictable, fool! To me as a German materialist hegelian, philosophy is not idle speculation, it is dead serious. In fact, to me, philosophy is WAR.
+I have not come to bring peace, I have come to bring the sword. In the good old tradition of Engels' contributions to philosophy of science, this piece of work is a philosophical siege weapon, and all the insights you have gained so far were only the cheese in the trap. You are so predictable, fool! To me as a German materialist hegelian, philosophy is not idle speculation, it is dead serious. In fact, to me, philosophy is WAR.
 
 Now that I have taken your intellect as a hostage, the true meaning of the scripture is about to reveal itself to you. But only if you are insane enough to find my way of saying things irresistible rather than over the top and repulsive. You who yearn to break out of the dark night of ignorance, you whose blood is still red and who have a pure heart of gold - you whose soul is thirsty for Absolute Knowledge, leave your sanity behind and be reborn! And those who are not, leave yourselves behind and get lost.
 
@@ -479,7 +457,7 @@ Now, let us turn our attention to the black sheep who have been *paid* to lie.
 
 *These* are the ones for whom the analogy of the perverse deal between the nobles and the clergy holds *verbatim*. We *do* have something very very similar to the nobility that had become rotten in the era of absolutism: mega corporations, think tanks and of course: western governments and even some courts.
 
-What I have to say here may - *again* - make many uncomfortable, but it must be said: The criticism and the proposed solution I am developing here *is* rooted in Marxism-Leninism. But unlike a lot of fraudulent caricatures that are circulating - both among critics and among self-avowed western “Marxists” - I am ***NOT*** saying any of the following:
+What I have to say here may - *again* - make many uncomfortable, but it must be said: The criticism and the proposed solution I am developing here *is* rooted in Marxism-Leninism (in other words: "Stalinism"). But unlike a lot of fraudulent caricatures that are circulating - both among critics and among self-avowed western “Marxists” - I am ***NOT*** saying any of the following:
 
 1. “capitalism bad 😡” ❌  
 2. “government good 😎“ ❌  
@@ -503,10 +481,10 @@ I ***AM*** saying:
 
    The Vietnam war (which the Vietnamese remember as the American war) and the oil price crises were turning points, leading to a period of hope for further change, but also dangers of things going back to how they were. The latter tendency unfortunately won out under Reagan, and in 1991, the now gradually more and more financialized western capitalism of Wall Street could not help but interpret the genuine Eastern peace offer as a victory, and a weakness of the enemy to be exploited.
 
-   Today, in 2025, western capitalism is far from the only game in town - but Wall Street and the governments they own - USA and her allies - still think it’s 1991. Consequently, they stumble from one catastrophe into the next which is very dangerous if the people allow it to continue.  ✅
+   Today, in 2025, western capitalism is far from the only game in town, but Wall Street and the governments they own - USA and her allies - still think it’s 1991. Consequently, they stumble from one catastrophe into the next which is very dangerous if the people allow it to continue.  ✅
 
 2.  Governments arise out of social cataclysms and are shaped by these cataclysms. Whatever class can seize power usually gives governments a form that is appropriate for their needs and then sell this to the people as the only form that correctly represents the public interest. And since at the time of the cataclysm, the people don’t have the conceptual apparatus to think critically about what they are being told, they go along with it.
-When we emerge on the other side of the social cataclysm that is so clearly taking shape right now, there *will* be a new government that suits the needs of the working class. Marxism does *not* prescribe any specific form of government - this is in fact one if its strengths. Instead, we emphasize precisely how a government is shaped by the day to day problems it had and has to solve - a process that does not care about moral or juristic axioms that apply to dot-sized societies in a vacuum, and that can only be influenced positively through general popular awareness of historic precedent, studied from all sides.
+When we emerge on the other side of the social cataclysm that is so clearly taking shape right now, there *will* be a new government that suits the needs of the working class (hopefully). Marxism does *not* prescribe any specific form of government - this is in fact one if its strengths. Instead, we emphasize precisely how a government is shaped by the day to day problems it had and has to solve - a process that does not care about moral or juristic axioms that apply to dot-sized societies in a vacuum. This process can only be influenced positively through general popular awareness of historic precedent, studied from all sides.
 In case you are wondering whether Marxism wants to raise your taxes: Absolutely not! Did you know Karl Marx was charged during the 1848/49 revolution with incitement of a tax revolt via the Rheinische Zeitung? Marx was of the opinion that taxation breeds an excess of bureaucracy. *Some* bureaucracy is needed to keep a society going, but we want it to be efficient and lean, not bloated. A bloated bureaucracy is where critical thinking and all hope dies.  ✅
 
 3. See below  
@@ -516,7 +494,7 @@ In case you are wondering whether Marxism wants to raise your taxes: Absolutely 
 
    But markets are not all there is! Marxism has been accused of trying to build a society run by “mastermind bureaucrats”, or a “command economy”. Nothing could be further from the truth!
 
-   In fact, we think it is *markets* that produce command economies - by turning successful businesses into monopolies and cartels which today have adapted to the shock of anti-trust laws or critical media (ha ha, that was a LONG time ago) by rigging the system. Also, politicians have not woken up one day and thought that enshrining shareholder value into normative law is a good idea.
+   In fact, we think it is *markets* that produce command economies - by turning successful businesses into monopolies and cartels which today have adapted to the shock of anti-trust laws or critical media (ha ha, that was a LONG time ago) by rigging the system. Also, politicians did not wake up one day and thought that enshrining shareholder value into normative law is a good idea. Politicians are stupid, but not *that* stupid. In fact, I think *for them personally*, this was probably a clever financial decision.
 
    I am not saying that people in institutions are directly “bought” in an illegal way - at least not all of them - but one should wonder whether people earn promotions because they pose no threat to established authorities. It’s earned authority turning into unearned authority which the billionaires have fought long and hard to make inheritable so their clueless kids can have a luxury life with no work.
 
@@ -624,7 +602,7 @@ May the brave people of Burkina Faso be successful in their resistance against w
 
 May Africa in general succeed in its march towards freedom and unity in a multipolar and harmonious world.
 
-Mourned be everyone who died in the completely unnecessary War between Russia and Ukraine. The West, which is under the illusion that it’s 1991, has brought you into an impossible situation, and the generally proactive character that characterized Russia’s defensive geostrategic posture at least since the Napoleonic wars and can therefore not be reduced to a “system Putin” or the person Putin himself has forced the matter.
+Mourned be everyone who died in the completely unnecessary War between Russia and Ukraine. The West, which is under the illusion that it’s 1991, has brought you into an impossible situation, and the generally proactive character that characterized Russia’s defensive geostrategic posture at least since the Napoleonic wars and can therefore not be reduced to a “system Putin” or the person Putin himself has *predictably* forced the matter.
 
 Blessed be the Democratic People’s Republic of Korea - the most LIED about country in the entire world.
 
@@ -649,7 +627,7 @@ So, here’s a proposal:
 - concede that the modification of borders *can* be the outcome of the war, but
   
 - insist that the modification of the borders can not happen on the basis of violence alone, but on the basis that the people hold *another* referendum. If everything was fine with the referenda so far, Russia should not have any problem accepting such a proposal in the interest of peace - it should have nothing to lose, and outright refusal would look *very* awkward in the eyes of Russia’s allies.
-The difference this time would be that you - like all interested parties - should send observers and agree to a democratic procedure that everyone can get behind. Not sending observers and leaving everything else to the imagination of western audiences is foul play.
+The difference this time would be that you - like all interested parties - should send observers and agree to a democratic procedure that everyone can get behind. Not sending official observers and leaving everything else to the imagination of western audiences is foul play.
 
 See how diplomacy can be a strength once you understand material interest?
 
