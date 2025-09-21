@@ -16,7 +16,7 @@
 
 \title{A Minor Contribution to Resolving the Consistency Problem of RQM \\ \large And an Attempt at Formalization}
 \author{Markus Kasperczyk}
-\date{September 11, 2025}
+\date{\today}
 
 \begin{document}
 
@@ -27,12 +27,6 @@
 \begin{abstract}
 Relational Quantum Mechanics (RQM), as proposed by Carlo Rovelli, faces a challenge: it does not clearly explain why different observers should ever agree on facts. Rovelli's postulate intended to address this issue has not led to broad consensus. In this work, I propose a refinement of this postulate informed by the relativity of simultaneity, which motivates a set of broader adjustments to RQM’s core principles. I also present a preliminary formalization connecting RQM to Markov chain theory, providing a concrete framework to identify interactions that dynamically generate facts.
 \end{abstract}
-
-\newpage
-
-\subsection*{Note}
-
-You are reading the arXiv version of this article. If you are interested in a more philosophically engaging discussion with memes, you can find this on \href{https://github.com/GermanBrainRot/Project-Galileo/tree/for-western-audiences}{GitHub}.
 
 \newpage
 
@@ -312,39 +306,15 @@ Not so in the unitary picture!
 
 It is a well known fact \cite{Hulpke_2006} that unitary evolution in the non-interacting case preserves entanglement - the quantum analogy of correlation.
 
-An "\textbf{interaction}" is just a situation where the dynamics and the prior state make it so that
-
-\begin{align*}
-&P((A,B)(t+\delta t) | (A,B)(t)) \\ \neq &P(A(t+\delta t)\mid A(t))\cdot P(B(t+\delta t) \mid B(t)),
-\end{align*}
-
-and a valid "\textbf{interaction outcome}" in \textbf{both the Markovian and Unitary picture} is just a pair of states (think: both billiard balls at the same place, but this is just modelling choice in my toy model) such that
+An "\textbf{interaction}" - whether we are in the unitary or Markovian picture - is just a transition from time $t_0$ to $t_0+\delta t$ such that
 
 \begin{mdframed}
 \begin{align*}
-&P((A,B)(t+\delta t) = (x,y) | (A,B)(t)) \\ \neq &P(A(t+\delta t) = x\mid A(t))\cdot P(B(t+\delta t)=y \mid B(t)).
+&P_{t\to t+\delta t}\cdot \psi (t_0) \neq P_{A, t\to t+\delta t}\cdot \psi (t_0) \cdot P_{B, t\to t+\delta t}\cdot \psi (t_0).
 \end{align*}
 \end{mdframed}
 
 We literally \textit{introduce} a correlation/entanglement dynamically - and unitary evolution preserves it as long as there are no further interactions in the above sense. That's all there is to it.
-
-\subsubsection{Small Sparsity Exploit}
-
-One \textit{very} neat thing that comes out of this way of wording the \textit{process} of entanglement is that the valid interaction outcomes are "marked". If we think of the entire probability or quantum state, it would assign a probability or amplitude to each possible configuration. But with the above observation, we can do the following:
-
-Given an interaction happens at $t\mapsto t+\delta t$. Let $I$ be the set of all valid interaction outcomes. Then, we can encode the entire posterior joint state $P_{\text{post}}$ (probability or quantum) as
-
-\begin{align*}
-P_{\text{post}}(A,B) = P_{\text{post}}(A,B) \odot 1_I \ ?? \ P_{\text{post}}(A)\cdot P_{\text{post}}(B)
-\end{align*}
-
-where $\odot$ is the pointwise product, $1_I$ is a 0/1 indicator whether we are in $I$ or not and $??$ is an operator inspired by modern programming languages like Swift which here has the meaning
-
-\begin{align*}
-A(i) \ ?? \ B(i) := B(i) \text{ if } A(i) = 0, A(i) \text{ otherwise}.
-\end{align*}
-
-If interactions are rare or only have a small amount of possible outcomes, this should lower the required storage space in a simulation.
 
 \subsubsection{Markovian versus Unitary Modelling}
 
