@@ -1,7 +1,5 @@
 # The Galilean Moment of Quantum Mechanics
 
-!!! Attention: This work is still in refinement stage until 23rd or September 2025. After this, I hope I can limit myself to minor revisions and pointers to other contributions. Until then, everything you read is provisional.
-
 ## Abstract
 
 In this publication, I will discuss Carlo Rovelli's Relational Quantum Mechanics (RQM) and how it aims at resolving the measurement problem. Once I have explained how I think it works, I will point out an obvious type of criticism and how Rovelli tried to fix the problem. After this, I will show why it does not fix the issues, suggest a *much* better fix. In the section "Road to Formalization", starting from a simple change in notation that I recognized only later as novel and clarifying, I develop how some of this plays out mathematically. Finally, I discuss why, in my opinion, academia missed this despite being obvious and how this is just the tip of the iceberg of much more fundamental problems with western society.
