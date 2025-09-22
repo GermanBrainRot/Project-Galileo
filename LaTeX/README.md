@@ -25,11 +25,15 @@ Marginalization of wave functions, when done naively, is ill-defined. The analog
 
 But during my attempts to fix this, I realized that marginalization isn't the operation I needed to apply. Just like the Kraus-Formalism, it is too *lossy*. You may attempt to plug your wave function back into the universe after collapse (whatever that means), but you're not putting it into the same universe, but only an average over all possible universes. That's not what I wanted at all!
 
-**The operation I need is *conditioning*, and it turns out that the correct dynamics of wave function collapse is a Markov chain that uses wave functions *as* underlying states, with Born probabilities elevated to transition probabilities. The universe selects a measurement outcome at random and conditions the wave function on it, thereby changing it - but this is just a Markovian transition!**
+**The operation I need is *conditioning*, and it turns out that the correct dynamics of wave function collapse is a coordinate-system dependent Markov chain that uses wave functions *as* underlying states, with Born probabilities elevated to transition probabilities. The universe selects a distinguishable measurement outcome at random and conditions the wave function on it, thereby changing it - but this is just a Markovian transition!**
 
 This insight also gives me a much better idea how to sell this to physicists: all I am providing here is a unified mathematical language so they can do what they have been doing all the time, namely conditioning on "measurement" outcomes (which they themselves have long generalized from more or less dot-sized outcomes to broader outcomes they encode using something called "POVM").
 
 I do not need to claim to have "solved the measurement problem" or "solved quantum philosophy". Such titles would not only immediately be dismissed when they come from an outsider, they are also ill-defined because nobody really knows what these problems *are*. A unified language for unitary evolution *and* Markov jumps is, on the other hand, immediately technically interesting and presents existing physical practices in an entirely new light, allowing *measurement itself* to be studies as part of the dynamics. That this makes predictions is just the cherry on top.
+
+---
+
+There seems to be one final twist though when we take Rovelli's idea to its logical conclusion: from the perspective of a coherent electron, *it* has a perfectly well-defined position and momentum and *the world* is in a weird superposition. This one **really** needs some further thought.
 
 ---
 
